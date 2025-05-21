@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pryLopezM_IEFI", "pryLopezM_IEFI\pryLopezM_IEFI.csproj", "{35F85CE2-40B6-42F2-A716-197D1D5C5332}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35F85CE2-40B6-42F2-A716-197D1D5C5332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F85CE2-40B6-42F2-A716-197D1D5C5332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F85CE2-40B6-42F2-A716-197D1D5C5332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F85CE2-40B6-42F2-A716-197D1D5C5332}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A1A9247-1BF9-4DFD-B7AA-B3DADAAFE685}
+	EndGlobalSection
+EndGlobal
