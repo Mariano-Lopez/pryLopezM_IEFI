@@ -1,13 +1,33 @@
 CREATE DATABASE BBDDUsuarios;
 
-USE BBDDUusarios;
+USE BBDDUsuarios;
 
-CREATE TABLE Usuarios(
-id int primary key not null,
-nombre varchar(50),
-permisos int not null,
-fechaUltConex DATETIME2 not null,
-fechaActual DATETIME2 not null,
-tiempoSesion BIGINT not null,
-tiempoTotal BIGINT not null
+CREATE TABLE Usuarios (
+    id INT PRIMARY KEY NOT NULL,
+    usuario VARCHAR(50),
+	contraseña VARCHAR(50),
+    permisos INT NOT NULL,
+    
 );
+
+CREATE TABLE sesionUs(
+	idSesion INT PRIMARY KEY NOT NULL IDENTITY,
+	fechaUltConex DATETIME NOT NULL,
+    fechaActual DATETIME NOT NULL,
+    tiempoSesion BIGINT NOT NULL,
+    tiempoTotal BIGINT NOT NULL,
+	idUs INT,
+	FOREIGN KEY (idUs) REFERENCES Usuarios(id)
+);
+
+INSERT INTO Usuarios (id, usuario, contraseña, permisos)
+VALUES
+(1, 'admin', 'admin123', 1),
+(2, 'usuario1', 'clave1', 2),
+(3, 'usuario2', 'clave2', 2);
+
+Select * from sesionUs;
+
+Select * from Usuarios;
+
+DROP TABLE sesionUs;

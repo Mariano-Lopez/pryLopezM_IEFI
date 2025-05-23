@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.mspInicio = new System.Windows.Forms.MenuStrip();
             this.tareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,6 +38,8 @@
             this.stsStatus = new System.Windows.Forms.StatusStrip();
             this.tsUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsFecha = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsTiempoS = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timerSesion = new System.Windows.Forms.Timer(this.components);
             this.mspInicio.SuspendLayout();
             this.stsStatus.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +59,7 @@
             // tareasToolStripMenuItem
             // 
             this.tareasToolStripMenuItem.Name = "tareasToolStripMenuItem";
-            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.tareasToolStripMenuItem.Text = "Tareas";
             // 
             // administrarToolStripMenuItem
@@ -71,13 +74,13 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios...";
             // 
             // auditoriaToolStripMenuItem
             // 
             this.auditoriaToolStripMenuItem.Name = "auditoriaToolStripMenuItem";
-            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.auditoriaToolStripMenuItem.Text = "Auditoria...";
             // 
             // cerrarSesiónToolStripMenuItem
@@ -90,7 +93,8 @@
             // 
             this.stsStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsUsuario,
-            this.tsFecha});
+            this.tsFecha,
+            this.tsTiempoS});
             this.stsStatus.Location = new System.Drawing.Point(0, 428);
             this.stsStatus.Name = "stsStatus";
             this.stsStatus.Size = new System.Drawing.Size(800, 22);
@@ -109,6 +113,17 @@
             this.tsFecha.Size = new System.Drawing.Size(38, 17);
             this.tsFecha.Text = "Fecha";
             // 
+            // tsTiempoS
+            // 
+            this.tsTiempoS.Name = "tsTiempoS";
+            this.tsTiempoS.Size = new System.Drawing.Size(84, 17);
+            this.tsTiempoS.Text = "Tiempo sesion";
+            // 
+            // timerSesion
+            // 
+            this.timerSesion.Interval = 1000;
+            this.timerSesion.Tick += new System.EventHandler(this.timerSesion_Tick);
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,6 +135,8 @@
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInicio_FormClosing_1);
+            this.Load += new System.EventHandler(this.frmInicio_Load);
             this.mspInicio.ResumeLayout(false);
             this.mspInicio.PerformLayout();
             this.stsStatus.ResumeLayout(false);
@@ -140,5 +157,7 @@
         private System.Windows.Forms.StatusStrip stsStatus;
         private System.Windows.Forms.ToolStripStatusLabel tsUsuario;
         private System.Windows.Forms.ToolStripStatusLabel tsFecha;
+        private System.Windows.Forms.Timer timerSesion;
+        private System.Windows.Forms.ToolStripStatusLabel tsTiempoS;
     }
 }

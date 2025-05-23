@@ -10,33 +10,25 @@ namespace pryLopezM_IEFI
     {
         public int id { get; set; }
 
-        public string nombre { get; set; }
+        public string usuario { get; set; }
+
+        public string contra { get; set; }
 
         public int permisos { get; set; }
 
-        public DateTime fechaUltConex { get; set; }
+        
 
-        public DateTime fechaActual { get; set; }
-
-        public TimeSpan tiempoSesion { get; set; }
-
-        public TimeSpan tiempoTot { get; set; }
-
-        public clsUsuario(int id, string nombre, int permisos, DateTime fechaUltConex, DateTime fechaActual, TimeSpan tiempoSesion, TimeSpan tiempoTot)
+        public clsUsuario(int id, string usuario, string contra, int permisos)
         {
             this.id = id;
 
-            this.nombre = nombre;
+            this.usuario = usuario;
+            
+            this.contra = contra;
 
             this.permisos = permisos;
 
-            this.fechaUltConex = fechaUltConex;
-
-            this.fechaActual = fechaActual;
-
-            this.tiempoSesion = tiempoSesion;
-
-            this.tiempoTot = tiempoTot;
+            
 
         }
 

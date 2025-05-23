@@ -17,6 +17,50 @@ namespace pryLopezM_IEFI
             InitializeComponent();
         }
 
+        clsConexionBBDD BBDD = new clsConexionBBDD();
+
+        clsUsuarios lstUsuarios = new clsUsuarios();
+
+        private void frmSesionUsuario_Load(object sender, EventArgs e)
+        {
+            BBDD.cargarUsuarios(lstUsuarios);
+        }
+
+        private int idSesionActual = 0;  // variable para guardar el idSesion actual
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtUsuario.Text) && !string.IsNullOrEmpty(txtContraseña.Text))
+            {
+                var usuario = lstUsuarios.lstUsuarios.FirstOrDefault(u => u.usuario == txtUsuario.Text);
+
+                if (usuario != null && usuario.contra == txtContraseña.Text)
+                {
+                    MessageBox.Show($"Bienvenido {usuario.usuario}.", "Login exitoso");
+
+                    clsSesion.nomUs = usuario.usuario;
+                    clsSesion.idUsuario = usuario.id;
+
+                    // Insertar nueva sesión y obtener el ID recién creado
+                    clsSesion.idSesion = BBDD.insertarNuevaSesionYObtenerID(usuario.id);
+
+                    txtContraseña.Text = "";
+                    txtUsuario.Text = "";
+
+                    frmInicio v = new frmInicio(clsSesion.idSesion, clsSesion.idUsuario);
+                    v.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos.", "Error de inicio de sesión");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se pueden dejar campos vacíos", "Error de inicio de sesión");
+            }
+        }
+
         
     }
 }
