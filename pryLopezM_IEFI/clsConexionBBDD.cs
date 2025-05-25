@@ -68,69 +68,6 @@ namespace pryLopezM_IEFI
             }
         }
 
-        /*public void actualizarInicio(clsUsuario usuario)
-        {
-            string query = "UPDATE Usuarios SET fechaUltConex = @fechaUltConex WHERE id = @id";
-
-            using (SqlConnection conn = new SqlConnection(cadenaConexion))
-            {
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    // Asignamos los parámetros
-                    cmd.Parameters.AddWithValue("@fechaUltConex", usuario.fechaUltConex);
-                    cmd.Parameters.AddWithValue("@id", usuario.id);
-
-                    // Abrimos la conexión y ejecutamos el comando
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }*/
-
-        public void insertarSesion(clsUsuario usuario, clsSesionUs sesion)
-        {
-            string query = "INSERT INTO sesionUs (fechaUltConex, fechaActual, tiempoSesion, tiempoTotal, idUs) " +
-                           "VALUES (@fechaUltConex, @fechaActual, @tiempoSesion, @tiempoTotal, @idUs)";
-
-            using (SqlConnection conn = new SqlConnection(cadenaConexion))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                cmd.Parameters.AddWithValue("@fechaUltConex", sesion.fechaUltConex);
-                cmd.Parameters.AddWithValue("@fechaActual", sesion.fechaActual);
-                cmd.Parameters.AddWithValue("@tiempoSesion", sesion.tiempoSesion.TotalSeconds); // como BIGINT en segundos
-                cmd.Parameters.AddWithValue("@tiempoTotal", sesion.tiempoTot.TotalSeconds);
-                cmd.Parameters.AddWithValue("@idUs", usuario.id);
-
-                conn.Open();
-                cmd.ExecuteNonQuery();
-            }
-        }
-
-
-        public int insertarNuevaSesion(int idUs)
-        {
-            int idSesionCreado = 0;
-
-            string query = "INSERT INTO sesionUs (fechaUltConex, fechaActual, tiempoSesion, tiempoTotal, idUs) " +
-                           "OUTPUT INSERTED.idSesion " +
-                           "VALUES (@fechaUltConex, @fechaActual, @tiempoSesion, @tiempoTotal, @idUs)";
-
-            using (SqlConnection conn = new SqlConnection(cadenaConexion))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                cmd.Parameters.AddWithValue("@fechaUltConex", DateTime.Now);
-                cmd.Parameters.AddWithValue("@fechaActual", DateTime.Now);
-                cmd.Parameters.AddWithValue("@tiempoSesion", 0);
-                cmd.Parameters.AddWithValue("@tiempoTotal", 0);
-                cmd.Parameters.AddWithValue("@idUs", idUs);
-
-                conn.Open();
-                idSesionCreado = (int)cmd.ExecuteScalar();  // Captura el idSesion generado
-            }
-
-            return idSesionCreado;
-        }
-
         public void actualizarSesion(int idSesion, TimeSpan tiempoSesion, TimeSpan tiempoTotal, DateTime fechaActual)
         {
             string query = "UPDATE sesionUs SET tiempoSesion = @tiempoSesion, tiempoTotal = @tiempoTotal, fechaActual = @fechaActual WHERE idSesion = @idSesion";
@@ -196,7 +133,37 @@ namespace pryLopezM_IEFI
             return idSesion;
         }
 
+        public void mostrarDatos(DataGridView dgv, string comando)
+        {
+            try
+            {
+                conexionBaseDatos = new SqlConnection(cadenaConexion);
 
+                nombreBaseDeDatos = conexionBaseDatos.Database;
+
+                conexionBaseDatos.Open();
+
+                string query = comando;
+                comandoBaseDatos = new SqlCommand(query, conexionBaseDatos);
+
+                //Crear un DataTable.
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(comandoBaseDatos);
+                DataTable tablaProductos = new DataTable();
+
+                dataAdapter.Fill(tablaProductos);
+
+                dgv.DataSource = tablaProductos;
+
+
+
+
+            }
+            catch (Exception e) 
+            {
+                MessageBox.Show(e.Message, "Error");
+
+            }
+        }
 
     }
 }

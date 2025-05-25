@@ -75,6 +75,16 @@ namespace pryLopezM_IEFI
             BBDD.actualizarSesion(idSesionActual, tiempoSesion, tiempoTotal, finSesion);
         }
 
-        
+        private void auditoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAuditoria v = new frmAuditoria();
+            v.ShowDialog();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuariosAdmin v = new frmUsuariosAdmin();
+            v.ShowDialog();
+        }
     }
 }

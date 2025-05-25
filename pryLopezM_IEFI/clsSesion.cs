@@ -11,6 +11,7 @@ namespace pryLopezM_IEFI
         public static string nomUs { get; set; }
         public static int idUsuario { get; set; }
         public static int idSesion { get; set; }
+        public static int idPermisos { get; set; }
 
         public static DateTime ultSesion { get; set; }
 

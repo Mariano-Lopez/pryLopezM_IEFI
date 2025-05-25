@@ -51,6 +51,12 @@
     <Compile Include="clsSesionUs.cs" />
     <Compile Include="clsUsuario.cs" />
     <Compile Include="clsUsuarios.cs" />
+    <Compile Include="frmUsuariosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuariosAdmin.Designer.cs">
+      <DependentUpon>frmUsuariosAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAuditoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmUsuariosAdmin.resx">
+      <DependentUpon>frmUsuariosAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAuditoria.resx">
       <DependentUpon>frmAuditoria.cs</DependentUpon>
     </EmbeddedResource>

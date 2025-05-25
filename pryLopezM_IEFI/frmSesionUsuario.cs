@@ -40,6 +40,7 @@ namespace pryLopezM_IEFI
 
                     clsSesion.nomUs = usuario.usuario;
                     clsSesion.idUsuario = usuario.id;
+                    clsSesion.idPermisos = usuario.permisos;
 
                     // Insertar nueva sesión y obtener el ID recién creado
                     clsSesion.idSesion = BBDD.insertarNuevaSesionYObtenerID(usuario.id);
@@ -61,6 +62,12 @@ namespace pryLopezM_IEFI
             }
         }
 
-        
+        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnIngresar.PerformClick();
+            }
+        }
     }
 }

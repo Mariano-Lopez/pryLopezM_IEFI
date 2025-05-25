@@ -16,5 +16,31 @@ namespace pryLopezM_IEFI
         {
             InitializeComponent();
         }
+
+        clsConexionBBDD BBDD = new clsConexionBBDD();
+
+        private void frmAuditoria_Load(object sender, EventArgs e)
+        {
+            cmbTablas.Items.Add("Usuarios");
+            cmbTablas.Items.Add("Tiempos de sesión");
+
+            
+        }
+
+        private void cmbTablas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTablas.SelectedIndex == 0)
+            {
+                string comando = "SELECT * FROM Usuarios";
+
+                BBDD.mostrarDatos(dgvBBDDTablas, comando);
+            }
+            else
+            {
+                string comando = "SELECT * FROM sesionUs";
+
+                BBDD.mostrarDatos(dgvBBDDTablas, comando);
+            }
+        }
     }
 }

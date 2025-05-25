@@ -3,7 +3,7 @@ CREATE DATABASE BBDDUsuarios;
 USE BBDDUsuarios;
 
 CREATE TABLE Usuarios (
-    id INT PRIMARY KEY NOT NULL,
+    id INT PRIMARY KEY NOT NULL IDENTITY,
     usuario VARCHAR(50),
 	contraseña VARCHAR(50),
     permisos INT NOT NULL,
@@ -31,3 +31,5 @@ Select * from sesionUs;
 Select * from Usuarios;
 
 DROP TABLE sesionUs;
+
+DROP TABLE Usuarios;
