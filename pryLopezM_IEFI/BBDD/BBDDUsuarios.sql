@@ -6,7 +6,7 @@ CREATE TABLE Usuarios (
     id INT PRIMARY KEY NOT NULL IDENTITY,
     usuario VARCHAR(50),
 	contraseña VARCHAR(50),
-    permisos INT NOT NULL,
+    permisos VARCHAR(20) NOT NULL,
     
 );
 
@@ -20,11 +20,11 @@ CREATE TABLE sesionUs(
 	FOREIGN KEY (idUs) REFERENCES Usuarios(id)
 );
 
-INSERT INTO Usuarios (id, usuario, contraseña, permisos)
+INSERT INTO Usuarios (usuario, contraseña, permisos)
 VALUES
-(1, 'admin', 'admin123', 1),
-(2, 'usuario1', 'clave1', 2),
-(3, 'usuario2', 'clave2', 2);
+('admin', 'admin123', 'Administrador'),
+('usuario1', 'clave1', 'Operador'),
+('usuario2', 'clave2', 'Operador');
 
 Select * from sesionUs;
 

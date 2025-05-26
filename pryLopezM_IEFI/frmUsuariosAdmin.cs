@@ -17,8 +17,15 @@ namespace pryLopezM_IEFI
             InitializeComponent();
         }
 
+        clsConexionBBDD BBDD = new clsConexionBBDD();
+
+        clsUsuarios lstUsuarios = new clsUsuarios();
+
         private void clsUsuariosAdmin_Load(object sender, EventArgs e)
         {
+            BBDD.mostrarDatos(dgvUsuarios);
+            BBDD.cargarUsuarios(lstUsuarios);
+
             // --CREAR --
             cmbPermisos.Items.Add("Administrador");
             cmbPermisos.Items.Add("Operador");
@@ -34,6 +41,7 @@ namespace pryLopezM_IEFI
             // --ACTUALIZAR--
             cmbPermisosActualizar.Items.Add("Adminsitrador");
             cmbPermisosActualizar.Items.Add("Operador");
+
 
             
         }
@@ -66,6 +74,25 @@ namespace pryLopezM_IEFI
         private void cmbPermisos_SelectedIndexChanged(object sender, EventArgs e)
         {
             habilitarBtn(btnCrearUs);
+        }
+
+        private void btnCrearUs_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtId.Text);
+
+            clsUsuario aux = new clsUsuario(id, txtUsuario.Text, txtContra.Text, cmbPermisos.Text);
+
+            BBDD.crearUsuario(txtUsuario, txtContra, cmbPermisos.Text);
+
+            BBDD.mostrarDatos(dgvUsuarios);
+
+            lstUsuarios.agregarUs(aux);
+
+
+            txtId.Text = "";
+            txtUsuario.Text = "";
+            txtContra.Text = "";
+            cmbPermisos.SelectedIndex = -1;
         }
 
         // --BUSCAR--
@@ -115,9 +142,183 @@ namespace pryLopezM_IEFI
                 btnBuscarUs.Enabled = cmbPermisosBuscar.SelectedIndex != -1;
         }
 
+        private void btnBuscarUs_Click(object sender, EventArgs e)
+        {
+            if (cmbBuscarFiltro.SelectedIndex == 0) 
+            {
+                BBDD.mostrarDatos(dgvUsuarios);
+
+                var resul = lstUsuarios.buscarUs(Convert.ToInt32(txtBuscar.Text));
+
+                txtUsuarioBuscar.Text = resul.usuario.ToString();
+
+                txtContraseñaBuscar.Text = resul.contra.ToString();
+
+                cmbPermisosBuscar.Text = resul.permisos.ToString();
+
+            }
+            else if (cmbBuscarFiltro.SelectedIndex == 1)
+            {
+                BBDD.mostrarDatos(dgvUsuarios);
+
+                var resul = lstUsuarios.buscarUs(txtBuscar.Text);
+
+                txtUsuarioBuscar.Text = resul.usuario.ToString();
+
+                txtContraseñaBuscar.Text = resul.contra.ToString();
+
+                cmbPermisosBuscar.Text = resul.permisos.ToString();
+            }
+            else if (cmbBuscarFiltro.SelectedIndex == 2)
+            {
+                dgvUsuarios.DataSource = lstUsuarios.buscarUsuarios(cmbPermisosBuscar.Text);
+            }
+        }
+
+        private void btnLimpiarBuscar_Click(object sender, EventArgs e)
+        {
+            BBDD.mostrarDatos(dgvUsuarios);
+
+            txtBuscar.Text = "";
+            txtUsuarioBuscar.Text = "";
+            txtContraseñaBuscar.Text = "";
+            cmbPermisosBuscar.SelectedIndex = -1;
+        }
+
         // --ACTUALIZAR--
 
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Si no selecciona la columna.
+            if (e.RowIndex >= 0)
+            {
+                //Toma los datos de la fila y llena los componentes.
+                DataGridViewRow fila = dgvUsuarios.Rows[e.RowIndex];
 
+                txtBuscar.Text = fila.Cells["id"].ToString();
 
+                txtUsuarioBuscar.Text = fila.Cells["usuario"].ToString();
+
+                txtContraseñaBuscar.Text = fila.Cells["contraseña"].ToString();
+
+                cmbPermisosBuscar.Text = fila.Cells["permisos"].Value.ToString();
+
+            }
+
+            habilitarCompoAct(true, true);
+
+        }
+
+        private void btnLimpiarAct_Click(object sender, EventArgs e)
+        {
+            limpiarCompoAct();
+
+            habilitarCompoAct(false, false);
+        }
+
+        private void btnActualizarUs_Click(object sender, EventArgs e)
+        {
+            
+            BBDD.actualizarDatosUs(txtUsuarioActualizar, txtContraActualizar, cmbPermisosActualizar, Convert.ToInt32(txtActualizar.Text));
+
+            BBDD.mostrarDatos(dgvUsuarios);
+
+            limpiarCompoAct();
+        }
+
+        private void btnBuscarActualizar_Click(object sender, EventArgs e)
+        {
+            var resul = lstUsuarios.buscarUs(txtUsuarioActualizar.Text);
+
+            if (resul != null)
+            {
+                txtContraActualizar.Text = resul.contra;
+
+                cmbPermisosActualizar.Text = resul.permisos;
+
+                txtActualizar.Text = (resul.id).ToString();
+
+                habilitarCompoAct(true, true);
+
+                btnEliminarUs.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Usuario no encontrado.","Error");
+            }
+        }
+
+        public void habilitarCompoAct(bool t, bool t2)
+        {
+            txtContraActualizar.Enabled = t;
+            cmbPermisosActualizar.Enabled=t2;
+        }
+
+        private void txtUsuarioActualizar_TextChanged(object sender, EventArgs e)
+        {
+            habilitarbtnAct();
+        }
+
+        private void txtContraActualizar_TextChanged(object sender, EventArgs e)
+        {
+            habilitarbtnAct();
+        }
+
+        public void habilitarbtnAct()
+        {
+            if (!string.IsNullOrEmpty(txtUsuarioActualizar.Text) && !string.IsNullOrEmpty(txtContraActualizar.Text))
+            {
+                btnActualizarUs.Enabled = true;
+
+            }
+            else
+            {
+                btnActualizarUs.Enabled = false;
+            }
+        }
+
+        public void limpiarCompoAct()
+        {
+            txtUsuarioActualizar.Text = "";
+            txtContraActualizar.Text = "";
+            txtActualizar.Text = "";
+            cmbPermisosActualizar.SelectedIndex = -1;
+        }
+
+        // --ELIMINAR--
+
+        private void btnEliminarUs_Click(object sender, EventArgs e)
+        {
+            BBDD.eliminarDatosUs(Convert.ToInt32(txtActualizar.Text));
+            BBDD.mostrarDatos(dgvUsuarios);
+        }
+
+        // --PANELES--
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            paneles(panelCrear);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            paneles(panelBuscar);
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            paneles(panelActualizar);
+        }
+
+        public void paneles(Panel pnl)
+        {
+            // Ocultamos todos
+            panelCrear.Visible = false;
+            panelBuscar.Visible = false;
+            panelActualizar.Visible = false;
+
+            // Mostramos el deseado
+            pnl.Visible = true;
+            pnl.BringToFront();
+        }
     }
 }

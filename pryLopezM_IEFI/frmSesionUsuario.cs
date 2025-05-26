@@ -26,8 +26,6 @@ namespace pryLopezM_IEFI
             BBDD.cargarUsuarios(lstUsuarios);
         }
 
-        private int idSesionActual = 0;  // variable para guardar el idSesion actual
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtUsuario.Text) && !string.IsNullOrEmpty(txtContraseña.Text))

@@ -14,11 +14,11 @@ namespace pryLopezM_IEFI
 
         public string contra { get; set; }
 
-        public int permisos { get; set; }
+        public string permisos { get; set; }
 
         
 
-        public clsUsuario(int id, string usuario, string contra, int permisos)
+        public clsUsuario(int id, string usuario, string contra, string permisos)
         {
             this.id = id;
 

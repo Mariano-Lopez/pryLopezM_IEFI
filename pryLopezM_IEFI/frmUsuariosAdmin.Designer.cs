@@ -30,18 +30,10 @@
         {
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.panelOpciones = new System.Windows.Forms.Panel();
-            this.btnBorrar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
             this.panelCrear = new System.Windows.Forms.Panel();
-            this.cmbPermisos = new System.Windows.Forms.ComboBox();
-            this.lblPermisos = new System.Windows.Forms.Label();
-            this.lblContraseña = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.txtContra = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.btnCrearUs = new System.Windows.Forms.Button();
             this.panelBuscar = new System.Windows.Forms.Panel();
             this.cmbBuscarFiltro = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,57 +46,66 @@
             this.txtContraseñaBuscar = new System.Windows.Forms.TextBox();
             this.txtUsuarioBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscarUs = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.cmbPermisos = new System.Windows.Forms.ComboBox();
+            this.lblPermisos = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.txtContra = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.btnCrearUs = new System.Windows.Forms.Button();
+            this.panelActualizar = new System.Windows.Forms.Panel();
+            this.btnLimpiarAct = new System.Windows.Forms.Button();
+            this.btnBuscarActualizar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtActualizar = new System.Windows.Forms.TextBox();
             this.cmbPermisosActualizar = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtContraseñaActualizar = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtContraActualizar = new System.Windows.Forms.TextBox();
             this.txtUsuarioActualizar = new System.Windows.Forms.TextBox();
             this.btnActualizarUs = new System.Windows.Forms.Button();
-            this.btnObtenerUs = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.btnLimpiarBuscar = new System.Windows.Forms.Button();
             this.chkMensaje = new System.Windows.Forms.CheckBox();
+            this.btnEliminarUs = new System.Windows.Forms.Button();
+            this.panelAcciones = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.panelOpciones.SuspendLayout();
             this.panelCrear.SuspendLayout();
             this.panelBuscar.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelActualizar.SuspendLayout();
+            this.panelAcciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvUsuarios
             // 
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.AllowUserToResizeColumns = false;
+            this.dgvUsuarios.AllowUserToResizeRows = false;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(196, 229);
+            this.dgvUsuarios.Location = new System.Drawing.Point(186, 223);
+            this.dgvUsuarios.MultiSelect = false;
             this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.Size = new System.Drawing.Size(695, 317);
+            this.dgvUsuarios.ReadOnly = true;
+            this.dgvUsuarios.RowHeadersVisible = false;
+            this.dgvUsuarios.Size = new System.Drawing.Size(514, 317);
             this.dgvUsuarios.TabIndex = 0;
+            this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
             // panelOpciones
             // 
             this.panelOpciones.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelOpciones.Controls.Add(this.panel1);
-            this.panelOpciones.Controls.Add(this.btnBorrar);
             this.panelOpciones.Controls.Add(this.btnActualizar);
             this.panelOpciones.Controls.Add(this.btnBuscar);
             this.panelOpciones.Controls.Add(this.btnCrear);
             this.panelOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelOpciones.Location = new System.Drawing.Point(0, 0);
             this.panelOpciones.Name = "panelOpciones";
-            this.panelOpciones.Size = new System.Drawing.Size(180, 558);
+            this.panelOpciones.Size = new System.Drawing.Size(180, 546);
             this.panelOpciones.TabIndex = 1;
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBorrar.Location = new System.Drawing.Point(0, 156);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(180, 52);
-            this.btnBorrar.TabIndex = 3;
-            this.btnBorrar.Text = "Borrar usuario";
-            this.btnBorrar.UseVisualStyleBackColor = true;
             // 
             // btnActualizar
             // 
@@ -113,8 +114,9 @@
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(180, 52);
             this.btnActualizar.TabIndex = 2;
-            this.btnActualizar.Text = "Actualizar usuario";
+            this.btnActualizar.Text = "Actualizar/Eliminar usuario";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnBuscar
             // 
@@ -125,6 +127,7 @@
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar usuario";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnCrear
             // 
@@ -135,11 +138,13 @@
             this.btnCrear.TabIndex = 0;
             this.btnCrear.Text = "Crear usuario";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // panelCrear
             // 
             this.panelCrear.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelCrear.Controls.Add(this.panelBuscar);
+            this.panelCrear.Controls.Add(this.label13);
+            this.panelCrear.Controls.Add(this.txtId);
             this.panelCrear.Controls.Add(this.cmbPermisos);
             this.panelCrear.Controls.Add(this.lblPermisos);
             this.panelCrear.Controls.Add(this.lblContraseña);
@@ -147,77 +152,17 @@
             this.panelCrear.Controls.Add(this.txtContra);
             this.panelCrear.Controls.Add(this.txtUsuario);
             this.panelCrear.Controls.Add(this.btnCrearUs);
-            this.panelCrear.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCrear.Location = new System.Drawing.Point(180, 0);
+            this.panelCrear.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCrear.Location = new System.Drawing.Point(0, 0);
             this.panelCrear.Name = "panelCrear";
-            this.panelCrear.Size = new System.Drawing.Size(727, 217);
+            this.panelCrear.Size = new System.Drawing.Size(528, 217);
             this.panelCrear.TabIndex = 4;
-            // 
-            // cmbPermisos
-            // 
-            this.cmbPermisos.FormattingEnabled = true;
-            this.cmbPermisos.Location = new System.Drawing.Point(250, 106);
-            this.cmbPermisos.Name = "cmbPermisos";
-            this.cmbPermisos.Size = new System.Drawing.Size(121, 21);
-            this.cmbPermisos.TabIndex = 7;
-            this.cmbPermisos.SelectedIndexChanged += new System.EventHandler(this.cmbPermisos_SelectedIndexChanged);
-            // 
-            // lblPermisos
-            // 
-            this.lblPermisos.AutoSize = true;
-            this.lblPermisos.Location = new System.Drawing.Point(247, 91);
-            this.lblPermisos.Name = "lblPermisos";
-            this.lblPermisos.Size = new System.Drawing.Size(49, 13);
-            this.lblPermisos.TabIndex = 6;
-            this.lblPermisos.Text = "Permisos";
-            // 
-            // lblContraseña
-            // 
-            this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(129, 91);
-            this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(64, 13);
-            this.lblContraseña.TabIndex = 5;
-            this.lblContraseña.Text = "Contraseña:";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(11, 91);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.TabIndex = 4;
-            this.lblUsuario.Text = "Usuario:";
-            // 
-            // txtContra
-            // 
-            this.txtContra.Location = new System.Drawing.Point(132, 107);
-            this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(100, 20);
-            this.txtContra.TabIndex = 3;
-            this.txtContra.TextChanged += new System.EventHandler(this.txtContra_TextChanged);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(14, 107);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
-            // 
-            // btnCrearUs
-            // 
-            this.btnCrearUs.Enabled = false;
-            this.btnCrearUs.Location = new System.Drawing.Point(105, 156);
-            this.btnCrearUs.Name = "btnCrearUs";
-            this.btnCrearUs.Size = new System.Drawing.Size(139, 38);
-            this.btnCrearUs.TabIndex = 0;
-            this.btnCrearUs.Text = "Crear usuario";
-            this.btnCrearUs.UseVisualStyleBackColor = true;
+            this.panelCrear.Visible = false;
             // 
             // panelBuscar
             // 
             this.panelBuscar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelBuscar.Controls.Add(this.btnLimpiarBuscar);
             this.panelBuscar.Controls.Add(this.cmbBuscarFiltro);
             this.panelBuscar.Controls.Add(this.label4);
             this.panelBuscar.Controls.Add(this.lblIdBuscar);
@@ -229,10 +174,10 @@
             this.panelBuscar.Controls.Add(this.txtContraseñaBuscar);
             this.panelBuscar.Controls.Add(this.txtUsuarioBuscar);
             this.panelBuscar.Controls.Add(this.btnBuscarUs);
-            this.panelBuscar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBuscar.Location = new System.Drawing.Point(0, 0);
             this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(727, 217);
+            this.panelBuscar.Size = new System.Drawing.Size(528, 217);
             this.panelBuscar.TabIndex = 8;
             // 
             // cmbBuscarFiltro
@@ -330,146 +275,269 @@
             // btnBuscarUs
             // 
             this.btnBuscarUs.Enabled = false;
-            this.btnBuscarUs.Location = new System.Drawing.Point(54, 167);
+            this.btnBuscarUs.Location = new System.Drawing.Point(124, 159);
             this.btnBuscarUs.Name = "btnBuscarUs";
             this.btnBuscarUs.Size = new System.Drawing.Size(139, 38);
             this.btnBuscarUs.TabIndex = 0;
             this.btnBuscarUs.Text = "Buscar usuario";
             this.btnBuscarUs.UseVisualStyleBackColor = true;
+            this.btnBuscarUs.Click += new System.EventHandler(this.btnBuscarUs_Click);
             // 
-            // panel1
+            // cmbPermisos
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Controls.Add(this.chkMensaje);
-            this.panel1.Controls.Add(this.btnLimpiar);
-            this.panel1.Controls.Add(this.btnObtenerUs);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtActualizar);
-            this.panel1.Controls.Add(this.cmbPermisosActualizar);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.txtContraseñaActualizar);
-            this.panel1.Controls.Add(this.txtUsuarioActualizar);
-            this.panel1.Controls.Add(this.btnActualizarUs);
-            this.panel1.Location = new System.Drawing.Point(72, 275);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(727, 217);
-            this.panel1.TabIndex = 12;
+            this.cmbPermisos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPermisos.FormattingEnabled = true;
+            this.cmbPermisos.Location = new System.Drawing.Point(130, 35);
+            this.cmbPermisos.Name = "cmbPermisos";
+            this.cmbPermisos.Size = new System.Drawing.Size(121, 21);
+            this.cmbPermisos.TabIndex = 7;
+            this.cmbPermisos.SelectedIndexChanged += new System.EventHandler(this.cmbPermisos_SelectedIndexChanged);
             // 
-            // label6
+            // lblPermisos
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "N° Identificador:";
+            this.lblPermisos.AutoSize = true;
+            this.lblPermisos.Location = new System.Drawing.Point(127, 20);
+            this.lblPermisos.Name = "lblPermisos";
+            this.lblPermisos.Size = new System.Drawing.Size(49, 13);
+            this.lblPermisos.TabIndex = 6;
+            this.lblPermisos.Text = "Permisos";
+            // 
+            // lblContraseña
+            // 
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Location = new System.Drawing.Point(128, 59);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(64, 13);
+            this.lblContraseña.TabIndex = 5;
+            this.lblContraseña.Text = "Contraseña:";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(7, 60);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
+            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // txtContra
+            // 
+            this.txtContra.Location = new System.Drawing.Point(131, 75);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.Size = new System.Drawing.Size(100, 20);
+            this.txtContra.TabIndex = 3;
+            this.txtContra.TextChanged += new System.EventHandler(this.txtContra_TextChanged);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(10, 76);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            // 
+            // btnCrearUs
+            // 
+            this.btnCrearUs.Enabled = false;
+            this.btnCrearUs.Location = new System.Drawing.Point(53, 110);
+            this.btnCrearUs.Name = "btnCrearUs";
+            this.btnCrearUs.Size = new System.Drawing.Size(139, 38);
+            this.btnCrearUs.TabIndex = 0;
+            this.btnCrearUs.Text = "Crear usuario";
+            this.btnCrearUs.UseVisualStyleBackColor = true;
+            this.btnCrearUs.Click += new System.EventHandler(this.btnCrearUs_Click);
+            // 
+            // panelActualizar
+            // 
+            this.panelActualizar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelActualizar.Controls.Add(this.chkMensaje);
+            this.panelActualizar.Controls.Add(this.btnEliminarUs);
+            this.panelActualizar.Controls.Add(this.btnLimpiarAct);
+            this.panelActualizar.Controls.Add(this.btnBuscarActualizar);
+            this.panelActualizar.Controls.Add(this.label5);
+            this.panelActualizar.Controls.Add(this.txtActualizar);
+            this.panelActualizar.Controls.Add(this.cmbPermisosActualizar);
+            this.panelActualizar.Controls.Add(this.label10);
+            this.panelActualizar.Controls.Add(this.label11);
+            this.panelActualizar.Controls.Add(this.label12);
+            this.panelActualizar.Controls.Add(this.txtContraActualizar);
+            this.panelActualizar.Controls.Add(this.txtUsuarioActualizar);
+            this.panelActualizar.Controls.Add(this.btnActualizarUs);
+            this.panelActualizar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelActualizar.Location = new System.Drawing.Point(0, 0);
+            this.panelActualizar.Name = "panelActualizar";
+            this.panelActualizar.Size = new System.Drawing.Size(528, 217);
+            this.panelActualizar.TabIndex = 15;
+            this.panelActualizar.Visible = false;
+            // 
+            // btnLimpiarAct
+            // 
+            this.btnLimpiarAct.Location = new System.Drawing.Point(158, 110);
+            this.btnLimpiarAct.Name = "btnLimpiarAct";
+            this.btnLimpiarAct.Size = new System.Drawing.Size(139, 23);
+            this.btnLimpiarAct.TabIndex = 13;
+            this.btnLimpiarAct.Text = "Limpiar";
+            this.btnLimpiarAct.UseVisualStyleBackColor = true;
+            this.btnLimpiarAct.Click += new System.EventHandler(this.btnLimpiarAct_Click);
+            // 
+            // btnBuscarActualizar
+            // 
+            this.btnBuscarActualizar.Location = new System.Drawing.Point(13, 108);
+            this.btnBuscarActualizar.Name = "btnBuscarActualizar";
+            this.btnBuscarActualizar.Size = new System.Drawing.Size(139, 25);
+            this.btnBuscarActualizar.TabIndex = 12;
+            this.btnBuscarActualizar.Text = "Buscar usuario";
+            this.btnBuscarActualizar.UseVisualStyleBackColor = true;
+            this.btnBuscarActualizar.Click += new System.EventHandler(this.btnBuscarActualizar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(38, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "N° Identificador:";
             // 
             // txtActualizar
             // 
             this.txtActualizar.Enabled = false;
-            this.txtActualizar.Location = new System.Drawing.Point(13, 33);
+            this.txtActualizar.Location = new System.Drawing.Point(41, 32);
             this.txtActualizar.Name = "txtActualizar";
             this.txtActualizar.Size = new System.Drawing.Size(100, 20);
             this.txtActualizar.TabIndex = 8;
             // 
             // cmbPermisosActualizar
             // 
-            this.cmbPermisosActualizar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPermisosActualizar.Enabled = false;
             this.cmbPermisosActualizar.FormattingEnabled = true;
-            this.cmbPermisosActualizar.Location = new System.Drawing.Point(130, 32);
+            this.cmbPermisosActualizar.Location = new System.Drawing.Point(158, 31);
             this.cmbPermisosActualizar.Name = "cmbPermisosActualizar";
             this.cmbPermisosActualizar.Size = new System.Drawing.Size(121, 21);
             this.cmbPermisosActualizar.TabIndex = 7;
             // 
-            // label7
+            // label10
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(127, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Permisos";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(155, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Permisos";
             // 
-            // label8
+            // label11
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(128, 66);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 13);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Contraseña:";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(156, 65);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 13);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Contraseña:";
             // 
-            // label9
+            // label12
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 66);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Usuario:";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(38, 65);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 13);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Usuario:";
             // 
-            // txtContraseñaActualizar
+            // txtContraActualizar
             // 
-            this.txtContraseñaActualizar.Enabled = false;
-            this.txtContraseñaActualizar.Location = new System.Drawing.Point(131, 82);
-            this.txtContraseñaActualizar.Name = "txtContraseñaActualizar";
-            this.txtContraseñaActualizar.Size = new System.Drawing.Size(100, 20);
-            this.txtContraseñaActualizar.TabIndex = 3;
+            this.txtContraActualizar.Enabled = false;
+            this.txtContraActualizar.Location = new System.Drawing.Point(159, 81);
+            this.txtContraActualizar.Name = "txtContraActualizar";
+            this.txtContraActualizar.Size = new System.Drawing.Size(100, 20);
+            this.txtContraActualizar.TabIndex = 3;
+            this.txtContraActualizar.TextChanged += new System.EventHandler(this.txtContraActualizar_TextChanged);
             // 
             // txtUsuarioActualizar
             // 
-            this.txtUsuarioActualizar.Location = new System.Drawing.Point(13, 82);
+            this.txtUsuarioActualizar.Location = new System.Drawing.Point(41, 81);
             this.txtUsuarioActualizar.Name = "txtUsuarioActualizar";
             this.txtUsuarioActualizar.Size = new System.Drawing.Size(100, 20);
             this.txtUsuarioActualizar.TabIndex = 1;
+            this.txtUsuarioActualizar.TextChanged += new System.EventHandler(this.txtUsuarioActualizar_TextChanged);
             // 
             // btnActualizarUs
             // 
             this.btnActualizarUs.Enabled = false;
-            this.btnActualizarUs.Location = new System.Drawing.Point(158, 108);
+            this.btnActualizarUs.Location = new System.Drawing.Point(13, 139);
             this.btnActualizarUs.Name = "btnActualizarUs";
             this.btnActualizarUs.Size = new System.Drawing.Size(139, 38);
             this.btnActualizarUs.TabIndex = 0;
             this.btnActualizarUs.Text = "Actualizar usuario";
             this.btnActualizarUs.UseVisualStyleBackColor = true;
+            this.btnActualizarUs.Click += new System.EventHandler(this.btnActualizarUs_Click);
             // 
-            // btnObtenerUs
+            // label13
             // 
-            this.btnObtenerUs.Location = new System.Drawing.Point(13, 108);
-            this.btnObtenerUs.Name = "btnObtenerUs";
-            this.btnObtenerUs.Size = new System.Drawing.Size(139, 25);
-            this.btnObtenerUs.TabIndex = 12;
-            this.btnObtenerUs.Text = "Cargar usuario";
-            this.btnObtenerUs.UseVisualStyleBackColor = true;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(7, 21);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(83, 13);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "N° Identificador:";
             // 
-            // btnLimpiar
+            // txtId
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(13, 139);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(139, 23);
-            this.btnLimpiar.TabIndex = 13;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.txtId.Location = new System.Drawing.Point(10, 37);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 8;
+            // 
+            // btnLimpiarBuscar
+            // 
+            this.btnLimpiarBuscar.Location = new System.Drawing.Point(18, 160);
+            this.btnLimpiarBuscar.Name = "btnLimpiarBuscar";
+            this.btnLimpiarBuscar.Size = new System.Drawing.Size(100, 37);
+            this.btnLimpiarBuscar.TabIndex = 14;
+            this.btnLimpiarBuscar.Text = "Limpiar";
+            this.btnLimpiarBuscar.UseVisualStyleBackColor = true;
+            this.btnLimpiarBuscar.Click += new System.EventHandler(this.btnLimpiarBuscar_Click);
             // 
             // chkMensaje
             // 
             this.chkMensaje.AutoSize = true;
-            this.chkMensaje.Location = new System.Drawing.Point(158, 145);
+            this.chkMensaje.Checked = true;
+            this.chkMensaje.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkMensaje.Location = new System.Drawing.Point(160, 183);
             this.chkMensaje.Name = "chkMensaje";
             this.chkMensaje.Size = new System.Drawing.Size(144, 17);
-            this.chkMensaje.TabIndex = 14;
+            this.chkMensaje.TabIndex = 16;
             this.chkMensaje.Text = "Mensaje de confirmación";
             this.chkMensaje.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarUs
+            // 
+            this.btnEliminarUs.Enabled = false;
+            this.btnEliminarUs.Location = new System.Drawing.Point(158, 139);
+            this.btnEliminarUs.Name = "btnEliminarUs";
+            this.btnEliminarUs.Size = new System.Drawing.Size(139, 38);
+            this.btnEliminarUs.TabIndex = 15;
+            this.btnEliminarUs.Text = "Eliminar usuario";
+            this.btnEliminarUs.UseVisualStyleBackColor = true;
+            this.btnEliminarUs.Click += new System.EventHandler(this.btnEliminarUs_Click);
+            // 
+            // panelAcciones
+            // 
+            this.panelAcciones.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelAcciones.Controls.Add(this.panelBuscar);
+            this.panelAcciones.Controls.Add(this.panelCrear);
+            this.panelAcciones.Controls.Add(this.panelActualizar);
+            this.panelAcciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAcciones.Location = new System.Drawing.Point(180, 0);
+            this.panelAcciones.Name = "panelAcciones";
+            this.panelAcciones.Size = new System.Drawing.Size(528, 217);
+            this.panelAcciones.TabIndex = 16;
             // 
             // frmUsuariosAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 558);
-            this.Controls.Add(this.panelCrear);
+            this.ClientSize = new System.Drawing.Size(708, 546);
+            this.Controls.Add(this.panelAcciones);
             this.Controls.Add(this.panelOpciones);
             this.Controls.Add(this.dgvUsuarios);
             this.Name = "frmUsuariosAdmin";
@@ -482,8 +550,9 @@
             this.panelCrear.PerformLayout();
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelActualizar.ResumeLayout(false);
+            this.panelActualizar.PerformLayout();
+            this.panelAcciones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -492,7 +561,6 @@
 
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Panel panelOpciones;
-        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnCrear;
@@ -516,18 +584,23 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ComboBox cmbBuscarFiltro;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panelActualizar;
+        private System.Windows.Forms.Button btnLimpiarAct;
+        private System.Windows.Forms.Button btnBuscarActualizar;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtActualizar;
         private System.Windows.Forms.ComboBox cmbPermisosActualizar;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtContraseñaActualizar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtContraActualizar;
         private System.Windows.Forms.TextBox txtUsuarioActualizar;
         private System.Windows.Forms.Button btnActualizarUs;
-        private System.Windows.Forms.Button btnObtenerUs;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnLimpiarBuscar;
         private System.Windows.Forms.CheckBox chkMensaje;
+        private System.Windows.Forms.Button btnEliminarUs;
+        private System.Windows.Forms.Panel panelAcciones;
     }
 }
