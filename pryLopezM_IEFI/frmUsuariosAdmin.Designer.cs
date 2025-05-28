@@ -164,7 +164,7 @@
             this.panelCrear.Controls.Add(this.cmbPermisos);
             this.panelCrear.Controls.Add(this.lblContraseña);
             this.panelCrear.Controls.Add(this.lblPermisos);
-            this.panelCrear.Location = new System.Drawing.Point(5, 67);
+            this.panelCrear.Location = new System.Drawing.Point(3, 67);
             this.panelCrear.Name = "panelCrear";
             this.panelCrear.Size = new System.Drawing.Size(568, 247);
             this.panelCrear.TabIndex = 4;
@@ -288,7 +288,7 @@
             this.panelBuscar.Controls.Add(this.txtContraseñaBuscar);
             this.panelBuscar.Controls.Add(this.txtUsuarioBuscar);
             this.panelBuscar.Controls.Add(this.btnBuscarUsuario);
-            this.panelBuscar.Location = new System.Drawing.Point(3, 64);
+            this.panelBuscar.Location = new System.Drawing.Point(3, 65);
             this.panelBuscar.Name = "panelBuscar";
             this.panelBuscar.Size = new System.Drawing.Size(568, 250);
             this.panelBuscar.TabIndex = 8;
@@ -445,7 +445,7 @@
             this.panelActualizar.Controls.Add(this.txtContraActualizar);
             this.panelActualizar.Controls.Add(this.txtUsuarioActualizar);
             this.panelActualizar.Controls.Add(this.btnActualizarUsuario);
-            this.panelActualizar.Location = new System.Drawing.Point(3, 65);
+            this.panelActualizar.Location = new System.Drawing.Point(3, 66);
             this.panelActualizar.Name = "panelActualizar";
             this.panelActualizar.Size = new System.Drawing.Size(569, 249);
             this.panelActualizar.TabIndex = 15;
