@@ -198,7 +198,7 @@ namespace pryLopezM_IEFI
             }
         }
 
-        public void crearUsuario(TextBox txt, TextBox txt1, string per)
+        public void crearUsuario(TextBox txt2,TextBox txt, TextBox txt1, string per)
         {
             try
             {
@@ -207,11 +207,12 @@ namespace pryLopezM_IEFI
                 conexionBaseDatos.Open();
 
                 string query = @"INSERT INTO Usuarios 
-                         (usuario, contraseña, permisos ) 
-                         VALUES (@usuario, @contraseña, @permisos)";
+                         (id, usuario, contraseña, permisos ) 
+                         VALUES (@id, @usuario, @contraseña, @permisos)";
 
                 SqlCommand command = new SqlCommand(query, conexionBaseDatos);
 
+                command.Parameters.AddWithValue("@id", txt2.Text);
                 command.Parameters.AddWithValue("@usuario", txt.Text);
                 command.Parameters.AddWithValue("@contraseña", txt1.Text);
                 command.Parameters.AddWithValue("@permisos", per);

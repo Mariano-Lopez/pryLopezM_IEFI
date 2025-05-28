@@ -24,7 +24,14 @@ INSERT INTO Usuarios (usuario, contraseña, permisos)
 VALUES
 ('admin', 'admin123', 'Administrador'),
 ('usuario1', 'clave1', 'Operador'),
-('usuario2', 'clave2', 'Operador');
+('usuario2', 'clave2', 'Operador'),
+('soporte1', 'soporte123', 'Soporte'),
+('maria', 'maria2024', 'Operador'),
+('juan', 'juanpass', 'Operador'),
+('lucas', 'lucas456', 'Administrador'),
+('ana', 'ana321', 'Soporte'),
+('testuser', 'testpass', 'Operador'),
+('supervisor1', 'super2024', 'Administrador');
 
 Select * from sesionUs;
 

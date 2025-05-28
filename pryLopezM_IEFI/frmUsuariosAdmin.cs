@@ -82,7 +82,7 @@ namespace pryLopezM_IEFI
 
             clsUsuario aux = new clsUsuario(id, txtUsuario.Text, txtContra.Text, cmbPermisos.Text);
 
-            BBDD.crearUsuario(txtUsuario, txtContra, cmbPermisos.Text);
+            BBDD.crearUsuario(txtId, txtUsuario, txtContra, cmbPermisos.Text);
 
             BBDD.mostrarDatos(dgvUsuarios);
 
@@ -102,17 +102,17 @@ namespace pryLopezM_IEFI
             if (cmbBuscarFiltro.SelectedIndex == 0) // Buscar por ID
             {
                 habilitarComponentes(true, false, false);
-                btnBuscarUs.Enabled = !string.IsNullOrEmpty(txtBuscar.Text);
+                btnBuscarUsuario.Enabled = !string.IsNullOrEmpty(txtBuscar.Text);
             }
             else if (cmbBuscarFiltro.SelectedIndex == 1) // Buscar por usuario
             {
                 habilitarComponentes(false, true, false);
-                btnBuscarUs.Enabled = !string.IsNullOrEmpty(txtUsuarioBuscar.Text);
+                btnBuscarUsuario.Enabled = !string.IsNullOrEmpty(txtUsuarioBuscar.Text);
             }
             else if (cmbBuscarFiltro.SelectedIndex == 2) // Buscar por permisos
             {
                 habilitarComponentes(false, false, true);
-                btnBuscarUs.Enabled = cmbPermisos.SelectedIndex != -1;
+                btnBuscarUsuario.Enabled = cmbPermisos.SelectedIndex != -1;
             }
         }
 
@@ -126,23 +126,23 @@ namespace pryLopezM_IEFI
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             if (cmbBuscarFiltro.SelectedIndex == 0)
-                btnBuscarUs.Enabled = !string.IsNullOrEmpty(txtBuscar.Text);
+                btnBuscarUsuario.Enabled = !string.IsNullOrEmpty(txtBuscar.Text);
         }
 
         private void txtUsuarioBuscar_TextChanged(object sender, EventArgs e)
         {
             if (cmbBuscarFiltro.SelectedIndex == 1)
-                btnBuscarUs.Enabled = !string.IsNullOrEmpty(txtUsuario.Text);
+                btnBuscarUsuario.Enabled = !string.IsNullOrEmpty(txtUsuario.Text);
         
         }
 
         private void cmbPermisosBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbBuscarFiltro.SelectedIndex == 2)
-                btnBuscarUs.Enabled = cmbPermisosBuscar.SelectedIndex != -1;
+                btnBuscarUsuario.Enabled = cmbPermisosBuscar.SelectedIndex != -1;
         }
 
-        private void btnBuscarUs_Click(object sender, EventArgs e)
+        private void btnBuscarUsuario_Click(object sender, EventArgs e)
         {
             if (cmbBuscarFiltro.SelectedIndex == 0) 
             {
@@ -195,11 +195,11 @@ namespace pryLopezM_IEFI
                 //Toma los datos de la fila y llena los componentes.
                 DataGridViewRow fila = dgvUsuarios.Rows[e.RowIndex];
 
-                txtBuscar.Text = fila.Cells["id"].ToString();
+                txtBuscar.Text = fila.Cells["id"].Value.ToString();
 
-                txtUsuarioBuscar.Text = fila.Cells["usuario"].ToString();
+                txtUsuarioBuscar.Text = fila.Cells["usuario"].Value.ToString();
 
-                txtContraseñaBuscar.Text = fila.Cells["contraseña"].ToString();
+                txtContraseñaBuscar.Text = fila.Cells["contraseña"].Value.ToString();
 
                 cmbPermisosBuscar.Text = fila.Cells["permisos"].Value.ToString();
 
@@ -211,22 +211,22 @@ namespace pryLopezM_IEFI
 
         private void btnLimpiarAct_Click(object sender, EventArgs e)
         {
-            limpiarCompoAct();
+            limpiarComponentesDeActualizar();
 
             habilitarCompoAct(false, false);
         }
 
-        private void btnActualizarUs_Click(object sender, EventArgs e)
+        private void btnActualizarUsuario_Click(object sender, EventArgs e)
         {
             
             BBDD.actualizarDatosUs(txtUsuarioActualizar, txtContraActualizar, cmbPermisosActualizar, Convert.ToInt32(txtActualizar.Text));
 
             BBDD.mostrarDatos(dgvUsuarios);
 
-            limpiarCompoAct();
+            limpiarComponentesDeActualizar();
         }
 
-        private void btnBuscarActualizar_Click(object sender, EventArgs e)
+        /*private void btnBuscarActualizar_Click(object sender, EventArgs e)
         {
             var resul = lstUsuarios.buscarUs(txtUsuarioActualizar.Text);
 
@@ -246,7 +246,7 @@ namespace pryLopezM_IEFI
             {
                 MessageBox.Show("Usuario no encontrado.","Error");
             }
-        }
+        }*/
 
         public void habilitarCompoAct(bool t, bool t2)
         {
@@ -268,16 +268,16 @@ namespace pryLopezM_IEFI
         {
             if (!string.IsNullOrEmpty(txtUsuarioActualizar.Text) && !string.IsNullOrEmpty(txtContraActualizar.Text))
             {
-                btnActualizarUs.Enabled = true;
+                btnActualizarUsuario.Enabled = true;
 
             }
             else
             {
-                btnActualizarUs.Enabled = false;
+                btnActualizarUsuario.Enabled = false;
             }
         }
 
-        public void limpiarCompoAct()
+        public void limpiarComponentesDeActualizar()
         {
             txtUsuarioActualizar.Text = "";
             txtContraActualizar.Text = "";
@@ -320,5 +320,16 @@ namespace pryLopezM_IEFI
             pnl.Visible = true;
             pnl.BringToFront();
         }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo dígitos y la tecla de retroceso (Backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Cancela el carácter si no es válido
+            }
+        }
+
+        
     }
 }
