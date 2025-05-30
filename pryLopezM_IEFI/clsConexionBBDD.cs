@@ -25,6 +25,7 @@ namespace pryLopezM_IEFI
 
         public string nombreBaseDeDatos;
 
+        
         public void cargarUsuarios(clsUsuarios lst)
         {
             try
@@ -53,9 +54,18 @@ namespace pryLopezM_IEFI
                     int id = Convert.ToInt32(fila[0]);
                     string usuario = fila[1].ToString();
                     string contra = fila[2].ToString();
-                    string permisos = fila[3].ToString();
+                    string nombre = fila[3].ToString();
+                    string apellido = fila[4].ToString();
+                    int edad = Convert.ToInt32(fila[5]);
+                    string dni = fila[6].ToString();
+                    string direccion = fila[7].ToString();
+                    string telefono = fila[8].ToString();
+                    string email = fila[9].ToString();
+                    DateTime fechaNacimiento = Convert.ToDateTime(fila[10].ToString());
+                    DateTime fechaDeAlta = Convert.ToDateTime(fila[11].ToString());
+                    string permisos = fila[12].ToString();
 
-                    clsUsuario aux = new clsUsuario(id, usuario, contra, permisos);
+                    clsUsuario aux = new clsUsuario(id, usuario, contra, nombre, apellido, edad, dni, direccion, telefono, email, fechaNacimiento, fechaDeAlta, permisos);
 
                     lst.lstUsuarios.Add(aux);
                 }
@@ -88,16 +98,18 @@ namespace pryLopezM_IEFI
             }
         }
 
+
+
         public long obtenerTiempoTotalAcumulado(int idUs)
         {
             long total = 0;
 
-            string query = "SELECT SUM(tiempoSesion) FROM sesionUs WHERE idUs = @idUs";
+            string query = "SELECT SUM(TiempoSesion) FROM sesionUs WHERE IdUsuarioSesion = @IdUsuarioSesion";
 
             using (SqlConnection conn = new SqlConnection(cadenaConexion))
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@idUs", idUs);
+                cmd.Parameters.AddWithValue("@IdUsuarioSesion", idUs);
                 conn.Open();
 
                 object result = cmd.ExecuteScalar();
@@ -109,23 +121,24 @@ namespace pryLopezM_IEFI
 
             return total;
         }
-
+        
         public int insertarNuevaSesionYObtenerID(int idUs)
         {
             int idSesion = 0;
 
-            string query = "INSERT INTO sesionUs (fechaUltConex, fechaActual, tiempoSesion, tiempoTotal, idUs) " +
+            string query = "INSERT INTO sesionUs (FechaUltConeccion, FechaActual, TiempoSesion, TiempoTotal, AccionRealizada, IdUsuarioSesion) " +
                            "OUTPUT INSERTED.idSesion " +
-                           "VALUES (@fechaUltConex, @fechaActual, @tiempoSesion, @tiempoTotal, @idUs)";
+                           "VALUES (@FechaUltConeccion, @FechaActual, @TiempoSesion, @TiempoTotal, @AccionRealizada, @IdUsuarioSesion)";
 
             using (SqlConnection conn = new SqlConnection(cadenaConexion))
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@fechaUltConex", DateTime.Now);
-                cmd.Parameters.AddWithValue("@fechaActual", DateTime.Now);
-                cmd.Parameters.AddWithValue("@tiempoSesion", 0); // todavía no hay tiempo
-                cmd.Parameters.AddWithValue("@tiempoTotal", 0);
-                cmd.Parameters.AddWithValue("@idUs", idUs);
+                cmd.Parameters.AddWithValue("@FechaUltConeccion", DateTime.Now);
+                cmd.Parameters.AddWithValue("@FechaActual", DateTime.Now);
+                cmd.Parameters.AddWithValue("@TiempoSesion", 0); // todavía no hay tiempo
+                cmd.Parameters.AddWithValue("@TiempoTotal", 0);
+                cmd.Parameters.AddWithValue("@AccionRealizada", "Hola");
+                cmd.Parameters.AddWithValue("@IdUsuarioSesion", idUs);
 
                 conn.Open();
                 idSesion = (int)cmd.ExecuteScalar(); // acá se recupera el ID generado

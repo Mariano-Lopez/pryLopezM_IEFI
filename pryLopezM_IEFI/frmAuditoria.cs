@@ -31,7 +31,7 @@ namespace pryLopezM_IEFI
         {
             if (cmbTablas.SelectedIndex == 0)
             {
-                string comando = "SELECT id, usuario, permisos FROM Usuarios";
+                string comando = "SELECT * FROM Usuarios";
 
                 BBDD.mostrarDatos(dgvBBDDTablas, comando);
             }

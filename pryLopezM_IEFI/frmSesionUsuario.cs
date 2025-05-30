@@ -25,7 +25,7 @@ namespace pryLopezM_IEFI
         {
             BBDD.cargarUsuarios(lstUsuarios);
         }
-
+        
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtUsuario.Text) && !string.IsNullOrEmpty(txtContraseña.Text))

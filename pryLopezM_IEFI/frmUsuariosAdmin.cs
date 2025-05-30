@@ -80,13 +80,13 @@ namespace pryLopezM_IEFI
         {
             int id = Convert.ToInt32(txtId.Text);
 
-            clsUsuario aux = new clsUsuario(id, txtUsuario.Text, txtContra.Text, cmbPermisos.Text);
+            //clsUsuario aux = new clsUsuario(id, txtUsuario.Text, txtContra.Text, cmbPermisos.Text);
 
             BBDD.crearUsuario(txtId, txtUsuario, txtContra, cmbPermisos.Text);
 
             BBDD.mostrarDatos(dgvUsuarios);
 
-            lstUsuarios.agregarUs(aux);
+            //lstUsuarios.agregarUs(aux);
 
 
             txtId.Text = "";
