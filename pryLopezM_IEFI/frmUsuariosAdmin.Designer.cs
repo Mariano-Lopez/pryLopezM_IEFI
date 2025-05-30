@@ -77,6 +77,8 @@
             this.txtUsuarioActualizar = new System.Windows.Forms.TextBox();
             this.btnActualizarUsuario = new System.Windows.Forms.Button();
             this.panelAcciones = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.panelOpciones.SuspendLayout();
             this.panelCrear.SuspendLayout();
@@ -114,7 +116,7 @@
             this.panelOpciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelOpciones.Location = new System.Drawing.Point(0, 0);
             this.panelOpciones.Name = "panelOpciones";
-            this.panelOpciones.Size = new System.Drawing.Size(1017, 59);
+            this.panelOpciones.Size = new System.Drawing.Size(1224, 59);
             this.panelOpciones.TabIndex = 1;
             // 
             // btnActualizar
@@ -598,14 +600,29 @@
             this.panelAcciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAcciones.Location = new System.Drawing.Point(0, 0);
             this.panelAcciones.Name = "panelAcciones";
-            this.panelAcciones.Size = new System.Drawing.Size(1017, 325);
+            this.panelAcciones.Size = new System.Drawing.Size(1224, 325);
             this.panelAcciones.TabIndex = 16;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(380, 361);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 19;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(631, 374);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 20;
             // 
             // frmUsuariosAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 323);
+            this.ClientSize = new System.Drawing.Size(1224, 793);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.panelAcciones);
             this.Name = "frmUsuariosAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -677,5 +694,7 @@
         private System.Windows.Forms.Label lblBuscarUusariosInstrucciones;
         private System.Windows.Forms.PictureBox imgActualizarEliminarUsuario;
         private System.Windows.Forms.Label lblActualizarEliminarUsuarioInstrucciones;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

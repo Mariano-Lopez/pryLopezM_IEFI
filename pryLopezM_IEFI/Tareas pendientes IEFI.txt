@@ -1,0 +1,7 @@
+- Cambiar Interfaz
+-Implmentar las acciones
+-frmLogin modificar lo de la vista de la contraseña.
+-En Auditoria que no se vea la contraseña
+-Las acciones de las auditoria con la BBDD deben estar hechas desde la clsBBDD
+-Cambios de orden en el menu de usuarios
+-Gestionar los permisos de usuarios (Administrador - Operador)

@@ -121,7 +121,7 @@
   <data name="imgCrearUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC6uSURBVHhe7d0H
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC6uSURBVHhe7d0H
         tCZVma/xPzkHJQoNKqBgg7TIKCpKsBERRUVFFJAgQYIOKCCgiCiMIDjeMd1RVNQBhWENyYCjSJIssUkS
         pjERBRtooAM0PbNeT7Xd5+33xO+r2lV7P7+1nnVdXgfqVNXeX6raJQEAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5WUbSREnvlPRRSZ+WdKqk0yVdKOkqSb+XNLVqWtUz
@@ -333,7 +333,7 @@ Los operadores no podrán ni siquiera entrar en este apartado.
   <data name="imgBuscarUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACohSURBVHhe7d15
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACohSURBVHhe7d15
         vK5jvcfxL3tjCxERRUimEpUGKhEqIcpQJ5WiovFwkiREGk6DwslJMnVERSWkVFKcozKGkDKkOg0y74Nt
         Y2/nvH7cOvz6rbWetdY9XMPn+3q9/6hX7ee+rut+nuu37uG6JEIIIYQQQgghhBBCCCGEEEIIIYQQQggh
         hBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYSQobOIpNUlbS5pF0n7SjpE0vGSTpH0fUlnAwCSYL/J9tt8
@@ -523,7 +523,7 @@ Por id, colocando el número dentro de la caja de texto, por nombre o si desea s
   <data name="imgActualizarEliminarUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAB+4SURBVHhe7d13
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAB+4SURBVHhe7d13
         /DVVYefxL00EGyoIShIL2EOiRnftIhqxF+xd49piFxU7KtGgGFs0inU1rggGK4pxUWMBu1GMYktssYsN
         EVAgeZ31PosezsNTbpsz836/Xp8/YhR+986Zc+bOnTuTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

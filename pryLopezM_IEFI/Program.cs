@@ -16,7 +16,7 @@ namespace pryLopezM_IEFI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSesionUsuario());
+            Application.Run(new frmLogin());
         }
     }
 }

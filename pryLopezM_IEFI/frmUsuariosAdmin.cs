@@ -219,7 +219,7 @@ namespace pryLopezM_IEFI
         private void btnActualizarUsuario_Click(object sender, EventArgs e)
         {
             
-            BBDD.actualizarDatosUs(txtUsuarioActualizar, txtContraActualizar, cmbPermisosActualizar, Convert.ToInt32(txtActualizar.Text));
+            //BBDD.actualizarDatosUs(txtUsuarioActualizar, txtContraActualizar, cmbPermisosActualizar, Convert.ToInt32(txtActualizar.Text));
 
             BBDD.mostrarDatos(dgvUsuarios);
 

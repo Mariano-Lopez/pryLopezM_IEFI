@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryLopezM_IEFI
 {
-    public partial class frmSesionUsuario : Form
+    public partial class frmLogin : Form
     {
-        public frmSesionUsuario()
+        public frmLogin()
         {
             InitializeComponent();
         }
