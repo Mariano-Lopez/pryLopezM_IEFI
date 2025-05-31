@@ -82,7 +82,7 @@ namespace pryLopezM_IEFI
 
             //clsUsuario aux = new clsUsuario(id, txtUsuario.Text, txtContra.Text, cmbPermisos.Text);
 
-            BBDD.crearUsuario(txtId, txtUsuario, txtContra, cmbPermisos.Text);
+            //BBDD.crearUsuario(txtId, txtUsuario, txtContra, cmbPermisos.Text);
 
             BBDD.mostrarDatos(dgvUsuarios);
 
@@ -331,5 +331,11 @@ namespace pryLopezM_IEFI
         }
 
         
+
+        private void panelAcciones_Resize(object sender, EventArgs e)
+        {
+            panelCrear.Left = (this.ClientSize.Width - panelCrear.Width) / 2;
+            panelCrear.Top = (this.ClientSize.Height - panelCrear.Height) / 2;
+        }
     }
 }

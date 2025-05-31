@@ -18,7 +18,7 @@ CREATE TABLE Usuarios (
     permisos VARCHAR(20) NOT NULL,
 );
 
-CREATE TABLE sesionUs(
+CREATE TABLE sesionUsuario	(
 	idSesion INT PRIMARY KEY NOT NULL IDENTITY,
 	fechaUltConeccion DATETIME NOT NULL,
     fechaActual DATETIME NOT NULL,

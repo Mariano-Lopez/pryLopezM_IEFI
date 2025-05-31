@@ -5,3 +5,4 @@
 -Las acciones de las auditoria con la BBDD deben estar hechas desde la clsBBDD
 -Cambios de orden en el menu de usuarios
 -Gestionar los permisos de usuarios (Administrador - Operador)
+-Verificar que al momento de crear al usuario no tengo ID repetido.

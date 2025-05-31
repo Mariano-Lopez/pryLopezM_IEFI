@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Net.WebRequestMethods;
 
 namespace pryLopezM_IEFI
 {
@@ -203,7 +204,8 @@ namespace pryLopezM_IEFI
             }
         }
 
-        public void crearUsuario(TextBox txt2,TextBox txt, TextBox txt1, string per)
+        public void crearUsuario(int id, TextBox txt, TextBox txt1, TextBox txt2, TextBox txt3, TextBox txt4,
+            TextBox txt5, TextBox txt6, TextBox txt7, TextBox txt8, DateTimePicker dtP, ComboBox cmb)
         {
             try
             {
@@ -211,17 +213,27 @@ namespace pryLopezM_IEFI
 
                 conexionBaseDatos.Open();
 
+                DateTime dtAlta = System.DateTime.Now;
+
                 string query = @"INSERT INTO Usuarios 
-                         (id, usuario, contraseña, permisos ) 
+                         (id, usuario, contraseña, nombre, apellido, edad, dni, direccion, telefono, mail, fechaNacimineto, fechaDeAlta, permisos ) 
                          VALUES (@id, @usuario, @contraseña, @permisos)";
 
                 SqlCommand command = new SqlCommand(query, conexionBaseDatos);
 
-                command.Parameters.AddWithValue("@id", txt2.Text);
                 command.Parameters.AddWithValue("@usuario", txt.Text);
                 command.Parameters.AddWithValue("@contraseña", txt1.Text);
-                command.Parameters.AddWithValue("@permisos", per);
-                
+                command.Parameters.AddWithValue("@nombre", txt2.Text);
+                command.Parameters.AddWithValue("@apellido", txt3.Text);
+                command.Parameters.AddWithValue("@edad", txt4.Text);
+                command.Parameters.AddWithValue("@dni", txt5.Text);
+                command.Parameters.AddWithValue("@direccion", txt6.Text);
+                command.Parameters.AddWithValue("@telefono", txt7.Text);
+                command.Parameters.AddWithValue("@email", txt8.Text);
+                command.Parameters.AddWithValue("@fechaNacimiento", dtP.Value);
+                command.Parameters.AddWithValue("@fechaAlta", dtAlta);
+                command.Parameters.AddWithValue("@permisos", cmb.Text);
+                command.Parameters.AddWithValue("@id", id);
 
                 command.ExecuteNonQuery();
             }
