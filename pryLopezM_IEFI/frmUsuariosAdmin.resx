@@ -121,7 +121,7 @@
   <data name="imgCrearUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC6uSURBVHhe7d0H
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC6uSURBVHhe7d0H
         tCZVma/xPzkHJQoNKqBgg7TIKCpKsBERRUVFFJAgQYIOKCCgiCiMIDjeMd1RVNQBhWENyYCjSJIssUkS
         pjERBRtooAM0PbNeT7Xd5+33xO+r2lV7P7+1nnVdXgfqVNXeX6raJQEAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5WUbSREnvlPRRSZ+WdKqk0yVdKOkqSb+XNLVqWtUz
@@ -330,10 +330,15 @@ Recuerde que solo los administradores son capaces de crear, buscar, actualizar y
 Los operadores no podrán ni siquiera entrar en este apartado.
 </value>
   </data>
-  <data name="imgBuscarUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="label10.Text" xml:space="preserve">
+    <value>Si desea saber los datos de uno o más usuarios, deberá elegir una de las opciones del menu desplegable.
+Recuerde que el botón no se habilitará en caso de que quede algún campo vacío u opción sin seleccionar.
+</value>
+  </data>
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACohSURBVHhe7d15
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACohSURBVHhe7d15
         vK5jvcfxL3tjCxERRUimEpUGKhEqIcpQJ5WiovFwkiREGk6DwslJMnVERSWkVFKcozKGkDKkOg0y74Nt
         Y2/nvH7cOvz6rbWetdY9XMPn+3q9/6hX7ee+rut+nuu37uG6JEIIIYQQQgghhBBCCCGEEEIIIYQQQggh
         hBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYSQobOIpNUlbS5pF0n7SjpE0vGSTpH0fUlnAwCSYL/J9tt8
@@ -516,14 +521,10 @@ Los operadores no podrán ni siquiera entrar en este apartado.
         EEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEJIl/k/y0VSFsPl4HAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="lblBuscarUusariosInstrucciones.Text" xml:space="preserve">
-    <value>Si desea saber los datos de uno o más usuarios, deberá elegir una de las opciones del menu desplegable.
-Por id, colocando el número dentro de la caja de texto, por nombre o si desea saber quienes son los operadores y los administradores.</value>
-  </data>
   <data name="imgActualizarEliminarUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAB+4SURBVHhe7d13
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAB+4SURBVHhe7d13
         /DVVYefxL00EGyoIShIL2EOiRnftIhqxF+xd49piFxU7KtGgGFs0inU1rggGK4pxUWMBu1GMYktssYsN
         EVAgeZ31PosezsNTbpsz836/Xp8/YhR+986Zc+bOnTuTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

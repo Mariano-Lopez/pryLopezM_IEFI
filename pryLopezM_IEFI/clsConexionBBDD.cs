@@ -166,7 +166,15 @@ namespace pryLopezM_IEFI
 
                 dataAdapter.Fill(tablaProductos);
 
+                dgv.AllowUserToOrderColumns = false;
+
                 dgv.DataSource = tablaProductos;
+
+                foreach (DataGridViewColumn column in dgv.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+
             }
             catch (Exception e)
             {
@@ -194,7 +202,14 @@ namespace pryLopezM_IEFI
 
                 dataAdapter.Fill(tablaProductos);
 
+                dgv.AllowUserToOrderColumns = false;
+
                 dgv.DataSource = tablaProductos;
+
+                foreach (DataGridViewColumn column in dgv.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
 
             }
             catch (Exception e)
@@ -204,8 +219,8 @@ namespace pryLopezM_IEFI
             }
         }
 
-        public void crearUsuario(int id, TextBox txt, TextBox txt1, TextBox txt2, TextBox txt3, TextBox txt4,
-            TextBox txt5, TextBox txt6, TextBox txt7, TextBox txt8, DateTimePicker dtP, ComboBox cmb)
+        public void crearUsuario(int id, TextBox txt, TextBox txt1, TextBox txt2, TextBox txt3, int edad,
+            TextBox txt5, TextBox txt6, TextBox txt7, TextBox txt8, DateTime dtN, DateTime dtA, ComboBox cmb)
         {
             try
             {
@@ -213,28 +228,28 @@ namespace pryLopezM_IEFI
 
                 conexionBaseDatos.Open();
 
-                DateTime dtAlta = System.DateTime.Now;
+
 
                 string query = @"INSERT INTO Usuarios 
-                         (id, usuario, contraseña, nombre, apellido, edad, dni, direccion, telefono, mail, fechaNacimineto, fechaDeAlta, permisos ) 
-                         VALUES (@id, @usuario, @contraseña, @permisos)";
+                         (idUsuario, usuario, contraseña, nombre, apellido, edad, DNI, direccion, telefono, email, fechaDeNacimiento, fechaDeAlta, permisos ) 
+                         VALUES (@idUsuario, @usuario, @contraseña, @nombre, @apellido, @edad, @DNI, @direccion, @telefono, @email, @fechaDeNacimiento, @fechaDeAlta, @permisos)";
 
                 SqlCommand command = new SqlCommand(query, conexionBaseDatos);
 
+                command.Parameters.AddWithValue("@idUsuario", id);
                 command.Parameters.AddWithValue("@usuario", txt.Text);
                 command.Parameters.AddWithValue("@contraseña", txt1.Text);
                 command.Parameters.AddWithValue("@nombre", txt2.Text);
                 command.Parameters.AddWithValue("@apellido", txt3.Text);
-                command.Parameters.AddWithValue("@edad", txt4.Text);
-                command.Parameters.AddWithValue("@dni", txt5.Text);
+                command.Parameters.AddWithValue("@edad", edad);
+                command.Parameters.AddWithValue("@DNI", txt5.Text);
                 command.Parameters.AddWithValue("@direccion", txt6.Text);
                 command.Parameters.AddWithValue("@telefono", txt7.Text);
                 command.Parameters.AddWithValue("@email", txt8.Text);
-                command.Parameters.AddWithValue("@fechaNacimiento", dtP.Value);
-                command.Parameters.AddWithValue("@fechaAlta", dtAlta);
+                command.Parameters.AddWithValue("@fechaDeNacimiento", dtN);
+                command.Parameters.AddWithValue("@fechaDeAlta", dtA);
                 command.Parameters.AddWithValue("@permisos", cmb.Text);
-                command.Parameters.AddWithValue("@id", id);
-
+                
                 command.ExecuteNonQuery();
             }
             catch (Exception e)

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Globalization;
 namespace pryLopezM_IEFI
 {
     public partial class frmUsuariosAdmin : Form
@@ -21,22 +21,19 @@ namespace pryLopezM_IEFI
 
         clsUsuarios lstUsuarios = new clsUsuarios();
 
+        
+
         private void clsUsuariosAdmin_Load(object sender, EventArgs e)
         {
             BBDD.mostrarDatos(dgvUsuarios);
             BBDD.cargarUsuarios(lstUsuarios);
 
+            /*Cambiar esto */
             // --CREAR --
-            cmbPermisos.Items.Add("Administrador");
-            cmbPermisos.Items.Add("Operador");
+            cmbPermisosCrear.Items.Add("Administrador");
+            cmbPermisosCrear.Items.Add("Operador");
 
             // --BUSCAR--
-            cmbBuscarFiltro.Items.Add("Identificador");
-            cmbBuscarFiltro.Items.Add("Usuario");
-            cmbBuscarFiltro.Items.Add("Permisos");
-
-            cmbPermisosBuscar.Items.Add("Administrador");
-            cmbPermisosBuscar.Items.Add("Operador");
 
             // --ACTUALIZAR--
             cmbPermisosActualizar.Items.Add("Adminsitrador");
@@ -46,12 +43,17 @@ namespace pryLopezM_IEFI
             
         }
 
+
+
         // --CREAR--
 
-        /* MIRAR ESTO */
-        public void habilitarBtn(Button btn)
+        bool fechaSeleccionada = false;
+        public void habilitarBotonCrear(Button btn)
         {
-            if (!string.IsNullOrEmpty(txtUsuario.Text) && !string.IsNullOrEmpty(txtContra.Text) && cmbPermisos.SelectedIndex != -1)
+            if (!string.IsNullOrEmpty(txtIdCrear.Text) && !string.IsNullOrEmpty(txtUsuarioCrear.Text) && !string.IsNullOrEmpty(txtContraseñaCrear.Text)
+                && !string.IsNullOrEmpty(txtNombreCrear.Text) && !string.IsNullOrEmpty(txtApellidoCrear.Text) && !string.IsNullOrEmpty(txtEdadCrear.Text)
+                && !string.IsNullOrEmpty(txtDNICrear.Text) && !string.IsNullOrEmpty(txtDireccionCrear.Text) && !string.IsNullOrEmpty(txtTelefonoCrear.Text)
+                && !string.IsNullOrEmpty(txtEmailCrear.Text) && fechaSeleccionada && cmbPermisosCrear.SelectedIndex != -1)
             {
                 btn.Enabled = true;
             }
@@ -61,133 +63,509 @@ namespace pryLopezM_IEFI
             }
         }
 
+        //--COMPONENTES CREAR
+
+        #region CREAR 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-            habilitarBtn(btnCrearUs);
+            habilitarBotonCrear(btnCrearUsuario);
         }
 
         private void txtContra_TextChanged(object sender, EventArgs e)
         {
-            habilitarBtn(btnCrearUs);
+            habilitarBotonCrear(btnCrearUsuario);
+        }
+
+        private void txtNombreCrear_TextChanged(object sender, EventArgs e)
+        {
+            habilitarBotonCrear(btnCrearUsuario);
+        }
+
+        private void txtApellidoCrear_TextChanged(object sender, EventArgs e)
+        {
+            habilitarBotonCrear(btnCrearUsuario);
+        }
+
+        private void txtEdadCrear_TextChanged(object sender, EventArgs e)
+        {
+            habilitarBotonCrear(btnCrearUsuario);
+        }
+
+        private void txtDNICrear_TextChanged(object sender, EventArgs e)
+        {
+            habilitarBotonCrear(btnCrearUsuario);
+        }
+
+        private void txtDireccionCrear_TextChanged(object sender, EventArgs e)
+        {
+            habilitarBotonCrear(btnCrearUsuario);
+        }
+
+        private void txtTelefonoCrear_TextChanged(object sender, EventArgs e)
+        {
+            habilitarBotonCrear(btnCrearUsuario);
+        }
+
+        private void txtEmailCrear_TextChanged(object sender, EventArgs e)
+        {
+            habilitarBotonCrear(btnCrearUsuario);
+        }
+        private void dtpNacimientoCrear_ValueChanged_1(object sender, EventArgs e)
+        {
+            fechaSeleccionada = true;
+            habilitarBotonCrear(btnCrearUsuario);
         }
 
         private void cmbPermisos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            habilitarBtn(btnCrearUs);
+            habilitarBotonCrear(btnCrearUsuario);
         }
 
-        private void btnCrearUs_Click(object sender, EventArgs e)
+        private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtId.Text);
+            int id = Convert.ToInt32(txtIdCrear.Text);
+            int edad = Convert.ToInt32(txtEdadCrear.Text);
+            DateTime fechaActual = System.DateTime.Now;
+            DateTime fechaNacimiento = dtpNacimientoCrear.Value.Date;
 
-            //clsUsuario aux = new clsUsuario(id, txtUsuario.Text, txtContra.Text, cmbPermisos.Text);
+            clsUsuario aux = new clsUsuario(id, txtUsuarioCrear.Text, txtContraseñaCrear.Text, txtNombreCrear.Text, txtApellidoCrear.Text, edad, txtDNICrear.Text,
+                 txtDireccionCrear.Text, txtTelefonoCrear.Text, txtEmailCrear.Text, fechaNacimiento, fechaActual, cmbPermisosCrear.Text);
 
-            //BBDD.crearUsuario(txtId, txtUsuario, txtContra, cmbPermisos.Text);
+            BBDD.crearUsuario(id, txtUsuarioCrear, txtContraseñaCrear, txtNombreCrear, txtApellidoCrear, edad, txtDNICrear,
+                 txtDireccionCrear, txtTelefonoCrear, txtEmailCrear, fechaNacimiento, fechaActual, cmbPermisosCrear);
 
+            lstUsuarios.agregarUsuario(aux);
             BBDD.mostrarDatos(dgvUsuarios);
 
-            //lstUsuarios.agregarUs(aux);
-
-
-            txtId.Text = "";
-            txtUsuario.Text = "";
-            txtContra.Text = "";
-            cmbPermisos.SelectedIndex = -1;
+            txtIdCrear.Text = "";
+            txtUsuarioCrear.Text = "";
+            txtContraseñaCrear.Text = "";
+            txtNombreCrear.Text = "";
+            txtApellidoCrear.Text = "";
+            txtEdadCrear.Text = "";
+            txtDNICrear.Text = "";
+            txtDireccionCrear.Text = "";
+            txtTelefonoCrear.Text = "";
+            txtEmailCrear.Text = "";
+            fechaSeleccionada = false;
+            cmbPermisosCrear.SelectedIndex = -1;
         }
+
+        #endregion
 
         // --BUSCAR--
 
-        private void cmbBuscarFiltro_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbBuscarFiltro.SelectedIndex == 0) // Buscar por ID
-            {
-                habilitarComponentes(true, false, false);
-                btnBuscarUsuario.Enabled = !string.IsNullOrEmpty(txtBuscar.Text);
-            }
-            else if (cmbBuscarFiltro.SelectedIndex == 1) // Buscar por usuario
-            {
-                habilitarComponentes(false, true, false);
-                btnBuscarUsuario.Enabled = !string.IsNullOrEmpty(txtUsuarioBuscar.Text);
-            }
-            else if (cmbBuscarFiltro.SelectedIndex == 2) // Buscar por permisos
-            {
-                habilitarComponentes(false, false, true);
-                btnBuscarUsuario.Enabled = cmbPermisos.SelectedIndex != -1;
-            }
-        }
-
-        public void habilitarComponentes(bool buscarActivo, bool usuarioActivo, bool permisosActivo)
-        {
-            txtBuscar.Enabled = buscarActivo;
-            txtUsuarioBuscar.Enabled = usuarioActivo;
-            cmbPermisosBuscar.Enabled = permisosActivo;
-        }
-
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            if (cmbBuscarFiltro.SelectedIndex == 0)
-                btnBuscarUsuario.Enabled = !string.IsNullOrEmpty(txtBuscar.Text);
-        }
-
-        private void txtUsuarioBuscar_TextChanged(object sender, EventArgs e)
-        {
-            if (cmbBuscarFiltro.SelectedIndex == 1)
-                btnBuscarUsuario.Enabled = !string.IsNullOrEmpty(txtUsuario.Text);
-        
-        }
-
-        private void cmbPermisosBuscar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbBuscarFiltro.SelectedIndex == 2)
-                btnBuscarUsuario.Enabled = cmbPermisosBuscar.SelectedIndex != -1;
-        }
-
-        private void btnBuscarUsuario_Click(object sender, EventArgs e)
-        {
-            if (cmbBuscarFiltro.SelectedIndex == 0) 
-            {
-                BBDD.mostrarDatos(dgvUsuarios);
-
-                var resul = lstUsuarios.buscarUs(Convert.ToInt32(txtBuscar.Text));
-
-                txtUsuarioBuscar.Text = resul.usuario.ToString();
-
-                txtContraseñaBuscar.Text = resul.contra.ToString();
-
-                cmbPermisosBuscar.Text = resul.permisos.ToString();
-
-            }
-            else if (cmbBuscarFiltro.SelectedIndex == 1)
-            {
-                BBDD.mostrarDatos(dgvUsuarios);
-
-                var resul = lstUsuarios.buscarUs(txtBuscar.Text);
-
-                txtUsuarioBuscar.Text = resul.usuario.ToString();
-
-                txtContraseñaBuscar.Text = resul.contra.ToString();
-
-                cmbPermisosBuscar.Text = resul.permisos.ToString();
-            }
-            else if (cmbBuscarFiltro.SelectedIndex == 2)
-            {
-                dgvUsuarios.DataSource = lstUsuarios.buscarUsuarios(cmbPermisosBuscar.Text);
-            }
-        }
+        bool tipoDeCarga;
 
         private void btnLimpiarBuscar_Click(object sender, EventArgs e)
         {
             BBDD.mostrarDatos(dgvUsuarios);
+        }
 
-            txtBuscar.Text = "";
-            txtUsuarioBuscar.Text = "";
-            txtContraseñaBuscar.Text = "";
-            cmbPermisosBuscar.SelectedIndex = -1;
+        private void txtDatoDeBusqueda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!tipoDeCarga)
+            {
+                
+                // Solo permitir dígitos y control (como backspace)
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
+
+        public void habilitarBtnBuscar()
+        {
+            if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+            {
+                btnBuscarUsuario.Enabled = true;
+            }
+            else
+            {
+                btnBuscarUsuario.Enabled = false;
+            }
+        }
+
+        private void txtDatoDeBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            habilitarBtnBuscar();
+        }
+
+        private void btnBuscarUsuario_Click(object sender, EventArgs e)
+        {
+
+            List<clsUsuario> resul = new List<clsUsuario>();
+
+            switch (cmbBuscarTipoDeDato.SelectedIndex)
+            {
+                case 0:
+
+
+                    string dato = "";
+                    string campo = "id";
+
+                    if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                    {
+                        dato = txtDatoDeBusqueda.Text;
+                        btnBuscarUsuario.Enabled = true;
+                    }
+                    else
+                    {
+                        btnBuscarUsuario.Enabled = false;
+                    }
+
+                    resul = lstUsuarios.buscarUsuario(dato, campo);
+
+                    break;
+
+                case 1:
+
+                    dato = "";
+                    campo = "usuario";
+
+                    if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                    {
+                        dato = txtDatoDeBusqueda.Text;
+                        btnBuscarUsuario.Enabled = true;
+                    }
+                    else
+                    {
+                        btnBuscarUsuario.Enabled = false;
+                    }
+
+                    resul = lstUsuarios.buscarUsuario(dato, campo);
+                    break;
+                case 2:
+                    dato = "";
+                    campo = "contraseña";
+
+                    if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                    {
+                        dato = txtDatoDeBusqueda.Text;
+                        btnBuscarUsuario.Enabled = true;
+                    }
+                    else
+                    {
+                        btnBuscarUsuario.Enabled = false;
+                    }
+
+                    resul = lstUsuarios.buscarUsuario(dato, campo);
+                    break;
+                case 3:
+                    dato = "";
+                    campo = "nombre";
+
+                    if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                    {
+                        dato = txtDatoDeBusqueda.Text;
+                        btnBuscarUsuario.Enabled = true;
+                    }
+                    else
+                    {
+                        btnBuscarUsuario.Enabled = false;
+                    }
+
+                    resul = lstUsuarios.buscarUsuario(dato, campo);
+                    break;
+                case 4:
+                    dato = "";
+                    campo = "apellido";
+
+                    if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                    {
+                        dato = txtDatoDeBusqueda.Text;
+                        btnBuscarUsuario.Enabled = true;
+                    }
+                    else
+                    {
+                        btnBuscarUsuario.Enabled = false;
+                    }
+
+                    resul = lstUsuarios.buscarUsuario(dato, campo);
+                    break;
+                case 5:
+                    dato = "";
+                    campo = "edad";
+
+                    if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                    {
+                        dato = txtDatoDeBusqueda.Text;
+                        btnBuscarUsuario.Enabled = true;
+                    }
+                    else
+                    {
+                        btnBuscarUsuario.Enabled = false;
+                    }
+
+                    resul = lstUsuarios.buscarUsuario(dato, campo);
+                    break;
+                case 6:
+                    dato = "";
+                    campo = "DNI";
+
+                    if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                    {
+                        dato = txtDatoDeBusqueda.Text;
+                        btnBuscarUsuario.Enabled = true;
+                    }
+                    else
+                    {
+                        btnBuscarUsuario.Enabled = false;
+                    }
+
+                    resul = lstUsuarios.buscarUsuario(dato, campo);
+                    break;
+                case 7:
+                    dato = "";
+                    campo = "direccion";
+
+                    if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                    {
+                        dato = txtDatoDeBusqueda.Text;
+                        btnBuscarUsuario.Enabled = true;
+                    }
+                    else
+                    {
+                        btnBuscarUsuario.Enabled = false;
+                    }
+
+                    resul = lstUsuarios.buscarUsuario(dato, campo);
+                    break;
+                case 8:
+                    dato = "";
+                    campo = "telefono";
+
+                    if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                    {
+                        dato = txtDatoDeBusqueda.Text;
+                        btnBuscarUsuario.Enabled = true;
+                    }
+                    else
+                    {
+                        btnBuscarUsuario.Enabled = false;
+                    }
+
+                    resul = lstUsuarios.buscarUsuario(dato, campo);
+                    break;
+                case 9:
+                    dato = "";
+                    campo = "email";
+
+                    if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                    {
+                        dato = txtDatoDeBusqueda.Text;
+                        btnBuscarUsuario.Enabled = true;
+                    }
+                    else
+                    {
+                        btnBuscarUsuario.Enabled = false;
+                    }
+
+                    resul = lstUsuarios.buscarUsuario(dato, campo);
+                    break;
+                case 10:
+                    DateTime datoF = dtpBuscarFecha.Value.Date;  // Obtenés un DateTime sin la hora
+                    dato = datoF.ToString("yyyy-MM-dd");         
+                    campo = "fechanacimiento";
+                    resul = lstUsuarios.buscarUsuario(datoF.ToString("yyyy-MM-dd"), campo);
+                    
+                    break;
+                case 11:
+                    DateTime fechaSeleccionada = dtpBuscarFecha.Value.Date;
+                    dato = fechaSeleccionada.ToString("yyyy-MM-dd");
+                    campo = "fechaAlta";
+                    resul = lstUsuarios.buscarUsuario(dato, campo);
+                    break;
+                case 12:
+
+                    if (cmbBuscarPermisos.SelectedIndex == 0)
+                    {
+                        dato = "";
+                        campo = "permisos";
+
+                        if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                        {
+                            dato = txtDatoDeBusqueda.Text;
+                            btnBuscarUsuario.Enabled = true;
+                        }
+                        else
+                        {
+                            btnBuscarUsuario.Enabled = false;
+                        }
+
+                        resul = lstUsuarios.buscarUsuario(dato, campo);
+                        break;
+                    }
+                    else
+                    {
+                        dato = "";
+                        campo = "permisos";
+
+                        if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
+                        {
+                            dato = txtDatoDeBusqueda.Text;
+                            btnBuscarUsuario.Enabled = true;
+                        }
+                        else
+                        {
+                            btnBuscarUsuario.Enabled = false;
+                        }
+
+                        resul = lstUsuarios.buscarUsuario(dato, campo);
+                        break;
+                    }
+            }
+
+            if (resul.Count == 0)
+            {
+                MessageBox.Show("No se encontraron datos.","Búsqueda finalizada.");
+                BBDD.mostrarDatos(dgvUsuarios);
+            }
+            else
+            {
+                dgvUsuarios.DataSource = null;
+                dgvUsuarios.DataSource = resul;
+            }
+
+            txtDatoDeBusqueda.Text = "";
+            dtpBuscarFecha.Value = System.DateTime.Now;
+            cmbBuscarPermisos.SelectedIndex = -1;
+
+
+        }
+
+        private void cmbBuscarTipoDeDato_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cmbBuscarTipoDeDato.SelectedIndex)
+            {
+                case 0:
+                    esconderComponentes();
+                    txtDatoDeBusqueda.Text = "";
+                    lblBusquedaSeleccionada.Text = "Cargue un N° de ID:";
+                    tipoDeCarga = false;
+                    lblBusquedaSeleccionada.Visible = true;
+                    txtDatoDeBusqueda.Visible = true;
+
+                    break;
+
+                case 1:
+                    esconderComponentes();
+                    txtDatoDeBusqueda.Text = "";
+                    lblBusquedaSeleccionada.Text = "Cargue un usuario:";
+                    tipoDeCarga = true;
+                    lblBusquedaSeleccionada.Visible = true;
+                    txtDatoDeBusqueda.Visible = true;
+                    break;
+                case 2:
+                    esconderComponentes();
+                    txtDatoDeBusqueda.Text = "";
+                    lblBusquedaSeleccionada.Text = "Cargue una contraseña:";
+                    tipoDeCarga = true;
+                    lblBusquedaSeleccionada.Visible = true;
+                    txtDatoDeBusqueda.Visible = true;
+                    // Opción 2
+                    break;
+                case 3:
+                    esconderComponentes();
+                    txtDatoDeBusqueda.Text = "";
+                    lblBusquedaSeleccionada.Text = "Cargue un nombre:";
+                    tipoDeCarga = true;
+                    lblBusquedaSeleccionada.Visible = true;
+                    txtDatoDeBusqueda.Visible = true;
+                    // Opción 2
+                    break;
+                case 4:
+                    esconderComponentes();
+                    txtDatoDeBusqueda.Text = "";
+                    lblBusquedaSeleccionada.Text = "Cargue un apellido:";
+                    tipoDeCarga = true;
+                    lblBusquedaSeleccionada.Visible = true;
+                    txtDatoDeBusqueda.Visible = true;
+                    break;
+                case 5:
+                    esconderComponentes();
+                    txtDatoDeBusqueda.Text = "";
+                    lblBusquedaSeleccionada.Text = "Cargue una edad:";
+                    tipoDeCarga = false;
+                    lblBusquedaSeleccionada.Visible = true;
+                    txtDatoDeBusqueda.Visible = true;
+                    break;
+                case 6:
+                    esconderComponentes();
+                    txtDatoDeBusqueda.Text = "";
+                    lblBusquedaSeleccionada.Text = "Cargue N° de DNI:";
+                    tipoDeCarga = false;
+                    lblBusquedaSeleccionada.Visible = true;
+                    txtDatoDeBusqueda.Visible = true;
+                    break;
+                case 7:
+                    esconderComponentes();
+                    txtDatoDeBusqueda.Text = "";
+                    lblBusquedaSeleccionada.Text = "Cargue una dirección:";
+                    tipoDeCarga = true;
+                    lblBusquedaSeleccionada.Visible = true;
+                    txtDatoDeBusqueda.Visible = true;
+                    break;
+                case 8:
+                    esconderComponentes();
+                    txtDatoDeBusqueda.Text = "";
+                    lblBusquedaSeleccionada.Text = "Cargue un teléfono:";
+                    tipoDeCarga = false;
+                    lblBusquedaSeleccionada.Visible = true;
+                    txtDatoDeBusqueda.Visible = true;
+                    break;
+                case 9:
+                    esconderComponentes();
+                    txtDatoDeBusqueda.Text = "";
+                    lblBusquedaSeleccionada.Text = "Cargue un e-mail:";
+                    tipoDeCarga = true;
+                    lblBusquedaSeleccionada.Visible = true;
+                    txtDatoDeBusqueda.Visible = true;
+                    break;
+                case 10:
+                    esconderComponentes();
+                    btnBuscarUsuario.Enabled = true;
+                    tipoDeCarga = true;
+                    lblBuscarPorFecha.Visible = true;
+                    dtpBuscarFecha.Visible = true;
+                    break;
+                case 11:
+                    esconderComponentes();
+                    btnBuscarUsuario.Enabled = true;
+                    tipoDeCarga = true;
+                    lblBuscarPorFecha.Visible = true;
+                    dtpBuscarFecha.Visible = true;
+                    break;
+                case 12:
+                    esconderComponentes();
+                    lblBusquedaSeleccionada.Text = "Seleccione rol a filtrar:";
+                    tipoDeCarga = true;
+                    lblBusquedaSeleccionada.Visible = true;
+                    cmbBuscarPermisos.Visible = true;
+                    break;
+            }
+
+        }
+
+        public void esconderComponentes()
+        {
+            lblBuscarPorFecha.Visible = false;
+            lblBusquedaSeleccionada.Visible = false;
+
+            dtpBuscarFecha.Visible = false;
+            cmbBuscarPermisos.Visible = false;
+            txtDatoDeBusqueda.Visible = false;
+
+            BBDD.mostrarDatos(dgvUsuarios);
+            btnBuscarUsuario.Enabled = false;
+
         }
 
         // --ACTUALIZAR--
 
-        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        /*private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Si no selecciona la columna.
             if (e.RowIndex >= 0)
@@ -226,7 +604,7 @@ namespace pryLopezM_IEFI
             limpiarComponentesDeActualizar();
         }
 
-        /*private void btnBuscarActualizar_Click(object sender, EventArgs e)
+        private void btnBuscarActualizar_Click(object sender, EventArgs e)
         {
             var resul = lstUsuarios.buscarUs(txtUsuarioActualizar.Text);
 
@@ -246,7 +624,7 @@ namespace pryLopezM_IEFI
             {
                 MessageBox.Show("Usuario no encontrado.","Error");
             }
-        }*/
+        }
 
         public void habilitarCompoAct(bool t, bool t2)
         {
@@ -291,22 +669,17 @@ namespace pryLopezM_IEFI
         {
             BBDD.eliminarDatosUs(Convert.ToInt32(txtActualizar.Text));
             BBDD.mostrarDatos(dgvUsuarios);
-        }
+        }*/
 
         // --PANELES--
-        private void btnCrear_Click(object sender, EventArgs e)
+        private void btnCrear_Click_1(object sender, EventArgs e)
         {
             paneles(panelCrear);
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             paneles(panelBuscar);
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            paneles(panelActualizar);
         }
 
         public void paneles(Panel pnl)
@@ -330,12 +703,15 @@ namespace pryLopezM_IEFI
             }
         }
 
-        
-
-        private void panelAcciones_Resize(object sender, EventArgs e)
+        private void txtIdCrear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            panelCrear.Left = (this.ClientSize.Width - panelCrear.Width) / 2;
-            panelCrear.Top = (this.ClientSize.Height - panelCrear.Height) / 2;
+            // Permite solo dígitos y la tecla de retroceso (Backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Cancela el carácter si no es válido
+            }
         }
+
+        
     }
 }

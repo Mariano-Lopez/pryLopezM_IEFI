@@ -31,36 +31,50 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuariosAdmin));
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.panelOpciones = new System.Windows.Forms.Panel();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
             this.panelCrear = new System.Windows.Forms.Panel();
+            this.lblFechaNaciminetoCrear = new System.Windows.Forms.Label();
+            this.txtNombreCrear = new System.Windows.Forms.TextBox();
+            this.lblNombreCrear = new System.Windows.Forms.Label();
+            this.txtApellidoCrear = new System.Windows.Forms.TextBox();
+            this.lblApellidoCrear = new System.Windows.Forms.Label();
+            this.txtEdadCrear = new System.Windows.Forms.TextBox();
+            this.lblEdadCrear = new System.Windows.Forms.Label();
+            this.txtDireccionCrear = new System.Windows.Forms.TextBox();
+            this.lblDireccionCrear = new System.Windows.Forms.Label();
+            this.txtEmailCrear = new System.Windows.Forms.TextBox();
+            this.lblEmailCrear = new System.Windows.Forms.Label();
+            this.txtTelefonoCrear = new System.Windows.Forms.TextBox();
+            this.lblTelefonoCrear = new System.Windows.Forms.Label();
+            this.txtDNICrear = new System.Windows.Forms.TextBox();
+            this.lblDNICrear = new System.Windows.Forms.Label();
+            this.dtpNacimientoCrear = new System.Windows.Forms.DateTimePicker();
             this.imgCrearUsuario = new System.Windows.Forms.PictureBox();
             this.lblCrearUsuarioInstrucciones = new System.Windows.Forms.Label();
             this.lblIdCrear = new System.Windows.Forms.Label();
-            this.txtContra = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.btnCrearUs = new System.Windows.Forms.Button();
+            this.txtContraseñaCrear = new System.Windows.Forms.TextBox();
+            this.txtUsuarioCrear = new System.Windows.Forms.TextBox();
+            this.txtIdCrear = new System.Windows.Forms.TextBox();
+            this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.lblUsuarioCrear = new System.Windows.Forms.Label();
-            this.cmbPermisos = new System.Windows.Forms.ComboBox();
+            this.cmbPermisosCrear = new System.Windows.Forms.ComboBox();
             this.lblContraseñaCrear = new System.Windows.Forms.Label();
             this.lblPermisos = new System.Windows.Forms.Label();
             this.panelBuscar = new System.Windows.Forms.Panel();
-            this.imgBuscarUsuario = new System.Windows.Forms.PictureBox();
-            this.lblBuscarUusariosInstrucciones = new System.Windows.Forms.Label();
+            this.cmbBuscarTipoDeDato = new System.Windows.Forms.ComboBox();
+            this.lblBuscarPorCampo = new System.Windows.Forms.Label();
             this.btnLimpiarBuscar = new System.Windows.Forms.Button();
-            this.cmbBuscarFiltro = new System.Windows.Forms.ComboBox();
-            this.lblBuscarUsuario = new System.Windows.Forms.Label();
-            this.lblIdBuscar = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.cmbPermisosBuscar = new System.Windows.Forms.ComboBox();
-            this.lblPermisosBuscar = new System.Windows.Forms.Label();
-            this.lblContrseñaBuscar = new System.Windows.Forms.Label();
-            this.lblUsuarioBuscar = new System.Windows.Forms.Label();
-            this.txtContraseñaBuscar = new System.Windows.Forms.TextBox();
-            this.txtUsuarioBuscar = new System.Windows.Forms.TextBox();
+            this.lblBuscarPorFecha = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtDatoDeBusqueda = new System.Windows.Forms.TextBox();
+            this.lblBusquedaSeleccionada = new System.Windows.Forms.Label();
+            this.dtpBuscarFecha = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBuscarUsuario = new System.Windows.Forms.Button();
+            this.cmbBuscarPermisos = new System.Windows.Forms.ComboBox();
             this.panelActualizar = new System.Windows.Forms.Panel();
             this.imgActualizarEliminarUsuario = new System.Windows.Forms.PictureBox();
             this.chkMensaje = new System.Windows.Forms.CheckBox();
@@ -77,29 +91,12 @@
             this.txtUsuarioActualizar = new System.Windows.Forms.TextBox();
             this.btnActualizarUsuario = new System.Windows.Forms.Button();
             this.panelAcciones = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dtpNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblDNICrear = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblTelefonoCrear = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lblEmailCrear = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.lblDireccionCrear = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.lblEdadCrear = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.lblApellidoCrear = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.lblNombreCrear = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.panelOpciones.SuspendLayout();
             this.panelCrear.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCrearUsuario)).BeginInit();
             this.panelBuscar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBuscarUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelActualizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgActualizarEliminarUsuario)).BeginInit();
             this.panelAcciones.SuspendLayout();
@@ -114,21 +111,23 @@
             this.dgvUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(40, 432);
+            this.dgvUsuarios.Location = new System.Drawing.Point(36, 445);
             this.dgvUsuarios.MultiSelect = false;
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersVisible = false;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1169, 336);
+            this.dgvUsuarios.ShowCellToolTips = false;
+            this.dgvUsuarios.ShowEditingIcon = false;
+            this.dgvUsuarios.Size = new System.Drawing.Size(1168, 514);
             this.dgvUsuarios.TabIndex = 0;
-            this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
             // panelOpciones
             // 
             this.panelOpciones.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelOpciones.Controls.Add(this.button1);
+            this.panelOpciones.Controls.Add(this.btnEliminar);
             this.panelOpciones.Controls.Add(this.btnActualizar);
             this.panelOpciones.Controls.Add(this.btnBuscar);
             this.panelOpciones.Controls.Add(this.btnCrear);
@@ -138,6 +137,17 @@
             this.panelOpciones.Size = new System.Drawing.Size(243, 417);
             this.panelOpciones.TabIndex = 1;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(0, 312);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(243, 104);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar usuario";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
             // btnActualizar
             // 
             this.btnActualizar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -146,9 +156,8 @@
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(243, 104);
             this.btnActualizar.TabIndex = 2;
-            this.btnActualizar.Text = "Actualizar/Eliminar usuario";
+            this.btnActualizar.Text = "Actualizar usuario";
             this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnBuscar
             // 
@@ -160,7 +169,7 @@
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar usuario";
             this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // btnCrear
             // 
@@ -172,43 +181,196 @@
             this.btnCrear.TabIndex = 0;
             this.btnCrear.Text = "Crear usuario";
             this.btnCrear.UseVisualStyleBackColor = true;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click_1);
             // 
             // panelCrear
             // 
             this.panelCrear.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelCrear.Controls.Add(this.label8);
-            this.panelCrear.Controls.Add(this.textBox7);
+            this.panelCrear.Controls.Add(this.lblFechaNaciminetoCrear);
+            this.panelCrear.Controls.Add(this.txtNombreCrear);
             this.panelCrear.Controls.Add(this.lblNombreCrear);
-            this.panelCrear.Controls.Add(this.textBox6);
+            this.panelCrear.Controls.Add(this.txtApellidoCrear);
             this.panelCrear.Controls.Add(this.lblApellidoCrear);
-            this.panelCrear.Controls.Add(this.textBox5);
+            this.panelCrear.Controls.Add(this.txtEdadCrear);
             this.panelCrear.Controls.Add(this.lblEdadCrear);
-            this.panelCrear.Controls.Add(this.textBox4);
+            this.panelCrear.Controls.Add(this.txtDireccionCrear);
             this.panelCrear.Controls.Add(this.lblDireccionCrear);
-            this.panelCrear.Controls.Add(this.textBox3);
+            this.panelCrear.Controls.Add(this.txtEmailCrear);
             this.panelCrear.Controls.Add(this.lblEmailCrear);
-            this.panelCrear.Controls.Add(this.textBox2);
+            this.panelCrear.Controls.Add(this.txtTelefonoCrear);
             this.panelCrear.Controls.Add(this.lblTelefonoCrear);
-            this.panelCrear.Controls.Add(this.textBox1);
+            this.panelCrear.Controls.Add(this.txtDNICrear);
             this.panelCrear.Controls.Add(this.lblDNICrear);
-            this.panelCrear.Controls.Add(this.dtpNacimiento);
+            this.panelCrear.Controls.Add(this.dtpNacimientoCrear);
             this.panelCrear.Controls.Add(this.imgCrearUsuario);
             this.panelCrear.Controls.Add(this.lblCrearUsuarioInstrucciones);
             this.panelCrear.Controls.Add(this.lblIdCrear);
-            this.panelCrear.Controls.Add(this.txtContra);
-            this.panelCrear.Controls.Add(this.txtUsuario);
-            this.panelCrear.Controls.Add(this.txtId);
-            this.panelCrear.Controls.Add(this.btnCrearUs);
+            this.panelCrear.Controls.Add(this.txtContraseñaCrear);
+            this.panelCrear.Controls.Add(this.txtUsuarioCrear);
+            this.panelCrear.Controls.Add(this.txtIdCrear);
+            this.panelCrear.Controls.Add(this.btnCrearUsuario);
             this.panelCrear.Controls.Add(this.lblUsuarioCrear);
-            this.panelCrear.Controls.Add(this.cmbPermisos);
+            this.panelCrear.Controls.Add(this.cmbPermisosCrear);
             this.panelCrear.Controls.Add(this.lblContraseñaCrear);
             this.panelCrear.Controls.Add(this.lblPermisos);
-            this.panelCrear.Location = new System.Drawing.Point(243, 3);
+            this.panelCrear.Location = new System.Drawing.Point(242, 4);
             this.panelCrear.Name = "panelCrear";
             this.panelCrear.Size = new System.Drawing.Size(1003, 413);
             this.panelCrear.TabIndex = 4;
             this.panelCrear.Visible = false;
+            // 
+            // lblFechaNaciminetoCrear
+            // 
+            this.lblFechaNaciminetoCrear.AutoSize = true;
+            this.lblFechaNaciminetoCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNaciminetoCrear.Location = new System.Drawing.Point(11, 281);
+            this.lblFechaNaciminetoCrear.Name = "lblFechaNaciminetoCrear";
+            this.lblFechaNaciminetoCrear.Size = new System.Drawing.Size(193, 24);
+            this.lblFechaNaciminetoCrear.TabIndex = 27;
+            this.lblFechaNaciminetoCrear.Text = "Fecha de nacimineto:";
+            // 
+            // txtNombreCrear
+            // 
+            this.txtNombreCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCrear.Location = new System.Drawing.Point(515, 186);
+            this.txtNombreCrear.Name = "txtNombreCrear";
+            this.txtNombreCrear.Size = new System.Drawing.Size(166, 29);
+            this.txtNombreCrear.TabIndex = 3;
+            this.txtNombreCrear.TextChanged += new System.EventHandler(this.txtNombreCrear_TextChanged);
+            // 
+            // lblNombreCrear
+            // 
+            this.lblNombreCrear.AutoSize = true;
+            this.lblNombreCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreCrear.Location = new System.Drawing.Point(511, 163);
+            this.lblNombreCrear.Name = "lblNombreCrear";
+            this.lblNombreCrear.Size = new System.Drawing.Size(84, 24);
+            this.lblNombreCrear.TabIndex = 26;
+            this.lblNombreCrear.Text = "Nombre:";
+            // 
+            // txtApellidoCrear
+            // 
+            this.txtApellidoCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoCrear.Location = new System.Drawing.Point(700, 186);
+            this.txtApellidoCrear.Name = "txtApellidoCrear";
+            this.txtApellidoCrear.Size = new System.Drawing.Size(142, 29);
+            this.txtApellidoCrear.TabIndex = 4;
+            this.txtApellidoCrear.TextChanged += new System.EventHandler(this.txtApellidoCrear_TextChanged);
+            // 
+            // lblApellidoCrear
+            // 
+            this.lblApellidoCrear.AutoSize = true;
+            this.lblApellidoCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoCrear.Location = new System.Drawing.Point(696, 163);
+            this.lblApellidoCrear.Name = "lblApellidoCrear";
+            this.lblApellidoCrear.Size = new System.Drawing.Size(84, 24);
+            this.lblApellidoCrear.TabIndex = 24;
+            this.lblApellidoCrear.Text = "Apellido:";
+            // 
+            // txtEdadCrear
+            // 
+            this.txtEdadCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdadCrear.Location = new System.Drawing.Point(859, 186);
+            this.txtEdadCrear.Name = "txtEdadCrear";
+            this.txtEdadCrear.Size = new System.Drawing.Size(79, 29);
+            this.txtEdadCrear.TabIndex = 5;
+            this.txtEdadCrear.TextChanged += new System.EventHandler(this.txtEdadCrear_TextChanged);
+            this.txtEdadCrear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdCrear_KeyPress);
+            // 
+            // lblEdadCrear
+            // 
+            this.lblEdadCrear.AutoSize = true;
+            this.lblEdadCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdadCrear.Location = new System.Drawing.Point(855, 163);
+            this.lblEdadCrear.Name = "lblEdadCrear";
+            this.lblEdadCrear.Size = new System.Drawing.Size(60, 24);
+            this.lblEdadCrear.TabIndex = 22;
+            this.lblEdadCrear.Text = "Edad:";
+            // 
+            // txtDireccionCrear
+            // 
+            this.txtDireccionCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccionCrear.Location = new System.Drawing.Point(171, 247);
+            this.txtDireccionCrear.Name = "txtDireccionCrear";
+            this.txtDireccionCrear.Size = new System.Drawing.Size(261, 29);
+            this.txtDireccionCrear.TabIndex = 7;
+            this.txtDireccionCrear.TextChanged += new System.EventHandler(this.txtDireccionCrear_TextChanged);
+            // 
+            // lblDireccionCrear
+            // 
+            this.lblDireccionCrear.AutoSize = true;
+            this.lblDireccionCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccionCrear.Location = new System.Drawing.Point(167, 224);
+            this.lblDireccionCrear.Name = "lblDireccionCrear";
+            this.lblDireccionCrear.Size = new System.Drawing.Size(95, 24);
+            this.lblDireccionCrear.TabIndex = 20;
+            this.lblDireccionCrear.Text = "Dirección:";
+            // 
+            // txtEmailCrear
+            // 
+            this.txtEmailCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailCrear.Location = new System.Drawing.Point(663, 247);
+            this.txtEmailCrear.Name = "txtEmailCrear";
+            this.txtEmailCrear.Size = new System.Drawing.Size(275, 29);
+            this.txtEmailCrear.TabIndex = 9;
+            this.txtEmailCrear.TextChanged += new System.EventHandler(this.txtEmailCrear_TextChanged);
+            // 
+            // lblEmailCrear
+            // 
+            this.lblEmailCrear.AutoSize = true;
+            this.lblEmailCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailCrear.Location = new System.Drawing.Point(659, 224);
+            this.lblEmailCrear.Name = "lblEmailCrear";
+            this.lblEmailCrear.Size = new System.Drawing.Size(62, 24);
+            this.lblEmailCrear.TabIndex = 18;
+            this.lblEmailCrear.Text = "Email:";
+            // 
+            // txtTelefonoCrear
+            // 
+            this.txtTelefonoCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefonoCrear.Location = new System.Drawing.Point(453, 247);
+            this.txtTelefonoCrear.Name = "txtTelefonoCrear";
+            this.txtTelefonoCrear.Size = new System.Drawing.Size(190, 29);
+            this.txtTelefonoCrear.TabIndex = 8;
+            this.txtTelefonoCrear.TextChanged += new System.EventHandler(this.txtTelefonoCrear_TextChanged);
+            // 
+            // lblTelefonoCrear
+            // 
+            this.lblTelefonoCrear.AutoSize = true;
+            this.lblTelefonoCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefonoCrear.Location = new System.Drawing.Point(449, 224);
+            this.lblTelefonoCrear.Name = "lblTelefonoCrear";
+            this.lblTelefonoCrear.Size = new System.Drawing.Size(90, 24);
+            this.lblTelefonoCrear.TabIndex = 16;
+            this.lblTelefonoCrear.Text = "Teléfono:";
+            // 
+            // txtDNICrear
+            // 
+            this.txtDNICrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNICrear.Location = new System.Drawing.Point(14, 247);
+            this.txtDNICrear.Name = "txtDNICrear";
+            this.txtDNICrear.Size = new System.Drawing.Size(142, 29);
+            this.txtDNICrear.TabIndex = 6;
+            this.txtDNICrear.TextChanged += new System.EventHandler(this.txtDNICrear_TextChanged);
+            // 
+            // lblDNICrear
+            // 
+            this.lblDNICrear.AutoSize = true;
+            this.lblDNICrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDNICrear.Location = new System.Drawing.Point(10, 224);
+            this.lblDNICrear.Name = "lblDNICrear";
+            this.lblDNICrear.Size = new System.Drawing.Size(46, 24);
+            this.lblDNICrear.TabIndex = 14;
+            this.lblDNICrear.Text = "DNI:";
+            // 
+            // dtpNacimientoCrear
+            // 
+            this.dtpNacimientoCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNacimientoCrear.Location = new System.Drawing.Point(15, 304);
+            this.dtpNacimientoCrear.Name = "dtpNacimientoCrear";
+            this.dtpNacimientoCrear.Size = new System.Drawing.Size(350, 29);
+            this.dtpNacimientoCrear.TabIndex = 10;
+            this.dtpNacimientoCrear.ValueChanged += new System.EventHandler(this.dtpNacimientoCrear_ValueChanged_1);
             // 
             // imgCrearUsuario
             // 
@@ -240,44 +402,44 @@
             this.lblIdCrear.TabIndex = 9;
             this.lblIdCrear.Text = "N° Identificador:";
             // 
-            // txtContra
+            // txtContraseñaCrear
             // 
-            this.txtContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContra.Location = new System.Drawing.Point(341, 186);
-            this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(155, 29);
-            this.txtContra.TabIndex = 3;
-            this.txtContra.TextChanged += new System.EventHandler(this.txtContra_TextChanged);
+            this.txtContraseñaCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaCrear.Location = new System.Drawing.Point(341, 186);
+            this.txtContraseñaCrear.Name = "txtContraseñaCrear";
+            this.txtContraseñaCrear.Size = new System.Drawing.Size(155, 29);
+            this.txtContraseñaCrear.TabIndex = 2;
+            this.txtContraseñaCrear.TextChanged += new System.EventHandler(this.txtContra_TextChanged);
             // 
-            // txtUsuario
+            // txtUsuarioCrear
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(171, 186);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(151, 29);
-            this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtUsuarioCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioCrear.Location = new System.Drawing.Point(171, 186);
+            this.txtUsuarioCrear.Name = "txtUsuarioCrear";
+            this.txtUsuarioCrear.Size = new System.Drawing.Size(151, 29);
+            this.txtUsuarioCrear.TabIndex = 1;
+            this.txtUsuarioCrear.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
-            // txtId
+            // txtIdCrear
             // 
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(15, 186);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(137, 29);
-            this.txtId.TabIndex = 8;
-            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
+            this.txtIdCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdCrear.Location = new System.Drawing.Point(15, 186);
+            this.txtIdCrear.Name = "txtIdCrear";
+            this.txtIdCrear.Size = new System.Drawing.Size(137, 29);
+            this.txtIdCrear.TabIndex = 0;
+            this.txtIdCrear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdCrear_KeyPress);
             // 
-            // btnCrearUs
+            // btnCrearUsuario
             // 
-            this.btnCrearUs.Enabled = false;
-            this.btnCrearUs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearUs.Location = new System.Drawing.Point(301, 356);
-            this.btnCrearUs.Name = "btnCrearUs";
-            this.btnCrearUs.Size = new System.Drawing.Size(394, 38);
-            this.btnCrearUs.TabIndex = 0;
-            this.btnCrearUs.Text = "Crear usuario";
-            this.btnCrearUs.UseVisualStyleBackColor = true;
-            this.btnCrearUs.Click += new System.EventHandler(this.btnCrearUs_Click);
+            this.btnCrearUsuario.Enabled = false;
+            this.btnCrearUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearUsuario.Location = new System.Drawing.Point(301, 356);
+            this.btnCrearUsuario.Name = "btnCrearUsuario";
+            this.btnCrearUsuario.Size = new System.Drawing.Size(394, 38);
+            this.btnCrearUsuario.TabIndex = 12;
+            this.btnCrearUsuario.Text = "Crear usuario";
+            this.btnCrearUsuario.UseVisualStyleBackColor = true;
+            this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUsuario_Click);
             // 
             // lblUsuarioCrear
             // 
@@ -289,16 +451,16 @@
             this.lblUsuarioCrear.TabIndex = 4;
             this.lblUsuarioCrear.Text = "Usuario:";
             // 
-            // cmbPermisos
+            // cmbPermisosCrear
             // 
-            this.cmbPermisos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPermisos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPermisos.FormattingEnabled = true;
-            this.cmbPermisos.Location = new System.Drawing.Point(392, 301);
-            this.cmbPermisos.Name = "cmbPermisos";
-            this.cmbPermisos.Size = new System.Drawing.Size(197, 32);
-            this.cmbPermisos.TabIndex = 7;
-            this.cmbPermisos.SelectedIndexChanged += new System.EventHandler(this.cmbPermisos_SelectedIndexChanged);
+            this.cmbPermisosCrear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPermisosCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPermisosCrear.FormattingEnabled = true;
+            this.cmbPermisosCrear.Location = new System.Drawing.Point(392, 301);
+            this.cmbPermisosCrear.Name = "cmbPermisosCrear";
+            this.cmbPermisosCrear.Size = new System.Drawing.Size(197, 32);
+            this.cmbPermisosCrear.TabIndex = 11;
+            this.cmbPermisosCrear.SelectedIndexChanged += new System.EventHandler(this.cmbPermisos_SelectedIndexChanged);
             // 
             // lblContraseñaCrear
             // 
@@ -316,166 +478,165 @@
             this.lblPermisos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPermisos.Location = new System.Drawing.Point(388, 279);
             this.lblPermisos.Name = "lblPermisos";
-            this.lblPermisos.Size = new System.Drawing.Size(88, 24);
+            this.lblPermisos.Size = new System.Drawing.Size(93, 24);
             this.lblPermisos.TabIndex = 6;
-            this.lblPermisos.Text = "Permisos";
+            this.lblPermisos.Text = "Permisos:";
             // 
             // panelBuscar
             // 
             this.panelBuscar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelBuscar.Controls.Add(this.imgBuscarUsuario);
-            this.panelBuscar.Controls.Add(this.lblBuscarUusariosInstrucciones);
+            this.panelBuscar.Controls.Add(this.cmbBuscarTipoDeDato);
+            this.panelBuscar.Controls.Add(this.lblBuscarPorCampo);
             this.panelBuscar.Controls.Add(this.btnLimpiarBuscar);
-            this.panelBuscar.Controls.Add(this.cmbBuscarFiltro);
-            this.panelBuscar.Controls.Add(this.lblBuscarUsuario);
-            this.panelBuscar.Controls.Add(this.lblIdBuscar);
-            this.panelBuscar.Controls.Add(this.txtBuscar);
-            this.panelBuscar.Controls.Add(this.cmbPermisosBuscar);
-            this.panelBuscar.Controls.Add(this.lblPermisosBuscar);
-            this.panelBuscar.Controls.Add(this.lblContrseñaBuscar);
-            this.panelBuscar.Controls.Add(this.lblUsuarioBuscar);
-            this.panelBuscar.Controls.Add(this.txtContraseñaBuscar);
-            this.panelBuscar.Controls.Add(this.txtUsuarioBuscar);
+            this.panelBuscar.Controls.Add(this.lblBuscarPorFecha);
+            this.panelBuscar.Controls.Add(this.label10);
+            this.panelBuscar.Controls.Add(this.txtDatoDeBusqueda);
+            this.panelBuscar.Controls.Add(this.lblBusquedaSeleccionada);
+            this.panelBuscar.Controls.Add(this.dtpBuscarFecha);
+            this.panelBuscar.Controls.Add(this.pictureBox2);
             this.panelBuscar.Controls.Add(this.btnBuscarUsuario);
-            this.panelBuscar.Location = new System.Drawing.Point(0, 0);
+            this.panelBuscar.Controls.Add(this.cmbBuscarPermisos);
+            this.panelBuscar.Location = new System.Drawing.Point(242, 4);
             this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(568, 250);
-            this.panelBuscar.TabIndex = 8;
+            this.panelBuscar.Size = new System.Drawing.Size(1003, 413);
+            this.panelBuscar.TabIndex = 29;
+            this.panelBuscar.Visible = false;
             // 
-            // imgBuscarUsuario
+            // cmbBuscarTipoDeDato
             // 
-            this.imgBuscarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("imgBuscarUsuario.Image")));
-            this.imgBuscarUsuario.Location = new System.Drawing.Point(14, 14);
-            this.imgBuscarUsuario.Name = "imgBuscarUsuario";
-            this.imgBuscarUsuario.Size = new System.Drawing.Size(105, 101);
-            this.imgBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgBuscarUsuario.TabIndex = 15;
-            this.imgBuscarUsuario.TabStop = false;
+            this.cmbBuscarTipoDeDato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBuscarTipoDeDato.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBuscarTipoDeDato.FormattingEnabled = true;
+            this.cmbBuscarTipoDeDato.Items.AddRange(new object[] {
+            "N° Identificador",
+            "Usuario",
+            "Contraseña",
+            "Nombre",
+            "Apellido",
+            "Edad",
+            "DNI",
+            "Dirección",
+            "Teléfono",
+            "E-mail",
+            "Fecha de nacimiento",
+            "Fecha de alta",
+            "Permisos"});
+            this.cmbBuscarTipoDeDato.Location = new System.Drawing.Point(356, 183);
+            this.cmbBuscarTipoDeDato.Name = "cmbBuscarTipoDeDato";
+            this.cmbBuscarTipoDeDato.Size = new System.Drawing.Size(243, 32);
+            this.cmbBuscarTipoDeDato.TabIndex = 30;
+            this.cmbBuscarTipoDeDato.SelectedIndexChanged += new System.EventHandler(this.cmbBuscarTipoDeDato_SelectedIndexChanged);
             // 
-            // lblBuscarUusariosInstrucciones
+            // lblBuscarPorCampo
             // 
-            this.lblBuscarUusariosInstrucciones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBuscarUusariosInstrucciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarUusariosInstrucciones.Location = new System.Drawing.Point(125, 14);
-            this.lblBuscarUusariosInstrucciones.Name = "lblBuscarUusariosInstrucciones";
-            this.lblBuscarUusariosInstrucciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBuscarUusariosInstrucciones.Size = new System.Drawing.Size(424, 104);
-            this.lblBuscarUusariosInstrucciones.TabIndex = 12;
-            this.lblBuscarUusariosInstrucciones.Text = resources.GetString("lblBuscarUusariosInstrucciones.Text");
+            this.lblBuscarPorCampo.AutoSize = true;
+            this.lblBuscarPorCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarPorCampo.Location = new System.Drawing.Point(319, 158);
+            this.lblBuscarPorCampo.Name = "lblBuscarPorCampo";
+            this.lblBuscarPorCampo.Size = new System.Drawing.Size(374, 24);
+            this.lblBuscarPorCampo.TabIndex = 29;
+            this.lblBuscarPorCampo.Text = "Seleccione tipo dato de referencia a buscar";
             // 
             // btnLimpiarBuscar
             // 
-            this.btnLimpiarBuscar.Location = new System.Drawing.Point(154, 177);
+            this.btnLimpiarBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarBuscar.Location = new System.Drawing.Point(256, 312);
             this.btnLimpiarBuscar.Name = "btnLimpiarBuscar";
-            this.btnLimpiarBuscar.Size = new System.Drawing.Size(100, 37);
-            this.btnLimpiarBuscar.TabIndex = 14;
+            this.btnLimpiarBuscar.Size = new System.Drawing.Size(222, 38);
+            this.btnLimpiarBuscar.TabIndex = 28;
             this.btnLimpiarBuscar.Text = "Limpiar";
             this.btnLimpiarBuscar.UseVisualStyleBackColor = true;
             this.btnLimpiarBuscar.Click += new System.EventHandler(this.btnLimpiarBuscar_Click);
             // 
-            // cmbBuscarFiltro
+            // lblBuscarPorFecha
             // 
-            this.cmbBuscarFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBuscarFiltro.FormattingEnabled = true;
-            this.cmbBuscarFiltro.Location = new System.Drawing.Point(14, 141);
-            this.cmbBuscarFiltro.Name = "cmbBuscarFiltro";
-            this.cmbBuscarFiltro.Size = new System.Drawing.Size(100, 21);
-            this.cmbBuscarFiltro.TabIndex = 11;
-            this.cmbBuscarFiltro.SelectedIndexChanged += new System.EventHandler(this.cmbBuscarFiltro_SelectedIndexChanged);
+            this.lblBuscarPorFecha.AutoSize = true;
+            this.lblBuscarPorFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarPorFecha.Location = new System.Drawing.Point(294, 220);
+            this.lblBuscarPorFecha.Name = "lblBuscarPorFecha";
+            this.lblBuscarPorFecha.Size = new System.Drawing.Size(161, 24);
+            this.lblBuscarPorFecha.TabIndex = 27;
+            this.lblBuscarPorFecha.Text = "Seleccione fecha:";
+            this.lblBuscarPorFecha.Visible = false;
             // 
-            // lblBuscarUsuario
+            // label10
             // 
-            this.lblBuscarUsuario.AutoSize = true;
-            this.lblBuscarUsuario.Location = new System.Drawing.Point(11, 126);
-            this.lblBuscarUsuario.Name = "lblBuscarUsuario";
-            this.lblBuscarUsuario.Size = new System.Drawing.Size(61, 13);
-            this.lblBuscarUsuario.TabIndex = 10;
-            this.lblBuscarUsuario.Text = "Buscar por:";
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(163, 16);
+            this.label10.Name = "label10";
+            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label10.Size = new System.Drawing.Size(766, 136);
+            this.label10.TabIndex = 12;
+            this.label10.Text = resources.GetString("label10.Text");
             // 
-            // lblIdBuscar
+            // txtDatoDeBusqueda
             // 
-            this.lblIdBuscar.AutoSize = true;
-            this.lblIdBuscar.Location = new System.Drawing.Point(119, 126);
-            this.lblIdBuscar.Name = "lblIdBuscar";
-            this.lblIdBuscar.Size = new System.Drawing.Size(83, 13);
-            this.lblIdBuscar.TabIndex = 9;
-            this.lblIdBuscar.Text = "N° Identificador:";
+            this.txtDatoDeBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDatoDeBusqueda.Location = new System.Drawing.Point(335, 247);
+            this.txtDatoDeBusqueda.Name = "txtDatoDeBusqueda";
+            this.txtDatoDeBusqueda.Size = new System.Drawing.Size(264, 29);
+            this.txtDatoDeBusqueda.TabIndex = 9;
+            this.txtDatoDeBusqueda.Visible = false;
+            this.txtDatoDeBusqueda.TextChanged += new System.EventHandler(this.txtDatoDeBusqueda_TextChanged);
+            this.txtDatoDeBusqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDatoDeBusqueda_KeyPress);
             // 
-            // txtBuscar
+            // lblBusquedaSeleccionada
             // 
-            this.txtBuscar.Enabled = false;
-            this.txtBuscar.Location = new System.Drawing.Point(122, 142);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
-            this.txtBuscar.TabIndex = 8;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
+            this.lblBusquedaSeleccionada.AutoSize = true;
+            this.lblBusquedaSeleccionada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusquedaSeleccionada.Location = new System.Drawing.Point(375, 220);
+            this.lblBusquedaSeleccionada.Name = "lblBusquedaSeleccionada";
+            this.lblBusquedaSeleccionada.Size = new System.Drawing.Size(175, 24);
+            this.lblBusquedaSeleccionada.TabIndex = 18;
+            this.lblBusquedaSeleccionada.Text = "Opción del usuario:";
+            this.lblBusquedaSeleccionada.Visible = false;
             // 
-            // cmbPermisosBuscar
+            // dtpBuscarFecha
             // 
-            this.cmbPermisosBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPermisosBuscar.Enabled = false;
-            this.cmbPermisosBuscar.FormattingEnabled = true;
-            this.cmbPermisosBuscar.Location = new System.Drawing.Point(454, 141);
-            this.cmbPermisosBuscar.Name = "cmbPermisosBuscar";
-            this.cmbPermisosBuscar.Size = new System.Drawing.Size(101, 21);
-            this.cmbPermisosBuscar.TabIndex = 7;
-            this.cmbPermisosBuscar.SelectedIndexChanged += new System.EventHandler(this.cmbPermisosBuscar_SelectedIndexChanged);
+            this.dtpBuscarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBuscarFecha.Location = new System.Drawing.Point(293, 246);
+            this.dtpBuscarFecha.Name = "dtpBuscarFecha";
+            this.dtpBuscarFecha.Size = new System.Drawing.Size(350, 29);
+            this.dtpBuscarFecha.TabIndex = 10;
+            this.dtpBuscarFecha.Value = new System.DateTime(2025, 6, 1, 0, 0, 0, 0);
+            this.dtpBuscarFecha.Visible = false;
             // 
-            // lblPermisosBuscar
+            // pictureBox2
             // 
-            this.lblPermisosBuscar.AutoSize = true;
-            this.lblPermisosBuscar.Location = new System.Drawing.Point(451, 126);
-            this.lblPermisosBuscar.Name = "lblPermisosBuscar";
-            this.lblPermisosBuscar.Size = new System.Drawing.Size(49, 13);
-            this.lblPermisosBuscar.TabIndex = 6;
-            this.lblPermisosBuscar.Text = "Permisos";
-            // 
-            // lblContrseñaBuscar
-            // 
-            this.lblContrseñaBuscar.AutoSize = true;
-            this.lblContrseñaBuscar.Location = new System.Drawing.Point(339, 126);
-            this.lblContrseñaBuscar.Name = "lblContrseñaBuscar";
-            this.lblContrseñaBuscar.Size = new System.Drawing.Size(64, 13);
-            this.lblContrseñaBuscar.TabIndex = 5;
-            this.lblContrseñaBuscar.Text = "Contraseña:";
-            // 
-            // lblUsuarioBuscar
-            // 
-            this.lblUsuarioBuscar.AutoSize = true;
-            this.lblUsuarioBuscar.Location = new System.Drawing.Point(230, 126);
-            this.lblUsuarioBuscar.Name = "lblUsuarioBuscar";
-            this.lblUsuarioBuscar.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuarioBuscar.TabIndex = 4;
-            this.lblUsuarioBuscar.Text = "Usuario:";
-            // 
-            // txtContraseñaBuscar
-            // 
-            this.txtContraseñaBuscar.Enabled = false;
-            this.txtContraseñaBuscar.Location = new System.Drawing.Point(342, 142);
-            this.txtContraseñaBuscar.Name = "txtContraseñaBuscar";
-            this.txtContraseñaBuscar.Size = new System.Drawing.Size(100, 20);
-            this.txtContraseñaBuscar.TabIndex = 3;
-            // 
-            // txtUsuarioBuscar
-            // 
-            this.txtUsuarioBuscar.Enabled = false;
-            this.txtUsuarioBuscar.Location = new System.Drawing.Point(233, 142);
-            this.txtUsuarioBuscar.Name = "txtUsuarioBuscar";
-            this.txtUsuarioBuscar.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuarioBuscar.TabIndex = 1;
-            this.txtUsuarioBuscar.TextChanged += new System.EventHandler(this.txtUsuarioBuscar_TextChanged);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(14, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(143, 136);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // btnBuscarUsuario
             // 
             this.btnBuscarUsuario.Enabled = false;
-            this.btnBuscarUsuario.Location = new System.Drawing.Point(260, 176);
+            this.btnBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarUsuario.Location = new System.Drawing.Point(484, 312);
             this.btnBuscarUsuario.Name = "btnBuscarUsuario";
-            this.btnBuscarUsuario.Size = new System.Drawing.Size(139, 38);
-            this.btnBuscarUsuario.TabIndex = 0;
+            this.btnBuscarUsuario.Size = new System.Drawing.Size(222, 38);
+            this.btnBuscarUsuario.TabIndex = 12;
             this.btnBuscarUsuario.Text = "Buscar usuario";
             this.btnBuscarUsuario.UseVisualStyleBackColor = true;
             this.btnBuscarUsuario.Click += new System.EventHandler(this.btnBuscarUsuario_Click);
+            // 
+            // cmbBuscarPermisos
+            // 
+            this.cmbBuscarPermisos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBuscarPermisos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBuscarPermisos.FormattingEnabled = true;
+            this.cmbBuscarPermisos.Items.AddRange(new object[] {
+            "Administrador",
+            "Operador"});
+            this.cmbBuscarPermisos.Location = new System.Drawing.Point(298, 245);
+            this.cmbBuscarPermisos.Name = "cmbBuscarPermisos";
+            this.cmbBuscarPermisos.Size = new System.Drawing.Size(338, 32);
+            this.cmbBuscarPermisos.TabIndex = 11;
+            this.cmbBuscarPermisos.Visible = false;
             // 
             // panelActualizar
             // 
@@ -542,7 +703,6 @@
             this.btnEliminarUs.TabIndex = 15;
             this.btnEliminarUs.Text = "Eliminar usuario";
             this.btnEliminarUs.UseVisualStyleBackColor = true;
-            this.btnEliminarUs.Click += new System.EventHandler(this.btnEliminarUs_Click);
             // 
             // btnLimpiarAct
             // 
@@ -552,7 +712,6 @@
             this.btnLimpiarAct.TabIndex = 13;
             this.btnLimpiarAct.Text = "Limpiar";
             this.btnLimpiarAct.UseVisualStyleBackColor = true;
-            this.btnLimpiarAct.Click += new System.EventHandler(this.btnLimpiarAct_Click);
             // 
             // lblIdEliminar
             // 
@@ -615,7 +774,6 @@
             this.txtContraActualizar.Name = "txtContraActualizar";
             this.txtContraActualizar.Size = new System.Drawing.Size(100, 20);
             this.txtContraActualizar.TabIndex = 3;
-            this.txtContraActualizar.TextChanged += new System.EventHandler(this.txtContraActualizar_TextChanged);
             // 
             // txtUsuarioActualizar
             // 
@@ -623,7 +781,6 @@
             this.txtUsuarioActualizar.Name = "txtUsuarioActualizar";
             this.txtUsuarioActualizar.Size = new System.Drawing.Size(100, 20);
             this.txtUsuarioActualizar.TabIndex = 1;
-            this.txtUsuarioActualizar.TextChanged += new System.EventHandler(this.txtUsuarioActualizar_TextChanged);
             // 
             // btnActualizarUsuario
             // 
@@ -634,182 +791,25 @@
             this.btnActualizarUsuario.TabIndex = 0;
             this.btnActualizarUsuario.Text = "Actualizar usuario";
             this.btnActualizarUsuario.UseVisualStyleBackColor = true;
-            this.btnActualizarUsuario.Click += new System.EventHandler(this.btnActualizarUsuario_Click);
             // 
             // panelAcciones
             // 
             this.panelAcciones.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelAcciones.Controls.Add(this.panelOpciones);
-            this.panelAcciones.Controls.Add(this.panelCrear);
             this.panelAcciones.Controls.Add(this.panelBuscar);
+            this.panelAcciones.Controls.Add(this.panelCrear);
+            this.panelAcciones.Controls.Add(this.panelOpciones);
             this.panelAcciones.Controls.Add(this.panelActualizar);
             this.panelAcciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAcciones.Location = new System.Drawing.Point(0, 0);
             this.panelAcciones.Name = "panelAcciones";
-            this.panelAcciones.Size = new System.Drawing.Size(1246, 417);
+            this.panelAcciones.Size = new System.Drawing.Size(1245, 417);
             this.panelAcciones.TabIndex = 16;
-            this.panelAcciones.Resize += new System.EventHandler(this.panelAcciones_Resize);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 312);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(243, 104);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Actualizar/Eliminar usuario";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dtpNacimiento
-            // 
-            this.dtpNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNacimiento.Location = new System.Drawing.Point(15, 304);
-            this.dtpNacimiento.Name = "dtpNacimiento";
-            this.dtpNacimiento.Size = new System.Drawing.Size(350, 29);
-            this.dtpNacimiento.TabIndex = 12;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(14, 247);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 29);
-            this.textBox1.TabIndex = 13;
-            // 
-            // lblDNICrear
-            // 
-            this.lblDNICrear.AutoSize = true;
-            this.lblDNICrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDNICrear.Location = new System.Drawing.Point(10, 224);
-            this.lblDNICrear.Name = "lblDNICrear";
-            this.lblDNICrear.Size = new System.Drawing.Size(46, 24);
-            this.lblDNICrear.TabIndex = 14;
-            this.lblDNICrear.Text = "DNI:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(453, 247);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 29);
-            this.textBox2.TabIndex = 15;
-            // 
-            // lblTelefonoCrear
-            // 
-            this.lblTelefonoCrear.AutoSize = true;
-            this.lblTelefonoCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefonoCrear.Location = new System.Drawing.Point(449, 224);
-            this.lblTelefonoCrear.Name = "lblTelefonoCrear";
-            this.lblTelefonoCrear.Size = new System.Drawing.Size(90, 24);
-            this.lblTelefonoCrear.TabIndex = 16;
-            this.lblTelefonoCrear.Text = "Teléfono:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(663, 247);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(275, 29);
-            this.textBox3.TabIndex = 17;
-            // 
-            // lblEmailCrear
-            // 
-            this.lblEmailCrear.AutoSize = true;
-            this.lblEmailCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailCrear.Location = new System.Drawing.Point(659, 224);
-            this.lblEmailCrear.Name = "lblEmailCrear";
-            this.lblEmailCrear.Size = new System.Drawing.Size(62, 24);
-            this.lblEmailCrear.TabIndex = 18;
-            this.lblEmailCrear.Text = "Email:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(179, 247);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(261, 29);
-            this.textBox4.TabIndex = 19;
-            // 
-            // lblDireccionCrear
-            // 
-            this.lblDireccionCrear.AutoSize = true;
-            this.lblDireccionCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccionCrear.Location = new System.Drawing.Point(175, 224);
-            this.lblDireccionCrear.Name = "lblDireccionCrear";
-            this.lblDireccionCrear.Size = new System.Drawing.Size(95, 24);
-            this.lblDireccionCrear.TabIndex = 20;
-            this.lblDireccionCrear.Text = "Dirección:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(859, 186);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(79, 29);
-            this.textBox5.TabIndex = 21;
-            // 
-            // lblEdadCrear
-            // 
-            this.lblEdadCrear.AutoSize = true;
-            this.lblEdadCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdadCrear.Location = new System.Drawing.Point(855, 163);
-            this.lblEdadCrear.Name = "lblEdadCrear";
-            this.lblEdadCrear.Size = new System.Drawing.Size(60, 24);
-            this.lblEdadCrear.TabIndex = 22;
-            this.lblEdadCrear.Text = "Edad:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(700, 186);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(142, 29);
-            this.textBox6.TabIndex = 23;
-            // 
-            // lblApellidoCrear
-            // 
-            this.lblApellidoCrear.AutoSize = true;
-            this.lblApellidoCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoCrear.Location = new System.Drawing.Point(696, 163);
-            this.lblApellidoCrear.Name = "lblApellidoCrear";
-            this.lblApellidoCrear.Size = new System.Drawing.Size(84, 24);
-            this.lblApellidoCrear.TabIndex = 24;
-            this.lblApellidoCrear.Text = "Apellido:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(515, 186);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(166, 29);
-            this.textBox7.TabIndex = 25;
-            // 
-            // lblNombreCrear
-            // 
-            this.lblNombreCrear.AutoSize = true;
-            this.lblNombreCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreCrear.Location = new System.Drawing.Point(511, 163);
-            this.lblNombreCrear.Name = "lblNombreCrear";
-            this.lblNombreCrear.Size = new System.Drawing.Size(84, 24);
-            this.lblNombreCrear.TabIndex = 26;
-            this.lblNombreCrear.Text = "Nombre:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 281);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 24);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Contraseña:";
             // 
             // frmUsuariosAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1246, 793);
+            this.ClientSize = new System.Drawing.Size(1245, 971);
             this.Controls.Add(this.panelAcciones);
             this.Controls.Add(this.dgvUsuarios);
             this.Name = "frmUsuariosAdmin";
@@ -824,7 +824,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgCrearUsuario)).EndInit();
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBuscarUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelActualizar.ResumeLayout(false);
             this.panelActualizar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgActualizarEliminarUsuario)).EndInit();
@@ -841,25 +841,13 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Panel panelCrear;
-        private System.Windows.Forms.ComboBox cmbPermisos;
+        private System.Windows.Forms.ComboBox cmbPermisosCrear;
         private System.Windows.Forms.Label lblPermisos;
         private System.Windows.Forms.Label lblContraseñaCrear;
         private System.Windows.Forms.Label lblUsuarioCrear;
-        private System.Windows.Forms.TextBox txtContra;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Button btnCrearUs;
-        private System.Windows.Forms.Panel panelBuscar;
-        private System.Windows.Forms.ComboBox cmbPermisosBuscar;
-        private System.Windows.Forms.Label lblPermisosBuscar;
-        private System.Windows.Forms.Label lblContrseñaBuscar;
-        private System.Windows.Forms.Label lblUsuarioBuscar;
-        private System.Windows.Forms.TextBox txtContraseñaBuscar;
-        private System.Windows.Forms.TextBox txtUsuarioBuscar;
-        private System.Windows.Forms.Button btnBuscarUsuario;
-        private System.Windows.Forms.Label lblIdBuscar;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.ComboBox cmbBuscarFiltro;
-        private System.Windows.Forms.Label lblBuscarUsuario;
+        private System.Windows.Forms.TextBox txtContraseñaCrear;
+        private System.Windows.Forms.TextBox txtUsuarioCrear;
+        private System.Windows.Forms.Button btnCrearUsuario;
         private System.Windows.Forms.Panel panelActualizar;
         private System.Windows.Forms.Button btnLimpiarAct;
         private System.Windows.Forms.Label lblIdEliminar;
@@ -872,33 +860,42 @@
         private System.Windows.Forms.TextBox txtUsuarioActualizar;
         private System.Windows.Forms.Button btnActualizarUsuario;
         private System.Windows.Forms.Label lblIdCrear;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Button btnLimpiarBuscar;
+        private System.Windows.Forms.TextBox txtIdCrear;
         private System.Windows.Forms.CheckBox chkMensaje;
         private System.Windows.Forms.Button btnEliminarUs;
         private System.Windows.Forms.Panel panelAcciones;
         private System.Windows.Forms.Label lblCrearUsuarioInstrucciones;
         private System.Windows.Forms.PictureBox imgCrearUsuario;
-        private System.Windows.Forms.PictureBox imgBuscarUsuario;
-        private System.Windows.Forms.Label lblBuscarUusariosInstrucciones;
         private System.Windows.Forms.PictureBox imgActualizarEliminarUsuario;
         private System.Windows.Forms.Label lblActualizarEliminarUsuarioInstrucciones;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.TextBox txtNombreCrear;
         private System.Windows.Forms.Label lblNombreCrear;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtApellidoCrear;
         private System.Windows.Forms.Label lblApellidoCrear;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtEdadCrear;
         private System.Windows.Forms.Label lblEdadCrear;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDireccionCrear;
         private System.Windows.Forms.Label lblDireccionCrear;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmailCrear;
         private System.Windows.Forms.Label lblEmailCrear;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTelefonoCrear;
         private System.Windows.Forms.Label lblTelefonoCrear;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDNICrear;
         private System.Windows.Forms.Label lblDNICrear;
-        private System.Windows.Forms.DateTimePicker dtpNacimiento;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dtpNacimientoCrear;
+        private System.Windows.Forms.Label lblFechaNaciminetoCrear;
+        private System.Windows.Forms.Panel panelBuscar;
+        private System.Windows.Forms.ComboBox cmbBuscarTipoDeDato;
+        private System.Windows.Forms.Label lblBuscarPorCampo;
+        private System.Windows.Forms.Button btnLimpiarBuscar;
+        private System.Windows.Forms.Label lblBuscarPorFecha;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtDatoDeBusqueda;
+        private System.Windows.Forms.Label lblBusquedaSeleccionada;
+        private System.Windows.Forms.DateTimePicker dtpBuscarFecha;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnBuscarUsuario;
+        private System.Windows.Forms.ComboBox cmbBuscarPermisos;
     }
 }
