@@ -21,10 +21,10 @@ namespace pryLopezM_IEFI
             lstUsuarios.Add(nuevo);
         }
 
-        /*public List<clsUsuario> buscarUsuario(int dato)
+        public clsUsuario buscarUsuario(int dato)
         {
-            return lstUsuarios.FindAll(e => e.id ==dato);
-        }*/
+            return lstUsuarios.Find(e => e.id ==dato);
+        }
 
 
 

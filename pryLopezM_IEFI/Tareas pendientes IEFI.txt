@@ -10,3 +10,4 @@
 -Ver porque NO puse identity en la bbdd
 -Mejorar lo de la carga del mail
 -Cambiar los elementos de los comboBox
+-Al crear usuario que ponga 2 veces la contraseña, para confirmarla.

@@ -36,8 +36,7 @@ namespace pryLopezM_IEFI
             // --BUSCAR--
 
             // --ACTUALIZAR--
-            cmbPermisosActualizar.Items.Add("Adminsitrador");
-            cmbPermisosActualizar.Items.Add("Operador");
+            
 
 
             
@@ -66,6 +65,15 @@ namespace pryLopezM_IEFI
         //--COMPONENTES CREAR
 
         #region CREAR 
+        private void txtIdCrear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo dígitos y la tecla de retroceso (Backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Cancela el carácter si no es válido
+            }
+        }
+
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
             habilitarBotonCrear(btnCrearUsuario);
@@ -121,6 +129,15 @@ namespace pryLopezM_IEFI
             habilitarBotonCrear(btnCrearUsuario);
         }
 
+        private void txtDireccionCrear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo dígitos y la tecla de retroceso (Backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Cancela el carácter si no es válido
+            }
+        }
+
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtIdCrear.Text);
@@ -154,6 +171,8 @@ namespace pryLopezM_IEFI
         #endregion
 
         // --BUSCAR--
+
+        #region BUSCAR
 
         bool tipoDeCarga;
 
@@ -562,10 +581,19 @@ namespace pryLopezM_IEFI
             btnBuscarUsuario.Enabled = false;
 
         }
-
+        #endregion
         // --ACTUALIZAR--
 
-        /*private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void txtDNIActualizar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo dígitos y la tecla de retroceso (Backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Cancela el carácter si no es válido
+            }
+        }
+
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Si no selecciona la columna.
             if (e.RowIndex >= 0)
@@ -573,103 +601,221 @@ namespace pryLopezM_IEFI
                 //Toma los datos de la fila y llena los componentes.
                 DataGridViewRow fila = dgvUsuarios.Rows[e.RowIndex];
 
-                txtBuscar.Text = fila.Cells["id"].Value.ToString();
+                txtIDActualizar.Text = fila.Cells["idUsuario"].Value.ToString();
+                txtIdParaEliminarUsuario.Text = fila.Cells["idUsuario"].Value.ToString();
 
-                txtUsuarioBuscar.Text = fila.Cells["usuario"].Value.ToString();
+                txtUsuarioActualizar.Text = fila.Cells["usuario"].Value.ToString();
 
-                txtContraseñaBuscar.Text = fila.Cells["contraseña"].Value.ToString();
+                txtContraseñaActualizar.Text = fila.Cells["contraseña"].Value.ToString();
+                txtNombreActualizar.Text = fila.Cells["nombre"].Value.ToString();
+                txtApellidoActualizar.Text = fila.Cells["apellido"].Value.ToString();
+                txtEdadActualizar.Text = fila.Cells["edad"].Value.ToString();
+                txtDNIActualizar.Text = fila.Cells["DNI"].Value.ToString();
+                txtDireccionActualizar.Text = fila.Cells["direccion"].Value.ToString();
+                txtTelefonoActualizar.Text = fila.Cells["telefono"].Value.ToString();
+                txtEmailActualizar.Text = fila.Cells["email"].Value.ToString();
+                dtpFechaNActualizar.Value = Convert.ToDateTime(fila.Cells["fechaDeNacimiento"].Value);
+              
+                cmbPermisosActualizar.Text = fila.Cells["permisos"].Value.ToString();
 
-                cmbPermisosBuscar.Text = fila.Cells["permisos"].Value.ToString();
+                habilitarComponentesDeActualizar(true, false);
 
-            }
-
-            habilitarCompoAct(true, true);
-
+            }            
         }
 
-        private void btnLimpiarAct_Click(object sender, EventArgs e)
+        public void habilitarComponentesDeActualizar(bool t, bool r)
         {
-            limpiarComponentesDeActualizar();
+            txtIDActualizar.Enabled = r;
+            txtUsuarioActualizar.Enabled = t;
+            txtContraseñaActualizar.Enabled = t;
+            txtNombreActualizar.Enabled = t;
+            txtApellidoActualizar.Enabled = t;
+            txtEdadActualizar.Enabled = t;
+            txtDNIActualizar.Enabled = t; 
+            txtDireccionActualizar.Enabled = t;
+            txtTelefonoActualizar.Enabled = t;
+            txtEmailActualizar.Enabled = t;
+            dtpFechaNActualizar.Enabled = t;
+            cmbPermisosActualizar.Enabled = t;
+            btnActualizarUsuario.Enabled = t;
+        }
 
-            habilitarCompoAct(false, false);
+        private void btnCargarUsuario_Click(object sender, EventArgs e)
+        {
+            clsUsuario aux;
+
+
+            int id = Convert.ToInt32(txtIDActualizar.Text);
+
+            aux = lstUsuarios.buscarUsuario(id);
+
+            if(aux == null)
+            {
+                MessageBox.Show("No se encontró ID","Error");
+            }
+            else
+            {
+                txtUsuarioActualizar.Text = aux.usuario;
+
+                txtContraseñaActualizar.Text = aux.contra;
+                txtNombreActualizar.Text = aux.nombre;
+                txtApellidoActualizar.Text = aux.apellido;
+                txtEdadActualizar.Text = aux.edad.ToString();
+                txtDNIActualizar.Text = aux.dni;
+                txtDireccionActualizar.Text = aux.direccion;
+                txtTelefonoActualizar.Text = aux.telefono;
+                txtEmailActualizar.Text = aux.email;
+                dtpFechaNActualizar.Value = aux.fechaNacimiento;
+
+                cmbPermisosActualizar.Text = aux.permisos;
+            }
+
+            habilitarComponentesDeActualizar(true, false);
+        }
+
+        private void btnLimpiarActualizar_Click_1(object sender, EventArgs e)
+        {
+            vaciarComponentesDeActualizar();
+            habilitarComponentesDeActualizar(false, true);
+        }
+
+        public void vaciarComponentesDeActualizar()
+        {
+            txtIDActualizar.Text = "";
+            txtUsuarioActualizar.Text = "";
+            txtContraseñaActualizar.Text = "";
+            txtNombreActualizar.Text = "";
+            txtApellidoActualizar.Text = "";
+            txtEdadActualizar.Text = "";
+            txtDNIActualizar.Text = "";
+            txtDireccionActualizar.Text = "";
+            txtTelefonoActualizar.Text = "";
+            txtEmailActualizar.Text = "";
+            dtpFechaNActualizar.Value = System.DateTime.Now;
+
+            cmbPermisosActualizar.SelectedIndex = -1;
+        }
+
+        private void txtIDActualizar_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtIDActualizar.Text))
+            {
+                btnCargarUsuarioActualizar.Enabled = true;
+            }
+            else
+            {
+                btnCargarUsuarioActualizar.Enabled = false;
+            }
         }
 
         private void btnActualizarUsuario_Click(object sender, EventArgs e)
         {
-            
-            //BBDD.actualizarDatosUs(txtUsuarioActualizar, txtContraActualizar, cmbPermisosActualizar, Convert.ToInt32(txtActualizar.Text));
 
-            BBDD.mostrarDatos(dgvUsuarios);
+            int id = Convert.ToInt32(txtIDActualizar.Text);
+            DateTime fechaActualizada = dtpFechaNActualizar.Value.Date;
 
-            limpiarComponentesDeActualizar();
-        }
 
-        private void btnBuscarActualizar_Click(object sender, EventArgs e)
-        {
-            var resul = lstUsuarios.buscarUs(txtUsuarioActualizar.Text);
-
-            if (resul != null)
+            if (!string.IsNullOrEmpty(txtUsuarioActualizar.Text) &&
+                !string.IsNullOrEmpty(txtContraseñaActualizar.Text) &&
+                !string.IsNullOrEmpty(txtNombreActualizar.Text) &&
+                !string.IsNullOrEmpty(txtApellidoActualizar.Text) &&
+                !string.IsNullOrEmpty(txtEdadActualizar.Text) &&
+                !string.IsNullOrEmpty(txtDireccionActualizar.Text) &&
+                !string.IsNullOrEmpty(txtDNIActualizar.Text) &&
+                !string.IsNullOrEmpty(txtTelefonoActualizar.Text) &&
+                !string.IsNullOrEmpty(txtEmailActualizar.Text))
             {
-                txtContraActualizar.Text = resul.contra;
+                BBDD.actualizarDatosUsuario(id, txtUsuarioActualizar, txtContraseñaActualizar, txtNombreActualizar, txtApellidoActualizar,
+                    txtEdadActualizar,txtDNIActualizar, txtDireccionActualizar, txtTelefonoActualizar,
+                    txtEmailActualizar, fechaActualizada, cmbPermisosActualizar );
 
-                cmbPermisosActualizar.Text = resul.permisos;
+                BBDD.mostrarDatos(dgvUsuarios);
 
-                txtActualizar.Text = (resul.id).ToString();
-
-                habilitarCompoAct(true, true);
-
-                btnEliminarUs.Enabled = true;
-            }
-            else
-            {
-                MessageBox.Show("Usuario no encontrado.","Error");
-            }
-        }
-
-        public void habilitarCompoAct(bool t, bool t2)
-        {
-            txtContraActualizar.Enabled = t;
-            cmbPermisosActualizar.Enabled=t2;
-        }
-
-        private void txtUsuarioActualizar_TextChanged(object sender, EventArgs e)
-        {
-            habilitarbtnAct();
-        }
-
-        private void txtContraActualizar_TextChanged(object sender, EventArgs e)
-        {
-            habilitarbtnAct();
-        }
-
-        public void habilitarbtnAct()
-        {
-            if (!string.IsNullOrEmpty(txtUsuarioActualizar.Text) && !string.IsNullOrEmpty(txtContraActualizar.Text))
-            {
-                btnActualizarUsuario.Enabled = true;
+                vaciarComponentesDeActualizar();
+                habilitarComponentesDeActualizar(false, true);
 
             }
             else
             {
-                btnActualizarUsuario.Enabled = false;
+                MessageBox.Show("No se pueden dejar campos vacíos.","Error");
             }
-        }
-
-        public void limpiarComponentesDeActualizar()
-        {
-            txtUsuarioActualizar.Text = "";
-            txtContraActualizar.Text = "";
-            txtActualizar.Text = "";
-            cmbPermisosActualizar.SelectedIndex = -1;
         }
 
         // --ELIMINAR--
-
-        private void btnEliminarUs_Click(object sender, EventArgs e)
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
-            BBDD.eliminarDatosUs(Convert.ToInt32(txtActualizar.Text));
-            BBDD.mostrarDatos(dgvUsuarios);
-        }*/
+            clsUsuario aux;
+            int id = Convert.ToInt32(txtIdParaEliminarUsuario.Text);
+
+            aux = lstUsuarios.buscarUsuario(id);
+
+            if ( aux != null )
+            {
+
+                DialogResult rtdo = MessageBox.Show(
+
+                        "Está a punto de eliminar el siguiente usuario: \n" +
+                        $"ID: {aux.id}\n" +
+                        $"Usuario: {aux.usuario}\n" +
+                        $"Contraseña: {aux.contra}\n" +
+                        $"Nombre: {aux.nombre}\n" +
+                        $"Apellido: {aux.apellido}\n" +
+                        $"Edad: {aux.edad}\n" +
+                        $"DNI: {aux.dni}\n" +
+                        $"Direccion: {aux.direccion}\n" +
+                        $"Telfono: {aux.telefono}\n" +
+                        $"Email: {aux.email}\n" +
+                        $"Fecha de nacimiento: {aux.fechaNacimiento}\n" +
+                        $"Fecha de alta: {aux.fechaDeAlta}\n" +
+                        $"Permiso: {aux.permisos}\n",
+                        "Eliminar usuario",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                        );
+
+                if (rtdo == DialogResult.Yes)
+                {
+                    if (chkMensaje.Checked)
+                    {
+                        DialogResult confir = MessageBox.Show("Esta acción es irreversible, ¿está realmente seguro de borrar el usuario?",
+                            "Confirmación",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question);
+
+                        if (confir == DialogResult.Yes)
+                        {
+                            txtIdParaEliminarUsuario.Text = "";
+                            BBDD.eliminarDatosUsusario(id);
+                            BBDD.mostrarDatos(dgvUsuarios);
+                        }
+                    }
+                    else
+                    {
+                        txtIdParaEliminarUsuario.Text = "";
+                        BBDD.eliminarDatosUsusario(id);
+                        BBDD.mostrarDatos(dgvUsuarios);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("ID inexistente.","Error");
+            }
+            
+
+        }
+
+        private void txtIdParaEliminarUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtIdParaEliminarUsuario.Text))
+            {
+                btnEliminarUsuario.Enabled = true;
+            }
+            else
+            {
+                btnEliminarUsuario.Enabled = false;
+            }
+        }
 
         // --PANELES--
         private void btnCrear_Click_1(object sender, EventArgs e)
@@ -680,6 +826,16 @@ namespace pryLopezM_IEFI
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             paneles(panelBuscar);
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            paneles(panelActualizar);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            paneles(panelEliminar);
         }
 
         public void paneles(Panel pnl)
@@ -694,16 +850,7 @@ namespace pryLopezM_IEFI
             pnl.BringToFront();
         }
 
-        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permite solo dígitos y la tecla de retroceso (Backspace)
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true; // Cancela el carácter si no es válido
-            }
-        }
-
-        private void txtIdCrear_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtIdParaEliminarUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permite solo dígitos y la tecla de retroceso (Backspace)
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))

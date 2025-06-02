@@ -258,8 +258,8 @@ namespace pryLopezM_IEFI
             }
         }
 
-        public void actualizarDatosUs(int id, TextBox txt, TextBox txt1, TextBox txt2, TextBox txt3, TextBox txt4,
-            TextBox txt5, TextBox txt6, TextBox txt7, TextBox txt8, DateTimePicker dtP, ComboBox cmb)
+        public void actualizarDatosUsuario(int id, TextBox txt, TextBox txt1, TextBox txt2, TextBox txt3, TextBox txt4,
+            TextBox txt5, TextBox txt6, TextBox txt7, TextBox txt8, DateTime dtP, ComboBox cmb)
         {
             try
             {
@@ -268,8 +268,8 @@ namespace pryLopezM_IEFI
                 conexionBaseDatos.Open();
 
                 string query = @"UPDATE Usuarios SET usuario = @usuario, contraseña = @contraseña, 
-                    nombre = @nombre, apellido = @apellido,  edad = @edad,  direccion = @direccion,  telefono = @telefono,
-                    email = @email,  fechaNacimiento = @fechaNacimiento,
+                    nombre = @nombre, apellido = @apellido,  edad = @edad, DNI = @dni, direccion = @direccion,  telefono = @telefono,
+                    email = @email,  fechaDeNacimiento = @fechaDeNacimiento,
                     permisos = @permisos WHERE idUsuario = @idUsuario";
 
                 SqlCommand command = new SqlCommand(query, conexionBaseDatos);
@@ -286,9 +286,9 @@ namespace pryLopezM_IEFI
                 command.Parameters.AddWithValue("@direccion", txt6.Text);
                 command.Parameters.AddWithValue("@telefono", txt7.Text);
                 command.Parameters.AddWithValue("@email", txt8.Text);
-                command.Parameters.AddWithValue("@fechaNacimiento", dtP.Value);
+                command.Parameters.AddWithValue("@fechaDeNacimiento", dtP);
                 command.Parameters.AddWithValue("@permisos", cmb.Text);
-                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@idUsuario", id);
 
 
                 command.ExecuteNonQuery();
@@ -305,7 +305,7 @@ namespace pryLopezM_IEFI
             }
         }
 
-        public void eliminarDatosUs(int id)
+        public void eliminarDatosUsusario(int id)
         {
             try
             {
