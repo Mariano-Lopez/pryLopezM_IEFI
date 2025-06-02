@@ -157,18 +157,7 @@ namespace pryLopezM_IEFI
                 lstUsuarios.agregarUsuario(aux);
                 BBDD.mostrarDatos(dgvUsuarios);
 
-                txtIdCrear.Text = "";
-                txtUsuarioCrear.Text = "";
-                txtContraseñaCrear.Text = "";
-                txtNombreCrear.Text = "";
-                txtApellidoCrear.Text = "";
-                txtEdadCrear.Text = "";
-                txtDNICrear.Text = "";
-                txtDireccionCrear.Text = "";
-                txtTelefonoCrear.Text = "";
-                txtEmailCrear.Text = "";
-                fechaSeleccionada = false;
-                cmbPermisosCrear.SelectedIndex = -1;
+                vaciarComponentesCrear();
             }
             else
             {
@@ -178,6 +167,22 @@ namespace pryLopezM_IEFI
 
 
             
+        }
+
+        public void vaciarComponentesCrear()
+        {
+            txtIdCrear.Text = "";
+            txtUsuarioCrear.Text = "";
+            txtContraseñaCrear.Text = "";
+            txtNombreCrear.Text = "";
+            txtApellidoCrear.Text = "";
+            txtEdadCrear.Text = "";
+            txtDNICrear.Text = "";
+            txtDireccionCrear.Text = "";
+            txtTelefonoCrear.Text = "";
+            txtEmailCrear.Text = "";
+            fechaSeleccionada = false;
+            cmbPermisosCrear.SelectedIndex = -1;
         }
 
         #endregion
@@ -460,11 +465,16 @@ namespace pryLopezM_IEFI
                 dgvUsuarios.DataSource = resul;
             }
 
+            vaciarComponentesBuscar();
+
+
+        }
+
+        public void vaciarComponentesBuscar()
+        {
             txtDatoDeBusqueda.Text = "";
             dtpBuscarFecha.Value = System.DateTime.Now;
             cmbBuscarPermisos.SelectedIndex = -1;
-
-
         }
 
         private void cmbBuscarTipoDeDato_SelectedIndexChanged(object sender, EventArgs e)
@@ -617,18 +627,48 @@ namespace pryLopezM_IEFI
                 txtIdParaEliminarUsuario.Text = fila.Cells["idUsuario"].Value.ToString();
 
                 txtUsuarioActualizar.Text = fila.Cells["usuario"].Value.ToString();
+                lblEliminarUsuarioDato.Text = fila.Cells["usuario"].Value.ToString();
 
                 txtContraseñaActualizar.Text = fila.Cells["contraseña"].Value.ToString();
+                lblEliminarContraseñaUsuario.Text = fila.Cells["contraseña"].Value.ToString();
+
                 txtNombreActualizar.Text = fila.Cells["nombre"].Value.ToString();
+                lblEliminarNombreUsuario.Text = fila.Cells["nombre"].Value.ToString();
+
+
                 txtApellidoActualizar.Text = fila.Cells["apellido"].Value.ToString();
+                lblEliminarApellidoUsuario.Text = fila.Cells["apellido"].Value.ToString();
+
+
                 txtEdadActualizar.Text = fila.Cells["edad"].Value.ToString();
+                lblEliminarEdadUsuario.Text = fila.Cells["edad"].Value.ToString();
+
+
                 txtDNIActualizar.Text = fila.Cells["DNI"].Value.ToString();
+                lblEliminarEmailUsuario.Text = fila.Cells["DNI"].Value.ToString();
+
+
                 txtDireccionActualizar.Text = fila.Cells["direccion"].Value.ToString();
+                lblEliminarDireccionUsuario.Text = fila.Cells["direccion"].Value.ToString();
+
+
                 txtTelefonoActualizar.Text = fila.Cells["telefono"].Value.ToString();
+                lblEliminarTelefonoUsuario.Text = fila.Cells["telefono"].Value.ToString();
+
+
                 txtEmailActualizar.Text = fila.Cells["email"].Value.ToString();
+                lblEliminarEmailUsuario.Text = fila.Cells["email"].Value.ToString();
+
+
                 dtpFechaNActualizar.Value = Convert.ToDateTime(fila.Cells["fechaDeNacimiento"].Value);
-              
+                lblEliminarFechaNacimientoUsuario.Text = fila.Cells["fechaDeNacimiento"].Value.ToString();
+
+
+                lblEliminarFechaNacimientoUsuario.Text = fila.Cells["fechaDeAlta"].Value.ToString();
+                    
                 cmbPermisosActualizar.Text = fila.Cells["permisos"].Value.ToString();
+                lblEliminarPermisosUsuario.Text = fila.Cells["permisos"].Value.ToString();
+
 
                 habilitarComponentesDeActualizar(true, false);
 
@@ -754,14 +794,15 @@ namespace pryLopezM_IEFI
         }
 
         // --ELIMINAR--
-        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+
+        private void btnConfirmarEliminacion_Click(object sender, EventArgs e)
         {
             clsUsuario aux;
             int id = Convert.ToInt32(txtIdParaEliminarUsuario.Text);
 
             aux = lstUsuarios.buscarUsuario(id);
 
-            if ( aux != null )
+            if (aux != null)
             {
 
                 DialogResult rtdo = MessageBox.Show(
@@ -782,7 +823,7 @@ namespace pryLopezM_IEFI
                         $"Permiso: {aux.permisos}\n",
                         "Eliminar usuario",
                         MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question
+                        MessageBoxIcon.Asterisk
                         );
 
                 if (rtdo == DialogResult.Yes)
@@ -792,27 +833,37 @@ namespace pryLopezM_IEFI
                         DialogResult confir = MessageBox.Show("Esta acción es irreversible, ¿está realmente seguro de borrar el usuario?",
                             "Confirmación",
                             MessageBoxButtons.YesNo,
-                            MessageBoxIcon.Question);
+                            MessageBoxIcon.Warning);
 
                         if (confir == DialogResult.Yes)
                         {
-                            txtIdParaEliminarUsuario.Text = "";
+                            
                             BBDD.eliminarDatosUsusario(id);
                             BBDD.mostrarDatos(dgvUsuarios);
+
+                            vaciarComponentesEliminar();
                         }
                     }
                     else
                     {
-                        txtIdParaEliminarUsuario.Text = "";
+                        
                         BBDD.eliminarDatosUsusario(id);
                         BBDD.mostrarDatos(dgvUsuarios);
+
+                        vaciarComponentesEliminar();
                     }
                 }
             }
             else
             {
-                MessageBox.Show("ID inexistente.","Error");
+                MessageBox.Show("ID inexistente.", "Error");
             }
+        }
+
+
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            mrcEliminarUsuario.Visible = true;
             
 
         }
@@ -829,25 +880,52 @@ namespace pryLopezM_IEFI
             }
         }
 
+        public void vaciarComponentesEliminar()
+        {
+
+            txtIdParaEliminarUsuario.Text = "";
+            lblEliminarIdUsuario.Text = "";
+            lblEliminarUsuarioDato.Text = "";
+            lblEliminarContraseñaUsuario.Text = "";
+            lblEliminarNombreUsuario.Text = "";
+            lblEliminarApellidoUsuario.Text = "";
+            lblEliminarEdadUsuario.Text = "";
+            lblEliminarDireccionUsuario.Text = "";
+            lblEliminarDNIUsuario.Text = "";
+            lblEliminarTelefonoUsuario.Text = "";
+            lblEliminarEmailUsuario.Text = "";
+            lblEliminarFechaNacimientoUsuario.Text = "";
+            lblEliminarFechaAltaUsuario.Text = "";
+            lblEliminarPermisosUsuario.Text = "";
+            
+            mrcEliminarUsuario.Visible = false; 
+            
+            
+        }
+
         // --PANELES--
         private void btnCrear_Click_1(object sender, EventArgs e)
         {
             paneles(panelCrear);
+            
         }
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             paneles(panelBuscar);
+            vaciarComponentesBuscar();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             paneles(panelActualizar);
+            vaciarComponentesDeActualizar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             paneles(panelEliminar);
+            vaciarComponentesEliminar();
         }
 
         public void paneles(Panel pnl)
