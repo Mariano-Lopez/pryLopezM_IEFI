@@ -118,6 +118,7 @@
     <Content Include="BBDD\BBDDUsuarios.sql" />
     <Content Include="Logo.ico" />
     <Content Include="Resources\Images\actualizar Usuario.png" />
+    <Content Include="Resources\Images\agregar-usuario-btn.png" />
     <Content Include="Resources\Images\agregar-usuario.png" />
     <Content Include="Resources\Images\borrar-usuario.png" />
     <Content Include="Resources\Images\buscar usuario.png" />

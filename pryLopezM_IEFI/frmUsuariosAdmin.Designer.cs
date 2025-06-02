@@ -68,7 +68,7 @@
             this.lblBuscarPorCampo = new System.Windows.Forms.Label();
             this.btnLimpiarBuscar = new System.Windows.Forms.Button();
             this.lblBuscarPorFecha = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblBuscarUsuarioInstrucciones = new System.Windows.Forms.Label();
             this.txtDatoDeBusqueda = new System.Windows.Forms.TextBox();
             this.lblBusquedaSeleccionada = new System.Windows.Forms.Label();
             this.dtpBuscarFecha = new System.Windows.Forms.DateTimePicker();
@@ -77,6 +77,13 @@
             this.cmbBuscarPermisos = new System.Windows.Forms.ComboBox();
             this.lblActualizarUsuarioInstrucciones = new System.Windows.Forms.Label();
             this.panelAcciones = new System.Windows.Forms.Panel();
+            this.panelEliminar = new System.Windows.Forms.Panel();
+            this.chkMensaje = new System.Windows.Forms.CheckBox();
+            this.btnEliminarUsuario = new System.Windows.Forms.Button();
+            this.lblEliminarUsuarioInstrucciones = new System.Windows.Forms.Label();
+            this.imgEliminarUsuario = new System.Windows.Forms.PictureBox();
+            this.lblIDEliminar = new System.Windows.Forms.Label();
+            this.txtIdParaEliminarUsuario = new System.Windows.Forms.TextBox();
             this.panelActualizar = new System.Windows.Forms.Panel();
             this.btnLimpiarActualizar = new System.Windows.Forms.Button();
             this.btnActualizarUsuario = new System.Windows.Forms.Button();
@@ -106,13 +113,6 @@
             this.cmbPermisosActualizar = new System.Windows.Forms.ComboBox();
             this.lblContraseñaActualizar = new System.Windows.Forms.Label();
             this.lblPermisosActualizar = new System.Windows.Forms.Label();
-            this.panelEliminar = new System.Windows.Forms.Panel();
-            this.btnEliminarUsuario = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.imgEliminarUsuario = new System.Windows.Forms.PictureBox();
-            this.lblIDEliminar = new System.Windows.Forms.Label();
-            this.txtIdParaEliminarUsuario = new System.Windows.Forms.TextBox();
-            this.chkMensaje = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.panelOpciones.SuspendLayout();
             this.panelCrear.SuspendLayout();
@@ -120,10 +120,10 @@
             this.panelBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuscarUsuario)).BeginInit();
             this.panelAcciones.SuspendLayout();
-            this.panelActualizar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).BeginInit();
             this.panelEliminar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgEliminarUsuario)).BeginInit();
+            this.panelActualizar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvUsuarios
@@ -202,6 +202,8 @@
             // 
             this.btnCrear.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.Image = ((System.Drawing.Image)(resources.GetObject("btnCrear.Image")));
+            this.btnCrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrear.Location = new System.Drawing.Point(0, 0);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(243, 104);
@@ -322,7 +324,6 @@
             this.txtDireccionCrear.Size = new System.Drawing.Size(261, 29);
             this.txtDireccionCrear.TabIndex = 7;
             this.txtDireccionCrear.TextChanged += new System.EventHandler(this.txtDireccionCrear_TextChanged);
-            this.txtDireccionCrear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccionCrear_KeyPress);
             // 
             // lblDireccionCrear
             // 
@@ -361,6 +362,7 @@
             this.txtTelefonoCrear.Size = new System.Drawing.Size(190, 29);
             this.txtTelefonoCrear.TabIndex = 8;
             this.txtTelefonoCrear.TextChanged += new System.EventHandler(this.txtTelefonoCrear_TextChanged);
+            this.txtTelefonoCrear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefonoCrear_KeyPress);
             // 
             // lblTelefonoCrear
             // 
@@ -380,6 +382,7 @@
             this.txtDNICrear.Size = new System.Drawing.Size(142, 29);
             this.txtDNICrear.TabIndex = 6;
             this.txtDNICrear.TextChanged += new System.EventHandler(this.txtDNICrear_TextChanged);
+            this.txtDNICrear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNICrear_KeyPress);
             // 
             // lblDNICrear
             // 
@@ -484,6 +487,9 @@
             this.cmbPermisosCrear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPermisosCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPermisosCrear.FormattingEnabled = true;
+            this.cmbPermisosCrear.Items.AddRange(new object[] {
+            "Administrador",
+            "Operador"});
             this.cmbPermisosCrear.Location = new System.Drawing.Point(392, 301);
             this.cmbPermisosCrear.Name = "cmbPermisosCrear";
             this.cmbPermisosCrear.Size = new System.Drawing.Size(197, 32);
@@ -517,7 +523,7 @@
             this.panelBuscar.Controls.Add(this.lblBuscarPorCampo);
             this.panelBuscar.Controls.Add(this.btnLimpiarBuscar);
             this.panelBuscar.Controls.Add(this.lblBuscarPorFecha);
-            this.panelBuscar.Controls.Add(this.label10);
+            this.panelBuscar.Controls.Add(this.lblBuscarUsuarioInstrucciones);
             this.panelBuscar.Controls.Add(this.txtDatoDeBusqueda);
             this.panelBuscar.Controls.Add(this.lblBusquedaSeleccionada);
             this.panelBuscar.Controls.Add(this.dtpBuscarFecha);
@@ -587,16 +593,16 @@
             this.lblBuscarPorFecha.Text = "Seleccione fecha:";
             this.lblBuscarPorFecha.Visible = false;
             // 
-            // label10
+            // lblBuscarUsuarioInstrucciones
             // 
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(163, 16);
-            this.label10.Name = "label10";
-            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label10.Size = new System.Drawing.Size(766, 136);
-            this.label10.TabIndex = 12;
-            this.label10.Text = resources.GetString("label10.Text");
+            this.lblBuscarUsuarioInstrucciones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBuscarUsuarioInstrucciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarUsuarioInstrucciones.Location = new System.Drawing.Point(163, 16);
+            this.lblBuscarUsuarioInstrucciones.Name = "lblBuscarUsuarioInstrucciones";
+            this.lblBuscarUsuarioInstrucciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblBuscarUsuarioInstrucciones.Size = new System.Drawing.Size(766, 136);
+            this.lblBuscarUsuarioInstrucciones.TabIndex = 12;
+            this.lblBuscarUsuarioInstrucciones.Text = resources.GetString("lblBuscarUsuarioInstrucciones.Text");
             // 
             // txtDatoDeBusqueda
             // 
@@ -680,16 +686,97 @@
             // panelAcciones
             // 
             this.panelAcciones.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelAcciones.Controls.Add(this.panelEliminar);
-            this.panelAcciones.Controls.Add(this.panelActualizar);
             this.panelAcciones.Controls.Add(this.panelCrear);
             this.panelAcciones.Controls.Add(this.panelBuscar);
+            this.panelAcciones.Controls.Add(this.panelEliminar);
+            this.panelAcciones.Controls.Add(this.panelActualizar);
             this.panelAcciones.Controls.Add(this.panelOpciones);
             this.panelAcciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAcciones.Location = new System.Drawing.Point(0, 0);
             this.panelAcciones.Name = "panelAcciones";
             this.panelAcciones.Size = new System.Drawing.Size(1245, 417);
             this.panelAcciones.TabIndex = 16;
+            // 
+            // panelEliminar
+            // 
+            this.panelEliminar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelEliminar.Controls.Add(this.chkMensaje);
+            this.panelEliminar.Controls.Add(this.btnEliminarUsuario);
+            this.panelEliminar.Controls.Add(this.lblEliminarUsuarioInstrucciones);
+            this.panelEliminar.Controls.Add(this.imgEliminarUsuario);
+            this.panelEliminar.Controls.Add(this.lblIDEliminar);
+            this.panelEliminar.Controls.Add(this.txtIdParaEliminarUsuario);
+            this.panelEliminar.Location = new System.Drawing.Point(249, 3);
+            this.panelEliminar.Name = "panelEliminar";
+            this.panelEliminar.Size = new System.Drawing.Size(1003, 413);
+            this.panelEliminar.TabIndex = 30;
+            this.panelEliminar.Visible = false;
+            // 
+            // chkMensaje
+            // 
+            this.chkMensaje.AutoSize = true;
+            this.chkMensaje.Checked = true;
+            this.chkMensaje.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMensaje.Location = new System.Drawing.Point(380, 273);
+            this.chkMensaje.Name = "chkMensaje";
+            this.chkMensaje.Size = new System.Drawing.Size(204, 24);
+            this.chkMensaje.TabIndex = 30;
+            this.chkMensaje.Text = "Mensaje de confirmación";
+            this.chkMensaje.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarUsuario
+            // 
+            this.btnEliminarUsuario.Enabled = false;
+            this.btnEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(344, 229);
+            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(266, 38);
+            this.btnEliminarUsuario.TabIndex = 29;
+            this.btnEliminarUsuario.Text = "Eliminar usuario";
+            this.btnEliminarUsuario.UseVisualStyleBackColor = true;
+            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
+            // 
+            // lblEliminarUsuarioInstrucciones
+            // 
+            this.lblEliminarUsuarioInstrucciones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblEliminarUsuarioInstrucciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarUsuarioInstrucciones.Location = new System.Drawing.Point(167, 13);
+            this.lblEliminarUsuarioInstrucciones.Name = "lblEliminarUsuarioInstrucciones";
+            this.lblEliminarUsuarioInstrucciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblEliminarUsuarioInstrucciones.Size = new System.Drawing.Size(762, 139);
+            this.lblEliminarUsuarioInstrucciones.TabIndex = 16;
+            this.lblEliminarUsuarioInstrucciones.Text = resources.GetString("lblEliminarUsuarioInstrucciones.Text");
+            // 
+            // imgEliminarUsuario
+            // 
+            this.imgEliminarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("imgEliminarUsuario.Image")));
+            this.imgEliminarUsuario.Location = new System.Drawing.Point(14, 16);
+            this.imgEliminarUsuario.Name = "imgEliminarUsuario";
+            this.imgEliminarUsuario.Size = new System.Drawing.Size(143, 136);
+            this.imgEliminarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgEliminarUsuario.TabIndex = 11;
+            this.imgEliminarUsuario.TabStop = false;
+            // 
+            // lblIDEliminar
+            // 
+            this.lblIDEliminar.AutoSize = true;
+            this.lblIDEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDEliminar.Location = new System.Drawing.Point(402, 162);
+            this.lblIDEliminar.Name = "lblIDEliminar";
+            this.lblIDEliminar.Size = new System.Drawing.Size(141, 24);
+            this.lblIDEliminar.TabIndex = 9;
+            this.lblIDEliminar.Text = "N° Identificador:";
+            // 
+            // txtIdParaEliminarUsuario
+            // 
+            this.txtIdParaEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdParaEliminarUsuario.Location = new System.Drawing.Point(406, 185);
+            this.txtIdParaEliminarUsuario.Name = "txtIdParaEliminarUsuario";
+            this.txtIdParaEliminarUsuario.Size = new System.Drawing.Size(137, 29);
+            this.txtIdParaEliminarUsuario.TabIndex = 0;
+            this.txtIdParaEliminarUsuario.TextChanged += new System.EventHandler(this.txtIdParaEliminarUsuario_TextChanged);
+            this.txtIdParaEliminarUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdParaEliminarUsuario_KeyPress);
             // 
             // panelActualizar
             // 
@@ -1010,87 +1097,6 @@
             this.lblPermisosActualizar.TabIndex = 6;
             this.lblPermisosActualizar.Text = "Permisos:";
             // 
-            // panelEliminar
-            // 
-            this.panelEliminar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelEliminar.Controls.Add(this.chkMensaje);
-            this.panelEliminar.Controls.Add(this.btnEliminarUsuario);
-            this.panelEliminar.Controls.Add(this.label2);
-            this.panelEliminar.Controls.Add(this.imgEliminarUsuario);
-            this.panelEliminar.Controls.Add(this.lblIDEliminar);
-            this.panelEliminar.Controls.Add(this.txtIdParaEliminarUsuario);
-            this.panelEliminar.Location = new System.Drawing.Point(249, 3);
-            this.panelEliminar.Name = "panelEliminar";
-            this.panelEliminar.Size = new System.Drawing.Size(1003, 413);
-            this.panelEliminar.TabIndex = 30;
-            this.panelEliminar.Visible = false;
-            // 
-            // btnEliminarUsuario
-            // 
-            this.btnEliminarUsuario.Enabled = false;
-            this.btnEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(344, 229);
-            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
-            this.btnEliminarUsuario.Size = new System.Drawing.Size(266, 38);
-            this.btnEliminarUsuario.TabIndex = 29;
-            this.btnEliminarUsuario.Text = "Eliminar usuario";
-            this.btnEliminarUsuario.UseVisualStyleBackColor = true;
-            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
-            // 
-            // label2
-            // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(167, 13);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(762, 139);
-            this.label2.TabIndex = 16;
-            this.label2.Text = resources.GetString("label2.Text");
-            // 
-            // imgEliminarUsuario
-            // 
-            this.imgEliminarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("imgEliminarUsuario.Image")));
-            this.imgEliminarUsuario.Location = new System.Drawing.Point(14, 16);
-            this.imgEliminarUsuario.Name = "imgEliminarUsuario";
-            this.imgEliminarUsuario.Size = new System.Drawing.Size(143, 136);
-            this.imgEliminarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgEliminarUsuario.TabIndex = 11;
-            this.imgEliminarUsuario.TabStop = false;
-            // 
-            // lblIDEliminar
-            // 
-            this.lblIDEliminar.AutoSize = true;
-            this.lblIDEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDEliminar.Location = new System.Drawing.Point(402, 162);
-            this.lblIDEliminar.Name = "lblIDEliminar";
-            this.lblIDEliminar.Size = new System.Drawing.Size(141, 24);
-            this.lblIDEliminar.TabIndex = 9;
-            this.lblIDEliminar.Text = "N° Identificador:";
-            // 
-            // txtIdParaEliminarUsuario
-            // 
-            this.txtIdParaEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdParaEliminarUsuario.Location = new System.Drawing.Point(406, 185);
-            this.txtIdParaEliminarUsuario.Name = "txtIdParaEliminarUsuario";
-            this.txtIdParaEliminarUsuario.Size = new System.Drawing.Size(137, 29);
-            this.txtIdParaEliminarUsuario.TabIndex = 0;
-            this.txtIdParaEliminarUsuario.TextChanged += new System.EventHandler(this.txtIdParaEliminarUsuario_TextChanged);
-            this.txtIdParaEliminarUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdParaEliminarUsuario_KeyPress);
-            // 
-            // chkMensaje
-            // 
-            this.chkMensaje.AutoSize = true;
-            this.chkMensaje.Checked = true;
-            this.chkMensaje.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMensaje.Location = new System.Drawing.Point(380, 273);
-            this.chkMensaje.Name = "chkMensaje";
-            this.chkMensaje.Size = new System.Drawing.Size(204, 24);
-            this.chkMensaje.TabIndex = 30;
-            this.chkMensaje.Text = "Mensaje de confirmación";
-            this.chkMensaje.UseVisualStyleBackColor = true;
-            // 
             // frmUsuariosAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1112,12 +1118,12 @@
             this.panelBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuscarUsuario)).EndInit();
             this.panelAcciones.ResumeLayout(false);
-            this.panelActualizar.ResumeLayout(false);
-            this.panelActualizar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).EndInit();
             this.panelEliminar.ResumeLayout(false);
             this.panelEliminar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgEliminarUsuario)).EndInit();
+            this.panelActualizar.ResumeLayout(false);
+            this.panelActualizar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1165,7 +1171,7 @@
         private System.Windows.Forms.Label lblBuscarPorCampo;
         private System.Windows.Forms.Button btnLimpiarBuscar;
         private System.Windows.Forms.Label lblBuscarPorFecha;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblBuscarUsuarioInstrucciones;
         private System.Windows.Forms.TextBox txtDatoDeBusqueda;
         private System.Windows.Forms.Label lblBusquedaSeleccionada;
         private System.Windows.Forms.DateTimePicker dtpBuscarFecha;
@@ -1203,7 +1209,7 @@
         private System.Windows.Forms.Button btnLimpiarActualizar;
         private System.Windows.Forms.Panel panelEliminar;
         private System.Windows.Forms.Button btnEliminarUsuario;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblEliminarUsuarioInstrucciones;
         private System.Windows.Forms.PictureBox imgEliminarUsuario;
         private System.Windows.Forms.Label lblIDEliminar;
         private System.Windows.Forms.TextBox txtIdParaEliminarUsuario;

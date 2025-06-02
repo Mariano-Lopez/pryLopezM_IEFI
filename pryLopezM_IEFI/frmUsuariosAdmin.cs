@@ -28,21 +28,8 @@ namespace pryLopezM_IEFI
             BBDD.mostrarDatos(dgvUsuarios);
             BBDD.cargarUsuarios(lstUsuarios);
 
-            /*Cambiar esto */
-            // --CREAR --
-            cmbPermisosCrear.Items.Add("Administrador");
-            cmbPermisosCrear.Items.Add("Operador");
-
-            // --BUSCAR--
-
-            // --ACTUALIZAR--
-            
-
-
             
         }
-
-
 
         // --CREAR--
 
@@ -129,7 +116,16 @@ namespace pryLopezM_IEFI
             habilitarBotonCrear(btnCrearUsuario);
         }
 
-        private void txtDireccionCrear_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtDNICrear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo dígitos y la tecla de retroceso (Backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Cancela el carácter si no es válido
+            }
+        }
+
+        private void txtTelefonoCrear_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permite solo dígitos y la tecla de retroceso (Backspace)
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -140,32 +136,48 @@ namespace pryLopezM_IEFI
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
+           
             int id = Convert.ToInt32(txtIdCrear.Text);
-            int edad = Convert.ToInt32(txtEdadCrear.Text);
-            DateTime fechaActual = System.DateTime.Now;
-            DateTime fechaNacimiento = dtpNacimientoCrear.Value.Date;
+            clsUsuario nuevo;
 
-            clsUsuario aux = new clsUsuario(id, txtUsuarioCrear.Text, txtContraseñaCrear.Text, txtNombreCrear.Text, txtApellidoCrear.Text, edad, txtDNICrear.Text,
-                 txtDireccionCrear.Text, txtTelefonoCrear.Text, txtEmailCrear.Text, fechaNacimiento, fechaActual, cmbPermisosCrear.Text);
+            nuevo = lstUsuarios.buscarUsuario(id);
 
-            BBDD.crearUsuario(id, txtUsuarioCrear, txtContraseñaCrear, txtNombreCrear, txtApellidoCrear, edad, txtDNICrear,
-                 txtDireccionCrear, txtTelefonoCrear, txtEmailCrear, fechaNacimiento, fechaActual, cmbPermisosCrear);
+            if (nuevo == null)
+            {
+                int edad = Convert.ToInt32(txtEdadCrear.Text);
+                DateTime fechaActual = System.DateTime.Now;
+                DateTime fechaNacimiento = dtpNacimientoCrear.Value.Date;
 
-            lstUsuarios.agregarUsuario(aux);
-            BBDD.mostrarDatos(dgvUsuarios);
+                clsUsuario aux = new clsUsuario(id, txtUsuarioCrear.Text, txtContraseñaCrear.Text, txtNombreCrear.Text, txtApellidoCrear.Text, edad, txtDNICrear.Text,
+                     txtDireccionCrear.Text, txtTelefonoCrear.Text, txtEmailCrear.Text, fechaNacimiento, fechaActual, cmbPermisosCrear.Text);
 
-            txtIdCrear.Text = "";
-            txtUsuarioCrear.Text = "";
-            txtContraseñaCrear.Text = "";
-            txtNombreCrear.Text = "";
-            txtApellidoCrear.Text = "";
-            txtEdadCrear.Text = "";
-            txtDNICrear.Text = "";
-            txtDireccionCrear.Text = "";
-            txtTelefonoCrear.Text = "";
-            txtEmailCrear.Text = "";
-            fechaSeleccionada = false;
-            cmbPermisosCrear.SelectedIndex = -1;
+                BBDD.crearUsuario(id, txtUsuarioCrear, txtContraseñaCrear, txtNombreCrear, txtApellidoCrear, edad, txtDNICrear,
+                     txtDireccionCrear, txtTelefonoCrear, txtEmailCrear, fechaNacimiento, fechaActual, cmbPermisosCrear);
+
+                lstUsuarios.agregarUsuario(aux);
+                BBDD.mostrarDatos(dgvUsuarios);
+
+                txtIdCrear.Text = "";
+                txtUsuarioCrear.Text = "";
+                txtContraseñaCrear.Text = "";
+                txtNombreCrear.Text = "";
+                txtApellidoCrear.Text = "";
+                txtEdadCrear.Text = "";
+                txtDNICrear.Text = "";
+                txtDireccionCrear.Text = "";
+                txtTelefonoCrear.Text = "";
+                txtEmailCrear.Text = "";
+                fechaSeleccionada = false;
+                cmbPermisosCrear.SelectedIndex = -1;
+            }
+            else
+            {
+                MessageBox.Show("El id que intenta cargar ya existe.","Error");
+                txtIdCrear.Text = "";
+            }
+
+
+            
         }
 
         #endregion
