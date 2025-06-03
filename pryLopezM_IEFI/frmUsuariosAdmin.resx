@@ -121,7 +121,7 @@
   <data name="btnEliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfpBgIRGTkBNzWWAAAA
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAHdElNRQfpBgIRGTkBNzWWAAAA
         GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAjJJREFUWEfFljmLFkEQhh/BCy9MvG/E
         TDwSzdQfIGxiYmqs4p37FzRWMDFWEE28Fdx0U3V1F0XBQFTMVJRnqV7G3p79Zub7dF54oemufqumuqt6
         oD1WA9uCjv8LFgKHgSvAC+BV0LFzrmnzT7AOuAp8AX7X0DVttB0pFLxdcFhHbUcWhCn1q3Ing+iekRzH
@@ -138,7 +138,7 @@
   <data name="btnActualizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAHdElNRQfpBgIRGTkBNzWWAAAA
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAAHdElNRQfpBgIRGTkBNzWWAAAA
         GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAhhJREFUWEftlk9LVVEUxX8mljYwKMVB
         SAQhCUL2ZyQYJCT9gQbNymiiX0CnTdSoPkAWNFJDJ30AZ0HUQBCqQUqjCipSgyY1KEstFuwrt81+7933
         uneQuGDBe3efvdc5+5y9z4Ed/EfYD1wB7gLTwC3gDLDbDywCx4HHwDrwO8WvwARwwDvkiUPAghP2vFdk
@@ -154,7 +154,7 @@
   <data name="btnBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfpBgIRGTkBNzWWAAAA
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAHdElNRQfpBgIRGTkBNzWWAAAA
         GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAArFJREFUWEfNl0uoTlEUx3/ej5Jn6BoY
         KBITJYwYkJKBmxExEAYmDAyEkZRHDJGBEBlJSBkYuq47uSEG8kh55B15y1v/29rXbrXPOfvQ+bLqX9+3
         v7XX+u+11l57ffBH+gMzgTXA+oYg2/LRL/LbIyOBvcBT4BvwoyHItnzsAYYH5zq5nP9qMXYAfUVAIREr
@@ -173,7 +173,7 @@
   <data name="btnCrear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfpBgIOIQxXYakDAAAA
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAHdElNRQfpBgIOIQxXYakDAAAA
         GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAihJREFUWEfFl8vODUEQx3+uiRBExD0h
         kYjERlhZCEsPYGXHA1h4BGHDjhdgLy6vIAQrm4+Fu0hs3VY2yC+plvnmq54zZ84w/+Sf0+mu6qqurqo+
         A8OxFdgfdPxfsBY4BdwAngCvg46dc02Zf4KdwE3gK/C7QteUUXZUuOGDxGCNyo7mhCH1VG0js6jOKNdx
@@ -607,7 +607,7 @@ Recuerde, que borrar un usuario es una acción irreversible. Puede habilitar o d
   <data name="imgEliminarUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACy8SURBVHhe7d0H
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACy8SURBVHhe7d0H
         1CVVma/xP6FJDZIkiihJBEFEzCSVFhDEhIjkzGBgcAQEdAYRRySIDjN3uFdUBEFFFAR01BEEQRBQclBA
         ERWV3EShm9Bz16v7G5uXt7/+wjlVOzy/tZ617tURqurU3ud851TtkgAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDBWljS2pK2lrSnpI9KOk7SyZLOlXSppF9Juj01PfWY
@@ -805,7 +805,7 @@ Recuerde, que borrar un usuario es una acción irreversible. Puede habilitar o d
   <data name="imgActualizarUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAB+4SURBVHhe7d13
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAB+4SURBVHhe7d13
         /DVVYefxL00EGyoIShIL2EOiRnftIhqxF+xd49piFxU7KtGgGFs0inU1rggGK4pxUWMBu1GMYktssYsN
         EVAgeZ31PosezsNTbpsz836/Xp8/YhR+986Zc+bOnTuTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

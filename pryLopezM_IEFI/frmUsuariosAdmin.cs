@@ -661,11 +661,12 @@ namespace pryLopezM_IEFI
 
 
                 dtpFechaNActualizar.Value = Convert.ToDateTime(fila.Cells["fechaDeNacimiento"].Value);
-                lblEliminarFechaNacimientoUsuario.Text = fila.Cells["fechaDeNacimiento"].Value.ToString();
+                lblEliminarFechaNacimientoUsuario.Text = Convert.ToDateTime(fila.Cells["fechaDeNacimiento"].Value).ToString("dd/MM/yyyy");
 
 
-                lblEliminarFechaNacimientoUsuario.Text = fila.Cells["fechaDeAlta"].Value.ToString();
-                    
+                lblEliminarFechaAltaUsuario.Text = Convert.ToDateTime(fila.Cells["fechaDeAlta"].Value).ToString("dd/MM/yyyy");
+
+
                 cmbPermisosActualizar.Text = fila.Cells["permisos"].Value.ToString();
                 lblEliminarPermisosUsuario.Text = fila.Cells["permisos"].Value.ToString();
 
@@ -797,75 +798,50 @@ namespace pryLopezM_IEFI
 
         private void btnConfirmarEliminacion_Click(object sender, EventArgs e)
         {
-            clsUsuario aux;
-            int id = Convert.ToInt32(txtIdParaEliminarUsuario.Text);
 
-            aux = lstUsuarios.buscarUsuario(id);
+            int idParaEliminar = Convert.ToInt32(txtIdParaEliminarUsuario.Text);
 
-            if (aux != null)
+            if (chkMensaje.Checked)
             {
+                DialogResult confir = MessageBox.Show("Esta acción es irreversible, ¿está realmente seguro de borrar el usuario?",
+                    "Confirmación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
 
-                DialogResult rtdo = MessageBox.Show(
-
-                        "Está a punto de eliminar el siguiente usuario: \n" +
-                        $"ID: {aux.id}\n" +
-                        $"Usuario: {aux.usuario}\n" +
-                        $"Contraseña: {aux.contra}\n" +
-                        $"Nombre: {aux.nombre}\n" +
-                        $"Apellido: {aux.apellido}\n" +
-                        $"Edad: {aux.edad}\n" +
-                        $"DNI: {aux.dni}\n" +
-                        $"Direccion: {aux.direccion}\n" +
-                        $"Telfono: {aux.telefono}\n" +
-                        $"Email: {aux.email}\n" +
-                        $"Fecha de nacimiento: {aux.fechaNacimiento}\n" +
-                        $"Fecha de alta: {aux.fechaDeAlta}\n" +
-                        $"Permiso: {aux.permisos}\n",
-                        "Eliminar usuario",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Asterisk
-                        );
-
-                if (rtdo == DialogResult.Yes)
+                if (confir == DialogResult.Yes)
                 {
-                    if (chkMensaje.Checked)
-                    {
-                        DialogResult confir = MessageBox.Show("Esta acción es irreversible, ¿está realmente seguro de borrar el usuario?",
-                            "Confirmación",
-                            MessageBoxButtons.YesNo,
-                            MessageBoxIcon.Warning);
 
-                        if (confir == DialogResult.Yes)
-                        {
-                            
-                            BBDD.eliminarDatosUsusario(id);
-                            BBDD.mostrarDatos(dgvUsuarios);
+                    BBDD.eliminarDatosUsusario(idParaEliminar);
+                    BBDD.mostrarDatos(dgvUsuarios);
 
-                            vaciarComponentesEliminar();
-                        }
-                    }
-                    else
-                    {
-                        
-                        BBDD.eliminarDatosUsusario(id);
-                        BBDD.mostrarDatos(dgvUsuarios);
-
-                        vaciarComponentesEliminar();
-                    }
+                    vaciarComponentesEliminar();
                 }
             }
             else
             {
-                MessageBox.Show("ID inexistente.", "Error");
-            }
-        }
 
+                BBDD.eliminarDatosUsusario(idParaEliminar);
+                BBDD.mostrarDatos(dgvUsuarios);
+
+                vaciarComponentesEliminar();
+            }
+            
+        }
 
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
-            mrcEliminarUsuario.Visible = true;
-            
+            clsUsuario aux;
+            int idParaEliminar = Convert.ToInt32(txtIdParaEliminarUsuario.Text);
+            aux = lstUsuarios.buscarUsuario(idParaEliminar);
 
+            if (aux != null)
+            {
+                mrcEliminarUsuario.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("ID inexistente.","Error");
+            }
         }
 
         private void txtIdParaEliminarUsuario_TextChanged(object sender, EventArgs e)

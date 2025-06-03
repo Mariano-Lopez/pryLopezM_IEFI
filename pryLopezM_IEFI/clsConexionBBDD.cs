@@ -332,5 +332,40 @@ namespace pryLopezM_IEFI
             
         }
 
+        public void registrarAcciones(string evento, string desc, int id, DateTime fecha)
+        {
+            try
+            {
+                conexionBaseDatos = new SqlConnection(cadenaConexion);
+                nombreBaseDeDatos = conexionBaseDatos.Database;
+                conexionBaseDatos.Open();
+
+                
+
+
+                string query = @"INSERT INTO accionRealizada (evento, descripcion, fechaDeAccion, idUsuarioAccion) VALUES (@evento,
+                                @descripcion, @fechaDeAccion, @idUsuarioAccion)";
+
+                SqlCommand command = new SqlCommand(query, conexionBaseDatos);
+
+                // Asignar los parámetros
+                command.Parameters.AddWithValue("@evento", evento);
+                command.Parameters.AddWithValue("@descripcion", desc);
+                command.Parameters.AddWithValue("@fechaDeAccion", fecha);
+                command.Parameters.AddWithValue("@idUsuarioAccion", id);
+
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
+
+
+
+
+
     }
 }
