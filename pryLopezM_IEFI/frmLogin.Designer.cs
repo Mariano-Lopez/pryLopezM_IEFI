@@ -141,7 +141,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Loign";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.frmSesionUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogoEmpresa)).EndInit();
             this.ResumeLayout(false);

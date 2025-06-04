@@ -54,6 +54,18 @@
     <Compile Include="clsSesionUs.cs" />
     <Compile Include="clsUsuario.cs" />
     <Compile Include="clsUsuarios.cs" />
+    <Compile Include="frmHistorialTareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistorialTareas.Designer.cs">
+      <DependentUpon>frmHistorialTareas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarTarea.Designer.cs">
+      <DependentUpon>frmRegistrarTarea.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuariosAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +92,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmHistorialTareas.resx">
+      <DependentUpon>frmHistorialTareas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarTarea.resx">
+      <DependentUpon>frmRegistrarTarea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUsuariosAdmin.resx">
       <DependentUpon>frmUsuariosAdmin.cs</DependentUpon>
     </EmbeddedResource>
