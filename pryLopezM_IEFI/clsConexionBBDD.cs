@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -363,8 +365,186 @@ namespace pryLopezM_IEFI
             }
         }
 
+        public void datosAuditoriaAcciones(DataGridView dgv)
+        {
+
+            try
+            {
+                conexionBaseDatos = new SqlConnection(cadenaConexion);
+
+                nombreBaseDeDatos = conexionBaseDatos.Database;
+
+                conexionBaseDatos.Open();
+
+                string query = "SELECT * FROM accionRealizada";
+                comandoBaseDatos = new SqlCommand(query, conexionBaseDatos);
+
+                //Crear un DataTable.
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(comandoBaseDatos);
+                DataTable tablaProductos = new DataTable();
+
+                dataAdapter.Fill(tablaProductos);
+
+                dgv.AllowUserToOrderColumns = false;
+                
+                dgv.DataSource = tablaProductos;
+
+                foreach (DataGridViewColumn column in dgv.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+
+            }
+        }
+
+        public void datosAuditoriaSesiones(DataGridView dgv)
+        {
+
+            try
+            {
+                conexionBaseDatos = new SqlConnection(cadenaConexion);
+
+                nombreBaseDeDatos = conexionBaseDatos.Database;
+
+                conexionBaseDatos.Open();
+
+                string query = "SELECT * FROM sesionUsuario";
+                comandoBaseDatos = new SqlCommand(query, conexionBaseDatos);
+
+                //Crear un DataTable.
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(comandoBaseDatos);
+                DataTable tablaProductos = new DataTable();
+
+                dataAdapter.Fill(tablaProductos);
+
+                dgv.AllowUserToOrderColumns = false;
+
+                dgv.DataSource = tablaProductos;
+
+                foreach (DataGridViewColumn column in dgv.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+
+            }
+        }
+
+        public void datosAuditoriaId(int id, DataGridView dgv, string tabla, string campo)
+        {
+            try
+            {
+                using (SqlConnection conexionBaseDatos = new SqlConnection(cadenaConexion))
+                {
+                    conexionBaseDatos.Open();
+
+                    string query = $@"SELECT * FROM {tabla} WHERE {campo} = @{campo}";
+
+                    using (SqlCommand command = new SqlCommand(query, conexionBaseDatos))
+                    {
+                        command.Parameters.AddWithValue($"@{campo}", id);
+
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                        DataTable tablaSesion = new DataTable();
+
+                        dataAdapter.Fill(tablaSesion);
+
+                        dgv.AllowUserToOrderColumns = false;
+                        dgv.DataSource = tablaSesion;
+
+                        foreach (DataGridViewColumn column in dgv.Columns)
+                        {
+                            column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+            }
+        }
+
+        public void datosAuditoriaFecha(string fecha, DataGridView dgv, string tabla, string campo)
+        {
+            try
+            {
+                using (SqlConnection conexionBaseDatos = new SqlConnection(cadenaConexion))
+                {
+                    conexionBaseDatos.Open();
+
+                    string query = $@"SELECT * FROM {tabla} WHERE {campo} = @{campo}";
+
+                    using (SqlCommand command = new SqlCommand(query, conexionBaseDatos))
+                    {
+                        command.Parameters.AddWithValue($"@{campo}", fecha);
+
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                        DataTable tablaSesion = new DataTable();
+
+                        dataAdapter.Fill(tablaSesion);
+
+                        dgv.AllowUserToOrderColumns = false;
+                        dgv.DataSource = tablaSesion;
+
+                        foreach (DataGridViewColumn column in dgv.Columns)
+                        {
+                            column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+            }
+        }
+
+        public void datosAuditoriaIdFecha(int id, string fecha, DataGridView dgv, string tabla, string campo, string campo2)
+        {
+            try
+            {
+                using (SqlConnection conexionBaseDatos = new SqlConnection(cadenaConexion))
+                {
+                    conexionBaseDatos.Open();
+
+                    string query = $@"SELECT * FROM {tabla} WHERE {campo} = @{campo} AND {campo2} = @{campo2}";
+
+                    using (SqlCommand command = new SqlCommand(query, conexionBaseDatos))
+                    {
+                        command.Parameters.AddWithValue($"@{campo}", fecha);
+                        command.Parameters.AddWithValue($"@{campo2}", id);
+
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                        DataTable tablaSesion = new DataTable();
+
+                        dataAdapter.Fill(tablaSesion);
 
 
+                        dgv.AllowUserToOrderColumns = false;
+                        dgv.DataSource = tablaSesion;
+
+                        foreach (DataGridViewColumn column in dgv.Columns)
+                        {
+                            column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+            }
+        }
 
 
     }

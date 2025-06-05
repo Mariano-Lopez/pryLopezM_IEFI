@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuariosAdmin));
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.panelOpciones = new System.Windows.Forms.Panel();
@@ -142,6 +145,9 @@
             this.cmbPermisosActualizar = new System.Windows.Forms.ComboBox();
             this.lblContraseñaActualizar = new System.Windows.Forms.Label();
             this.lblPermisosActualizar = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTituloPanel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.panelOpciones.SuspendLayout();
             this.panelCrear.SuspendLayout();
@@ -154,6 +160,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgEliminarUsuario)).BeginInit();
             this.panelActualizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvUsuarios
@@ -166,16 +173,41 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(36, 445);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUsuarios.Location = new System.Drawing.Point(36, 515);
             this.dgvUsuarios.MultiSelect = false;
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUsuarios.RowHeadersVisible = false;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.ShowCellToolTips = false;
             this.dgvUsuarios.ShowEditingIcon = false;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1168, 514);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1168, 306);
             this.dgvUsuarios.TabIndex = 0;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
@@ -189,7 +221,7 @@
             this.panelOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelOpciones.Location = new System.Drawing.Point(0, 0);
             this.panelOpciones.Name = "panelOpciones";
-            this.panelOpciones.Size = new System.Drawing.Size(243, 417);
+            this.panelOpciones.Size = new System.Drawing.Size(243, 488);
             this.panelOpciones.TabIndex = 1;
             // 
             // btnEliminar
@@ -198,11 +230,11 @@
             this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(0, 312);
+            this.btnEliminar.Location = new System.Drawing.Point(0, 363);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(243, 104);
+            this.btnEliminar.Size = new System.Drawing.Size(243, 124);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar usuario";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -215,11 +247,11 @@
             this.btnActualizar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(0, 208);
+            this.btnActualizar.Location = new System.Drawing.Point(0, 242);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(243, 104);
+            this.btnActualizar.Size = new System.Drawing.Size(243, 121);
             this.btnActualizar.TabIndex = 2;
             this.btnActualizar.Text = "Actualizar usuario";
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -232,11 +264,11 @@
             this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(0, 104);
+            this.btnBuscar.Location = new System.Drawing.Point(0, 121);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(243, 104);
+            this.btnBuscar.Size = new System.Drawing.Size(243, 121);
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar usuario";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -249,12 +281,12 @@
             this.btnCrear.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCrear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrear.Image = ((System.Drawing.Image)(resources.GetObject("btnCrear.Image")));
             this.btnCrear.Location = new System.Drawing.Point(0, 0);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCrear.Size = new System.Drawing.Size(243, 104);
+            this.btnCrear.Size = new System.Drawing.Size(243, 121);
             this.btnCrear.TabIndex = 0;
             this.btnCrear.Text = "Crear usuario";
             this.btnCrear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -291,9 +323,9 @@
             this.panelCrear.Controls.Add(this.cmbPermisosCrear);
             this.panelCrear.Controls.Add(this.lblContraseñaCrear);
             this.panelCrear.Controls.Add(this.lblPermisos);
-            this.panelCrear.Location = new System.Drawing.Point(249, 4);
+            this.panelCrear.Location = new System.Drawing.Point(249, 64);
             this.panelCrear.Name = "panelCrear";
-            this.panelCrear.Size = new System.Drawing.Size(1003, 413);
+            this.panelCrear.Size = new System.Drawing.Size(1003, 424);
             this.panelCrear.TabIndex = 4;
             this.panelCrear.Visible = false;
             // 
@@ -582,9 +614,9 @@
             this.panelBuscar.Controls.Add(this.imgBuscarUsuario);
             this.panelBuscar.Controls.Add(this.btnBuscarUsuario);
             this.panelBuscar.Controls.Add(this.cmbBuscarPermisos);
-            this.panelBuscar.Location = new System.Drawing.Point(249, 3);
+            this.panelBuscar.Location = new System.Drawing.Point(249, 63);
             this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(1003, 413);
+            this.panelBuscar.Size = new System.Drawing.Size(1003, 424);
             this.panelBuscar.TabIndex = 29;
             this.panelBuscar.Visible = false;
             // 
@@ -741,6 +773,7 @@
             // panelAcciones
             // 
             this.panelAcciones.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelAcciones.Controls.Add(this.panel1);
             this.panelAcciones.Controls.Add(this.panelEliminar);
             this.panelAcciones.Controls.Add(this.panelActualizar);
             this.panelAcciones.Controls.Add(this.panelCrear);
@@ -749,12 +782,12 @@
             this.panelAcciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAcciones.Location = new System.Drawing.Point(0, 0);
             this.panelAcciones.Name = "panelAcciones";
-            this.panelAcciones.Size = new System.Drawing.Size(1245, 417);
+            this.panelAcciones.Size = new System.Drawing.Size(1245, 488);
             this.panelAcciones.TabIndex = 16;
             // 
             // panelEliminar
             // 
-            this.panelEliminar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelEliminar.BackColor = System.Drawing.Color.DimGray;
             this.panelEliminar.Controls.Add(this.btnLimpiarEliminacion);
             this.panelEliminar.Controls.Add(this.mrcEliminarUsuario);
             this.panelEliminar.Controls.Add(this.chkMensaje);
@@ -763,21 +796,26 @@
             this.panelEliminar.Controls.Add(this.imgEliminarUsuario);
             this.panelEliminar.Controls.Add(this.lblIDEliminar);
             this.panelEliminar.Controls.Add(this.txtIdParaEliminarUsuario);
-            this.panelEliminar.Location = new System.Drawing.Point(249, 3);
+            this.panelEliminar.Location = new System.Drawing.Point(249, 63);
             this.panelEliminar.Name = "panelEliminar";
-            this.panelEliminar.Size = new System.Drawing.Size(1003, 413);
+            this.panelEliminar.Size = new System.Drawing.Size(1003, 424);
             this.panelEliminar.TabIndex = 30;
             this.panelEliminar.Visible = false;
             // 
             // btnLimpiarEliminacion
             // 
-            this.btnLimpiarEliminacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarEliminacion.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLimpiarEliminacion.FlatAppearance.BorderSize = 3;
+            this.btnLimpiarEliminacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarEliminacion.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarEliminacion.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarEliminacion.Image")));
             this.btnLimpiarEliminacion.Location = new System.Drawing.Point(87, 304);
             this.btnLimpiarEliminacion.Name = "btnLimpiarEliminacion";
-            this.btnLimpiarEliminacion.Size = new System.Drawing.Size(117, 38);
+            this.btnLimpiarEliminacion.Size = new System.Drawing.Size(146, 47);
             this.btnLimpiarEliminacion.TabIndex = 33;
             this.btnLimpiarEliminacion.Text = "Limpiar";
-            this.btnLimpiarEliminacion.UseVisualStyleBackColor = true;
+            this.btnLimpiarEliminacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpiarEliminacion.UseVisualStyleBackColor = false;
             // 
             // mrcEliminarUsuario
             // 
@@ -808,9 +846,10 @@
             this.mrcEliminarUsuario.Controls.Add(this.lblEliminarUsuario);
             this.mrcEliminarUsuario.Controls.Add(this.lblEliminarIdUsuario);
             this.mrcEliminarUsuario.Controls.Add(this.lblElminarId);
-            this.mrcEliminarUsuario.Location = new System.Drawing.Point(290, 164);
+            this.mrcEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mrcEliminarUsuario.Location = new System.Drawing.Point(315, 163);
             this.mrcEliminarUsuario.Name = "mrcEliminarUsuario";
-            this.mrcEliminarUsuario.Size = new System.Drawing.Size(559, 246);
+            this.mrcEliminarUsuario.Size = new System.Drawing.Size(458, 246);
             this.mrcEliminarUsuario.TabIndex = 31;
             this.mrcEliminarUsuario.TabStop = false;
             this.mrcEliminarUsuario.Visible = false;
@@ -818,20 +857,21 @@
             // lblEliminarTelefono
             // 
             this.lblEliminarTelefono.AutoSize = true;
-            this.lblEliminarTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarTelefono.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarTelefono.Location = new System.Drawing.Point(208, 87);
             this.lblEliminarTelefono.Name = "lblEliminarTelefono";
-            this.lblEliminarTelefono.Size = new System.Drawing.Size(75, 20);
+            this.lblEliminarTelefono.Size = new System.Drawing.Size(74, 21);
             this.lblEliminarTelefono.TabIndex = 34;
             this.lblEliminarTelefono.Text = "Teléfono:";
             // 
             // lblEliminarTelefonoUsuario
             // 
             this.lblEliminarTelefonoUsuario.AutoSize = true;
-            this.lblEliminarTelefonoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarTelefonoUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarTelefonoUsuario.Location = new System.Drawing.Point(282, 87);
             this.lblEliminarTelefonoUsuario.Name = "lblEliminarTelefonoUsuario";
-            this.lblEliminarTelefonoUsuario.Size = new System.Drawing.Size(71, 20);
+            this.lblEliminarTelefonoUsuario.Size = new System.Drawing.Size(70, 21);
             this.lblEliminarTelefonoUsuario.TabIndex = 33;
             this.lblEliminarTelefonoUsuario.Text = "Telefono";
             // 
@@ -841,7 +881,7 @@
             this.btnConfirmarEliminacion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnConfirmarEliminacion.FlatAppearance.BorderSize = 3;
             this.btnConfirmarEliminacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmarEliminacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarEliminacion.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmarEliminacion.Location = new System.Drawing.Point(66, 193);
             this.btnConfirmarEliminacion.Name = "btnConfirmarEliminacion";
             this.btnConfirmarEliminacion.Size = new System.Drawing.Size(266, 38);
@@ -853,241 +893,253 @@
             // lblEliminarFechaNacimientoUsuario
             // 
             this.lblEliminarFechaNacimientoUsuario.AutoSize = true;
-            this.lblEliminarFechaNacimientoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarFechaNacimientoUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarFechaNacimientoUsuario.Location = new System.Drawing.Point(362, 112);
             this.lblEliminarFechaNacimientoUsuario.Name = "lblEliminarFechaNacimientoUsuario";
-            this.lblEliminarFechaNacimientoUsuario.Size = new System.Drawing.Size(54, 20);
+            this.lblEliminarFechaNacimientoUsuario.Size = new System.Drawing.Size(51, 21);
             this.lblEliminarFechaNacimientoUsuario.TabIndex = 26;
             this.lblEliminarFechaNacimientoUsuario.Text = "Fecha";
             // 
             // lblEliminarFechaNacimiento
             // 
             this.lblEliminarFechaNacimiento.AutoSize = true;
-            this.lblEliminarFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarFechaNacimiento.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarFechaNacimiento.Location = new System.Drawing.Point(208, 112);
             this.lblEliminarFechaNacimiento.Name = "lblEliminarFechaNacimiento";
-            this.lblEliminarFechaNacimiento.Size = new System.Drawing.Size(161, 20);
+            this.lblEliminarFechaNacimiento.Size = new System.Drawing.Size(158, 21);
             this.lblEliminarFechaNacimiento.TabIndex = 25;
             this.lblEliminarFechaNacimiento.Text = "Fecha de nacimiento:";
             // 
             // lblEliminarFechaAlta
             // 
             this.lblEliminarFechaAlta.AutoSize = true;
-            this.lblEliminarFechaAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarFechaAlta.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarFechaAlta.Location = new System.Drawing.Point(208, 136);
             this.lblEliminarFechaAlta.Name = "lblEliminarFechaAlta";
-            this.lblEliminarFechaAlta.Size = new System.Drawing.Size(110, 20);
+            this.lblEliminarFechaAlta.Size = new System.Drawing.Size(108, 21);
             this.lblEliminarFechaAlta.TabIndex = 24;
             this.lblEliminarFechaAlta.Text = "Fecha de alta:";
             // 
             // lblEliminarPermisosUsuario
             // 
             this.lblEliminarPermisosUsuario.AutoSize = true;
-            this.lblEliminarPermisosUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarPermisosUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarPermisosUsuario.Location = new System.Drawing.Point(283, 160);
             this.lblEliminarPermisosUsuario.Name = "lblEliminarPermisosUsuario";
-            this.lblEliminarPermisosUsuario.Size = new System.Drawing.Size(74, 20);
+            this.lblEliminarPermisosUsuario.Size = new System.Drawing.Size(74, 21);
             this.lblEliminarPermisosUsuario.TabIndex = 21;
             this.lblEliminarPermisosUsuario.Text = "Permisos";
             // 
             // lblEliminarPermisos
             // 
             this.lblEliminarPermisos.AutoSize = true;
-            this.lblEliminarPermisos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarPermisos.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarPermisos.Location = new System.Drawing.Point(208, 160);
             this.lblEliminarPermisos.Name = "lblEliminarPermisos";
-            this.lblEliminarPermisos.Size = new System.Drawing.Size(78, 20);
+            this.lblEliminarPermisos.Size = new System.Drawing.Size(78, 21);
             this.lblEliminarPermisos.TabIndex = 19;
             this.lblEliminarPermisos.Text = "Permisos:";
             // 
             // lblEliminarFechaAltaUsuario
             // 
             this.lblEliminarFechaAltaUsuario.AutoSize = true;
-            this.lblEliminarFechaAltaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarFechaAltaUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarFechaAltaUsuario.Location = new System.Drawing.Point(314, 136);
             this.lblEliminarFechaAltaUsuario.Name = "lblEliminarFechaAltaUsuario";
-            this.lblEliminarFechaAltaUsuario.Size = new System.Drawing.Size(106, 20);
+            this.lblEliminarFechaAltaUsuario.Size = new System.Drawing.Size(104, 21);
             this.lblEliminarFechaAltaUsuario.TabIndex = 18;
             this.lblEliminarFechaAltaUsuario.Text = "Fecha de alta";
             // 
             // lblEliminarEmail
             // 
             this.lblEliminarEmail.AutoSize = true;
-            this.lblEliminarEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarEmail.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarEmail.Location = new System.Drawing.Point(208, 62);
             this.lblEliminarEmail.Name = "lblEliminarEmail";
-            this.lblEliminarEmail.Size = new System.Drawing.Size(52, 20);
+            this.lblEliminarEmail.Size = new System.Drawing.Size(56, 21);
             this.lblEliminarEmail.TabIndex = 17;
             this.lblEliminarEmail.Text = "Email:";
             // 
             // lblEliminarEmailUsuario
             // 
             this.lblEliminarEmailUsuario.AutoSize = true;
-            this.lblEliminarEmailUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarEmailUsuario.Location = new System.Drawing.Point(255, 62);
+            this.lblEliminarEmailUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarEmailUsuario.Location = new System.Drawing.Point(264, 63);
             this.lblEliminarEmailUsuario.Name = "lblEliminarEmailUsuario";
-            this.lblEliminarEmailUsuario.Size = new System.Drawing.Size(48, 20);
+            this.lblEliminarEmailUsuario.Size = new System.Drawing.Size(52, 21);
             this.lblEliminarEmailUsuario.TabIndex = 16;
             this.lblEliminarEmailUsuario.Text = "Email";
             // 
             // lblEliminarDireccionUsuario
             // 
             this.lblEliminarDireccionUsuario.AutoSize = true;
-            this.lblEliminarDireccionUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarDireccionUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarDireccionUsuario.Location = new System.Drawing.Point(282, 40);
             this.lblEliminarDireccionUsuario.Name = "lblEliminarDireccionUsuario";
-            this.lblEliminarDireccionUsuario.Size = new System.Drawing.Size(75, 20);
+            this.lblEliminarDireccionUsuario.Size = new System.Drawing.Size(77, 21);
             this.lblEliminarDireccionUsuario.TabIndex = 15;
             this.lblEliminarDireccionUsuario.Text = "Dirección";
             // 
             // lblEliminarDireccion
             // 
             this.lblEliminarDireccion.AutoSize = true;
-            this.lblEliminarDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarDireccion.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarDireccion.Location = new System.Drawing.Point(208, 40);
             this.lblEliminarDireccion.Name = "lblEliminarDireccion";
-            this.lblEliminarDireccion.Size = new System.Drawing.Size(79, 20);
+            this.lblEliminarDireccion.Size = new System.Drawing.Size(81, 21);
             this.lblEliminarDireccion.TabIndex = 14;
             this.lblEliminarDireccion.Text = "Dirección:";
             // 
             // lblEliminarDNIUsuario
             // 
             this.lblEliminarDNIUsuario.AutoSize = true;
-            this.lblEliminarDNIUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarDNIUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarDNIUsuario.Location = new System.Drawing.Point(246, 16);
             this.lblEliminarDNIUsuario.Name = "lblEliminarDNIUsuario";
-            this.lblEliminarDNIUsuario.Size = new System.Drawing.Size(37, 20);
+            this.lblEliminarDNIUsuario.Size = new System.Drawing.Size(40, 21);
             this.lblEliminarDNIUsuario.TabIndex = 13;
             this.lblEliminarDNIUsuario.Text = "DNI";
             // 
             // lblEliminarDNI
             // 
             this.lblEliminarDNI.AutoSize = true;
-            this.lblEliminarDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarDNI.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarDNI.Location = new System.Drawing.Point(208, 16);
             this.lblEliminarDNI.Name = "lblEliminarDNI";
-            this.lblEliminarDNI.Size = new System.Drawing.Size(41, 20);
+            this.lblEliminarDNI.Size = new System.Drawing.Size(44, 21);
             this.lblEliminarDNI.TabIndex = 12;
             this.lblEliminarDNI.Text = "DNI:";
             // 
             // lblEliminarEdadUsuario
             // 
             this.lblEliminarEdadUsuario.AutoSize = true;
-            this.lblEliminarEdadUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarEdadUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarEdadUsuario.Location = new System.Drawing.Point(58, 150);
             this.lblEliminarEdadUsuario.Name = "lblEliminarEdadUsuario";
-            this.lblEliminarEdadUsuario.Size = new System.Drawing.Size(47, 20);
+            this.lblEliminarEdadUsuario.Size = new System.Drawing.Size(47, 21);
             this.lblEliminarEdadUsuario.TabIndex = 11;
             this.lblEliminarEdadUsuario.Text = "Edad";
             // 
             // lblEliminarEdad
             // 
             this.lblEliminarEdad.AutoSize = true;
-            this.lblEliminarEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarEdad.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarEdad.Location = new System.Drawing.Point(9, 150);
             this.lblEliminarEdad.Name = "lblEliminarEdad";
-            this.lblEliminarEdad.Size = new System.Drawing.Size(51, 20);
+            this.lblEliminarEdad.Size = new System.Drawing.Size(51, 21);
             this.lblEliminarEdad.TabIndex = 10;
             this.lblEliminarEdad.Text = "Edad:";
             // 
             // lblEliminarApellidoUsuario
             // 
             this.lblEliminarApellidoUsuario.AutoSize = true;
-            this.lblEliminarApellidoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarApellidoUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarApellidoUsuario.Location = new System.Drawing.Point(81, 125);
             this.lblEliminarApellidoUsuario.Name = "lblEliminarApellidoUsuario";
-            this.lblEliminarApellidoUsuario.Size = new System.Drawing.Size(65, 20);
+            this.lblEliminarApellidoUsuario.Size = new System.Drawing.Size(71, 21);
             this.lblEliminarApellidoUsuario.TabIndex = 9;
             this.lblEliminarApellidoUsuario.Text = "Apellido";
             // 
             // lblEliminarApellido
             // 
             this.lblEliminarApellido.AutoSize = true;
-            this.lblEliminarApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarApellido.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarApellido.Location = new System.Drawing.Point(9, 126);
             this.lblEliminarApellido.Name = "lblEliminarApellido";
-            this.lblEliminarApellido.Size = new System.Drawing.Size(69, 20);
+            this.lblEliminarApellido.Size = new System.Drawing.Size(75, 21);
             this.lblEliminarApellido.TabIndex = 8;
             this.lblEliminarApellido.Text = "Apellido:";
             // 
             // lblEliminarNombreUsuario
             // 
             this.lblEliminarNombreUsuario.AutoSize = true;
-            this.lblEliminarNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarNombreUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarNombreUsuario.Location = new System.Drawing.Point(77, 98);
             this.lblEliminarNombreUsuario.Name = "lblEliminarNombreUsuario";
-            this.lblEliminarNombreUsuario.Size = new System.Drawing.Size(65, 20);
+            this.lblEliminarNombreUsuario.Size = new System.Drawing.Size(66, 21);
             this.lblEliminarNombreUsuario.TabIndex = 7;
             this.lblEliminarNombreUsuario.Text = "Nombre";
             // 
             // lblEliminarNombre
             // 
             this.lblEliminarNombre.AutoSize = true;
-            this.lblEliminarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarNombre.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarNombre.Location = new System.Drawing.Point(9, 98);
             this.lblEliminarNombre.Name = "lblEliminarNombre";
-            this.lblEliminarNombre.Size = new System.Drawing.Size(69, 20);
+            this.lblEliminarNombre.Size = new System.Drawing.Size(70, 21);
             this.lblEliminarNombre.TabIndex = 6;
             this.lblEliminarNombre.Text = "Nombre:";
             // 
             // lblEliminarContraseñaUsuario
             // 
             this.lblEliminarContraseñaUsuario.AutoSize = true;
-            this.lblEliminarContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarContraseñaUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarContraseñaUsuario.Location = new System.Drawing.Point(100, 70);
             this.lblEliminarContraseñaUsuario.Name = "lblEliminarContraseñaUsuario";
-            this.lblEliminarContraseñaUsuario.Size = new System.Drawing.Size(92, 20);
+            this.lblEliminarContraseñaUsuario.Size = new System.Drawing.Size(92, 21);
             this.lblEliminarContraseñaUsuario.TabIndex = 5;
             this.lblEliminarContraseñaUsuario.Text = "Contraseña";
             // 
             // lblEliminarContraseña
             // 
             this.lblEliminarContraseña.AutoSize = true;
-            this.lblEliminarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarContraseña.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarContraseña.Location = new System.Drawing.Point(9, 70);
             this.lblEliminarContraseña.Name = "lblEliminarContraseña";
             this.lblEliminarContraseña.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEliminarContraseña.Size = new System.Drawing.Size(96, 20);
+            this.lblEliminarContraseña.Size = new System.Drawing.Size(96, 21);
             this.lblEliminarContraseña.TabIndex = 4;
             this.lblEliminarContraseña.Text = "Contraseña:";
             // 
             // lblEliminarUsuarioDato
             // 
             this.lblEliminarUsuarioDato.AutoSize = true;
-            this.lblEliminarUsuarioDato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarUsuarioDato.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarUsuarioDato.Location = new System.Drawing.Point(72, 41);
             this.lblEliminarUsuarioDato.Name = "lblEliminarUsuarioDato";
-            this.lblEliminarUsuarioDato.Size = new System.Drawing.Size(64, 20);
+            this.lblEliminarUsuarioDato.Size = new System.Drawing.Size(67, 21);
             this.lblEliminarUsuarioDato.TabIndex = 3;
             this.lblEliminarUsuarioDato.Text = "Usuario";
             // 
             // lblEliminarUsuario
             // 
             this.lblEliminarUsuario.AutoSize = true;
-            this.lblEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarUsuario.Location = new System.Drawing.Point(9, 42);
             this.lblEliminarUsuario.Name = "lblEliminarUsuario";
-            this.lblEliminarUsuario.Size = new System.Drawing.Size(68, 20);
+            this.lblEliminarUsuario.Size = new System.Drawing.Size(71, 21);
             this.lblEliminarUsuario.TabIndex = 2;
             this.lblEliminarUsuario.Text = "Usuario:";
             // 
             // lblEliminarIdUsuario
             // 
             this.lblEliminarIdUsuario.AutoSize = true;
-            this.lblEliminarIdUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarIdUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarIdUsuario.Location = new System.Drawing.Point(132, 14);
             this.lblEliminarIdUsuario.Name = "lblEliminarIdUsuario";
-            this.lblEliminarIdUsuario.Size = new System.Drawing.Size(26, 20);
+            this.lblEliminarIdUsuario.Size = new System.Drawing.Size(28, 21);
             this.lblEliminarIdUsuario.TabIndex = 1;
             this.lblEliminarIdUsuario.Text = "ID";
             // 
             // lblElminarId
             // 
             this.lblElminarId.AutoSize = true;
-            this.lblElminarId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElminarId.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblElminarId.Location = new System.Drawing.Point(9, 14);
             this.lblElminarId.Name = "lblElminarId";
-            this.lblElminarId.Size = new System.Drawing.Size(121, 20);
+            this.lblElminarId.Size = new System.Drawing.Size(128, 21);
             this.lblElminarId.TabIndex = 0;
             this.lblElminarId.Text = "N° Identificador:";
             // 
@@ -1096,10 +1148,10 @@
             this.chkMensaje.AutoSize = true;
             this.chkMensaje.Checked = true;
             this.chkMensaje.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMensaje.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMensaje.Location = new System.Drawing.Point(54, 275);
             this.chkMensaje.Name = "chkMensaje";
-            this.chkMensaje.Size = new System.Drawing.Size(204, 24);
+            this.chkMensaje.Size = new System.Drawing.Size(205, 25);
             this.chkMensaje.TabIndex = 30;
             this.chkMensaje.Text = "Mensaje de confirmación";
             this.chkMensaje.UseVisualStyleBackColor = true;
@@ -1111,10 +1163,10 @@
             this.btnEliminarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEliminarUsuario.FlatAppearance.BorderSize = 3;
             this.btnEliminarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarUsuario.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarUsuario.Location = new System.Drawing.Point(18, 231);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
-            this.btnEliminarUsuario.Size = new System.Drawing.Size(266, 38);
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(266, 40);
             this.btnEliminarUsuario.TabIndex = 29;
             this.btnEliminarUsuario.Text = "Eliminar usuario";
             this.btnEliminarUsuario.UseVisualStyleBackColor = false;
@@ -1123,8 +1175,8 @@
             // lblEliminarUsuarioInstrucciones
             // 
             this.lblEliminarUsuarioInstrucciones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblEliminarUsuarioInstrucciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarUsuarioInstrucciones.Location = new System.Drawing.Point(167, 13);
+            this.lblEliminarUsuarioInstrucciones.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarUsuarioInstrucciones.Location = new System.Drawing.Point(222, 11);
             this.lblEliminarUsuarioInstrucciones.Name = "lblEliminarUsuarioInstrucciones";
             this.lblEliminarUsuarioInstrucciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblEliminarUsuarioInstrucciones.Size = new System.Drawing.Size(762, 139);
@@ -1134,7 +1186,7 @@
             // imgEliminarUsuario
             // 
             this.imgEliminarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("imgEliminarUsuario.Image")));
-            this.imgEliminarUsuario.Location = new System.Drawing.Point(14, 16);
+            this.imgEliminarUsuario.Location = new System.Drawing.Point(69, 14);
             this.imgEliminarUsuario.Name = "imgEliminarUsuario";
             this.imgEliminarUsuario.Size = new System.Drawing.Size(143, 136);
             this.imgEliminarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1144,19 +1196,19 @@
             // lblIDEliminar
             // 
             this.lblIDEliminar.AutoSize = true;
-            this.lblIDEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDEliminar.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDEliminar.Location = new System.Drawing.Point(76, 164);
             this.lblIDEliminar.Name = "lblIDEliminar";
-            this.lblIDEliminar.Size = new System.Drawing.Size(141, 24);
+            this.lblIDEliminar.Size = new System.Drawing.Size(155, 25);
             this.lblIDEliminar.TabIndex = 9;
             this.lblIDEliminar.Text = "N° Identificador:";
             // 
             // txtIdParaEliminarUsuario
             // 
-            this.txtIdParaEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdParaEliminarUsuario.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdParaEliminarUsuario.Location = new System.Drawing.Point(80, 187);
             this.txtIdParaEliminarUsuario.Name = "txtIdParaEliminarUsuario";
-            this.txtIdParaEliminarUsuario.Size = new System.Drawing.Size(137, 29);
+            this.txtIdParaEliminarUsuario.Size = new System.Drawing.Size(137, 33);
             this.txtIdParaEliminarUsuario.TabIndex = 0;
             this.txtIdParaEliminarUsuario.TextChanged += new System.EventHandler(this.txtIdParaEliminarUsuario_TextChanged);
             this.txtIdParaEliminarUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdParaEliminarUsuario_KeyPress);
@@ -1193,9 +1245,9 @@
             this.panelActualizar.Controls.Add(this.cmbPermisosActualizar);
             this.panelActualizar.Controls.Add(this.lblContraseñaActualizar);
             this.panelActualizar.Controls.Add(this.lblPermisosActualizar);
-            this.panelActualizar.Location = new System.Drawing.Point(249, 3);
+            this.panelActualizar.Location = new System.Drawing.Point(249, 63);
             this.panelActualizar.Name = "panelActualizar";
-            this.panelActualizar.Size = new System.Drawing.Size(1003, 413);
+            this.panelActualizar.Size = new System.Drawing.Size(1003, 424);
             this.panelActualizar.TabIndex = 28;
             this.panelActualizar.Visible = false;
             // 
@@ -1483,11 +1535,49 @@
             this.lblPermisosActualizar.TabIndex = 6;
             this.lblPermisosActualizar.Text = "Permisos:";
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Green;
+            this.btnHome.FlatAppearance.BorderSize = 3;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(6, 8);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(50, 43);
+            this.btnHome.TabIndex = 34;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.lblTituloPanel);
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(249, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(996, 60);
+            this.panel1.TabIndex = 35;
+            // 
+            // lblTituloPanel
+            // 
+            this.lblTituloPanel.AutoSize = true;
+            this.lblTituloPanel.Font = new System.Drawing.Font("Palatino Linotype", 26.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloPanel.Location = new System.Drawing.Point(72, 4);
+            this.lblTituloPanel.Name = "lblTituloPanel";
+            this.lblTituloPanel.Size = new System.Drawing.Size(255, 47);
+            this.lblTituloPanel.TabIndex = 35;
+            this.lblTituloPanel.Text = "Titulo de panel";
+            // 
             // frmUsuariosAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1245, 971);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1245, 833);
             this.Controls.Add(this.panelAcciones);
             this.Controls.Add(this.dgvUsuarios);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1513,6 +1603,8 @@
             this.panelActualizar.ResumeLayout(false);
             this.panelActualizar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1632,5 +1724,8 @@
         private System.Windows.Forms.Button btnConfirmarEliminacion;
         private System.Windows.Forms.Label lblEliminarTelefono;
         private System.Windows.Forms.Label lblEliminarTelefonoUsuario;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTituloPanel;
     }
 }
