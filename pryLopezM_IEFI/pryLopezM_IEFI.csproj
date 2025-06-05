@@ -135,10 +135,13 @@
   <ItemGroup>
     <Content Include="BBDD\BBDDUsuarios.sql" />
     <Content Include="Logo.ico" />
+    <Content Include="Resources\Images\accion-usuario-btn.png" />
     <Content Include="Resources\Images\actualizar Usuario-btn.png" />
     <Content Include="Resources\Images\actualizar Usuario.png" />
     <Content Include="Resources\Images\agregar-usuario-btn.png" />
     <Content Include="Resources\Images\agregar-usuario.png" />
+    <Content Include="Resources\Images\auditoria-btn.png" />
+    <Content Include="Resources\Images\auditoria.png" />
     <Content Include="Resources\Images\borrar-usuario-btn.png" />
     <Content Include="Resources\Images\borrar-usuario.png" />
     <Content Include="Resources\Images\buscar usuario-btn.png" />
@@ -150,6 +153,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Logo.png" />
+    <Content Include="Resources\Images\sesion-usuario-btn.png" />
     <Content Include="Tareas pendientes IEFI.txt" />
   </ItemGroup>
   <ItemGroup />

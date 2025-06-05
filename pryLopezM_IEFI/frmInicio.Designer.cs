@@ -88,32 +88,36 @@
             // 
             // stsStatus
             // 
+            this.stsStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stsStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsUsuario,
             this.tsFecha,
             this.tsTiempoS});
-            this.stsStatus.Location = new System.Drawing.Point(0, 428);
+            this.stsStatus.Location = new System.Drawing.Point(0, 424);
             this.stsStatus.Name = "stsStatus";
-            this.stsStatus.Size = new System.Drawing.Size(800, 22);
+            this.stsStatus.Size = new System.Drawing.Size(800, 26);
             this.stsStatus.TabIndex = 3;
             this.stsStatus.Text = "statusStrip1";
             // 
             // tsUsuario
             // 
+            this.tsUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsUsuario.Name = "tsUsuario";
-            this.tsUsuario.Size = new System.Drawing.Size(47, 17);
+            this.tsUsuario.Size = new System.Drawing.Size(64, 21);
             this.tsUsuario.Text = "Usuario";
             // 
             // tsFecha
             // 
+            this.tsFecha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsFecha.Name = "tsFecha";
-            this.tsFecha.Size = new System.Drawing.Size(38, 17);
+            this.tsFecha.Size = new System.Drawing.Size(50, 21);
             this.tsFecha.Text = "Fecha";
             // 
             // tsTiempoS
             // 
+            this.tsTiempoS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsTiempoS.Name = "tsTiempoS";
-            this.tsTiempoS.Size = new System.Drawing.Size(84, 17);
+            this.tsTiempoS.Size = new System.Drawing.Size(110, 21);
             this.tsTiempoS.Text = "Tiempo sesion";
             // 
             // timerSesion
@@ -131,6 +135,7 @@
             this.btnCerrarSesion.TabIndex = 4;
             this.btnCerrarSesion.Text = "Cerrar sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // frmInicio
             // 

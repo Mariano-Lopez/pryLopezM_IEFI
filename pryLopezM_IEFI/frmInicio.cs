@@ -73,6 +73,13 @@ namespace pryLopezM_IEFI
 
             // Guardás la sesión existente (NO crear una nueva)
             BBDD.actualizarSesion(idSesionActual, tiempoSesion, tiempoTotal, finSesion);
+
+            BBDD.registrarAcciones("Logout", "Cierre de sesión", clsSesion.idUsuario, finSesion);
+
+            
+
+
+
         }
 
         private void auditoriaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,6 +92,11 @@ namespace pryLopezM_IEFI
         {
             frmUsuariosAdmin v = new frmUsuariosAdmin();
             v.ShowDialog();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

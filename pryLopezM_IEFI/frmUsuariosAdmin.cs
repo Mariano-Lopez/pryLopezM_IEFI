@@ -157,6 +157,7 @@ namespace pryLopezM_IEFI
                 lstUsuarios.agregarUsuario(aux);
                 BBDD.mostrarDatos(dgvUsuarios);
 
+                BBDD.registrarAcciones("Creación de usuario", $"Se creó el usuario {txtUsuarioCrear.Text}", clsSesion.idUsuario, clsSesion.fechaAccion);
                 vaciarComponentesCrear();
             }
             else
@@ -402,14 +403,14 @@ namespace pryLopezM_IEFI
                     resul = lstUsuarios.buscarUsuario(dato, campo);
                     break;
                 case 10:
-                    DateTime datoF = dtpBuscarFecha.Value.Date;  // Obtenés un DateTime sin la hora
-                    dato = datoF.ToString("yyyy-MM-dd");         
+                    DateTime fechaSeleccionada = dtpBuscarFecha.Value.Date;  // Obtenés un DateTime sin la hora
+                    dato = fechaSeleccionada.ToString("yyyy-MM-dd");         
                     campo = "fechanacimiento";
-                    resul = lstUsuarios.buscarUsuario(datoF.ToString("yyyy-MM-dd"), campo);
+                    resul = lstUsuarios.buscarUsuario(fechaSeleccionada.ToString("yyyy-MM-dd"), campo);
                     
                     break;
                 case 11:
-                    DateTime fechaSeleccionada = dtpBuscarFecha.Value.Date;
+                    fechaSeleccionada = dtpBuscarFecha.Value.Date;
                     dato = fechaSeleccionada.ToString("yyyy-MM-dd");
                     campo = "fechaAlta";
                     resul = lstUsuarios.buscarUsuario(dato, campo);
@@ -452,6 +453,8 @@ namespace pryLopezM_IEFI
                         resul = lstUsuarios.buscarUsuario(dato, campo);
                         break;
                     }
+
+
             }
 
             if (resul.Count == 0)
@@ -461,12 +464,22 @@ namespace pryLopezM_IEFI
             }
             else
             {
+                DateTime fechaBusqueda = dtpBuscarFecha.Value;
+
+                if (cmbBuscarTipoDeDato.SelectedIndex == 11 || cmbBuscarTipoDeDato.SelectedIndex == 10)
+                {
+                    BBDD.registrarAcciones($"Búsqueda de {cmbBuscarTipoDeDato.Text}", $"Dato: {fechaBusqueda}", clsSesion.idUsuario, clsSesion.fechaAccion);
+                }
+                else
+                {
+                    BBDD.registrarAcciones($"Búsqueda de {cmbBuscarTipoDeDato.Text}", $"Dato: {txtDatoDeBusqueda.Text}", clsSesion.idUsuario, clsSesion.fechaAccion);
+                }
+
                 dgvUsuarios.DataSource = null;
                 dgvUsuarios.DataSource = resul;
             }
 
             vaciarComponentesBuscar();
-
 
         }
 
@@ -767,6 +780,9 @@ namespace pryLopezM_IEFI
             int id = Convert.ToInt32(txtIDActualizar.Text);
             DateTime fechaActualizada = dtpFechaNActualizar.Value.Date;
 
+            clsUsuario aux;
+
+            aux = lstUsuarios.buscarUsuario(id);
 
             if (!string.IsNullOrEmpty(txtUsuarioActualizar.Text) &&
                 !string.IsNullOrEmpty(txtContraseñaActualizar.Text) &&
@@ -784,6 +800,8 @@ namespace pryLopezM_IEFI
 
                 BBDD.mostrarDatos(dgvUsuarios);
 
+                BBDD.registrarAcciones("Actualización de usuario", $"Cambio de datos del usuario {aux.usuario}", clsSesion.idUsuario, clsSesion.fechaAccion);
+
                 vaciarComponentesDeActualizar();
                 habilitarComponentesDeActualizar(false, true);
 
@@ -798,8 +816,11 @@ namespace pryLopezM_IEFI
 
         private void btnConfirmarEliminacion_Click(object sender, EventArgs e)
         {
-
+            clsUsuario aux;
             int idParaEliminar = Convert.ToInt32(txtIdParaEliminarUsuario.Text);
+            aux = lstUsuarios.buscarUsuario(idParaEliminar);
+
+            BBDD.registrarAcciones("Usuarios", $"Eliminación de usuario '{aux.usuario}' ", clsSesion.idUsuario, clsSesion.fechaAccion);
 
             if (chkMensaje.Checked)
             {
@@ -825,6 +846,8 @@ namespace pryLopezM_IEFI
 
                 vaciarComponentesEliminar();
             }
+
+            
             
         }
 

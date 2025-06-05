@@ -513,11 +513,12 @@
             // 
             this.btnCrearUsuario.BackColor = System.Drawing.Color.DarkGreen;
             this.btnCrearUsuario.Enabled = false;
+            this.btnCrearUsuario.FlatAppearance.BorderSize = 3;
             this.btnCrearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearUsuario.Location = new System.Drawing.Point(301, 356);
+            this.btnCrearUsuario.Location = new System.Drawing.Point(315, 356);
             this.btnCrearUsuario.Name = "btnCrearUsuario";
-            this.btnCrearUsuario.Size = new System.Drawing.Size(394, 38);
+            this.btnCrearUsuario.Size = new System.Drawing.Size(321, 38);
             this.btnCrearUsuario.TabIndex = 12;
             this.btnCrearUsuario.Text = "Crear usuario";
             this.btnCrearUsuario.UseVisualStyleBackColor = false;
@@ -699,14 +700,17 @@
             // 
             // btnBuscarUsuario
             // 
+            this.btnBuscarUsuario.BackColor = System.Drawing.Color.Teal;
             this.btnBuscarUsuario.Enabled = false;
+            this.btnBuscarUsuario.FlatAppearance.BorderSize = 3;
+            this.btnBuscarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarUsuario.Location = new System.Drawing.Point(484, 312);
             this.btnBuscarUsuario.Name = "btnBuscarUsuario";
             this.btnBuscarUsuario.Size = new System.Drawing.Size(222, 38);
             this.btnBuscarUsuario.TabIndex = 12;
             this.btnBuscarUsuario.Text = "Buscar usuario";
-            this.btnBuscarUsuario.UseVisualStyleBackColor = true;
+            this.btnBuscarUsuario.UseVisualStyleBackColor = false;
             this.btnBuscarUsuario.Click += new System.EventHandler(this.btnBuscarUsuario_Click);
             // 
             // cmbBuscarPermisos
@@ -738,9 +742,9 @@
             // 
             this.panelAcciones.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panelAcciones.Controls.Add(this.panelEliminar);
+            this.panelAcciones.Controls.Add(this.panelActualizar);
             this.panelAcciones.Controls.Add(this.panelCrear);
             this.panelAcciones.Controls.Add(this.panelBuscar);
-            this.panelAcciones.Controls.Add(this.panelActualizar);
             this.panelAcciones.Controls.Add(this.panelOpciones);
             this.panelAcciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAcciones.Location = new System.Drawing.Point(0, 0);
@@ -767,7 +771,6 @@
             // 
             // btnLimpiarEliminacion
             // 
-            this.btnLimpiarEliminacion.Enabled = false;
             this.btnLimpiarEliminacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarEliminacion.Location = new System.Drawing.Point(87, 304);
             this.btnLimpiarEliminacion.Name = "btnLimpiarEliminacion";
@@ -816,7 +819,7 @@
             // 
             this.lblEliminarTelefono.AutoSize = true;
             this.lblEliminarTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarTelefono.Location = new System.Drawing.Point(241, 87);
+            this.lblEliminarTelefono.Location = new System.Drawing.Point(208, 87);
             this.lblEliminarTelefono.Name = "lblEliminarTelefono";
             this.lblEliminarTelefono.Size = new System.Drawing.Size(75, 20);
             this.lblEliminarTelefono.TabIndex = 34;
@@ -826,7 +829,7 @@
             // 
             this.lblEliminarTelefonoUsuario.AutoSize = true;
             this.lblEliminarTelefonoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarTelefonoUsuario.Location = new System.Drawing.Point(315, 87);
+            this.lblEliminarTelefonoUsuario.Location = new System.Drawing.Point(282, 87);
             this.lblEliminarTelefonoUsuario.Name = "lblEliminarTelefonoUsuario";
             this.lblEliminarTelefonoUsuario.Size = new System.Drawing.Size(71, 20);
             this.lblEliminarTelefonoUsuario.TabIndex = 33;
@@ -851,17 +854,17 @@
             // 
             this.lblEliminarFechaNacimientoUsuario.AutoSize = true;
             this.lblEliminarFechaNacimientoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarFechaNacimientoUsuario.Location = new System.Drawing.Point(395, 112);
+            this.lblEliminarFechaNacimientoUsuario.Location = new System.Drawing.Point(362, 112);
             this.lblEliminarFechaNacimientoUsuario.Name = "lblEliminarFechaNacimientoUsuario";
-            this.lblEliminarFechaNacimientoUsuario.Size = new System.Drawing.Size(157, 20);
+            this.lblEliminarFechaNacimientoUsuario.Size = new System.Drawing.Size(54, 20);
             this.lblEliminarFechaNacimientoUsuario.TabIndex = 26;
-            this.lblEliminarFechaNacimientoUsuario.Text = "Fecha de nacimiento";
+            this.lblEliminarFechaNacimientoUsuario.Text = "Fecha";
             // 
             // lblEliminarFechaNacimiento
             // 
             this.lblEliminarFechaNacimiento.AutoSize = true;
             this.lblEliminarFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarFechaNacimiento.Location = new System.Drawing.Point(241, 112);
+            this.lblEliminarFechaNacimiento.Location = new System.Drawing.Point(208, 112);
             this.lblEliminarFechaNacimiento.Name = "lblEliminarFechaNacimiento";
             this.lblEliminarFechaNacimiento.Size = new System.Drawing.Size(161, 20);
             this.lblEliminarFechaNacimiento.TabIndex = 25;
@@ -871,7 +874,7 @@
             // 
             this.lblEliminarFechaAlta.AutoSize = true;
             this.lblEliminarFechaAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarFechaAlta.Location = new System.Drawing.Point(241, 136);
+            this.lblEliminarFechaAlta.Location = new System.Drawing.Point(208, 136);
             this.lblEliminarFechaAlta.Name = "lblEliminarFechaAlta";
             this.lblEliminarFechaAlta.Size = new System.Drawing.Size(110, 20);
             this.lblEliminarFechaAlta.TabIndex = 24;
@@ -881,7 +884,7 @@
             // 
             this.lblEliminarPermisosUsuario.AutoSize = true;
             this.lblEliminarPermisosUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarPermisosUsuario.Location = new System.Drawing.Point(316, 160);
+            this.lblEliminarPermisosUsuario.Location = new System.Drawing.Point(283, 160);
             this.lblEliminarPermisosUsuario.Name = "lblEliminarPermisosUsuario";
             this.lblEliminarPermisosUsuario.Size = new System.Drawing.Size(74, 20);
             this.lblEliminarPermisosUsuario.TabIndex = 21;
@@ -891,7 +894,7 @@
             // 
             this.lblEliminarPermisos.AutoSize = true;
             this.lblEliminarPermisos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarPermisos.Location = new System.Drawing.Point(241, 160);
+            this.lblEliminarPermisos.Location = new System.Drawing.Point(208, 160);
             this.lblEliminarPermisos.Name = "lblEliminarPermisos";
             this.lblEliminarPermisos.Size = new System.Drawing.Size(78, 20);
             this.lblEliminarPermisos.TabIndex = 19;
@@ -901,7 +904,7 @@
             // 
             this.lblEliminarFechaAltaUsuario.AutoSize = true;
             this.lblEliminarFechaAltaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarFechaAltaUsuario.Location = new System.Drawing.Point(347, 136);
+            this.lblEliminarFechaAltaUsuario.Location = new System.Drawing.Point(314, 136);
             this.lblEliminarFechaAltaUsuario.Name = "lblEliminarFechaAltaUsuario";
             this.lblEliminarFechaAltaUsuario.Size = new System.Drawing.Size(106, 20);
             this.lblEliminarFechaAltaUsuario.TabIndex = 18;
@@ -911,7 +914,7 @@
             // 
             this.lblEliminarEmail.AutoSize = true;
             this.lblEliminarEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarEmail.Location = new System.Drawing.Point(241, 62);
+            this.lblEliminarEmail.Location = new System.Drawing.Point(208, 62);
             this.lblEliminarEmail.Name = "lblEliminarEmail";
             this.lblEliminarEmail.Size = new System.Drawing.Size(52, 20);
             this.lblEliminarEmail.TabIndex = 17;
@@ -921,7 +924,7 @@
             // 
             this.lblEliminarEmailUsuario.AutoSize = true;
             this.lblEliminarEmailUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarEmailUsuario.Location = new System.Drawing.Point(288, 62);
+            this.lblEliminarEmailUsuario.Location = new System.Drawing.Point(255, 62);
             this.lblEliminarEmailUsuario.Name = "lblEliminarEmailUsuario";
             this.lblEliminarEmailUsuario.Size = new System.Drawing.Size(48, 20);
             this.lblEliminarEmailUsuario.TabIndex = 16;
@@ -931,7 +934,7 @@
             // 
             this.lblEliminarDireccionUsuario.AutoSize = true;
             this.lblEliminarDireccionUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarDireccionUsuario.Location = new System.Drawing.Point(315, 40);
+            this.lblEliminarDireccionUsuario.Location = new System.Drawing.Point(282, 40);
             this.lblEliminarDireccionUsuario.Name = "lblEliminarDireccionUsuario";
             this.lblEliminarDireccionUsuario.Size = new System.Drawing.Size(75, 20);
             this.lblEliminarDireccionUsuario.TabIndex = 15;
@@ -941,7 +944,7 @@
             // 
             this.lblEliminarDireccion.AutoSize = true;
             this.lblEliminarDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarDireccion.Location = new System.Drawing.Point(241, 40);
+            this.lblEliminarDireccion.Location = new System.Drawing.Point(208, 40);
             this.lblEliminarDireccion.Name = "lblEliminarDireccion";
             this.lblEliminarDireccion.Size = new System.Drawing.Size(79, 20);
             this.lblEliminarDireccion.TabIndex = 14;
@@ -951,7 +954,7 @@
             // 
             this.lblEliminarDNIUsuario.AutoSize = true;
             this.lblEliminarDNIUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarDNIUsuario.Location = new System.Drawing.Point(279, 16);
+            this.lblEliminarDNIUsuario.Location = new System.Drawing.Point(246, 16);
             this.lblEliminarDNIUsuario.Name = "lblEliminarDNIUsuario";
             this.lblEliminarDNIUsuario.Size = new System.Drawing.Size(37, 20);
             this.lblEliminarDNIUsuario.TabIndex = 13;
@@ -961,7 +964,7 @@
             // 
             this.lblEliminarDNI.AutoSize = true;
             this.lblEliminarDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarDNI.Location = new System.Drawing.Point(241, 16);
+            this.lblEliminarDNI.Location = new System.Drawing.Point(208, 16);
             this.lblEliminarDNI.Name = "lblEliminarDNI";
             this.lblEliminarDNI.Size = new System.Drawing.Size(41, 20);
             this.lblEliminarDNI.TabIndex = 12;
@@ -1209,14 +1212,17 @@
             // 
             // btnActualizarUsuario
             // 
+            this.btnActualizarUsuario.BackColor = System.Drawing.Color.DarkOrange;
             this.btnActualizarUsuario.Enabled = false;
+            this.btnActualizarUsuario.FlatAppearance.BorderSize = 3;
+            this.btnActualizarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarUsuario.Location = new System.Drawing.Point(406, 357);
             this.btnActualizarUsuario.Name = "btnActualizarUsuario";
             this.btnActualizarUsuario.Size = new System.Drawing.Size(257, 38);
             this.btnActualizarUsuario.TabIndex = 28;
             this.btnActualizarUsuario.Text = "Actualizar usuario";
-            this.btnActualizarUsuario.UseVisualStyleBackColor = true;
+            this.btnActualizarUsuario.UseVisualStyleBackColor = false;
             this.btnActualizarUsuario.Click += new System.EventHandler(this.btnActualizarUsuario_Click);
             // 
             // lblFechaDeNActualizar
@@ -1484,6 +1490,7 @@
             this.ClientSize = new System.Drawing.Size(1245, 971);
             this.Controls.Add(this.panelAcciones);
             this.Controls.Add(this.dgvUsuarios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUsuariosAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";

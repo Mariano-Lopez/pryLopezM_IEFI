@@ -13,11 +13,14 @@ namespace pryLopezM_IEFI
         public static int idSesion { get; set; }
         public static string idPermisos { get; set; }
 
-        public static DateTime ultSesion { get; set; }
+        public static DateTime fechaAccion = DateTime.Now;
 
         public static TimeSpan sesionActual { get; set; }
+        
         
 
 
     }
+
+    
 }

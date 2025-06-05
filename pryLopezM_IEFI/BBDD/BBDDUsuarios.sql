@@ -64,6 +64,8 @@ Select * from sesionUsusario;
 
 Select * from Usuarios;
 
+Select * from accionRealizada;
+
 
 DROP TABLE sesionUsuario;
 

@@ -49,6 +49,8 @@ namespace pryLopezM_IEFI
                     txtContraseña.Text = "";
                     txtUsuario.Text = "";
 
+                    txtUsuario.Focus();
+
                     MessageBox.Show($"Bienvenido {usuario.usuario}.", "Login exitoso");
 
                     frmInicio v = new frmInicio(clsSesion.idSesion, clsSesion.idUsuario);
