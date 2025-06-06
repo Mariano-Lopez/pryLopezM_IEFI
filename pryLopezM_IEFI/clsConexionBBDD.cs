@@ -149,42 +149,6 @@ namespace pryLopezM_IEFI
             return idSesion;
         }
 
-        public void mostrarDatos(DataGridView dgv, string comando)
-        {
-            try
-            {
-                conexionBaseDatos = new SqlConnection(cadenaConexion);
-
-                nombreBaseDeDatos = conexionBaseDatos.Database;
-
-                conexionBaseDatos.Open();
-
-                string query = comando;
-                comandoBaseDatos = new SqlCommand(query, conexionBaseDatos);
-
-                //Crear un DataTable.
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(comandoBaseDatos);
-                DataTable tablaProductos = new DataTable();
-
-                dataAdapter.Fill(tablaProductos);
-
-                dgv.AllowUserToOrderColumns = false;
-
-                dgv.DataSource = tablaProductos;
-
-                foreach (DataGridViewColumn column in dgv.Columns)
-                {
-                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
-                }
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, "Error");
-
-            }
-        }
-
         public void mostrarDatos(DataGridView dgv)
         {
             try
@@ -543,6 +507,77 @@ namespace pryLopezM_IEFI
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, "Error");
+            }
+        }
+
+        public void mostrarDatosTarea(DataGridView dgv)
+        {
+            try
+            {
+                conexionBaseDatos = new SqlConnection(cadenaConexion);
+
+                nombreBaseDeDatos = conexionBaseDatos.Database;
+
+                conexionBaseDatos.Open();
+
+                string query = @"SELECT * FROM registrarTarea";
+                comandoBaseDatos = new SqlCommand(query, conexionBaseDatos);
+
+                //Crear un DataTable.
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(comandoBaseDatos);
+                DataTable tablaProductos = new DataTable();
+
+                dataAdapter.Fill(tablaProductos);
+
+                dgv.AllowUserToOrderColumns = false;
+
+                dgv.DataSource = tablaProductos;
+
+                foreach (DataGridViewColumn column in dgv.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+
+            }
+        }
+
+        public void registrarTarea(DateTime fecha, string tarea, string lugar, TimeSpan hora, int idUsuario, string comentario, string Detalle, DateTime fechaC)
+        {
+            try
+            {
+                conexionBaseDatos = new SqlConnection(cadenaConexion);
+                nombreBaseDeDatos = conexionBaseDatos.Database;
+                conexionBaseDatos.Open();
+
+
+
+
+                string query = @"INSERT INTO registrarTarea (fechaTarea, tareaPrincipal, lugarTarea, detalle, comentario, fechaCreacion, horaTareaRegistrada, idUsuarioTarea) VALUES (@fechaTarea, @tareaPrincipal,
+                                   @lugarTarea, @detalle, @comentario, @fechaCreacion, @horaTareaRegistrada, @idUsuarioTarea)";
+
+                SqlCommand command = new SqlCommand(query, conexionBaseDatos);
+
+                // Asignar los parámetros
+                command.Parameters.AddWithValue("@fechaTarea", fecha);
+                command.Parameters.AddWithValue("@tareaPrincipal", tarea);
+                command.Parameters.AddWithValue("@lugarTarea", lugar);
+                command.Parameters.AddWithValue("@detalle", Detalle);
+                command.Parameters.AddWithValue("@comentario", comentario);
+                command.Parameters.AddWithValue("@fechaCreacion", fechaC);
+                command.Parameters.AddWithValue("@horaTareaRegistrada", hora);
+                command.Parameters.AddWithValue("@idUsuarioTarea", idUsuario);
+
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
             }
         }
 

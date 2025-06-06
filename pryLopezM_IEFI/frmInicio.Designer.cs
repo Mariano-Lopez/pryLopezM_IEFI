@@ -41,6 +41,8 @@
             this.tsTiempoS = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerSesion = new System.Windows.Forms.Timer(this.components);
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.registrarTareaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialTareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mspInicio.SuspendLayout();
             this.stsStatus.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +61,9 @@
             // 
             // tareasToolStripMenuItem
             // 
+            this.tareasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarTareaToolStripMenuItem,
+            this.historialTareasToolStripMenuItem});
             this.tareasToolStripMenuItem.Name = "tareasToolStripMenuItem";
             this.tareasToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.tareasToolStripMenuItem.Text = "Tareas";
@@ -137,6 +142,19 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
+            // registrarTareaToolStripMenuItem
+            // 
+            this.registrarTareaToolStripMenuItem.Name = "registrarTareaToolStripMenuItem";
+            this.registrarTareaToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.registrarTareaToolStripMenuItem.Text = "Registrar tarea...";
+            this.registrarTareaToolStripMenuItem.Click += new System.EventHandler(this.registrarTareaToolStripMenuItem_Click);
+            // 
+            // historialTareasToolStripMenuItem
+            // 
+            this.historialTareasToolStripMenuItem.Name = "historialTareasToolStripMenuItem";
+            this.historialTareasToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.historialTareasToolStripMenuItem.Text = "Historial tareas...";
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,5 +194,7 @@
         private System.Windows.Forms.Timer timerSesion;
         private System.Windows.Forms.ToolStripStatusLabel tsTiempoS;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.ToolStripMenuItem registrarTareaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historialTareasToolStripMenuItem;
     }
 }

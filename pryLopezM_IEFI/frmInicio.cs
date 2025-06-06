@@ -98,5 +98,11 @@ namespace pryLopezM_IEFI
         {
             this.Close();
         }
+
+        private void registrarTareaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistrarTarea v = new frmRegistrarTarea();
+            v.ShowDialog();
+        }
     }
 }

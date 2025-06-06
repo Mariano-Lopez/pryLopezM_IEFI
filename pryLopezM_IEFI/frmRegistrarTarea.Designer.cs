@@ -41,7 +41,7 @@
             this.chkSalarioTarea = new System.Windows.Forms.CheckBox();
             this.chkReciboTarea = new System.Windows.Forms.CheckBox();
             this.lblReclamoTarea = new System.Windows.Forms.Label();
-            this.lblEstudioTarea = new System.Windows.Forms.CheckBox();
+            this.chkEstudioTarea = new System.Windows.Forms.CheckBox();
             this.chkVacacionTarea = new System.Windows.Forms.CheckBox();
             this.lblLicenciaTarea = new System.Windows.Forms.Label();
             this.chkInsumo = new System.Windows.Forms.CheckBox();
@@ -65,7 +65,7 @@
             // lblTarea
             // 
             this.lblTarea.AutoSize = true;
-            this.lblTarea.Location = new System.Drawing.Point(9, 59);
+            this.lblTarea.Location = new System.Drawing.Point(9, 58);
             this.lblTarea.Name = "lblTarea";
             this.lblTarea.Size = new System.Drawing.Size(38, 13);
             this.lblTarea.TabIndex = 1;
@@ -74,7 +74,7 @@
             // lblLugarTarea
             // 
             this.lblLugarTarea.AutoSize = true;
-            this.lblLugarTarea.Location = new System.Drawing.Point(9, 103);
+            this.lblLugarTarea.Location = new System.Drawing.Point(9, 105);
             this.lblLugarTarea.Name = "lblLugarTarea";
             this.lblLugarTarea.Size = new System.Drawing.Size(37, 13);
             this.lblLugarTarea.TabIndex = 2;
@@ -82,7 +82,8 @@
             // 
             // dtpFechaTarea
             // 
-            this.dtpFechaTarea.Location = new System.Drawing.Point(12, 27);
+            this.dtpFechaTarea.Location = new System.Drawing.Point(12, 26);
+            this.dtpFechaTarea.MinDate = new System.DateTime(2025, 6, 6, 0, 0, 0, 0);
             this.dtpFechaTarea.Name = "dtpFechaTarea";
             this.dtpFechaTarea.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaTarea.TabIndex = 3;
@@ -90,31 +91,52 @@
             // cmbTarea
             // 
             this.cmbTarea.FormattingEnabled = true;
-            this.cmbTarea.Location = new System.Drawing.Point(12, 75);
+            this.cmbTarea.Items.AddRange(new object[] {
+            "Auditoría",
+            "Consultas",
+            "Inspección",
+            "Reclamos",
+            "Visita"});
+            this.cmbTarea.Location = new System.Drawing.Point(12, 74);
             this.cmbTarea.Name = "cmbTarea";
             this.cmbTarea.Size = new System.Drawing.Size(121, 21);
             this.cmbTarea.TabIndex = 4;
+            this.cmbTarea.SelectedIndexChanged += new System.EventHandler(this.cmbTarea_SelectedIndexChanged);
             // 
             // cmbLugarTarea
             // 
             this.cmbLugarTarea.FormattingEnabled = true;
-            this.cmbLugarTarea.Location = new System.Drawing.Point(12, 119);
+            this.cmbLugarTarea.Items.AddRange(new object[] {
+            "Empresa",
+            "Servicio",
+            "Oficina"});
+            this.cmbLugarTarea.Location = new System.Drawing.Point(12, 121);
             this.cmbLugarTarea.Name = "cmbLugarTarea";
             this.cmbLugarTarea.Size = new System.Drawing.Size(121, 21);
             this.cmbLugarTarea.TabIndex = 5;
+            this.cmbLugarTarea.SelectedIndexChanged += new System.EventHandler(this.cmbLugarTarea_SelectedIndexChanged);
             // 
             // dgvTareas
             // 
+            this.dgvTareas.AllowUserToAddRows = false;
+            this.dgvTareas.AllowUserToDeleteRows = false;
+            this.dgvTareas.AllowUserToResizeColumns = false;
+            this.dgvTareas.AllowUserToResizeRows = false;
+            this.dgvTareas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvTareas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTareas.Location = new System.Drawing.Point(12, 150);
+            this.dgvTareas.Location = new System.Drawing.Point(12, 278);
+            this.dgvTareas.MultiSelect = false;
             this.dgvTareas.Name = "dgvTareas";
-            this.dgvTareas.Size = new System.Drawing.Size(443, 156);
+            this.dgvTareas.ReadOnly = true;
+            this.dgvTareas.RowHeadersVisible = false;
+            this.dgvTareas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTareas.Size = new System.Drawing.Size(965, 290);
             this.dgvTareas.TabIndex = 6;
             // 
             // lblUniformeTarea
             // 
             this.lblUniformeTarea.AutoSize = true;
-            this.lblUniformeTarea.Location = new System.Drawing.Point(7, 16);
+            this.lblUniformeTarea.Location = new System.Drawing.Point(15, 20);
             this.lblUniformeTarea.Name = "lblUniformeTarea";
             this.lblUniformeTarea.Size = new System.Drawing.Size(49, 13);
             this.lblUniformeTarea.TabIndex = 7;
@@ -125,14 +147,14 @@
             this.mrcDetalleTarea.Controls.Add(this.chkSalarioTarea);
             this.mrcDetalleTarea.Controls.Add(this.chkReciboTarea);
             this.mrcDetalleTarea.Controls.Add(this.lblReclamoTarea);
-            this.mrcDetalleTarea.Controls.Add(this.lblEstudioTarea);
+            this.mrcDetalleTarea.Controls.Add(this.chkEstudioTarea);
             this.mrcDetalleTarea.Controls.Add(this.chkVacacionTarea);
             this.mrcDetalleTarea.Controls.Add(this.lblLicenciaTarea);
             this.mrcDetalleTarea.Controls.Add(this.chkInsumo);
             this.mrcDetalleTarea.Controls.Add(this.lblUniformeTarea);
-            this.mrcDetalleTarea.Location = new System.Drawing.Point(225, 27);
+            this.mrcDetalleTarea.Location = new System.Drawing.Point(229, 26);
             this.mrcDetalleTarea.Name = "mrcDetalleTarea";
-            this.mrcDetalleTarea.Size = new System.Drawing.Size(219, 111);
+            this.mrcDetalleTarea.Size = new System.Drawing.Size(94, 178);
             this.mrcDetalleTarea.TabIndex = 8;
             this.mrcDetalleTarea.TabStop = false;
             this.mrcDetalleTarea.Text = "Detalle";
@@ -140,56 +162,60 @@
             // chkSalarioTarea
             // 
             this.chkSalarioTarea.AutoSize = true;
-            this.chkSalarioTarea.Location = new System.Drawing.Point(119, 34);
+            this.chkSalarioTarea.Location = new System.Drawing.Point(15, 134);
             this.chkSalarioTarea.Name = "chkSalarioTarea";
             this.chkSalarioTarea.Size = new System.Drawing.Size(58, 17);
             this.chkSalarioTarea.TabIndex = 14;
             this.chkSalarioTarea.Text = "Salario";
             this.chkSalarioTarea.UseVisualStyleBackColor = true;
+            this.chkSalarioTarea.CheckedChanged += new System.EventHandler(this.chkSalarioTarea_CheckedChanged);
             // 
             // chkReciboTarea
             // 
             this.chkReciboTarea.AutoSize = true;
-            this.chkReciboTarea.Location = new System.Drawing.Point(119, 57);
+            this.chkReciboTarea.Location = new System.Drawing.Point(15, 155);
             this.chkReciboTarea.Name = "chkReciboTarea";
             this.chkReciboTarea.Size = new System.Drawing.Size(60, 17);
             this.chkReciboTarea.TabIndex = 13;
             this.chkReciboTarea.Text = "Recibo";
             this.chkReciboTarea.UseVisualStyleBackColor = true;
+            this.chkReciboTarea.CheckedChanged += new System.EventHandler(this.chkReciboTarea_CheckedChanged);
             // 
             // lblReclamoTarea
             // 
             this.lblReclamoTarea.AutoSize = true;
-            this.lblReclamoTarea.Location = new System.Drawing.Point(116, 18);
+            this.lblReclamoTarea.Location = new System.Drawing.Point(15, 117);
             this.lblReclamoTarea.Name = "lblReclamoTarea";
             this.lblReclamoTarea.Size = new System.Drawing.Size(49, 13);
             this.lblReclamoTarea.TabIndex = 12;
             this.lblReclamoTarea.Text = "Reclamo";
             // 
-            // lblEstudioTarea
+            // chkEstudioTarea
             // 
-            this.lblEstudioTarea.AutoSize = true;
-            this.lblEstudioTarea.Location = new System.Drawing.Point(10, 68);
-            this.lblEstudioTarea.Name = "lblEstudioTarea";
-            this.lblEstudioTarea.Size = new System.Drawing.Size(61, 17);
-            this.lblEstudioTarea.TabIndex = 11;
-            this.lblEstudioTarea.Text = "Estudio";
-            this.lblEstudioTarea.UseVisualStyleBackColor = true;
+            this.chkEstudioTarea.AutoSize = true;
+            this.chkEstudioTarea.Location = new System.Drawing.Point(15, 75);
+            this.chkEstudioTarea.Name = "chkEstudioTarea";
+            this.chkEstudioTarea.Size = new System.Drawing.Size(61, 17);
+            this.chkEstudioTarea.TabIndex = 11;
+            this.chkEstudioTarea.Text = "Estudio";
+            this.chkEstudioTarea.UseVisualStyleBackColor = true;
+            this.chkEstudioTarea.CheckedChanged += new System.EventHandler(this.chkEstudioTarea_CheckedChanged);
             // 
             // chkVacacionTarea
             // 
             this.chkVacacionTarea.AutoSize = true;
-            this.chkVacacionTarea.Location = new System.Drawing.Point(10, 91);
+            this.chkVacacionTarea.Location = new System.Drawing.Point(15, 96);
             this.chkVacacionTarea.Name = "chkVacacionTarea";
             this.chkVacacionTarea.Size = new System.Drawing.Size(71, 17);
             this.chkVacacionTarea.TabIndex = 10;
             this.chkVacacionTarea.Text = "Vacación";
             this.chkVacacionTarea.UseVisualStyleBackColor = true;
+            this.chkVacacionTarea.CheckedChanged += new System.EventHandler(this.chkVacacionTarea_CheckedChanged);
             // 
             // lblLicenciaTarea
             // 
             this.lblLicenciaTarea.AutoSize = true;
-            this.lblLicenciaTarea.Location = new System.Drawing.Point(7, 52);
+            this.lblLicenciaTarea.Location = new System.Drawing.Point(15, 58);
             this.lblLicenciaTarea.Name = "lblLicenciaTarea";
             this.lblLicenciaTarea.Size = new System.Drawing.Size(47, 13);
             this.lblLicenciaTarea.TabIndex = 9;
@@ -198,43 +224,48 @@
             // chkInsumo
             // 
             this.chkInsumo.AutoSize = true;
-            this.chkInsumo.Location = new System.Drawing.Point(10, 32);
+            this.chkInsumo.Location = new System.Drawing.Point(15, 37);
             this.chkInsumo.Name = "chkInsumo";
             this.chkInsumo.Size = new System.Drawing.Size(60, 17);
             this.chkInsumo.TabIndex = 8;
             this.chkInsumo.Text = "Insumo";
             this.chkInsumo.UseVisualStyleBackColor = true;
+            this.chkInsumo.CheckedChanged += new System.EventHandler(this.chkInsumo_CheckedChanged);
             // 
             // btnCancelarTarea
             // 
-            this.btnCancelarTarea.Location = new System.Drawing.Point(577, 320);
+            this.btnCancelarTarea.Location = new System.Drawing.Point(247, 235);
             this.btnCancelarTarea.Name = "btnCancelarTarea";
             this.btnCancelarTarea.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarTarea.TabIndex = 15;
             this.btnCancelarTarea.Text = "Cancelar";
             this.btnCancelarTarea.UseVisualStyleBackColor = true;
+            this.btnCancelarTarea.Click += new System.EventHandler(this.btnCancelarTarea_Click);
             // 
             // btnGrabarTarea
             // 
-            this.btnGrabarTarea.Location = new System.Drawing.Point(682, 320);
+            this.btnGrabarTarea.Enabled = false;
+            this.btnGrabarTarea.Location = new System.Drawing.Point(352, 235);
             this.btnGrabarTarea.Name = "btnGrabarTarea";
             this.btnGrabarTarea.Size = new System.Drawing.Size(75, 23);
             this.btnGrabarTarea.TabIndex = 16;
             this.btnGrabarTarea.Text = "Grabar";
             this.btnGrabarTarea.UseVisualStyleBackColor = true;
+            this.btnGrabarTarea.Click += new System.EventHandler(this.btnGrabarTarea_Click);
             // 
             // txtComentarioTarea
             // 
-            this.txtComentarioTarea.Location = new System.Drawing.Point(472, 47);
+            this.txtComentarioTarea.Location = new System.Drawing.Point(352, 42);
             this.txtComentarioTarea.Multiline = true;
             this.txtComentarioTarea.Name = "txtComentarioTarea";
-            this.txtComentarioTarea.Size = new System.Drawing.Size(397, 259);
+            this.txtComentarioTarea.Size = new System.Drawing.Size(233, 162);
             this.txtComentarioTarea.TabIndex = 17;
+            this.txtComentarioTarea.TextChanged += new System.EventHandler(this.txtComentarioTarea_TextChanged);
             // 
             // lblComentarioTarea
             // 
             this.lblComentarioTarea.AutoSize = true;
-            this.lblComentarioTarea.Location = new System.Drawing.Point(469, 31);
+            this.lblComentarioTarea.Location = new System.Drawing.Point(349, 26);
             this.lblComentarioTarea.Name = "lblComentarioTarea";
             this.lblComentarioTarea.Size = new System.Drawing.Size(63, 13);
             this.lblComentarioTarea.TabIndex = 15;
@@ -244,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 351);
+            this.ClientSize = new System.Drawing.Size(1143, 698);
             this.Controls.Add(this.lblComentarioTarea);
             this.Controls.Add(this.txtComentarioTarea);
             this.Controls.Add(this.btnGrabarTarea);
@@ -260,6 +291,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegistrarTarea";
             this.Text = "Registrar tarea";
+            this.Load += new System.EventHandler(this.frmRegistrarTarea_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareas)).EndInit();
             this.mrcDetalleTarea.ResumeLayout(false);
             this.mrcDetalleTarea.PerformLayout();
@@ -282,7 +314,7 @@
         private System.Windows.Forms.CheckBox chkSalarioTarea;
         private System.Windows.Forms.CheckBox chkReciboTarea;
         private System.Windows.Forms.Label lblReclamoTarea;
-        private System.Windows.Forms.CheckBox lblEstudioTarea;
+        private System.Windows.Forms.CheckBox chkEstudioTarea;
         private System.Windows.Forms.CheckBox chkVacacionTarea;
         private System.Windows.Forms.Label lblLicenciaTarea;
         private System.Windows.Forms.CheckBox chkInsumo;

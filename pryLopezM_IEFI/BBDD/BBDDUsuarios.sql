@@ -38,6 +38,38 @@ FOREIGN KEY (idUsuarioAccion) REFERENCES Usuarios(idUsuario)
 );
 
 
+CREATE TABLE registrarTarea (
+    idTarea INT NOT NULL IDENTITY PRIMARY KEY,
+	fechaTarea DATE NOT NULL,
+	tareaPrincipal VARCHAR (50) NOT NULL,
+	lugarTarea VARCHAR (50) NOT NULL,
+	detalle VARCHAR(255) NOT NULL, -- Asumiendo que vas a guardar los checks como texto concatenado
+    comentario VARCHAR(255) NOT NULL,
+	fechaCreacion DATE NOT NULL, -- Para saber cuándo se registró
+	horaTareaRegistrada TIME(0) NOT NULL,
+    idUsuarioTarea INT NOT NULL
+    --estado VARCHAR(50), -- Ej: "Pendiente", "En Proceso", "Completada"
+    --prioridad VARCHAR(20), -- Ej: "Alta", "Media", "Baja"
+    FOREIGN KEY (idUsuarioTarea) REFERENCES Usuarios(IdUsuario)
+);
+
+
+INSERT INTO registrarTarea 
+(fechaTarea, tareaPrincipal, lugarTarea, detalle, comentario, fechaCreacion, horaTareaRegistrada, idUsuarioTarea)
+VALUES
+('2025-06-12', 'Auditoría', 'Empresa Servicio', 'Estudio, Recibo', 'Revisión de contratos del personal.', '2025-06-11', '08:30:00', 1),
+('2025-06-12', 'Consultas', 'Oficina', 'Salario, Vacacion', 'Consulta por nuevo sistema de vacaciones.', '2025-06-11', '10:15:00', 2),
+('2025-06-13', 'Inspección', 'Empresa Servicio', 'Estudio, Vacacion', 'Inspección de seguridad en taller.', '2025-06-12', '11:45:00', 3),
+('2025-06-13', 'Reclamos', 'Oficina', 'Insumo, Recibo', 'Reclamos por insumos defectuosos.', '2025-06-12', '14:10:00', 4),
+('2025-06-14', 'Visitas', 'Oficina', 'Salario', 'Visita de evaluación de ambiente laboral.', '2025-06-13', '09:20:00', 5),
+('2025-06-14', 'Auditoría', 'Empresa Servicio', 'Salario, Estudio', 'Auditoría interna mensual.', '2025-06-13', '13:50:00', 6),
+('2025-06-15', 'Consultas', 'Oficina', 'Recibo', 'Consulta sobre pago de horas extra.', '2025-06-14', '10:05:00', 7),
+('2025-06-15', 'Inspección', 'Empresa Servicio', 'Estudio, Insumo', 'Inspección técnica de herramientas.', '2025-06-14', '15:30:00', 8),
+('2025-06-16', 'Reclamos', 'Oficina', 'Recibo, Salario', 'Reclamos múltiples por descuentos.', '2025-06-15', '09:40:00', 9),
+('2025-06-16', 'Visitas', 'Empresa Servicio', 'Vacacion, Estudio', 'Visita de coordinación con otros sectores.', '2025-06-15', '16:10:00', 10);
+
+
+
 INSERT INTO Usuarios 
 (IdUsuario, Usuario, Contraseña, Nombre, Apellido, Edad, DNI, Direccion, Telefono, Email, FechaDeNacimiento, FechaDeAlta, Permisos)
 VALUES
@@ -90,12 +122,16 @@ Select * from Usuarios;
 
 Select * from accionRealizada;
 
+Select * from registrarTarea;
+
 
 DROP TABLE sesionUsuario;
 
 DROP TABLE Usuarios;
 
 DROP TABLE accionRealizada;
+
+DROP TABLE registrarTarea;
 
 SELECT idUsuario, fechaDeAlta FROM Usuarios;
 
