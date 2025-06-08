@@ -45,7 +45,7 @@ CREATE TABLE registrarTarea (
 	lugarTarea VARCHAR (50) NOT NULL,
 	detalle VARCHAR(255) NOT NULL, -- Asumiendo que vas a guardar los checks como texto concatenado
     comentario VARCHAR(255) NOT NULL,
-	fechaCreacion DATE NOT NULL, -- Para saber cuándo se registró
+	fechaRegistro DATE NOT NULL, -- Para saber cuándo se registró
 	horaTareaRegistrada TIME(0) NOT NULL,
     idUsuarioTarea INT NOT NULL
     --estado VARCHAR(50), -- Ej: "Pendiente", "En Proceso", "Completada"
@@ -55,18 +55,18 @@ CREATE TABLE registrarTarea (
 
 
 INSERT INTO registrarTarea 
-(fechaTarea, tareaPrincipal, lugarTarea, detalle, comentario, fechaCreacion, horaTareaRegistrada, idUsuarioTarea)
+(fechaTarea, tareaPrincipal, lugarTarea, detalle, comentario, fechaRegistro, horaTareaRegistrada, idUsuarioTarea)
 VALUES
-('2025-06-12', 'Auditoría', 'Empresa Servicio', 'Estudio, Recibo', 'Revisión de contratos del personal.', '2025-06-11', '08:30:00', 1),
-('2025-06-12', 'Consultas', 'Oficina', 'Salario, Vacacion', 'Consulta por nuevo sistema de vacaciones.', '2025-06-11', '10:15:00', 2),
-('2025-06-13', 'Inspección', 'Empresa Servicio', 'Estudio, Vacacion', 'Inspección de seguridad en taller.', '2025-06-12', '11:45:00', 3),
-('2025-06-13', 'Reclamos', 'Oficina', 'Insumo, Recibo', 'Reclamos por insumos defectuosos.', '2025-06-12', '14:10:00', 4),
-('2025-06-14', 'Visitas', 'Oficina', 'Salario', 'Visita de evaluación de ambiente laboral.', '2025-06-13', '09:20:00', 5),
-('2025-06-14', 'Auditoría', 'Empresa Servicio', 'Salario, Estudio', 'Auditoría interna mensual.', '2025-06-13', '13:50:00', 6),
-('2025-06-15', 'Consultas', 'Oficina', 'Recibo', 'Consulta sobre pago de horas extra.', '2025-06-14', '10:05:00', 7),
-('2025-06-15', 'Inspección', 'Empresa Servicio', 'Estudio, Insumo', 'Inspección técnica de herramientas.', '2025-06-14', '15:30:00', 8),
-('2025-06-16', 'Reclamos', 'Oficina', 'Recibo, Salario', 'Reclamos múltiples por descuentos.', '2025-06-15', '09:40:00', 9),
-('2025-06-16', 'Visitas', 'Empresa Servicio', 'Vacacion, Estudio', 'Visita de coordinación con otros sectores.', '2025-06-15', '16:10:00', 10);
+('2025-06-1', 'Auditoría', 'Empresa', 'Estudio, Recibo', 'Revisión de contratos del personal.', '2025-06-2', '08:30:00', 1),
+('2025-06-1', 'Consultas', 'Oficina', 'Salario, Vacacion', 'Consulta por nuevo sistema de vacaciones.', '2025-06-2', '10:15:00', 2),
+('2025-06-2', 'Inspección', 'Empresa', 'Estudio, Vacacion', 'Inspección de seguridad en taller.', '2025-06-3', '11:45:00', 3),
+('2025-06-2', 'Reclamos', 'Servicio', 'Insumo, Recibo', 'Reclamos por insumos defectuosos.', '2025-06-3', '14:10:00', 4),
+('2025-06-3', 'Visitas', 'Oficina', 'Salario', 'Visita de evaluación de ambiente laboral.', '2025-06-4', '09:20:00', 5),
+('2025-06-3', 'Auditoría', 'Empresa', 'Salario, Estudio', 'Auditoría interna mensual.', '2025-06-4', '13:50:00', 6),
+('2025-06-4', 'Consultas', 'Servicio', 'Recibo', 'Consulta sobre pago de horas extra.', '2025-06-5', '10:05:00', 7),
+('2025-06-4', 'Inspección', 'Empresa', 'Estudio, Insumo', 'Inspección técnica de herramientas.', '2025-06-5', '15:30:00', 8),
+('2025-06-5', 'Reclamos', 'Oficina', 'Recibo, Salario', 'Reclamos múltiples por descuentos.', '2025-06-6', '09:40:00', 9),
+('2025-06-5', 'Visitas', 'Servicio', 'Vacacion, Estudio', 'Visita de coordinación con otros sectores.', '2025-06-6', '16:10:00', 10);
 
 
 

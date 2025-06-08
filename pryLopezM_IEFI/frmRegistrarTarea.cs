@@ -28,7 +28,7 @@ namespace pryLopezM_IEFI
         {
             BBDD.mostrarDatosTarea(dgvTareas);
 
-            dtpFechaTarea.MinDate = DateTime.Today;
+            dtpFechaTarea.MaxDate = DateTime.Today;
         }
 
         private void btnGrabarTarea_Click(object sender, EventArgs e)

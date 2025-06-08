@@ -12,3 +12,4 @@
 -Cambiar los elementos de los comboBox
 -Al crear usuario que ponga 2 veces la contraseña, para confirmarla.
 -Opcion de buscar varios usuarios a la vez
+

@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Net.WebRequestMethods;
 
+
 namespace pryLopezM_IEFI
 {
     public class clsConexionBBDD
@@ -580,6 +581,118 @@ namespace pryLopezM_IEFI
                 MessageBox.Show(ex.Message, "Error");
             }
         }
+
+        public void filtrarTareaPorDato(DataGridView dgv, string dato, string campo)
+        {
+            try
+            {
+                using (SqlConnection conexionBaseDatos = new SqlConnection(cadenaConexion))
+                {
+                    conexionBaseDatos.Open();
+
+                    string query = $@"SELECT * FROM registrarTarea WHERE {campo} = @{campo}";
+
+                    using (SqlCommand command = new SqlCommand(query, conexionBaseDatos))
+                    {
+                        command.Parameters.AddWithValue($"@{campo}", dato);
+
+
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                        DataTable tablaSesion = new DataTable();
+
+                        dataAdapter.Fill(tablaSesion);
+
+
+                        dgv.AllowUserToOrderColumns = false;
+                        dgv.DataSource = tablaSesion;
+
+                        foreach (DataGridViewColumn column in dgv.Columns)
+                        {
+                            column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+            }
+        }
+
+        public void filtrarTareaPorDato(DataGridView dgv, int dato)
+        {
+            try
+            {
+                using (SqlConnection conexionBaseDatos = new SqlConnection(cadenaConexion))
+                {
+                    conexionBaseDatos.Open();
+
+                    string query = $@"SELECT * FROM registrarTarea WHERE idUsuarioTarea = @idUsuarioTarea";
+
+                    using (SqlCommand command = new SqlCommand(query, conexionBaseDatos))
+                    {
+                        command.Parameters.AddWithValue("@idUsuarioTarea", dato);
+
+
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                        DataTable tablaSesion = new DataTable();
+
+                        dataAdapter.Fill(tablaSesion);
+
+
+                        dgv.AllowUserToOrderColumns = false;
+                        dgv.DataSource = tablaSesion;
+
+                        foreach (DataGridViewColumn column in dgv.Columns)
+                        {
+                            column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+            }
+        }
+
+        public void filtrarTareaPorDato(string dato, string campo, DataGridView dgv)
+        {
+            try
+            {
+                using (SqlConnection conexionBaseDatos = new SqlConnection(cadenaConexion))
+                {
+                    conexionBaseDatos.Open();
+
+                    string query = $@"SELECT * FROM registrarTarea WHERE {campo} LIKE @valor";
+
+                    using (SqlCommand command = new SqlCommand(query, conexionBaseDatos))
+                    {
+                        command.Parameters.AddWithValue("@valor", $"%{dato}%");
+
+
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                        DataTable tablaSesion = new DataTable();
+
+                        dataAdapter.Fill(tablaSesion);
+
+
+                        dgv.AllowUserToOrderColumns = false;
+                        dgv.DataSource = tablaSesion;
+
+                        foreach (DataGridViewColumn column in dgv.Columns)
+                        {
+                            column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+            }
+        }
+
 
 
     }

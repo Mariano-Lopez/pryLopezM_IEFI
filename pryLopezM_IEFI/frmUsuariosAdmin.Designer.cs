@@ -80,6 +80,9 @@
             this.cmbBuscarPermisos = new System.Windows.Forms.ComboBox();
             this.lblActualizarUsuarioInstrucciones = new System.Windows.Forms.Label();
             this.panelAcciones = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTituloPanel = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.Button();
             this.panelEliminar = new System.Windows.Forms.Panel();
             this.btnLimpiarEliminacion = new System.Windows.Forms.Button();
             this.mrcEliminarUsuario = new System.Windows.Forms.GroupBox();
@@ -145,9 +148,6 @@
             this.cmbPermisosActualizar = new System.Windows.Forms.ComboBox();
             this.lblContraseñaActualizar = new System.Windows.Forms.Label();
             this.lblPermisosActualizar = new System.Windows.Forms.Label();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTituloPanel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.panelOpciones.SuspendLayout();
             this.panelCrear.SuspendLayout();
@@ -155,12 +155,12 @@
             this.panelBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuscarUsuario)).BeginInit();
             this.panelAcciones.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panelEliminar.SuspendLayout();
             this.mrcEliminarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgEliminarUsuario)).BeginInit();
             this.panelActualizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvUsuarios
@@ -713,7 +713,7 @@
             // dtpBuscarFecha
             // 
             this.dtpBuscarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBuscarFecha.Location = new System.Drawing.Point(293, 246);
+            this.dtpBuscarFecha.Location = new System.Drawing.Point(286, 246);
             this.dtpBuscarFecha.Name = "dtpBuscarFecha";
             this.dtpBuscarFecha.Size = new System.Drawing.Size(350, 29);
             this.dtpBuscarFecha.TabIndex = 10;
@@ -773,17 +773,53 @@
             // panelAcciones
             // 
             this.panelAcciones.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelAcciones.Controls.Add(this.panelBuscar);
             this.panelAcciones.Controls.Add(this.panel1);
             this.panelAcciones.Controls.Add(this.panelEliminar);
             this.panelAcciones.Controls.Add(this.panelActualizar);
             this.panelAcciones.Controls.Add(this.panelCrear);
-            this.panelAcciones.Controls.Add(this.panelBuscar);
             this.panelAcciones.Controls.Add(this.panelOpciones);
             this.panelAcciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAcciones.Location = new System.Drawing.Point(0, 0);
             this.panelAcciones.Name = "panelAcciones";
             this.panelAcciones.Size = new System.Drawing.Size(1245, 488);
             this.panelAcciones.TabIndex = 16;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.lblTituloPanel);
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(249, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(996, 60);
+            this.panel1.TabIndex = 35;
+            // 
+            // lblTituloPanel
+            // 
+            this.lblTituloPanel.AutoSize = true;
+            this.lblTituloPanel.Font = new System.Drawing.Font("Palatino Linotype", 26.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloPanel.Location = new System.Drawing.Point(72, 4);
+            this.lblTituloPanel.Name = "lblTituloPanel";
+            this.lblTituloPanel.Size = new System.Drawing.Size(255, 47);
+            this.lblTituloPanel.TabIndex = 35;
+            this.lblTituloPanel.Text = "Titulo de panel";
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Green;
+            this.btnHome.FlatAppearance.BorderSize = 3;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(6, 8);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(50, 43);
+            this.btnHome.TabIndex = 34;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = false;
             // 
             // panelEliminar
             // 
@@ -1535,42 +1571,6 @@
             this.lblPermisosActualizar.TabIndex = 6;
             this.lblPermisosActualizar.Text = "Permisos:";
             // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.Green;
-            this.btnHome.FlatAppearance.BorderSize = 3;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(6, 8);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(50, 43);
-            this.btnHome.TabIndex = 34;
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Controls.Add(this.lblTituloPanel);
-            this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(249, 6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(996, 60);
-            this.panel1.TabIndex = 35;
-            // 
-            // lblTituloPanel
-            // 
-            this.lblTituloPanel.AutoSize = true;
-            this.lblTituloPanel.Font = new System.Drawing.Font("Palatino Linotype", 26.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloPanel.Location = new System.Drawing.Point(72, 4);
-            this.lblTituloPanel.Name = "lblTituloPanel";
-            this.lblTituloPanel.Size = new System.Drawing.Size(255, 47);
-            this.lblTituloPanel.TabIndex = 35;
-            this.lblTituloPanel.Text = "Titulo de panel";
-            // 
             // frmUsuariosAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1595,6 +1595,8 @@
             this.panelBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuscarUsuario)).EndInit();
             this.panelAcciones.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panelEliminar.ResumeLayout(false);
             this.panelEliminar.PerformLayout();
             this.mrcEliminarUsuario.ResumeLayout(false);
@@ -1603,8 +1605,6 @@
             this.panelActualizar.ResumeLayout(false);
             this.panelActualizar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

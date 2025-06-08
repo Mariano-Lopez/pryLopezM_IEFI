@@ -83,7 +83,7 @@
             // dtpFechaTarea
             // 
             this.dtpFechaTarea.Location = new System.Drawing.Point(12, 26);
-            this.dtpFechaTarea.MinDate = new System.DateTime(2025, 6, 6, 0, 0, 0, 0);
+            this.dtpFechaTarea.MinDate = new System.DateTime(1769, 1, 1, 0, 0, 0, 0);
             this.dtpFechaTarea.Name = "dtpFechaTarea";
             this.dtpFechaTarea.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaTarea.TabIndex = 3;
@@ -275,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 698);
+            this.ClientSize = new System.Drawing.Size(990, 698);
             this.Controls.Add(this.lblComentarioTarea);
             this.Controls.Add(this.txtComentarioTarea);
             this.Controls.Add(this.btnGrabarTarea);

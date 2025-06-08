@@ -595,6 +595,10 @@ namespace pryLopezM_IEFI
                 case 12:
                     esconderComponentes();
                     lblBusquedaSeleccionada.Text = "Seleccione rol a filtrar:";
+                    if (cmbBuscarPermisos.SelectedIndex != -1)
+                    {
+                        btnBuscarUsuario.Enabled = true;
+                    }
                     tipoDeCarga = true;
                     lblBusquedaSeleccionada.Visible = true;
                     cmbBuscarPermisos.Visible = true;
