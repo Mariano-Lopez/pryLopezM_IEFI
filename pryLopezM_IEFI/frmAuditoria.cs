@@ -137,5 +137,10 @@ namespace pryLopezM_IEFI
                 e.FormattingApplied = true;
             }
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -50,7 +50,7 @@ namespace pryLopezM_IEFI
 
             BBDD.registrarTarea(fechaElegida, tarea, lugar, hora, clsVariablesGlobales.idUsuario, comentario, detalle, fechaHoy);
 
-            dtpFechaTarea.Value = fechaHoy;
+            dtpFechaTarea.Value = System.DateTime.Now.Date;
             cmbTarea.SelectedIndex = -1;
             cmbLugarTarea.SelectedIndex = -1;
 

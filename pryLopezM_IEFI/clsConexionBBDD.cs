@@ -595,8 +595,8 @@ namespace pryLopezM_IEFI
 
 
 
-                string query = @"INSERT INTO registrarTarea (fechaTarea, tareaPrincipal, lugarTarea, detalle, comentario, fechaCreacion, horaTareaRegistrada, idUsuarioTarea) VALUES (@fechaTarea, @tareaPrincipal,
-                                   @lugarTarea, @detalle, @comentario, @fechaCreacion, @horaTareaRegistrada, @idUsuarioTarea)";
+                string query = @"INSERT INTO registrarTarea (fechaTarea, tareaPrincipal, lugarTarea, detalle, comentario, fechaRegistro, horaTareaRegistrada, idUsuarioTarea) VALUES (@fechaTarea, @tareaPrincipal,
+                                   @lugarTarea, @detalle, @comentario, @fechaRegistro, @horaTareaRegistrada, @idUsuarioTarea)";
 
                 SqlCommand command = new SqlCommand(query, conexionBaseDatos);
 
@@ -606,7 +606,7 @@ namespace pryLopezM_IEFI
                 command.Parameters.AddWithValue("@lugarTarea", lugar);
                 command.Parameters.AddWithValue("@detalle", Detalle);
                 command.Parameters.AddWithValue("@comentario", comentario);
-                command.Parameters.AddWithValue("@fechaCreacion", fechaC);
+                command.Parameters.AddWithValue("@fechaRegistro", fechaC);
                 command.Parameters.AddWithValue("@horaTareaRegistrada", hora);
                 command.Parameters.AddWithValue("@idUsuarioTarea", idUsuario);
 

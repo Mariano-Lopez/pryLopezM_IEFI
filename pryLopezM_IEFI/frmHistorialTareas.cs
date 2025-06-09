@@ -210,14 +210,14 @@ namespace pryLopezM_IEFI
             txtBusquedaTarea.Text = "";
             txtBusquedaTarea.Visible = false;
 
-            dtpFechaBusquedaTarea.Value = DateTime.Now;
+            dtpFechaBusquedaTarea.Value = DateTime.Now.Date;
             dtpFechaBusquedaTarea.Visible = false;
 
-            lblTipoDeDato.Visible = false;
+            lblCargaDeDato.Visible = false;
 
             btnFiltrarTarea.Enabled = false;
 
-
+            BBDD.mostrarDatosTarea(dgvHistorialTarea);
         }
 
         public void limpiarComponentesSeleccion()
