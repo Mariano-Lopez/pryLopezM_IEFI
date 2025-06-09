@@ -78,6 +78,35 @@
             this.cmbBuscarPermisos = new System.Windows.Forms.ComboBox();
             this.lblActualizarUsuarioInstrucciones = new System.Windows.Forms.Label();
             this.panelAcciones = new System.Windows.Forms.Panel();
+            this.panelActualizar = new System.Windows.Forms.Panel();
+            this.btnLimpiarActualizar = new System.Windows.Forms.Button();
+            this.btnActualizarUsuario = new System.Windows.Forms.Button();
+            this.lblFechaDeNActualizar = new System.Windows.Forms.Label();
+            this.txtNombreActualizar = new System.Windows.Forms.TextBox();
+            this.lblNombreActualizar = new System.Windows.Forms.Label();
+            this.txtApellidoActualizar = new System.Windows.Forms.TextBox();
+            this.lblApellidoActualizar = new System.Windows.Forms.Label();
+            this.txtEdadActualizar = new System.Windows.Forms.TextBox();
+            this.lblEdadActualizar = new System.Windows.Forms.Label();
+            this.txtDireccionActualizar = new System.Windows.Forms.TextBox();
+            this.lblDireccionActualizar = new System.Windows.Forms.Label();
+            this.txtEmailActualizar = new System.Windows.Forms.TextBox();
+            this.lblEmailActualizar = new System.Windows.Forms.Label();
+            this.txtTelefonoActualizar = new System.Windows.Forms.TextBox();
+            this.lblTelefonoActualizar = new System.Windows.Forms.Label();
+            this.txtDNIActualizar = new System.Windows.Forms.TextBox();
+            this.lblDNIActualizar = new System.Windows.Forms.Label();
+            this.dtpFechaNActualizar = new System.Windows.Forms.DateTimePicker();
+            this.imgActualizarUsuario = new System.Windows.Forms.PictureBox();
+            this.lblIdActualizar = new System.Windows.Forms.Label();
+            this.txtContraseñaActualizar = new System.Windows.Forms.TextBox();
+            this.txtUsuarioActualizar = new System.Windows.Forms.TextBox();
+            this.txtIDActualizar = new System.Windows.Forms.TextBox();
+            this.btnCargarUsuarioActualizar = new System.Windows.Forms.Button();
+            this.lblUsuarioActualizar = new System.Windows.Forms.Label();
+            this.cmbPermisosActualizar = new System.Windows.Forms.ComboBox();
+            this.lblContraseñaActualizar = new System.Windows.Forms.Label();
+            this.lblPermisosActualizar = new System.Windows.Forms.Label();
             this.panelEliminar = new System.Windows.Forms.Panel();
             this.btnLimpiarEliminacion = new System.Windows.Forms.Button();
             this.mrcEliminarUsuario = new System.Windows.Forms.GroupBox();
@@ -117,35 +146,6 @@
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblTituloPanel = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panelActualizar = new System.Windows.Forms.Panel();
-            this.btnLimpiarActualizar = new System.Windows.Forms.Button();
-            this.btnActualizarUsuario = new System.Windows.Forms.Button();
-            this.lblFechaDeNActualizar = new System.Windows.Forms.Label();
-            this.txtNombreActualizar = new System.Windows.Forms.TextBox();
-            this.lblNombreActualizar = new System.Windows.Forms.Label();
-            this.txtApellidoActualizar = new System.Windows.Forms.TextBox();
-            this.lblApellidoActualizar = new System.Windows.Forms.Label();
-            this.txtEdadActualizar = new System.Windows.Forms.TextBox();
-            this.lblEdadActualizar = new System.Windows.Forms.Label();
-            this.txtDireccionActualizar = new System.Windows.Forms.TextBox();
-            this.lblDireccionActualizar = new System.Windows.Forms.Label();
-            this.txtEmailActualizar = new System.Windows.Forms.TextBox();
-            this.lblEmailActualizar = new System.Windows.Forms.Label();
-            this.txtTelefonoActualizar = new System.Windows.Forms.TextBox();
-            this.lblTelefonoActualizar = new System.Windows.Forms.Label();
-            this.txtDNIActualizar = new System.Windows.Forms.TextBox();
-            this.lblDNIActualizar = new System.Windows.Forms.Label();
-            this.dtpFechaNActualizar = new System.Windows.Forms.DateTimePicker();
-            this.imgActualizarUsuario = new System.Windows.Forms.PictureBox();
-            this.lblIdActualizar = new System.Windows.Forms.Label();
-            this.txtContraseñaActualizar = new System.Windows.Forms.TextBox();
-            this.txtUsuarioActualizar = new System.Windows.Forms.TextBox();
-            this.txtIDActualizar = new System.Windows.Forms.TextBox();
-            this.btnCargarUsuarioActualizar = new System.Windows.Forms.Button();
-            this.lblUsuarioActualizar = new System.Windows.Forms.Label();
-            this.cmbPermisosActualizar = new System.Windows.Forms.ComboBox();
-            this.lblContraseñaActualizar = new System.Windows.Forms.Label();
-            this.lblPermisosActualizar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.panelOpciones.SuspendLayout();
             this.panelCrear.SuspendLayout();
@@ -153,12 +153,12 @@
             this.panelBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuscarUsuario)).BeginInit();
             this.panelAcciones.SuspendLayout();
+            this.panelActualizar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).BeginInit();
             this.panelEliminar.SuspendLayout();
             this.mrcEliminarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgEliminarUsuario)).BeginInit();
             this.panelTitulo.SuspendLayout();
-            this.panelActualizar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvUsuarios
@@ -756,10 +756,10 @@
             // panelAcciones
             // 
             this.panelAcciones.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelAcciones.Controls.Add(this.panelEliminar);
             this.panelAcciones.Controls.Add(this.panelCrear);
             this.panelAcciones.Controls.Add(this.panelActualizar);
             this.panelAcciones.Controls.Add(this.panelBuscar);
-            this.panelAcciones.Controls.Add(this.panelEliminar);
             this.panelAcciones.Controls.Add(this.panelTitulo);
             this.panelAcciones.Controls.Add(this.panelOpciones);
             this.panelAcciones.Dock = System.Windows.Forms.DockStyle.Top;
@@ -767,458 +767,6 @@
             this.panelAcciones.Name = "panelAcciones";
             this.panelAcciones.Size = new System.Drawing.Size(1286, 484);
             this.panelAcciones.TabIndex = 16;
-            // 
-            // panelEliminar
-            // 
-            this.panelEliminar.BackColor = System.Drawing.Color.DimGray;
-            this.panelEliminar.Controls.Add(this.btnLimpiarEliminacion);
-            this.panelEliminar.Controls.Add(this.mrcEliminarUsuario);
-            this.panelEliminar.Controls.Add(this.chkMensaje);
-            this.panelEliminar.Controls.Add(this.btnEliminarUsuario);
-            this.panelEliminar.Controls.Add(this.lblEliminarUsuarioInstrucciones);
-            this.panelEliminar.Controls.Add(this.imgEliminarUsuario);
-            this.panelEliminar.Controls.Add(this.lblIDEliminar);
-            this.panelEliminar.Controls.Add(this.txtIdParaEliminarUsuario);
-            this.panelEliminar.Location = new System.Drawing.Point(243, 58);
-            this.panelEliminar.Name = "panelEliminar";
-            this.panelEliminar.Size = new System.Drawing.Size(1003, 424);
-            this.panelEliminar.TabIndex = 30;
-            this.panelEliminar.Visible = false;
-            // 
-            // btnLimpiarEliminacion
-            // 
-            this.btnLimpiarEliminacion.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnLimpiarEliminacion.FlatAppearance.BorderSize = 3;
-            this.btnLimpiarEliminacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarEliminacion.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarEliminacion.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarEliminacion.Image")));
-            this.btnLimpiarEliminacion.Location = new System.Drawing.Point(87, 304);
-            this.btnLimpiarEliminacion.Name = "btnLimpiarEliminacion";
-            this.btnLimpiarEliminacion.Size = new System.Drawing.Size(146, 47);
-            this.btnLimpiarEliminacion.TabIndex = 33;
-            this.btnLimpiarEliminacion.Text = "Limpiar";
-            this.btnLimpiarEliminacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimpiarEliminacion.UseVisualStyleBackColor = false;
-            // 
-            // mrcEliminarUsuario
-            // 
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarTelefono);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarTelefonoUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.btnConfirmarEliminacion);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarFechaNacimientoUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarFechaNacimiento);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarFechaAlta);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarPermisosUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarPermisos);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarFechaAltaUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarEmail);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarEmailUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarDireccionUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarDireccion);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarDNIUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarDNI);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarEdadUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarEdad);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarApellidoUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarApellido);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarNombreUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarNombre);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarContraseñaUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarContraseña);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarUsuarioDato);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarIdUsuario);
-            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarId);
-            this.mrcEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mrcEliminarUsuario.Location = new System.Drawing.Point(315, 163);
-            this.mrcEliminarUsuario.Name = "mrcEliminarUsuario";
-            this.mrcEliminarUsuario.Size = new System.Drawing.Size(600, 246);
-            this.mrcEliminarUsuario.TabIndex = 31;
-            this.mrcEliminarUsuario.TabStop = false;
-            this.mrcEliminarUsuario.Visible = false;
-            // 
-            // lblEliminarTelefono
-            // 
-            this.lblEliminarTelefono.AutoSize = true;
-            this.lblEliminarTelefono.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarTelefono.Location = new System.Drawing.Point(315, 86);
-            this.lblEliminarTelefono.Name = "lblEliminarTelefono";
-            this.lblEliminarTelefono.Size = new System.Drawing.Size(97, 18);
-            this.lblEliminarTelefono.TabIndex = 34;
-            this.lblEliminarTelefono.Text = "Teléfono:";
-            // 
-            // lblEliminarTelefonoUsuario
-            // 
-            this.lblEliminarTelefonoUsuario.AutoSize = true;
-            this.lblEliminarTelefonoUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarTelefonoUsuario.Location = new System.Drawing.Point(412, 86);
-            this.lblEliminarTelefonoUsuario.Name = "lblEliminarTelefonoUsuario";
-            this.lblEliminarTelefonoUsuario.Size = new System.Drawing.Size(92, 18);
-            this.lblEliminarTelefonoUsuario.TabIndex = 33;
-            this.lblEliminarTelefonoUsuario.Text = "Telefono";
-            // 
-            // btnConfirmarEliminacion
-            // 
-            this.btnConfirmarEliminacion.BackColor = System.Drawing.Color.Red;
-            this.btnConfirmarEliminacion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnConfirmarEliminacion.FlatAppearance.BorderSize = 3;
-            this.btnConfirmarEliminacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmarEliminacion.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmarEliminacion.Location = new System.Drawing.Point(138, 194);
-            this.btnConfirmarEliminacion.Name = "btnConfirmarEliminacion";
-            this.btnConfirmarEliminacion.Size = new System.Drawing.Size(297, 38);
-            this.btnConfirmarEliminacion.TabIndex = 32;
-            this.btnConfirmarEliminacion.Text = "Confirmar eliminación";
-            this.btnConfirmarEliminacion.UseVisualStyleBackColor = false;
-            this.btnConfirmarEliminacion.Click += new System.EventHandler(this.btnConfirmarEliminacion_Click);
-            // 
-            // lblEliminarFechaNacimientoUsuario
-            // 
-            this.lblEliminarFechaNacimientoUsuario.AutoSize = true;
-            this.lblEliminarFechaNacimientoUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarFechaNacimientoUsuario.Location = new System.Drawing.Point(518, 111);
-            this.lblEliminarFechaNacimientoUsuario.Name = "lblEliminarFechaNacimientoUsuario";
-            this.lblEliminarFechaNacimientoUsuario.Size = new System.Drawing.Size(64, 18);
-            this.lblEliminarFechaNacimientoUsuario.TabIndex = 26;
-            this.lblEliminarFechaNacimientoUsuario.Text = "Fecha";
-            // 
-            // lblEliminarFechaNacimiento
-            // 
-            this.lblEliminarFechaNacimiento.AutoSize = true;
-            this.lblEliminarFechaNacimiento.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarFechaNacimiento.Location = new System.Drawing.Point(315, 111);
-            this.lblEliminarFechaNacimiento.Name = "lblEliminarFechaNacimiento";
-            this.lblEliminarFechaNacimiento.Size = new System.Drawing.Size(197, 18);
-            this.lblEliminarFechaNacimiento.TabIndex = 25;
-            this.lblEliminarFechaNacimiento.Text = "Fecha de nacimiento:";
-            // 
-            // lblEliminarFechaAlta
-            // 
-            this.lblEliminarFechaAlta.AutoSize = true;
-            this.lblEliminarFechaAlta.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarFechaAlta.Location = new System.Drawing.Point(315, 135);
-            this.lblEliminarFechaAlta.Name = "lblEliminarFechaAlta";
-            this.lblEliminarFechaAlta.Size = new System.Drawing.Size(138, 18);
-            this.lblEliminarFechaAlta.TabIndex = 24;
-            this.lblEliminarFechaAlta.Text = "Fecha de alta:";
-            // 
-            // lblEliminarPermisosUsuario
-            // 
-            this.lblEliminarPermisosUsuario.AutoSize = true;
-            this.lblEliminarPermisosUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarPermisosUsuario.Location = new System.Drawing.Point(409, 158);
-            this.lblEliminarPermisosUsuario.Name = "lblEliminarPermisosUsuario";
-            this.lblEliminarPermisosUsuario.Size = new System.Drawing.Size(90, 18);
-            this.lblEliminarPermisosUsuario.TabIndex = 21;
-            this.lblEliminarPermisosUsuario.Text = "Permisos";
-            // 
-            // lblEliminarPermisos
-            // 
-            this.lblEliminarPermisos.AutoSize = true;
-            this.lblEliminarPermisos.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarPermisos.Location = new System.Drawing.Point(315, 159);
-            this.lblEliminarPermisos.Name = "lblEliminarPermisos";
-            this.lblEliminarPermisos.Size = new System.Drawing.Size(95, 18);
-            this.lblEliminarPermisos.TabIndex = 19;
-            this.lblEliminarPermisos.Text = "Permisos:";
-            // 
-            // lblEliminarFechaAltaUsuario
-            // 
-            this.lblEliminarFechaAltaUsuario.AutoSize = true;
-            this.lblEliminarFechaAltaUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarFechaAltaUsuario.Location = new System.Drawing.Point(459, 135);
-            this.lblEliminarFechaAltaUsuario.Name = "lblEliminarFechaAltaUsuario";
-            this.lblEliminarFechaAltaUsuario.Size = new System.Drawing.Size(133, 18);
-            this.lblEliminarFechaAltaUsuario.TabIndex = 18;
-            this.lblEliminarFechaAltaUsuario.Text = "Fecha de alta";
-            // 
-            // lblEliminarEmail
-            // 
-            this.lblEliminarEmail.AutoSize = true;
-            this.lblEliminarEmail.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarEmail.Location = new System.Drawing.Point(315, 61);
-            this.lblEliminarEmail.Name = "lblEliminarEmail";
-            this.lblEliminarEmail.Size = new System.Drawing.Size(63, 18);
-            this.lblEliminarEmail.TabIndex = 17;
-            this.lblEliminarEmail.Text = "Email:";
-            // 
-            // lblEliminarEmailUsuario
-            // 
-            this.lblEliminarEmailUsuario.AutoSize = true;
-            this.lblEliminarEmailUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarEmailUsuario.Location = new System.Drawing.Point(377, 61);
-            this.lblEliminarEmailUsuario.Name = "lblEliminarEmailUsuario";
-            this.lblEliminarEmailUsuario.Size = new System.Drawing.Size(58, 18);
-            this.lblEliminarEmailUsuario.TabIndex = 16;
-            this.lblEliminarEmailUsuario.Text = "Email";
-            // 
-            // lblEliminarDireccionUsuario
-            // 
-            this.lblEliminarDireccionUsuario.AutoSize = true;
-            this.lblEliminarDireccionUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarDireccionUsuario.Location = new System.Drawing.Point(415, 39);
-            this.lblEliminarDireccionUsuario.Name = "lblEliminarDireccionUsuario";
-            this.lblEliminarDireccionUsuario.Size = new System.Drawing.Size(97, 18);
-            this.lblEliminarDireccionUsuario.TabIndex = 15;
-            this.lblEliminarDireccionUsuario.Text = "Dirección";
-            // 
-            // lblEliminarDireccion
-            // 
-            this.lblEliminarDireccion.AutoSize = true;
-            this.lblEliminarDireccion.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarDireccion.Location = new System.Drawing.Point(315, 39);
-            this.lblEliminarDireccion.Name = "lblEliminarDireccion";
-            this.lblEliminarDireccion.Size = new System.Drawing.Size(102, 18);
-            this.lblEliminarDireccion.TabIndex = 14;
-            this.lblEliminarDireccion.Text = "Dirección:";
-            // 
-            // lblEliminarDNIUsuario
-            // 
-            this.lblEliminarDNIUsuario.AutoSize = true;
-            this.lblEliminarDNIUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarDNIUsuario.Location = new System.Drawing.Point(361, 14);
-            this.lblEliminarDNIUsuario.Name = "lblEliminarDNIUsuario";
-            this.lblEliminarDNIUsuario.Size = new System.Drawing.Size(40, 18);
-            this.lblEliminarDNIUsuario.TabIndex = 13;
-            this.lblEliminarDNIUsuario.Text = "DNI";
-            // 
-            // lblEliminarDNI
-            // 
-            this.lblEliminarDNI.AutoSize = true;
-            this.lblEliminarDNI.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarDNI.Location = new System.Drawing.Point(315, 15);
-            this.lblEliminarDNI.Name = "lblEliminarDNI";
-            this.lblEliminarDNI.Size = new System.Drawing.Size(45, 18);
-            this.lblEliminarDNI.TabIndex = 12;
-            this.lblEliminarDNI.Text = "DNI:";
-            // 
-            // lblEliminarEdadUsuario
-            // 
-            this.lblEliminarEdadUsuario.AutoSize = true;
-            this.lblEliminarEdadUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarEdadUsuario.Location = new System.Drawing.Point(96, 150);
-            this.lblEliminarEdadUsuario.Name = "lblEliminarEdadUsuario";
-            this.lblEliminarEdadUsuario.Size = new System.Drawing.Size(53, 18);
-            this.lblEliminarEdadUsuario.TabIndex = 11;
-            this.lblEliminarEdadUsuario.Text = "Edad";
-            // 
-            // lblEliminarEdad
-            // 
-            this.lblEliminarEdad.AutoSize = true;
-            this.lblEliminarEdad.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarEdad.Location = new System.Drawing.Point(41, 150);
-            this.lblEliminarEdad.Name = "lblEliminarEdad";
-            this.lblEliminarEdad.Size = new System.Drawing.Size(58, 18);
-            this.lblEliminarEdad.TabIndex = 10;
-            this.lblEliminarEdad.Text = "Edad:";
-            // 
-            // lblEliminarApellidoUsuario
-            // 
-            this.lblEliminarApellidoUsuario.AutoSize = true;
-            this.lblEliminarApellidoUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarApellidoUsuario.Location = new System.Drawing.Point(132, 125);
-            this.lblEliminarApellidoUsuario.Name = "lblEliminarApellidoUsuario";
-            this.lblEliminarApellidoUsuario.Size = new System.Drawing.Size(86, 18);
-            this.lblEliminarApellidoUsuario.TabIndex = 9;
-            this.lblEliminarApellidoUsuario.Text = "Apellido";
-            // 
-            // lblEliminarApellido
-            // 
-            this.lblEliminarApellido.AutoSize = true;
-            this.lblEliminarApellido.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarApellido.Location = new System.Drawing.Point(41, 126);
-            this.lblEliminarApellido.Name = "lblEliminarApellido";
-            this.lblEliminarApellido.Size = new System.Drawing.Size(91, 18);
-            this.lblEliminarApellido.TabIndex = 8;
-            this.lblEliminarApellido.Text = "Apellido:";
-            // 
-            // lblEliminarNombreUsuario
-            // 
-            this.lblEliminarNombreUsuario.AutoSize = true;
-            this.lblEliminarNombreUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarNombreUsuario.Location = new System.Drawing.Point(120, 98);
-            this.lblEliminarNombreUsuario.Name = "lblEliminarNombreUsuario";
-            this.lblEliminarNombreUsuario.Size = new System.Drawing.Size(78, 18);
-            this.lblEliminarNombreUsuario.TabIndex = 7;
-            this.lblEliminarNombreUsuario.Text = "Nombre";
-            // 
-            // lblEliminarNombre
-            // 
-            this.lblEliminarNombre.AutoSize = true;
-            this.lblEliminarNombre.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarNombre.Location = new System.Drawing.Point(41, 98);
-            this.lblEliminarNombre.Name = "lblEliminarNombre";
-            this.lblEliminarNombre.Size = new System.Drawing.Size(83, 18);
-            this.lblEliminarNombre.TabIndex = 6;
-            this.lblEliminarNombre.Text = "Nombre:";
-            // 
-            // lblEliminarContraseñaUsuario
-            // 
-            this.lblEliminarContraseñaUsuario.AutoSize = true;
-            this.lblEliminarContraseñaUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarContraseñaUsuario.Location = new System.Drawing.Point(165, 70);
-            this.lblEliminarContraseñaUsuario.Name = "lblEliminarContraseñaUsuario";
-            this.lblEliminarContraseñaUsuario.Size = new System.Drawing.Size(118, 18);
-            this.lblEliminarContraseñaUsuario.TabIndex = 5;
-            this.lblEliminarContraseñaUsuario.Text = "Contraseña";
-            // 
-            // lblEliminarContraseña
-            // 
-            this.lblEliminarContraseña.AutoSize = true;
-            this.lblEliminarContraseña.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarContraseña.Location = new System.Drawing.Point(41, 70);
-            this.lblEliminarContraseña.Name = "lblEliminarContraseña";
-            this.lblEliminarContraseña.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEliminarContraseña.Size = new System.Drawing.Size(123, 18);
-            this.lblEliminarContraseña.TabIndex = 4;
-            this.lblEliminarContraseña.Text = "Contraseña:";
-            // 
-            // lblEliminarUsuarioDato
-            // 
-            this.lblEliminarUsuarioDato.AutoSize = true;
-            this.lblEliminarUsuarioDato.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarUsuarioDato.Location = new System.Drawing.Point(125, 42);
-            this.lblEliminarUsuarioDato.Name = "lblEliminarUsuarioDato";
-            this.lblEliminarUsuarioDato.Size = new System.Drawing.Size(80, 18);
-            this.lblEliminarUsuarioDato.TabIndex = 3;
-            this.lblEliminarUsuarioDato.Text = "Usuario";
-            // 
-            // lblEliminarUsuario
-            // 
-            this.lblEliminarUsuario.AutoSize = true;
-            this.lblEliminarUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarUsuario.Location = new System.Drawing.Point(41, 42);
-            this.lblEliminarUsuario.Name = "lblEliminarUsuario";
-            this.lblEliminarUsuario.Size = new System.Drawing.Size(85, 18);
-            this.lblEliminarUsuario.TabIndex = 2;
-            this.lblEliminarUsuario.Text = "Usuario:";
-            // 
-            // lblEliminarIdUsuario
-            // 
-            this.lblEliminarIdUsuario.AutoSize = true;
-            this.lblEliminarIdUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarIdUsuario.Location = new System.Drawing.Point(200, 14);
-            this.lblEliminarIdUsuario.Name = "lblEliminarIdUsuario";
-            this.lblEliminarIdUsuario.Size = new System.Drawing.Size(26, 18);
-            this.lblEliminarIdUsuario.TabIndex = 1;
-            this.lblEliminarIdUsuario.Text = "ID";
-            // 
-            // lblEliminarId
-            // 
-            this.lblEliminarId.AutoSize = true;
-            this.lblEliminarId.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarId.Location = new System.Drawing.Point(41, 14);
-            this.lblEliminarId.Name = "lblEliminarId";
-            this.lblEliminarId.Size = new System.Drawing.Size(160, 18);
-            this.lblEliminarId.TabIndex = 0;
-            this.lblEliminarId.Text = "N° Identificador:";
-            // 
-            // chkMensaje
-            // 
-            this.chkMensaje.AutoSize = true;
-            this.chkMensaje.Checked = true;
-            this.chkMensaje.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkMensaje.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMensaje.Location = new System.Drawing.Point(54, 275);
-            this.chkMensaje.Name = "chkMensaje";
-            this.chkMensaje.Size = new System.Drawing.Size(255, 22);
-            this.chkMensaje.TabIndex = 30;
-            this.chkMensaje.Text = "Mensaje de confirmación";
-            this.chkMensaje.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarUsuario
-            // 
-            this.btnEliminarUsuario.BackColor = System.Drawing.Color.Red;
-            this.btnEliminarUsuario.Enabled = false;
-            this.btnEliminarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminarUsuario.FlatAppearance.BorderSize = 3;
-            this.btnEliminarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(18, 231);
-            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
-            this.btnEliminarUsuario.Size = new System.Drawing.Size(266, 40);
-            this.btnEliminarUsuario.TabIndex = 29;
-            this.btnEliminarUsuario.Text = "Eliminar usuario";
-            this.btnEliminarUsuario.UseVisualStyleBackColor = false;
-            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
-            // 
-            // lblEliminarUsuarioInstrucciones
-            // 
-            this.lblEliminarUsuarioInstrucciones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblEliminarUsuarioInstrucciones.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminarUsuarioInstrucciones.Location = new System.Drawing.Point(167, 6);
-            this.lblEliminarUsuarioInstrucciones.Name = "lblEliminarUsuarioInstrucciones";
-            this.lblEliminarUsuarioInstrucciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEliminarUsuarioInstrucciones.Size = new System.Drawing.Size(762, 139);
-            this.lblEliminarUsuarioInstrucciones.TabIndex = 16;
-            this.lblEliminarUsuarioInstrucciones.Text = resources.GetString("lblEliminarUsuarioInstrucciones.Text");
-            // 
-            // imgEliminarUsuario
-            // 
-            this.imgEliminarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("imgEliminarUsuario.Image")));
-            this.imgEliminarUsuario.Location = new System.Drawing.Point(14, 9);
-            this.imgEliminarUsuario.Name = "imgEliminarUsuario";
-            this.imgEliminarUsuario.Size = new System.Drawing.Size(143, 136);
-            this.imgEliminarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgEliminarUsuario.TabIndex = 11;
-            this.imgEliminarUsuario.TabStop = false;
-            // 
-            // lblIDEliminar
-            // 
-            this.lblIDEliminar.AutoSize = true;
-            this.lblIDEliminar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDEliminar.Location = new System.Drawing.Point(53, 164);
-            this.lblIDEliminar.Name = "lblIDEliminar";
-            this.lblIDEliminar.Size = new System.Drawing.Size(193, 21);
-            this.lblIDEliminar.TabIndex = 9;
-            this.lblIDEliminar.Text = "N° Identificador:";
-            // 
-            // txtIdParaEliminarUsuario
-            // 
-            this.txtIdParaEliminarUsuario.Font = new System.Drawing.Font("Copperplate Gothic Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdParaEliminarUsuario.Location = new System.Drawing.Point(80, 187);
-            this.txtIdParaEliminarUsuario.Name = "txtIdParaEliminarUsuario";
-            this.txtIdParaEliminarUsuario.Size = new System.Drawing.Size(137, 28);
-            this.txtIdParaEliminarUsuario.TabIndex = 0;
-            this.txtIdParaEliminarUsuario.TextChanged += new System.EventHandler(this.txtIdParaEliminarUsuario_TextChanged);
-            this.txtIdParaEliminarUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdParaEliminarUsuario_KeyPress);
-            // 
-            // panelTitulo
-            // 
-            this.panelTitulo.BackColor = System.Drawing.Color.DimGray;
-            this.panelTitulo.Controls.Add(this.lblTituloPanel);
-            this.panelTitulo.Controls.Add(this.btnHome);
-            this.panelTitulo.Font = new System.Drawing.Font("Copperplate Gothic Bold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelTitulo.Location = new System.Drawing.Point(243, 1);
-            this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1003, 60);
-            this.panelTitulo.TabIndex = 35;
-            this.panelTitulo.Visible = false;
-            // 
-            // lblTituloPanel
-            // 
-            this.lblTituloPanel.AutoSize = true;
-            this.lblTituloPanel.Font = new System.Drawing.Font("Copperplate Gothic Bold", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloPanel.Location = new System.Drawing.Point(62, 12);
-            this.lblTituloPanel.Name = "lblTituloPanel";
-            this.lblTituloPanel.Size = new System.Drawing.Size(320, 39);
-            this.lblTituloPanel.TabIndex = 35;
-            this.lblTituloPanel.Text = "Titulo de panel";
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.Green;
-            this.btnHome.FlatAppearance.BorderSize = 3;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(6, 8);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(50, 43);
-            this.btnHome.TabIndex = 34;
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panelActualizar
             // 
@@ -1550,6 +1098,458 @@
             this.lblPermisosActualizar.TabIndex = 6;
             this.lblPermisosActualizar.Text = "Permisos:";
             // 
+            // panelEliminar
+            // 
+            this.panelEliminar.BackColor = System.Drawing.Color.DimGray;
+            this.panelEliminar.Controls.Add(this.btnLimpiarEliminacion);
+            this.panelEliminar.Controls.Add(this.mrcEliminarUsuario);
+            this.panelEliminar.Controls.Add(this.chkMensaje);
+            this.panelEliminar.Controls.Add(this.btnEliminarUsuario);
+            this.panelEliminar.Controls.Add(this.lblEliminarUsuarioInstrucciones);
+            this.panelEliminar.Controls.Add(this.imgEliminarUsuario);
+            this.panelEliminar.Controls.Add(this.lblIDEliminar);
+            this.panelEliminar.Controls.Add(this.txtIdParaEliminarUsuario);
+            this.panelEliminar.Location = new System.Drawing.Point(243, 58);
+            this.panelEliminar.Name = "panelEliminar";
+            this.panelEliminar.Size = new System.Drawing.Size(1003, 424);
+            this.panelEliminar.TabIndex = 30;
+            this.panelEliminar.Visible = false;
+            // 
+            // btnLimpiarEliminacion
+            // 
+            this.btnLimpiarEliminacion.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLimpiarEliminacion.FlatAppearance.BorderSize = 3;
+            this.btnLimpiarEliminacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarEliminacion.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarEliminacion.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarEliminacion.Image")));
+            this.btnLimpiarEliminacion.Location = new System.Drawing.Point(87, 304);
+            this.btnLimpiarEliminacion.Name = "btnLimpiarEliminacion";
+            this.btnLimpiarEliminacion.Size = new System.Drawing.Size(146, 47);
+            this.btnLimpiarEliminacion.TabIndex = 33;
+            this.btnLimpiarEliminacion.Text = "Limpiar";
+            this.btnLimpiarEliminacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpiarEliminacion.UseVisualStyleBackColor = false;
+            // 
+            // mrcEliminarUsuario
+            // 
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarTelefono);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarTelefonoUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.btnConfirmarEliminacion);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarFechaNacimientoUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarFechaNacimiento);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarFechaAlta);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarPermisosUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarPermisos);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarFechaAltaUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarEmail);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarEmailUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarDireccionUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarDireccion);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarDNIUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarDNI);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarEdadUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarEdad);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarApellidoUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarApellido);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarNombreUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarNombre);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarContraseñaUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarContraseña);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarUsuarioDato);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarIdUsuario);
+            this.mrcEliminarUsuario.Controls.Add(this.lblEliminarId);
+            this.mrcEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mrcEliminarUsuario.Location = new System.Drawing.Point(315, 163);
+            this.mrcEliminarUsuario.Name = "mrcEliminarUsuario";
+            this.mrcEliminarUsuario.Size = new System.Drawing.Size(614, 246);
+            this.mrcEliminarUsuario.TabIndex = 31;
+            this.mrcEliminarUsuario.TabStop = false;
+            this.mrcEliminarUsuario.Visible = false;
+            // 
+            // lblEliminarTelefono
+            // 
+            this.lblEliminarTelefono.AutoSize = true;
+            this.lblEliminarTelefono.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarTelefono.Location = new System.Drawing.Point(283, 87);
+            this.lblEliminarTelefono.Name = "lblEliminarTelefono";
+            this.lblEliminarTelefono.Size = new System.Drawing.Size(97, 18);
+            this.lblEliminarTelefono.TabIndex = 34;
+            this.lblEliminarTelefono.Text = "Teléfono:";
+            // 
+            // lblEliminarTelefonoUsuario
+            // 
+            this.lblEliminarTelefonoUsuario.AutoSize = true;
+            this.lblEliminarTelefonoUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarTelefonoUsuario.Location = new System.Drawing.Point(380, 87);
+            this.lblEliminarTelefonoUsuario.Name = "lblEliminarTelefonoUsuario";
+            this.lblEliminarTelefonoUsuario.Size = new System.Drawing.Size(92, 18);
+            this.lblEliminarTelefonoUsuario.TabIndex = 33;
+            this.lblEliminarTelefonoUsuario.Text = "Telefono";
+            // 
+            // btnConfirmarEliminacion
+            // 
+            this.btnConfirmarEliminacion.BackColor = System.Drawing.Color.Red;
+            this.btnConfirmarEliminacion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConfirmarEliminacion.FlatAppearance.BorderSize = 3;
+            this.btnConfirmarEliminacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmarEliminacion.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarEliminacion.Location = new System.Drawing.Point(138, 194);
+            this.btnConfirmarEliminacion.Name = "btnConfirmarEliminacion";
+            this.btnConfirmarEliminacion.Size = new System.Drawing.Size(297, 38);
+            this.btnConfirmarEliminacion.TabIndex = 32;
+            this.btnConfirmarEliminacion.Text = "Confirmar eliminación";
+            this.btnConfirmarEliminacion.UseVisualStyleBackColor = false;
+            this.btnConfirmarEliminacion.Click += new System.EventHandler(this.btnConfirmarEliminacion_Click);
+            // 
+            // lblEliminarFechaNacimientoUsuario
+            // 
+            this.lblEliminarFechaNacimientoUsuario.AutoSize = true;
+            this.lblEliminarFechaNacimientoUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarFechaNacimientoUsuario.Location = new System.Drawing.Point(486, 112);
+            this.lblEliminarFechaNacimientoUsuario.Name = "lblEliminarFechaNacimientoUsuario";
+            this.lblEliminarFechaNacimientoUsuario.Size = new System.Drawing.Size(64, 18);
+            this.lblEliminarFechaNacimientoUsuario.TabIndex = 26;
+            this.lblEliminarFechaNacimientoUsuario.Text = "Fecha";
+            // 
+            // lblEliminarFechaNacimiento
+            // 
+            this.lblEliminarFechaNacimiento.AutoSize = true;
+            this.lblEliminarFechaNacimiento.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarFechaNacimiento.Location = new System.Drawing.Point(283, 112);
+            this.lblEliminarFechaNacimiento.Name = "lblEliminarFechaNacimiento";
+            this.lblEliminarFechaNacimiento.Size = new System.Drawing.Size(197, 18);
+            this.lblEliminarFechaNacimiento.TabIndex = 25;
+            this.lblEliminarFechaNacimiento.Text = "Fecha de nacimiento:";
+            // 
+            // lblEliminarFechaAlta
+            // 
+            this.lblEliminarFechaAlta.AutoSize = true;
+            this.lblEliminarFechaAlta.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarFechaAlta.Location = new System.Drawing.Point(283, 136);
+            this.lblEliminarFechaAlta.Name = "lblEliminarFechaAlta";
+            this.lblEliminarFechaAlta.Size = new System.Drawing.Size(138, 18);
+            this.lblEliminarFechaAlta.TabIndex = 24;
+            this.lblEliminarFechaAlta.Text = "Fecha de alta:";
+            // 
+            // lblEliminarPermisosUsuario
+            // 
+            this.lblEliminarPermisosUsuario.AutoSize = true;
+            this.lblEliminarPermisosUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarPermisosUsuario.Location = new System.Drawing.Point(377, 159);
+            this.lblEliminarPermisosUsuario.Name = "lblEliminarPermisosUsuario";
+            this.lblEliminarPermisosUsuario.Size = new System.Drawing.Size(90, 18);
+            this.lblEliminarPermisosUsuario.TabIndex = 21;
+            this.lblEliminarPermisosUsuario.Text = "Permisos";
+            // 
+            // lblEliminarPermisos
+            // 
+            this.lblEliminarPermisos.AutoSize = true;
+            this.lblEliminarPermisos.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarPermisos.Location = new System.Drawing.Point(283, 160);
+            this.lblEliminarPermisos.Name = "lblEliminarPermisos";
+            this.lblEliminarPermisos.Size = new System.Drawing.Size(95, 18);
+            this.lblEliminarPermisos.TabIndex = 19;
+            this.lblEliminarPermisos.Text = "Permisos:";
+            // 
+            // lblEliminarFechaAltaUsuario
+            // 
+            this.lblEliminarFechaAltaUsuario.AutoSize = true;
+            this.lblEliminarFechaAltaUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarFechaAltaUsuario.Location = new System.Drawing.Point(427, 136);
+            this.lblEliminarFechaAltaUsuario.Name = "lblEliminarFechaAltaUsuario";
+            this.lblEliminarFechaAltaUsuario.Size = new System.Drawing.Size(133, 18);
+            this.lblEliminarFechaAltaUsuario.TabIndex = 18;
+            this.lblEliminarFechaAltaUsuario.Text = "Fecha de alta";
+            // 
+            // lblEliminarEmail
+            // 
+            this.lblEliminarEmail.AutoSize = true;
+            this.lblEliminarEmail.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarEmail.Location = new System.Drawing.Point(283, 62);
+            this.lblEliminarEmail.Name = "lblEliminarEmail";
+            this.lblEliminarEmail.Size = new System.Drawing.Size(63, 18);
+            this.lblEliminarEmail.TabIndex = 17;
+            this.lblEliminarEmail.Text = "Email:";
+            // 
+            // lblEliminarEmailUsuario
+            // 
+            this.lblEliminarEmailUsuario.AutoSize = true;
+            this.lblEliminarEmailUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarEmailUsuario.Location = new System.Drawing.Point(345, 62);
+            this.lblEliminarEmailUsuario.Name = "lblEliminarEmailUsuario";
+            this.lblEliminarEmailUsuario.Size = new System.Drawing.Size(58, 18);
+            this.lblEliminarEmailUsuario.TabIndex = 16;
+            this.lblEliminarEmailUsuario.Text = "Email";
+            // 
+            // lblEliminarDireccionUsuario
+            // 
+            this.lblEliminarDireccionUsuario.AutoSize = true;
+            this.lblEliminarDireccionUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarDireccionUsuario.Location = new System.Drawing.Point(383, 40);
+            this.lblEliminarDireccionUsuario.Name = "lblEliminarDireccionUsuario";
+            this.lblEliminarDireccionUsuario.Size = new System.Drawing.Size(97, 18);
+            this.lblEliminarDireccionUsuario.TabIndex = 15;
+            this.lblEliminarDireccionUsuario.Text = "Dirección";
+            // 
+            // lblEliminarDireccion
+            // 
+            this.lblEliminarDireccion.AutoSize = true;
+            this.lblEliminarDireccion.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarDireccion.Location = new System.Drawing.Point(283, 40);
+            this.lblEliminarDireccion.Name = "lblEliminarDireccion";
+            this.lblEliminarDireccion.Size = new System.Drawing.Size(102, 18);
+            this.lblEliminarDireccion.TabIndex = 14;
+            this.lblEliminarDireccion.Text = "Dirección:";
+            // 
+            // lblEliminarDNIUsuario
+            // 
+            this.lblEliminarDNIUsuario.AutoSize = true;
+            this.lblEliminarDNIUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarDNIUsuario.Location = new System.Drawing.Point(329, 15);
+            this.lblEliminarDNIUsuario.Name = "lblEliminarDNIUsuario";
+            this.lblEliminarDNIUsuario.Size = new System.Drawing.Size(40, 18);
+            this.lblEliminarDNIUsuario.TabIndex = 13;
+            this.lblEliminarDNIUsuario.Text = "DNI";
+            // 
+            // lblEliminarDNI
+            // 
+            this.lblEliminarDNI.AutoSize = true;
+            this.lblEliminarDNI.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarDNI.Location = new System.Drawing.Point(283, 16);
+            this.lblEliminarDNI.Name = "lblEliminarDNI";
+            this.lblEliminarDNI.Size = new System.Drawing.Size(45, 18);
+            this.lblEliminarDNI.TabIndex = 12;
+            this.lblEliminarDNI.Text = "DNI:";
+            // 
+            // lblEliminarEdadUsuario
+            // 
+            this.lblEliminarEdadUsuario.AutoSize = true;
+            this.lblEliminarEdadUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarEdadUsuario.Location = new System.Drawing.Point(72, 152);
+            this.lblEliminarEdadUsuario.Name = "lblEliminarEdadUsuario";
+            this.lblEliminarEdadUsuario.Size = new System.Drawing.Size(53, 18);
+            this.lblEliminarEdadUsuario.TabIndex = 11;
+            this.lblEliminarEdadUsuario.Text = "Edad";
+            // 
+            // lblEliminarEdad
+            // 
+            this.lblEliminarEdad.AutoSize = true;
+            this.lblEliminarEdad.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarEdad.Location = new System.Drawing.Point(17, 152);
+            this.lblEliminarEdad.Name = "lblEliminarEdad";
+            this.lblEliminarEdad.Size = new System.Drawing.Size(58, 18);
+            this.lblEliminarEdad.TabIndex = 10;
+            this.lblEliminarEdad.Text = "Edad:";
+            // 
+            // lblEliminarApellidoUsuario
+            // 
+            this.lblEliminarApellidoUsuario.AutoSize = true;
+            this.lblEliminarApellidoUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarApellidoUsuario.Location = new System.Drawing.Point(108, 127);
+            this.lblEliminarApellidoUsuario.Name = "lblEliminarApellidoUsuario";
+            this.lblEliminarApellidoUsuario.Size = new System.Drawing.Size(86, 18);
+            this.lblEliminarApellidoUsuario.TabIndex = 9;
+            this.lblEliminarApellidoUsuario.Text = "Apellido";
+            // 
+            // lblEliminarApellido
+            // 
+            this.lblEliminarApellido.AutoSize = true;
+            this.lblEliminarApellido.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarApellido.Location = new System.Drawing.Point(17, 128);
+            this.lblEliminarApellido.Name = "lblEliminarApellido";
+            this.lblEliminarApellido.Size = new System.Drawing.Size(91, 18);
+            this.lblEliminarApellido.TabIndex = 8;
+            this.lblEliminarApellido.Text = "Apellido:";
+            // 
+            // lblEliminarNombreUsuario
+            // 
+            this.lblEliminarNombreUsuario.AutoSize = true;
+            this.lblEliminarNombreUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarNombreUsuario.Location = new System.Drawing.Point(96, 100);
+            this.lblEliminarNombreUsuario.Name = "lblEliminarNombreUsuario";
+            this.lblEliminarNombreUsuario.Size = new System.Drawing.Size(78, 18);
+            this.lblEliminarNombreUsuario.TabIndex = 7;
+            this.lblEliminarNombreUsuario.Text = "Nombre";
+            // 
+            // lblEliminarNombre
+            // 
+            this.lblEliminarNombre.AutoSize = true;
+            this.lblEliminarNombre.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarNombre.Location = new System.Drawing.Point(17, 100);
+            this.lblEliminarNombre.Name = "lblEliminarNombre";
+            this.lblEliminarNombre.Size = new System.Drawing.Size(83, 18);
+            this.lblEliminarNombre.TabIndex = 6;
+            this.lblEliminarNombre.Text = "Nombre:";
+            // 
+            // lblEliminarContraseñaUsuario
+            // 
+            this.lblEliminarContraseñaUsuario.AutoSize = true;
+            this.lblEliminarContraseñaUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarContraseñaUsuario.Location = new System.Drawing.Point(141, 72);
+            this.lblEliminarContraseñaUsuario.Name = "lblEliminarContraseñaUsuario";
+            this.lblEliminarContraseñaUsuario.Size = new System.Drawing.Size(118, 18);
+            this.lblEliminarContraseñaUsuario.TabIndex = 5;
+            this.lblEliminarContraseñaUsuario.Text = "Contraseña";
+            // 
+            // lblEliminarContraseña
+            // 
+            this.lblEliminarContraseña.AutoSize = true;
+            this.lblEliminarContraseña.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarContraseña.Location = new System.Drawing.Point(17, 72);
+            this.lblEliminarContraseña.Name = "lblEliminarContraseña";
+            this.lblEliminarContraseña.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblEliminarContraseña.Size = new System.Drawing.Size(123, 18);
+            this.lblEliminarContraseña.TabIndex = 4;
+            this.lblEliminarContraseña.Text = "Contraseña:";
+            // 
+            // lblEliminarUsuarioDato
+            // 
+            this.lblEliminarUsuarioDato.AutoSize = true;
+            this.lblEliminarUsuarioDato.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarUsuarioDato.Location = new System.Drawing.Point(101, 44);
+            this.lblEliminarUsuarioDato.Name = "lblEliminarUsuarioDato";
+            this.lblEliminarUsuarioDato.Size = new System.Drawing.Size(80, 18);
+            this.lblEliminarUsuarioDato.TabIndex = 3;
+            this.lblEliminarUsuarioDato.Text = "Usuario";
+            // 
+            // lblEliminarUsuario
+            // 
+            this.lblEliminarUsuario.AutoSize = true;
+            this.lblEliminarUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarUsuario.Location = new System.Drawing.Point(17, 44);
+            this.lblEliminarUsuario.Name = "lblEliminarUsuario";
+            this.lblEliminarUsuario.Size = new System.Drawing.Size(85, 18);
+            this.lblEliminarUsuario.TabIndex = 2;
+            this.lblEliminarUsuario.Text = "Usuario:";
+            // 
+            // lblEliminarIdUsuario
+            // 
+            this.lblEliminarIdUsuario.AutoSize = true;
+            this.lblEliminarIdUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarIdUsuario.Location = new System.Drawing.Point(176, 16);
+            this.lblEliminarIdUsuario.Name = "lblEliminarIdUsuario";
+            this.lblEliminarIdUsuario.Size = new System.Drawing.Size(26, 18);
+            this.lblEliminarIdUsuario.TabIndex = 1;
+            this.lblEliminarIdUsuario.Text = "ID";
+            // 
+            // lblEliminarId
+            // 
+            this.lblEliminarId.AutoSize = true;
+            this.lblEliminarId.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarId.Location = new System.Drawing.Point(17, 16);
+            this.lblEliminarId.Name = "lblEliminarId";
+            this.lblEliminarId.Size = new System.Drawing.Size(160, 18);
+            this.lblEliminarId.TabIndex = 0;
+            this.lblEliminarId.Text = "N° Identificador:";
+            // 
+            // chkMensaje
+            // 
+            this.chkMensaje.AutoSize = true;
+            this.chkMensaje.Checked = true;
+            this.chkMensaje.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkMensaje.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMensaje.Location = new System.Drawing.Point(22, 277);
+            this.chkMensaje.Name = "chkMensaje";
+            this.chkMensaje.Size = new System.Drawing.Size(255, 22);
+            this.chkMensaje.TabIndex = 30;
+            this.chkMensaje.Text = "Mensaje de confirmación";
+            this.chkMensaje.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarUsuario
+            // 
+            this.btnEliminarUsuario.BackColor = System.Drawing.Color.Red;
+            this.btnEliminarUsuario.Enabled = false;
+            this.btnEliminarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminarUsuario.FlatAppearance.BorderSize = 3;
+            this.btnEliminarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(18, 231);
+            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(266, 40);
+            this.btnEliminarUsuario.TabIndex = 29;
+            this.btnEliminarUsuario.Text = "Eliminar usuario";
+            this.btnEliminarUsuario.UseVisualStyleBackColor = false;
+            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
+            // 
+            // lblEliminarUsuarioInstrucciones
+            // 
+            this.lblEliminarUsuarioInstrucciones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblEliminarUsuarioInstrucciones.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarUsuarioInstrucciones.Location = new System.Drawing.Point(167, 6);
+            this.lblEliminarUsuarioInstrucciones.Name = "lblEliminarUsuarioInstrucciones";
+            this.lblEliminarUsuarioInstrucciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblEliminarUsuarioInstrucciones.Size = new System.Drawing.Size(762, 139);
+            this.lblEliminarUsuarioInstrucciones.TabIndex = 16;
+            this.lblEliminarUsuarioInstrucciones.Text = resources.GetString("lblEliminarUsuarioInstrucciones.Text");
+            // 
+            // imgEliminarUsuario
+            // 
+            this.imgEliminarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("imgEliminarUsuario.Image")));
+            this.imgEliminarUsuario.Location = new System.Drawing.Point(14, 9);
+            this.imgEliminarUsuario.Name = "imgEliminarUsuario";
+            this.imgEliminarUsuario.Size = new System.Drawing.Size(143, 136);
+            this.imgEliminarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgEliminarUsuario.TabIndex = 11;
+            this.imgEliminarUsuario.TabStop = false;
+            // 
+            // lblIDEliminar
+            // 
+            this.lblIDEliminar.AutoSize = true;
+            this.lblIDEliminar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDEliminar.Location = new System.Drawing.Point(53, 164);
+            this.lblIDEliminar.Name = "lblIDEliminar";
+            this.lblIDEliminar.Size = new System.Drawing.Size(193, 21);
+            this.lblIDEliminar.TabIndex = 9;
+            this.lblIDEliminar.Text = "N° Identificador:";
+            // 
+            // txtIdParaEliminarUsuario
+            // 
+            this.txtIdParaEliminarUsuario.Font = new System.Drawing.Font("Copperplate Gothic Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdParaEliminarUsuario.Location = new System.Drawing.Point(80, 187);
+            this.txtIdParaEliminarUsuario.Name = "txtIdParaEliminarUsuario";
+            this.txtIdParaEliminarUsuario.Size = new System.Drawing.Size(137, 28);
+            this.txtIdParaEliminarUsuario.TabIndex = 0;
+            this.txtIdParaEliminarUsuario.TextChanged += new System.EventHandler(this.txtIdParaEliminarUsuario_TextChanged);
+            this.txtIdParaEliminarUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdParaEliminarUsuario_KeyPress);
+            // 
+            // panelTitulo
+            // 
+            this.panelTitulo.BackColor = System.Drawing.Color.DimGray;
+            this.panelTitulo.Controls.Add(this.lblTituloPanel);
+            this.panelTitulo.Controls.Add(this.btnHome);
+            this.panelTitulo.Font = new System.Drawing.Font("Copperplate Gothic Bold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelTitulo.Location = new System.Drawing.Point(243, 1);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(1003, 60);
+            this.panelTitulo.TabIndex = 35;
+            this.panelTitulo.Visible = false;
+            // 
+            // lblTituloPanel
+            // 
+            this.lblTituloPanel.AutoSize = true;
+            this.lblTituloPanel.Font = new System.Drawing.Font("Copperplate Gothic Bold", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloPanel.Location = new System.Drawing.Point(62, 12);
+            this.lblTituloPanel.Name = "lblTituloPanel";
+            this.lblTituloPanel.Size = new System.Drawing.Size(320, 39);
+            this.lblTituloPanel.TabIndex = 35;
+            this.lblTituloPanel.Text = "Titulo de panel";
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Green;
+            this.btnHome.FlatAppearance.BorderSize = 3;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(6, 8);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(50, 43);
+            this.btnHome.TabIndex = 34;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // frmUsuariosAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1574,6 +1574,9 @@
             this.panelBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuscarUsuario)).EndInit();
             this.panelAcciones.ResumeLayout(false);
+            this.panelActualizar.ResumeLayout(false);
+            this.panelActualizar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).EndInit();
             this.panelEliminar.ResumeLayout(false);
             this.panelEliminar.PerformLayout();
             this.mrcEliminarUsuario.ResumeLayout(false);
@@ -1581,9 +1584,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgEliminarUsuario)).EndInit();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
-            this.panelActualizar.ResumeLayout(false);
-            this.panelActualizar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -610,8 +610,8 @@ namespace pryLopezM_IEFI
                 //Toma los datos de la fila y llena los componentes.
                 DataGridViewRow fila = dgvUsuarios.Rows[e.RowIndex];
 
-                txtIDActualizar.Text = fila.Cells["N° ID"].Value.ToString();
-                txtIdParaEliminarUsuario.Text = fila.Cells["N° ID"].Value.ToString();
+                txtIDActualizar.Text = fila.Cells["N°ID"].Value.ToString();
+                txtIdParaEliminarUsuario.Text = fila.Cells["N°ID"].Value.ToString();
 
                 txtUsuarioActualizar.Text = fila.Cells["usuario"].Value.ToString();
                 lblEliminarUsuarioDato.Text = fila.Cells["usuario"].Value.ToString();

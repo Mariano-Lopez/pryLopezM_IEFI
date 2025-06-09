@@ -100,7 +100,7 @@
             // 
             this.usuariosToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios...";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -108,7 +108,7 @@
             // 
             this.auditoriaToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.auditoriaToolStripMenuItem.Name = "auditoriaToolStripMenuItem";
-            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.auditoriaToolStripMenuItem.Text = "Auditoria...";
             this.auditoriaToolStripMenuItem.Click += new System.EventHandler(this.auditoriaToolStripMenuItem_Click);
             // 
@@ -154,6 +154,7 @@
             // 
             // btnCerrarSesion
             // 
+            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrarSesion.BackColor = System.Drawing.Color.IndianRed;
             this.btnCerrarSesion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.BackgroundImage")));
             this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -183,6 +184,7 @@
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInicio_FormClosing_1);
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.mspInicio.ResumeLayout(false);
