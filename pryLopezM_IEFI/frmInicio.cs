@@ -61,12 +61,6 @@ namespace pryLopezM_IEFI
 
             if (confir == DialogResult.Yes)
             {
-                timerSesion.Stop();
-
-                // Supongamos que tienes el tiempo total acumulado de alguna forma
-                TimeSpan tiempoTotal = tiempoSesionActual; // Podés sumar lo anterior si querés
-
-                BBDD.actualizarSesion(idSesionActual, tiempoSesionActual, tiempoTotal, DateTime.Now);
                 GuardarSesion();
             }
 

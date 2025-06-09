@@ -134,9 +134,9 @@ namespace pryLopezM_IEFI
             }
         }
 
-        private void btnCancelarTarea_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

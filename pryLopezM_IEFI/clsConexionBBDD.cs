@@ -169,13 +169,19 @@ namespace pryLopezM_IEFI
 
                 //Crear un DataTable.
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(comandoBaseDatos);
-                DataTable tablaProductos = new DataTable();
+                DataTable tablaUsuario = new DataTable();
 
-                dataAdapter.Fill(tablaProductos);
+
+                dataAdapter.Fill(tablaUsuario);
 
                 dgv.AllowUserToOrderColumns = false;
 
-                dgv.DataSource = tablaProductos;
+                tablaUsuario.Columns["idUsuario"].ColumnName = "N°ID";
+                tablaUsuario.Columns["fechaDeNacimiento"].ColumnName = "Fecha de nacimiento";
+                tablaUsuario.Columns["fechaDeAlta"].ColumnName = "Fecha de alta";
+                tablaUsuario.Columns["horaDeAlta"].ColumnName = "Hora de alta";
+
+                dgv.DataSource = tablaUsuario;
 
                 foreach (DataGridViewColumn column in dgv.Columns)
                 {
@@ -350,13 +356,20 @@ namespace pryLopezM_IEFI
 
                 //Crear un DataTable.
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(comandoBaseDatos);
-                DataTable tablaProductos = new DataTable();
+                DataTable tablaUsuario = new DataTable();
 
-                dataAdapter.Fill(tablaProductos);
+                dataAdapter.Fill(tablaUsuario);
 
                 dgv.AllowUserToOrderColumns = false;
-                
-                dgv.DataSource = tablaProductos;
+
+                tablaUsuario.Columns["idAccionRealizada"].ColumnName = "N°ID";
+                tablaUsuario.Columns["evento"].ColumnName = "Evento";
+                tablaUsuario.Columns["evento"].ColumnName = "Evento";
+                tablaUsuario.Columns["fechaDeAccion"].ColumnName = "Fecha";
+                tablaUsuario.Columns["horaDeAccion"].ColumnName = "Hora";
+                tablaUsuario.Columns["idUsuarioAccion"].ColumnName = "ID usuario";
+
+                dgv.DataSource = tablaUsuario;
 
                 foreach (DataGridViewColumn column in dgv.Columns)
                 {
@@ -387,13 +400,22 @@ namespace pryLopezM_IEFI
 
                 //Crear un DataTable.
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(comandoBaseDatos);
-                DataTable tablaProductos = new DataTable();
+                DataTable tablaUsuario = new DataTable();
 
-                dataAdapter.Fill(tablaProductos);
+                dataAdapter.Fill(tablaUsuario);
 
                 dgv.AllowUserToOrderColumns = false;
 
-                dgv.DataSource = tablaProductos;
+                tablaUsuario.Columns["idSesion"].ColumnName = "N° sesión";
+                tablaUsuario.Columns["fechaUltConeccion"].ColumnName = "Fecha última conección";
+                tablaUsuario.Columns["horaUltConeccion"].ColumnName = "Hora de última conección";
+                tablaUsuario.Columns["fechaActual"].ColumnName = "Fecha actual";
+                tablaUsuario.Columns["horaActual"].ColumnName = "Hora actual";
+                tablaUsuario.Columns["tiempoSesion"].ColumnName = "Tiempo de sesión";
+                tablaUsuario.Columns["tiempoTotal"].ColumnName = "Tiempo total";
+                tablaUsuario.Columns["idUsuarioSesion"].ColumnName = "ID usuario";
+
+                dgv.DataSource = tablaUsuario;
 
                 foreach (DataGridViewColumn column in dgv.Columns)
                 {
@@ -530,13 +552,24 @@ namespace pryLopezM_IEFI
 
                 //Crear un DataTable.
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(comandoBaseDatos);
-                DataTable tablaProductos = new DataTable();
+                DataTable tablaUsuario = new DataTable();
 
-                dataAdapter.Fill(tablaProductos);
+                dataAdapter.Fill(tablaUsuario);
 
                 dgv.AllowUserToOrderColumns = false;
 
-                dgv.DataSource = tablaProductos;
+                dgv.DataSource = tablaUsuario;
+
+                tablaUsuario.Columns["idTarea"].ColumnName = "ID Tarea";
+                tablaUsuario.Columns["fechaTarea"].ColumnName = "Fecha de tarea";
+                tablaUsuario.Columns["tareaPrincipal"].ColumnName = "Tarea principal";
+                tablaUsuario.Columns["lugarTarea"].ColumnName = "Lugar";
+                tablaUsuario.Columns["detalle"].ColumnName = "Detalle";
+                tablaUsuario.Columns["comentario"].ColumnName = "Comentario";
+                tablaUsuario.Columns["fechaRegistro"].ColumnName = "Fecha registro";
+                tablaUsuario.Columns["horaTareaRegistrada"].ColumnName = "Hora registro";
+                tablaUsuario.Columns["idUsuarioTarea"].ColumnName = "ID usuario";
+                
 
                 foreach (DataGridViewColumn column in dgv.Columns)
                 {

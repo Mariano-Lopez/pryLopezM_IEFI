@@ -610,8 +610,8 @@ namespace pryLopezM_IEFI
                 //Toma los datos de la fila y llena los componentes.
                 DataGridViewRow fila = dgvUsuarios.Rows[e.RowIndex];
 
-                txtIDActualizar.Text = fila.Cells["idUsuario"].Value.ToString();
-                txtIdParaEliminarUsuario.Text = fila.Cells["idUsuario"].Value.ToString();
+                txtIDActualizar.Text = fila.Cells["N° ID"].Value.ToString();
+                txtIdParaEliminarUsuario.Text = fila.Cells["N° ID"].Value.ToString();
 
                 txtUsuarioActualizar.Text = fila.Cells["usuario"].Value.ToString();
                 lblEliminarUsuarioDato.Text = fila.Cells["usuario"].Value.ToString();
@@ -647,11 +647,11 @@ namespace pryLopezM_IEFI
                 lblEliminarEmailUsuario.Text = fila.Cells["email"].Value.ToString();
 
 
-                dtpFechaNActualizar.Value = Convert.ToDateTime(fila.Cells["fechaDeNacimiento"].Value);
-                lblEliminarFechaNacimientoUsuario.Text = Convert.ToDateTime(fila.Cells["fechaDeNacimiento"].Value).ToString("dd/MM/yyyy");
+                dtpFechaNActualizar.Value = Convert.ToDateTime(fila.Cells["Fecha de nacimiento"].Value);
+                lblEliminarFechaNacimientoUsuario.Text = Convert.ToDateTime(fila.Cells["Fecha de nacimiento"].Value).ToString("dd/MM/yyyy");
 
 
-                lblEliminarFechaAltaUsuario.Text = Convert.ToDateTime(fila.Cells["fechaDeAlta"].Value).ToString("dd/MM/yyyy");
+                lblEliminarFechaAltaUsuario.Text = Convert.ToDateTime(fila.Cells["Fecha de alta"].Value).ToString("dd/MM/yyyy");
 
 
                 cmbPermisosActualizar.Text = fila.Cells["permisos"].Value.ToString();

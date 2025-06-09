@@ -40,6 +40,7 @@ namespace pryLopezM_IEFI
                 case 0:
                     limpiarComponentesSeleccion();
                     lblCargaDeDato.Text = "Fecha de tarea";
+                    lblCargaDeDato.Visible = true;
                     dtpFechaBusquedaTarea.Visible = true;
                     btnFiltrarTarea.Enabled = true;
 
@@ -48,6 +49,7 @@ namespace pryLopezM_IEFI
                 case 1:
                     limpiarComponentesSeleccion();
                     lblCargaDeDato.Text = "Fecha de registro de tarea";
+                    lblCargaDeDato.Visible = true;
                     dtpFechaBusquedaTarea.Visible = true;
                     btnFiltrarTarea.Enabled = true;
 
@@ -58,6 +60,7 @@ namespace pryLopezM_IEFI
                     limpiarComponentesSeleccion();
 
                     lblCargaDeDato.Text = "Tarea realizada";
+                    lblCargaDeDato.Visible = true;
                     cmbBusquedaTarea.Items.Clear();
                     cmbBusquedaTarea.Items.Add("Auditoría");
                     cmbBusquedaTarea.Items.Add("Consultas");
@@ -73,6 +76,7 @@ namespace pryLopezM_IEFI
                     limpiarComponentesSeleccion();
 
                     lblCargaDeDato.Text = "Lugar de tarea";
+                    lblCargaDeDato.Visible = true;
                     cmbBusquedaTarea.Items.Clear();
                     cmbBusquedaTarea.Items.Add("Empresa");
                     cmbBusquedaTarea.Items.Add("Servicio");
@@ -86,6 +90,7 @@ namespace pryLopezM_IEFI
                     limpiarComponentesSeleccion();
 
                     lblCargaDeDato.Text = "Seleccione detalle";
+                    lblCargaDeDato.Visible = true;
                     cmbBusquedaTarea.Items.Clear();
                     cmbBusquedaTarea.Items.Add("Insumo");
                     cmbBusquedaTarea.Items.Add("Estudio");
@@ -98,7 +103,8 @@ namespace pryLopezM_IEFI
 
                 case 5:
                     limpiarComponentesSeleccion();
-                    lblCargaDeDato.Text = "Cargue alguna palabra que contiene el comentario buscado";
+                    lblCargaDeDato.Text = "Comentario buscado";
+                    lblCargaDeDato.Visible = true;
                     txtBusquedaTarea.Visible = true;
 
 
@@ -106,7 +112,8 @@ namespace pryLopezM_IEFI
 
                 case 6:
                     limpiarComponentesSeleccion();
-                    lblCargaDeDato.Text = "Cargue N° identificador del usuario";
+                    lblCargaDeDato.Text = "N° ID del usuario";
+                    lblCargaDeDato.Visible = true;
                     txtBusquedaTarea.Visible = true;
 
 
@@ -260,6 +267,11 @@ namespace pryLopezM_IEFI
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiarComponentesHistorialTarea();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

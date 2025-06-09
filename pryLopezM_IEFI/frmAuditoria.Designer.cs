@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAuditoria));
             this.dgvAuditoria = new System.Windows.Forms.DataGridView();
             this.panelAuditoria = new System.Windows.Forms.Panel();
@@ -63,37 +63,37 @@
             this.dgvAuditoria.AllowUserToResizeRows = false;
             this.dgvAuditoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvAuditoria.BackgroundColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAuditoria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAuditoria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAuditoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAuditoria.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvAuditoria.Location = new System.Drawing.Point(137, 490);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAuditoria.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAuditoria.Location = new System.Drawing.Point(48, 491);
             this.dgvAuditoria.MultiSelect = false;
             this.dgvAuditoria.Name = "dgvAuditoria";
             this.dgvAuditoria.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAuditoria.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAuditoria.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAuditoria.RowHeadersVisible = false;
-            this.dgvAuditoria.Size = new System.Drawing.Size(756, 266);
+            this.dgvAuditoria.Size = new System.Drawing.Size(934, 266);
             this.dgvAuditoria.TabIndex = 0;
             this.dgvAuditoria.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAuditoria_CellFormatting);
             // 
@@ -123,7 +123,7 @@
             this.btnLimpiarAuditoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLimpiarAuditoria.FlatAppearance.BorderSize = 3;
             this.btnLimpiarAuditoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarAuditoria.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarAuditoria.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarAuditoria.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarAuditoria.Image")));
             this.btnLimpiarAuditoria.Location = new System.Drawing.Point(296, 327);
             this.btnLimpiarAuditoria.Name = "btnLimpiarAuditoria";
@@ -148,17 +148,17 @@
             // lblMostrarDatosFiltro
             // 
             this.lblMostrarDatosFiltro.AutoSize = true;
-            this.lblMostrarDatosFiltro.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMostrarDatosFiltro.Location = new System.Drawing.Point(222, 211);
+            this.lblMostrarDatosFiltro.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMostrarDatosFiltro.Location = new System.Drawing.Point(162, 214);
             this.lblMostrarDatosFiltro.Name = "lblMostrarDatosFiltro";
-            this.lblMostrarDatosFiltro.Size = new System.Drawing.Size(203, 25);
+            this.lblMostrarDatosFiltro.Size = new System.Drawing.Size(260, 21);
             this.lblMostrarDatosFiltro.TabIndex = 18;
             this.lblMostrarDatosFiltro.Text = "Seleccione una opción:";
             // 
             // cmbOpcionesAuditoría
             // 
             this.cmbOpcionesAuditoría.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbOpcionesAuditoría.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbOpcionesAuditoría.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbOpcionesAuditoría.FormattingEnabled = true;
             this.cmbOpcionesAuditoría.Items.AddRange(new object[] {
             "Buscar por ID",
@@ -166,37 +166,37 @@
             "Buscar por ID y fecha"});
             this.cmbOpcionesAuditoría.Location = new System.Drawing.Point(428, 208);
             this.cmbOpcionesAuditoría.Name = "cmbOpcionesAuditoría";
-            this.cmbOpcionesAuditoría.Size = new System.Drawing.Size(262, 33);
+            this.cmbOpcionesAuditoría.Size = new System.Drawing.Size(262, 29);
             this.cmbOpcionesAuditoría.TabIndex = 17;
             this.cmbOpcionesAuditoría.SelectedIndexChanged += new System.EventHandler(this.cmbOpcionesAuditoría_SelectedIndexChanged);
             // 
             // lblMostrarDatosUsuarioFecha
             // 
             this.lblMostrarDatosUsuarioFecha.AutoSize = true;
-            this.lblMostrarDatosUsuarioFecha.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMostrarDatosUsuarioFecha.Location = new System.Drawing.Point(397, 254);
+            this.lblMostrarDatosUsuarioFecha.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMostrarDatosUsuarioFecha.Location = new System.Drawing.Point(398, 254);
             this.lblMostrarDatosUsuarioFecha.Name = "lblMostrarDatosUsuarioFecha";
-            this.lblMostrarDatosUsuarioFecha.Size = new System.Drawing.Size(61, 25);
+            this.lblMostrarDatosUsuarioFecha.Size = new System.Drawing.Size(76, 21);
             this.lblMostrarDatosUsuarioFecha.TabIndex = 16;
             this.lblMostrarDatosUsuarioFecha.Text = "Fecha";
             // 
             // dtpAuditoría
             // 
             this.dtpAuditoría.Enabled = false;
-            this.dtpAuditoría.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpAuditoría.Font = new System.Drawing.Font("Copperplate Gothic Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpAuditoría.Location = new System.Drawing.Point(402, 282);
             this.dtpAuditoría.Name = "dtpAuditoría";
-            this.dtpAuditoría.Size = new System.Drawing.Size(329, 33);
+            this.dtpAuditoría.Size = new System.Drawing.Size(355, 24);
             this.dtpAuditoría.TabIndex = 15;
             // 
             // optAccionesRealizadas
             // 
             this.optAccionesRealizadas.AutoSize = true;
-            this.optAccionesRealizadas.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optAccionesRealizadas.Font = new System.Drawing.Font("Copperplate Gothic Bold", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optAccionesRealizadas.Image = ((System.Drawing.Image)(resources.GetObject("optAccionesRealizadas.Image")));
-            this.optAccionesRealizadas.Location = new System.Drawing.Point(495, 160);
+            this.optAccionesRealizadas.Location = new System.Drawing.Point(516, 160);
             this.optAccionesRealizadas.Name = "optAccionesRealizadas";
-            this.optAccionesRealizadas.Size = new System.Drawing.Size(325, 42);
+            this.optAccionesRealizadas.Size = new System.Drawing.Size(404, 37);
             this.optAccionesRealizadas.TabIndex = 14;
             this.optAccionesRealizadas.Text = "Acciones realizadas";
             this.optAccionesRealizadas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -207,11 +207,11 @@
             // 
             this.optSesionUsuario.AutoSize = true;
             this.optSesionUsuario.Checked = true;
-            this.optSesionUsuario.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optSesionUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optSesionUsuario.Image = ((System.Drawing.Image)(resources.GetObject("optSesionUsuario.Image")));
-            this.optSesionUsuario.Location = new System.Drawing.Point(160, 160);
+            this.optSesionUsuario.Location = new System.Drawing.Point(125, 160);
             this.optSesionUsuario.Name = "optSesionUsuario";
-            this.optSesionUsuario.Size = new System.Drawing.Size(318, 42);
+            this.optSesionUsuario.Size = new System.Drawing.Size(391, 37);
             this.optSesionUsuario.TabIndex = 13;
             this.optSesionUsuario.TabStop = true;
             this.optSesionUsuario.Text = "Sesiones de usuario";
@@ -225,7 +225,7 @@
             this.btnBuscarUsuarioAuditoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscarUsuarioAuditoria.FlatAppearance.BorderSize = 3;
             this.btnBuscarUsuarioAuditoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarUsuarioAuditoria.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarUsuarioAuditoria.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarUsuarioAuditoria.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarUsuarioAuditoria.Image")));
             this.btnBuscarUsuarioAuditoria.Location = new System.Drawing.Point(458, 327);
             this.btnBuscarUsuarioAuditoria.Name = "btnBuscarUsuarioAuditoria";
@@ -240,17 +240,17 @@
             // lblMostrarDatoPorID
             // 
             this.lblMostrarDatoPorID.AutoSize = true;
-            this.lblMostrarDatoPorID.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMostrarDatoPorID.Location = new System.Drawing.Point(235, 254);
+            this.lblMostrarDatoPorID.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMostrarDatoPorID.Location = new System.Drawing.Point(204, 254);
             this.lblMostrarDatoPorID.Name = "lblMostrarDatoPorID";
-            this.lblMostrarDatoPorID.Size = new System.Drawing.Size(150, 25);
+            this.lblMostrarDatoPorID.Size = new System.Drawing.Size(187, 21);
             this.lblMostrarDatoPorID.TabIndex = 11;
             this.lblMostrarDatoPorID.Text = "N° Identificador";
             // 
             // lblAuditoriaInstrucciones
             // 
             this.lblAuditoriaInstrucciones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblAuditoriaInstrucciones.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAuditoriaInstrucciones.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAuditoriaInstrucciones.Location = new System.Drawing.Point(125, 13);
             this.lblAuditoriaInstrucciones.Name = "lblAuditoriaInstrucciones";
             this.lblAuditoriaInstrucciones.Size = new System.Drawing.Size(795, 139);
@@ -260,10 +260,10 @@
             // txtIdAuditoría
             // 
             this.txtIdAuditoría.Enabled = false;
-            this.txtIdAuditoría.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdAuditoría.Location = new System.Drawing.Point(266, 283);
+            this.txtIdAuditoría.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdAuditoría.Location = new System.Drawing.Point(259, 282);
             this.txtIdAuditoría.Name = "txtIdAuditoría";
-            this.txtIdAuditoría.Size = new System.Drawing.Size(80, 33);
+            this.txtIdAuditoría.Size = new System.Drawing.Size(80, 29);
             this.txtIdAuditoría.TabIndex = 8;
             // 
             // panelTitulo
@@ -274,18 +274,17 @@
             this.panelTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelTitulo.Location = new System.Drawing.Point(48, 17);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(254, 60);
+            this.panelTitulo.Size = new System.Drawing.Size(291, 60);
             this.panelTitulo.TabIndex = 36;
             // 
             // lblTituloAuditoria
             // 
             this.lblTituloAuditoria.AutoSize = true;
             this.lblTituloAuditoria.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lblTituloAuditoria.Font = new System.Drawing.Font("Palatino Linotype", 26.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloAuditoria.Location = new System.Drawing.Point(71, 4);
+            this.lblTituloAuditoria.Font = new System.Drawing.Font("Copperplate Gothic Bold", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloAuditoria.Location = new System.Drawing.Point(62, 12);
             this.lblTituloAuditoria.Name = "lblTituloAuditoria";
-            this.lblTituloAuditoria.Size = new System.Drawing.Size(187, 47);
+            this.lblTituloAuditoria.Size = new System.Drawing.Size(229, 39);
             this.lblTituloAuditoria.TabIndex = 35;
             this.lblTituloAuditoria.Text = "Auditorías";
             // 

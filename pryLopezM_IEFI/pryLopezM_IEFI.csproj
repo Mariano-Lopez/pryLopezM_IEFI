@@ -149,6 +149,7 @@
     <Content Include="Resources\Images\cerrar-sesion-btn.png" />
     <Content Include="Resources\Images\cerrar-sesion.png" />
     <Content Include="Resources\Images\fondo.jpg" />
+    <Content Include="Resources\Images\Historial.png" />
     <Content Include="Resources\Images\home-btn.png" />
     <Content Include="Resources\Images\limpiar-btn.png" />
     <Content Include="Resources\Images\Logo.ico">
@@ -156,6 +157,7 @@
     </Content>
     <Content Include="Resources\Images\Logo.png" />
     <Content Include="Resources\Images\sesion-usuario-btn.png" />
+    <Content Include="Resources\Images\tarea-completada.png" />
     <Content Include="Tareas pendientes IEFI.txt" />
   </ItemGroup>
   <ItemGroup />
