@@ -98,15 +98,9 @@ namespace pryLopezM_IEFI
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            DialogResult confir = MessageBox.Show("¿Está seguro de cerrar sesión?",
-                    "Confirmación",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-
-            if (confir == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            
+            this.Close();
+            
             
         }
 
