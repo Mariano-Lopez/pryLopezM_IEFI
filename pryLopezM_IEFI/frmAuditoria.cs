@@ -33,16 +33,19 @@ namespace pryLopezM_IEFI
             {
                 txtIdAuditoría.Enabled = true;
                 dtpAuditoría.Enabled = false;
+                btnBuscarUsuarioAuditoria.Enabled = false;
             }
             else if (cmbOpcionesAuditoría.SelectedIndex == 1)
             {
                 txtIdAuditoría.Enabled = false;
                 dtpAuditoría.Enabled = true;
+                btnBuscarUsuarioAuditoria.Enabled = true;
             }
             else if (cmbOpcionesAuditoría.SelectedIndex == 2)
             {
                 txtIdAuditoría.Enabled = true;
                 dtpAuditoría.Enabled = true;
+                btnBuscarUsuarioAuditoria.Enabled = false;
             }
         }
 
@@ -141,6 +144,18 @@ namespace pryLopezM_IEFI
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtIdAuditoría_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtIdAuditoría.Text))
+            {
+                btnBuscarUsuarioAuditoria.Enabled = true;
+            }
+            else
+            {
+                btnBuscarUsuarioAuditoria.Enabled = false;
+            }
         }
     }
 }

@@ -200,6 +200,7 @@
             // 
             // cmbFiltrarTarea
             // 
+            this.cmbFiltrarTarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltrarTarea.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFiltrarTarea.FormattingEnabled = true;
             this.cmbFiltrarTarea.Items.AddRange(new object[] {
