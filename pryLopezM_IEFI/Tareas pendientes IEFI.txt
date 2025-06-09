@@ -1,15 +1,4 @@
-- Cambiar Interfaz
--Implmentar las acciones
--frmLogin modificar lo de la vista de la contraseña.
--En Auditoria que no se vea la contraseña
--Las acciones de las auditoria con la BBDD deben estar hechas desde la clsBBDD
--Cambios de orden en el menu de usuarios
--Gestionar los permisos de usuarios (Administrador - Operador)
--Verificar que al momento de crear al usuario no tengo ID repetido.
--Meter todas las querys de los forms en la clsBBDD (En auditoria hay una)
--Ver porque NO puse identity en la bbdd
 -Mejorar lo de la carga del mail
--Cambiar los elementos de los comboBox
 -Al crear usuario que ponga 2 veces la contraseña, para confirmarla.
 -Opcion de buscar varios usuarios a la vez
 
