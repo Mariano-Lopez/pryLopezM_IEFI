@@ -148,8 +148,10 @@ namespace pryLopezM_IEFI
             BBDD.crearUsuario(txtUsuarioCrear, txtContraseñaCrear, txtNombreCrear, txtApellidoCrear, edad, txtDNICrear,
                     txtDireccionCrear, txtTelefonoCrear, txtEmailCrear, fechaNacimiento, fechaActual, cmbPermisosCrear);
 
-            lstUsuarios.agregarUsuario(aux);
+            
             BBDD.mostrarDatos(dgvUsuarios);
+            BBDD.cargarUsuarios(lstUsuarios);
+
 
             BBDD.registrarAcciones("Creación de usuario", $"Se creó el usuario {txtUsuarioCrear.Text}", clsVariablesGlobales.idUsuario, clsVariablesGlobales.fechaAccion);
             vaciarComponentesCrear();
@@ -443,6 +445,7 @@ namespace pryLopezM_IEFI
 
                 dgvUsuarios.DataSource = null;
                 dgvUsuarios.DataSource = resul;
+                
             }
 
             vaciarComponentesBuscar();
