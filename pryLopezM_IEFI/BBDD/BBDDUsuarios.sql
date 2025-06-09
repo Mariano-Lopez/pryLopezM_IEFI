@@ -104,18 +104,7 @@ VALUES
 ('Logout', 'Cierre de sesión manual', '2025-06-06', 10);
 
 
-INSERT INTO sesionUsuario (fechaUltConeccion, fechaActual, tiempoSesion, tiempoTotal, idUsuarioSesion)
-VALUES 
-('2025-06-01', '2025-06-01', 3600, 7200, 1),
-('2025-06-01', '2025-06-01', 1800, 3600, 2),
-('2025-06-02', '2025-06-02', 2700, 2700, 3),
-('2025-06-03', '2025-06-03', 4500, 9000, 4),
-('2025-06-03', '2025-06-03', 1200, 3600, 5),
-('2025-06-04', '2025-06-04', 3000, 3000, 6),
-('2025-06-05', '2025-06-05', 2400, 4800, 7),
-('2025-06-05', '2025-06-05', 600, 1800, 8),
-('2025-06-06', '2025-06-06', 3600, 10800, 9),
-('2025-06-06', '2025-06-06', 900, 1800, 10);
+
 
 INSERT INTO sesionUsuario (fechaUltConeccion, fechaActual, tiempoSesion, tiempoTotal, idUsuarioSesion)
 VALUES 
