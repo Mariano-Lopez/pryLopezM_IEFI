@@ -78,35 +78,6 @@
             this.cmbBuscarPermisos = new System.Windows.Forms.ComboBox();
             this.lblActualizarUsuarioInstrucciones = new System.Windows.Forms.Label();
             this.panelAcciones = new System.Windows.Forms.Panel();
-            this.panelActualizar = new System.Windows.Forms.Panel();
-            this.btnLimpiarActualizar = new System.Windows.Forms.Button();
-            this.btnActualizarUsuario = new System.Windows.Forms.Button();
-            this.lblFechaDeNActualizar = new System.Windows.Forms.Label();
-            this.txtNombreActualizar = new System.Windows.Forms.TextBox();
-            this.lblNombreActualizar = new System.Windows.Forms.Label();
-            this.txtApellidoActualizar = new System.Windows.Forms.TextBox();
-            this.lblApellidoActualizar = new System.Windows.Forms.Label();
-            this.txtEdadActualizar = new System.Windows.Forms.TextBox();
-            this.lblEdadActualizar = new System.Windows.Forms.Label();
-            this.txtDireccionActualizar = new System.Windows.Forms.TextBox();
-            this.lblDireccionActualizar = new System.Windows.Forms.Label();
-            this.txtEmailActualizar = new System.Windows.Forms.TextBox();
-            this.lblEmailActualizar = new System.Windows.Forms.Label();
-            this.txtTelefonoActualizar = new System.Windows.Forms.TextBox();
-            this.lblTelefonoActualizar = new System.Windows.Forms.Label();
-            this.txtDNIActualizar = new System.Windows.Forms.TextBox();
-            this.lblDNIActualizar = new System.Windows.Forms.Label();
-            this.dtpFechaNActualizar = new System.Windows.Forms.DateTimePicker();
-            this.imgActualizarUsuario = new System.Windows.Forms.PictureBox();
-            this.lblIdActualizar = new System.Windows.Forms.Label();
-            this.txtContraseñaActualizar = new System.Windows.Forms.TextBox();
-            this.txtUsuarioActualizar = new System.Windows.Forms.TextBox();
-            this.txtIDActualizar = new System.Windows.Forms.TextBox();
-            this.btnCargarUsuarioActualizar = new System.Windows.Forms.Button();
-            this.lblUsuarioActualizar = new System.Windows.Forms.Label();
-            this.cmbPermisosActualizar = new System.Windows.Forms.ComboBox();
-            this.lblContraseñaActualizar = new System.Windows.Forms.Label();
-            this.lblPermisosActualizar = new System.Windows.Forms.Label();
             this.panelEliminar = new System.Windows.Forms.Panel();
             this.btnLimpiarEliminacion = new System.Windows.Forms.Button();
             this.mrcEliminarUsuario = new System.Windows.Forms.GroupBox();
@@ -143,6 +114,35 @@
             this.imgEliminarUsuario = new System.Windows.Forms.PictureBox();
             this.lblIDEliminar = new System.Windows.Forms.Label();
             this.txtIdParaEliminarUsuario = new System.Windows.Forms.TextBox();
+            this.panelActualizar = new System.Windows.Forms.Panel();
+            this.btnLimpiarActualizar = new System.Windows.Forms.Button();
+            this.btnActualizarUsuario = new System.Windows.Forms.Button();
+            this.lblFechaDeNActualizar = new System.Windows.Forms.Label();
+            this.txtNombreActualizar = new System.Windows.Forms.TextBox();
+            this.lblNombreActualizar = new System.Windows.Forms.Label();
+            this.txtApellidoActualizar = new System.Windows.Forms.TextBox();
+            this.lblApellidoActualizar = new System.Windows.Forms.Label();
+            this.txtEdadActualizar = new System.Windows.Forms.TextBox();
+            this.lblEdadActualizar = new System.Windows.Forms.Label();
+            this.txtDireccionActualizar = new System.Windows.Forms.TextBox();
+            this.lblDireccionActualizar = new System.Windows.Forms.Label();
+            this.txtEmailActualizar = new System.Windows.Forms.TextBox();
+            this.lblEmailActualizar = new System.Windows.Forms.Label();
+            this.txtTelefonoActualizar = new System.Windows.Forms.TextBox();
+            this.lblTelefonoActualizar = new System.Windows.Forms.Label();
+            this.txtDNIActualizar = new System.Windows.Forms.TextBox();
+            this.lblDNIActualizar = new System.Windows.Forms.Label();
+            this.dtpFechaNActualizar = new System.Windows.Forms.DateTimePicker();
+            this.imgActualizarUsuario = new System.Windows.Forms.PictureBox();
+            this.lblIdActualizar = new System.Windows.Forms.Label();
+            this.txtContraseñaActualizar = new System.Windows.Forms.TextBox();
+            this.txtUsuarioActualizar = new System.Windows.Forms.TextBox();
+            this.txtIDActualizar = new System.Windows.Forms.TextBox();
+            this.btnCargarUsuarioActualizar = new System.Windows.Forms.Button();
+            this.lblUsuarioActualizar = new System.Windows.Forms.Label();
+            this.cmbPermisosActualizar = new System.Windows.Forms.ComboBox();
+            this.lblContraseñaActualizar = new System.Windows.Forms.Label();
+            this.lblPermisosActualizar = new System.Windows.Forms.Label();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblTituloPanel = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
@@ -153,11 +153,11 @@
             this.panelBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuscarUsuario)).BeginInit();
             this.panelAcciones.SuspendLayout();
-            this.panelActualizar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).BeginInit();
             this.panelEliminar.SuspendLayout();
             this.mrcEliminarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgEliminarUsuario)).BeginInit();
+            this.panelActualizar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).BeginInit();
             this.panelTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -205,7 +205,7 @@
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.ShowCellToolTips = false;
             this.dgvUsuarios.ShowEditingIcon = false;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1209, 306);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1207, 306);
             this.dgvUsuarios.TabIndex = 0;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
@@ -755,7 +755,7 @@
             // 
             // panelAcciones
             // 
-            this.panelAcciones.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelAcciones.BackColor = System.Drawing.Color.DimGray;
             this.panelAcciones.Controls.Add(this.panelEliminar);
             this.panelAcciones.Controls.Add(this.panelCrear);
             this.panelAcciones.Controls.Add(this.panelActualizar);
@@ -765,338 +765,8 @@
             this.panelAcciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAcciones.Location = new System.Drawing.Point(0, 0);
             this.panelAcciones.Name = "panelAcciones";
-            this.panelAcciones.Size = new System.Drawing.Size(1286, 484);
+            this.panelAcciones.Size = new System.Drawing.Size(1284, 484);
             this.panelAcciones.TabIndex = 16;
-            // 
-            // panelActualizar
-            // 
-            this.panelActualizar.BackColor = System.Drawing.Color.DimGray;
-            this.panelActualizar.Controls.Add(this.btnLimpiarActualizar);
-            this.panelActualizar.Controls.Add(this.btnActualizarUsuario);
-            this.panelActualizar.Controls.Add(this.lblFechaDeNActualizar);
-            this.panelActualizar.Controls.Add(this.txtNombreActualizar);
-            this.panelActualizar.Controls.Add(this.lblActualizarUsuarioInstrucciones);
-            this.panelActualizar.Controls.Add(this.lblNombreActualizar);
-            this.panelActualizar.Controls.Add(this.txtApellidoActualizar);
-            this.panelActualizar.Controls.Add(this.lblApellidoActualizar);
-            this.panelActualizar.Controls.Add(this.txtEdadActualizar);
-            this.panelActualizar.Controls.Add(this.lblEdadActualizar);
-            this.panelActualizar.Controls.Add(this.txtDireccionActualizar);
-            this.panelActualizar.Controls.Add(this.lblDireccionActualizar);
-            this.panelActualizar.Controls.Add(this.txtEmailActualizar);
-            this.panelActualizar.Controls.Add(this.lblEmailActualizar);
-            this.panelActualizar.Controls.Add(this.txtTelefonoActualizar);
-            this.panelActualizar.Controls.Add(this.lblTelefonoActualizar);
-            this.panelActualizar.Controls.Add(this.txtDNIActualizar);
-            this.panelActualizar.Controls.Add(this.lblDNIActualizar);
-            this.panelActualizar.Controls.Add(this.dtpFechaNActualizar);
-            this.panelActualizar.Controls.Add(this.imgActualizarUsuario);
-            this.panelActualizar.Controls.Add(this.lblIdActualizar);
-            this.panelActualizar.Controls.Add(this.txtContraseñaActualizar);
-            this.panelActualizar.Controls.Add(this.txtUsuarioActualizar);
-            this.panelActualizar.Controls.Add(this.txtIDActualizar);
-            this.panelActualizar.Controls.Add(this.btnCargarUsuarioActualizar);
-            this.panelActualizar.Controls.Add(this.lblUsuarioActualizar);
-            this.panelActualizar.Controls.Add(this.cmbPermisosActualizar);
-            this.panelActualizar.Controls.Add(this.lblContraseñaActualizar);
-            this.panelActualizar.Controls.Add(this.lblPermisosActualizar);
-            this.panelActualizar.Location = new System.Drawing.Point(243, 58);
-            this.panelActualizar.Name = "panelActualizar";
-            this.panelActualizar.Size = new System.Drawing.Size(1003, 424);
-            this.panelActualizar.TabIndex = 28;
-            this.panelActualizar.Visible = false;
-            // 
-            // btnLimpiarActualizar
-            // 
-            this.btnLimpiarActualizar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnLimpiarActualizar.FlatAppearance.BorderSize = 3;
-            this.btnLimpiarActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarActualizar.Image")));
-            this.btnLimpiarActualizar.Location = new System.Drawing.Point(669, 349);
-            this.btnLimpiarActualizar.Name = "btnLimpiarActualizar";
-            this.btnLimpiarActualizar.Size = new System.Drawing.Size(145, 52);
-            this.btnLimpiarActualizar.TabIndex = 29;
-            this.btnLimpiarActualizar.Text = "Limpiar";
-            this.btnLimpiarActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimpiarActualizar.UseVisualStyleBackColor = false;
-            this.btnLimpiarActualizar.Click += new System.EventHandler(this.btnLimpiarActualizar_Click_1);
-            // 
-            // btnActualizarUsuario
-            // 
-            this.btnActualizarUsuario.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnActualizarUsuario.Enabled = false;
-            this.btnActualizarUsuario.FlatAppearance.BorderSize = 3;
-            this.btnActualizarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarUsuario.Location = new System.Drawing.Point(406, 357);
-            this.btnActualizarUsuario.Name = "btnActualizarUsuario";
-            this.btnActualizarUsuario.Size = new System.Drawing.Size(257, 38);
-            this.btnActualizarUsuario.TabIndex = 28;
-            this.btnActualizarUsuario.Text = "Actualizar usuario";
-            this.btnActualizarUsuario.UseVisualStyleBackColor = false;
-            this.btnActualizarUsuario.Click += new System.EventHandler(this.btnActualizarUsuario_Click);
-            // 
-            // lblFechaDeNActualizar
-            // 
-            this.lblFechaDeNActualizar.AutoSize = true;
-            this.lblFechaDeNActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaDeNActualizar.Location = new System.Drawing.Point(11, 281);
-            this.lblFechaDeNActualizar.Name = "lblFechaDeNActualizar";
-            this.lblFechaDeNActualizar.Size = new System.Drawing.Size(236, 21);
-            this.lblFechaDeNActualizar.TabIndex = 27;
-            this.lblFechaDeNActualizar.Text = "Fecha de nacimiento:";
-            // 
-            // txtNombreActualizar
-            // 
-            this.txtNombreActualizar.Enabled = false;
-            this.txtNombreActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreActualizar.Location = new System.Drawing.Point(515, 186);
-            this.txtNombreActualizar.Name = "txtNombreActualizar";
-            this.txtNombreActualizar.Size = new System.Drawing.Size(166, 29);
-            this.txtNombreActualizar.TabIndex = 3;
-            // 
-            // lblNombreActualizar
-            // 
-            this.lblNombreActualizar.AutoSize = true;
-            this.lblNombreActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreActualizar.Location = new System.Drawing.Point(511, 163);
-            this.lblNombreActualizar.Name = "lblNombreActualizar";
-            this.lblNombreActualizar.Size = new System.Drawing.Size(101, 21);
-            this.lblNombreActualizar.TabIndex = 26;
-            this.lblNombreActualizar.Text = "Nombre:";
-            // 
-            // txtApellidoActualizar
-            // 
-            this.txtApellidoActualizar.Enabled = false;
-            this.txtApellidoActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidoActualizar.Location = new System.Drawing.Point(700, 186);
-            this.txtApellidoActualizar.Name = "txtApellidoActualizar";
-            this.txtApellidoActualizar.Size = new System.Drawing.Size(142, 29);
-            this.txtApellidoActualizar.TabIndex = 4;
-            // 
-            // lblApellidoActualizar
-            // 
-            this.lblApellidoActualizar.AutoSize = true;
-            this.lblApellidoActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoActualizar.Location = new System.Drawing.Point(696, 163);
-            this.lblApellidoActualizar.Name = "lblApellidoActualizar";
-            this.lblApellidoActualizar.Size = new System.Drawing.Size(110, 21);
-            this.lblApellidoActualizar.TabIndex = 24;
-            this.lblApellidoActualizar.Text = "Apellido:";
-            // 
-            // txtEdadActualizar
-            // 
-            this.txtEdadActualizar.Enabled = false;
-            this.txtEdadActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdadActualizar.Location = new System.Drawing.Point(859, 186);
-            this.txtEdadActualizar.Name = "txtEdadActualizar";
-            this.txtEdadActualizar.Size = new System.Drawing.Size(79, 29);
-            this.txtEdadActualizar.TabIndex = 5;
-            this.txtEdadActualizar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNIActualizar_KeyPress);
-            // 
-            // lblEdadActualizar
-            // 
-            this.lblEdadActualizar.AutoSize = true;
-            this.lblEdadActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdadActualizar.Location = new System.Drawing.Point(855, 163);
-            this.lblEdadActualizar.Name = "lblEdadActualizar";
-            this.lblEdadActualizar.Size = new System.Drawing.Size(69, 21);
-            this.lblEdadActualizar.TabIndex = 22;
-            this.lblEdadActualizar.Text = "Edad:";
-            // 
-            // txtDireccionActualizar
-            // 
-            this.txtDireccionActualizar.Enabled = false;
-            this.txtDireccionActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccionActualizar.Location = new System.Drawing.Point(171, 247);
-            this.txtDireccionActualizar.Name = "txtDireccionActualizar";
-            this.txtDireccionActualizar.Size = new System.Drawing.Size(261, 29);
-            this.txtDireccionActualizar.TabIndex = 7;
-            // 
-            // lblDireccionActualizar
-            // 
-            this.lblDireccionActualizar.AutoSize = true;
-            this.lblDireccionActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccionActualizar.Location = new System.Drawing.Point(167, 224);
-            this.lblDireccionActualizar.Name = "lblDireccionActualizar";
-            this.lblDireccionActualizar.Size = new System.Drawing.Size(123, 21);
-            this.lblDireccionActualizar.TabIndex = 20;
-            this.lblDireccionActualizar.Text = "Dirección:";
-            // 
-            // txtEmailActualizar
-            // 
-            this.txtEmailActualizar.Enabled = false;
-            this.txtEmailActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailActualizar.Location = new System.Drawing.Point(663, 247);
-            this.txtEmailActualizar.Name = "txtEmailActualizar";
-            this.txtEmailActualizar.Size = new System.Drawing.Size(275, 29);
-            this.txtEmailActualizar.TabIndex = 9;
-            // 
-            // lblEmailActualizar
-            // 
-            this.lblEmailActualizar.AutoSize = true;
-            this.lblEmailActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailActualizar.Location = new System.Drawing.Point(659, 224);
-            this.lblEmailActualizar.Name = "lblEmailActualizar";
-            this.lblEmailActualizar.Size = new System.Drawing.Size(76, 21);
-            this.lblEmailActualizar.TabIndex = 18;
-            this.lblEmailActualizar.Text = "Email:";
-            // 
-            // txtTelefonoActualizar
-            // 
-            this.txtTelefonoActualizar.Enabled = false;
-            this.txtTelefonoActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoActualizar.Location = new System.Drawing.Point(453, 247);
-            this.txtTelefonoActualizar.Name = "txtTelefonoActualizar";
-            this.txtTelefonoActualizar.Size = new System.Drawing.Size(190, 29);
-            this.txtTelefonoActualizar.TabIndex = 8;
-            this.txtTelefonoActualizar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNIActualizar_KeyPress);
-            // 
-            // lblTelefonoActualizar
-            // 
-            this.lblTelefonoActualizar.AutoSize = true;
-            this.lblTelefonoActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefonoActualizar.Location = new System.Drawing.Point(449, 224);
-            this.lblTelefonoActualizar.Name = "lblTelefonoActualizar";
-            this.lblTelefonoActualizar.Size = new System.Drawing.Size(118, 21);
-            this.lblTelefonoActualizar.TabIndex = 16;
-            this.lblTelefonoActualizar.Text = "Teléfono:";
-            // 
-            // txtDNIActualizar
-            // 
-            this.txtDNIActualizar.Enabled = false;
-            this.txtDNIActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDNIActualizar.Location = new System.Drawing.Point(14, 247);
-            this.txtDNIActualizar.Name = "txtDNIActualizar";
-            this.txtDNIActualizar.Size = new System.Drawing.Size(142, 29);
-            this.txtDNIActualizar.TabIndex = 6;
-            this.txtDNIActualizar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNIActualizar_KeyPress);
-            // 
-            // lblDNIActualizar
-            // 
-            this.lblDNIActualizar.AutoSize = true;
-            this.lblDNIActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDNIActualizar.Location = new System.Drawing.Point(10, 224);
-            this.lblDNIActualizar.Name = "lblDNIActualizar";
-            this.lblDNIActualizar.Size = new System.Drawing.Size(55, 21);
-            this.lblDNIActualizar.TabIndex = 14;
-            this.lblDNIActualizar.Text = "DNI:";
-            // 
-            // dtpFechaNActualizar
-            // 
-            this.dtpFechaNActualizar.Enabled = false;
-            this.dtpFechaNActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaNActualizar.Location = new System.Drawing.Point(15, 304);
-            this.dtpFechaNActualizar.Name = "dtpFechaNActualizar";
-            this.dtpFechaNActualizar.Size = new System.Drawing.Size(417, 29);
-            this.dtpFechaNActualizar.TabIndex = 10;
-            // 
-            // imgActualizarUsuario
-            // 
-            this.imgActualizarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("imgActualizarUsuario.Image")));
-            this.imgActualizarUsuario.Location = new System.Drawing.Point(14, 16);
-            this.imgActualizarUsuario.Name = "imgActualizarUsuario";
-            this.imgActualizarUsuario.Size = new System.Drawing.Size(143, 136);
-            this.imgActualizarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgActualizarUsuario.TabIndex = 11;
-            this.imgActualizarUsuario.TabStop = false;
-            // 
-            // lblIdActualizar
-            // 
-            this.lblIdActualizar.AutoSize = true;
-            this.lblIdActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdActualizar.Location = new System.Drawing.Point(11, 163);
-            this.lblIdActualizar.Name = "lblIdActualizar";
-            this.lblIdActualizar.Size = new System.Drawing.Size(193, 21);
-            this.lblIdActualizar.TabIndex = 9;
-            this.lblIdActualizar.Text = "N° Identificador:";
-            // 
-            // txtContraseñaActualizar
-            // 
-            this.txtContraseñaActualizar.Enabled = false;
-            this.txtContraseñaActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaActualizar.Location = new System.Drawing.Point(341, 186);
-            this.txtContraseñaActualizar.Name = "txtContraseñaActualizar";
-            this.txtContraseñaActualizar.Size = new System.Drawing.Size(155, 29);
-            this.txtContraseñaActualizar.TabIndex = 2;
-            // 
-            // txtUsuarioActualizar
-            // 
-            this.txtUsuarioActualizar.Enabled = false;
-            this.txtUsuarioActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuarioActualizar.Location = new System.Drawing.Point(171, 186);
-            this.txtUsuarioActualizar.Name = "txtUsuarioActualizar";
-            this.txtUsuarioActualizar.Size = new System.Drawing.Size(151, 29);
-            this.txtUsuarioActualizar.TabIndex = 1;
-            // 
-            // txtIDActualizar
-            // 
-            this.txtIDActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDActualizar.Location = new System.Drawing.Point(15, 186);
-            this.txtIDActualizar.Name = "txtIDActualizar";
-            this.txtIDActualizar.Size = new System.Drawing.Size(137, 29);
-            this.txtIDActualizar.TabIndex = 0;
-            this.txtIDActualizar.TextChanged += new System.EventHandler(this.txtIDActualizar_TextChanged);
-            // 
-            // btnCargarUsuarioActualizar
-            // 
-            this.btnCargarUsuarioActualizar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCargarUsuarioActualizar.Enabled = false;
-            this.btnCargarUsuarioActualizar.FlatAppearance.BorderSize = 3;
-            this.btnCargarUsuarioActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargarUsuarioActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarUsuarioActualizar.Location = new System.Drawing.Point(142, 357);
-            this.btnCargarUsuarioActualizar.Name = "btnCargarUsuarioActualizar";
-            this.btnCargarUsuarioActualizar.Size = new System.Drawing.Size(257, 38);
-            this.btnCargarUsuarioActualizar.TabIndex = 12;
-            this.btnCargarUsuarioActualizar.Text = "Cargar usuario";
-            this.btnCargarUsuarioActualizar.UseVisualStyleBackColor = false;
-            this.btnCargarUsuarioActualizar.Click += new System.EventHandler(this.btnCargarUsuario_Click);
-            // 
-            // lblUsuarioActualizar
-            // 
-            this.lblUsuarioActualizar.AutoSize = true;
-            this.lblUsuarioActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioActualizar.Location = new System.Drawing.Point(167, 163);
-            this.lblUsuarioActualizar.Name = "lblUsuarioActualizar";
-            this.lblUsuarioActualizar.Size = new System.Drawing.Size(103, 21);
-            this.lblUsuarioActualizar.TabIndex = 4;
-            this.lblUsuarioActualizar.Text = "Usuario:";
-            // 
-            // cmbPermisosActualizar
-            // 
-            this.cmbPermisosActualizar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPermisosActualizar.Enabled = false;
-            this.cmbPermisosActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPermisosActualizar.FormattingEnabled = true;
-            this.cmbPermisosActualizar.Items.AddRange(new object[] {
-            "Administrador",
-            "Operador"});
-            this.cmbPermisosActualizar.Location = new System.Drawing.Point(453, 302);
-            this.cmbPermisosActualizar.Name = "cmbPermisosActualizar";
-            this.cmbPermisosActualizar.Size = new System.Drawing.Size(197, 29);
-            this.cmbPermisosActualizar.TabIndex = 11;
-            // 
-            // lblContraseñaActualizar
-            // 
-            this.lblContraseñaActualizar.AutoSize = true;
-            this.lblContraseñaActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseñaActualizar.Location = new System.Drawing.Point(337, 163);
-            this.lblContraseñaActualizar.Name = "lblContraseñaActualizar";
-            this.lblContraseñaActualizar.Size = new System.Drawing.Size(148, 21);
-            this.lblContraseñaActualizar.TabIndex = 5;
-            this.lblContraseñaActualizar.Text = "Contraseña:";
-            // 
-            // lblPermisosActualizar
-            // 
-            this.lblPermisosActualizar.AutoSize = true;
-            this.lblPermisosActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPermisosActualizar.Location = new System.Drawing.Point(449, 280);
-            this.lblPermisosActualizar.Name = "lblPermisosActualizar";
-            this.lblPermisosActualizar.Size = new System.Drawing.Size(116, 21);
-            this.lblPermisosActualizar.TabIndex = 6;
-            this.lblPermisosActualizar.Text = "Permisos:";
             // 
             // panelEliminar
             // 
@@ -1513,6 +1183,336 @@
             this.txtIdParaEliminarUsuario.TextChanged += new System.EventHandler(this.txtIdParaEliminarUsuario_TextChanged);
             this.txtIdParaEliminarUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdParaEliminarUsuario_KeyPress);
             // 
+            // panelActualizar
+            // 
+            this.panelActualizar.BackColor = System.Drawing.Color.DimGray;
+            this.panelActualizar.Controls.Add(this.btnLimpiarActualizar);
+            this.panelActualizar.Controls.Add(this.btnActualizarUsuario);
+            this.panelActualizar.Controls.Add(this.lblFechaDeNActualizar);
+            this.panelActualizar.Controls.Add(this.txtNombreActualizar);
+            this.panelActualizar.Controls.Add(this.lblActualizarUsuarioInstrucciones);
+            this.panelActualizar.Controls.Add(this.lblNombreActualizar);
+            this.panelActualizar.Controls.Add(this.txtApellidoActualizar);
+            this.panelActualizar.Controls.Add(this.lblApellidoActualizar);
+            this.panelActualizar.Controls.Add(this.txtEdadActualizar);
+            this.panelActualizar.Controls.Add(this.lblEdadActualizar);
+            this.panelActualizar.Controls.Add(this.txtDireccionActualizar);
+            this.panelActualizar.Controls.Add(this.lblDireccionActualizar);
+            this.panelActualizar.Controls.Add(this.txtEmailActualizar);
+            this.panelActualizar.Controls.Add(this.lblEmailActualizar);
+            this.panelActualizar.Controls.Add(this.txtTelefonoActualizar);
+            this.panelActualizar.Controls.Add(this.lblTelefonoActualizar);
+            this.panelActualizar.Controls.Add(this.txtDNIActualizar);
+            this.panelActualizar.Controls.Add(this.lblDNIActualizar);
+            this.panelActualizar.Controls.Add(this.dtpFechaNActualizar);
+            this.panelActualizar.Controls.Add(this.imgActualizarUsuario);
+            this.panelActualizar.Controls.Add(this.lblIdActualizar);
+            this.panelActualizar.Controls.Add(this.txtContraseñaActualizar);
+            this.panelActualizar.Controls.Add(this.txtUsuarioActualizar);
+            this.panelActualizar.Controls.Add(this.txtIDActualizar);
+            this.panelActualizar.Controls.Add(this.btnCargarUsuarioActualizar);
+            this.panelActualizar.Controls.Add(this.lblUsuarioActualizar);
+            this.panelActualizar.Controls.Add(this.cmbPermisosActualizar);
+            this.panelActualizar.Controls.Add(this.lblContraseñaActualizar);
+            this.panelActualizar.Controls.Add(this.lblPermisosActualizar);
+            this.panelActualizar.Location = new System.Drawing.Point(243, 58);
+            this.panelActualizar.Name = "panelActualizar";
+            this.panelActualizar.Size = new System.Drawing.Size(1003, 424);
+            this.panelActualizar.TabIndex = 28;
+            this.panelActualizar.Visible = false;
+            // 
+            // btnLimpiarActualizar
+            // 
+            this.btnLimpiarActualizar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLimpiarActualizar.FlatAppearance.BorderSize = 3;
+            this.btnLimpiarActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarActualizar.Image")));
+            this.btnLimpiarActualizar.Location = new System.Drawing.Point(669, 349);
+            this.btnLimpiarActualizar.Name = "btnLimpiarActualizar";
+            this.btnLimpiarActualizar.Size = new System.Drawing.Size(145, 52);
+            this.btnLimpiarActualizar.TabIndex = 29;
+            this.btnLimpiarActualizar.Text = "Limpiar";
+            this.btnLimpiarActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpiarActualizar.UseVisualStyleBackColor = false;
+            this.btnLimpiarActualizar.Click += new System.EventHandler(this.btnLimpiarActualizar_Click_1);
+            // 
+            // btnActualizarUsuario
+            // 
+            this.btnActualizarUsuario.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnActualizarUsuario.Enabled = false;
+            this.btnActualizarUsuario.FlatAppearance.BorderSize = 3;
+            this.btnActualizarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarUsuario.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarUsuario.Location = new System.Drawing.Point(406, 357);
+            this.btnActualizarUsuario.Name = "btnActualizarUsuario";
+            this.btnActualizarUsuario.Size = new System.Drawing.Size(257, 38);
+            this.btnActualizarUsuario.TabIndex = 28;
+            this.btnActualizarUsuario.Text = "Actualizar usuario";
+            this.btnActualizarUsuario.UseVisualStyleBackColor = false;
+            this.btnActualizarUsuario.Click += new System.EventHandler(this.btnActualizarUsuario_Click);
+            // 
+            // lblFechaDeNActualizar
+            // 
+            this.lblFechaDeNActualizar.AutoSize = true;
+            this.lblFechaDeNActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaDeNActualizar.Location = new System.Drawing.Point(11, 281);
+            this.lblFechaDeNActualizar.Name = "lblFechaDeNActualizar";
+            this.lblFechaDeNActualizar.Size = new System.Drawing.Size(236, 21);
+            this.lblFechaDeNActualizar.TabIndex = 27;
+            this.lblFechaDeNActualizar.Text = "Fecha de nacimiento:";
+            // 
+            // txtNombreActualizar
+            // 
+            this.txtNombreActualizar.Enabled = false;
+            this.txtNombreActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreActualizar.Location = new System.Drawing.Point(515, 186);
+            this.txtNombreActualizar.Name = "txtNombreActualizar";
+            this.txtNombreActualizar.Size = new System.Drawing.Size(166, 29);
+            this.txtNombreActualizar.TabIndex = 3;
+            // 
+            // lblNombreActualizar
+            // 
+            this.lblNombreActualizar.AutoSize = true;
+            this.lblNombreActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreActualizar.Location = new System.Drawing.Point(511, 163);
+            this.lblNombreActualizar.Name = "lblNombreActualizar";
+            this.lblNombreActualizar.Size = new System.Drawing.Size(101, 21);
+            this.lblNombreActualizar.TabIndex = 26;
+            this.lblNombreActualizar.Text = "Nombre:";
+            // 
+            // txtApellidoActualizar
+            // 
+            this.txtApellidoActualizar.Enabled = false;
+            this.txtApellidoActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoActualizar.Location = new System.Drawing.Point(700, 186);
+            this.txtApellidoActualizar.Name = "txtApellidoActualizar";
+            this.txtApellidoActualizar.Size = new System.Drawing.Size(142, 29);
+            this.txtApellidoActualizar.TabIndex = 4;
+            // 
+            // lblApellidoActualizar
+            // 
+            this.lblApellidoActualizar.AutoSize = true;
+            this.lblApellidoActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoActualizar.Location = new System.Drawing.Point(696, 163);
+            this.lblApellidoActualizar.Name = "lblApellidoActualizar";
+            this.lblApellidoActualizar.Size = new System.Drawing.Size(110, 21);
+            this.lblApellidoActualizar.TabIndex = 24;
+            this.lblApellidoActualizar.Text = "Apellido:";
+            // 
+            // txtEdadActualizar
+            // 
+            this.txtEdadActualizar.Enabled = false;
+            this.txtEdadActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdadActualizar.Location = new System.Drawing.Point(859, 186);
+            this.txtEdadActualizar.Name = "txtEdadActualizar";
+            this.txtEdadActualizar.Size = new System.Drawing.Size(79, 29);
+            this.txtEdadActualizar.TabIndex = 5;
+            this.txtEdadActualizar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNIActualizar_KeyPress);
+            // 
+            // lblEdadActualizar
+            // 
+            this.lblEdadActualizar.AutoSize = true;
+            this.lblEdadActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdadActualizar.Location = new System.Drawing.Point(855, 163);
+            this.lblEdadActualizar.Name = "lblEdadActualizar";
+            this.lblEdadActualizar.Size = new System.Drawing.Size(69, 21);
+            this.lblEdadActualizar.TabIndex = 22;
+            this.lblEdadActualizar.Text = "Edad:";
+            // 
+            // txtDireccionActualizar
+            // 
+            this.txtDireccionActualizar.Enabled = false;
+            this.txtDireccionActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccionActualizar.Location = new System.Drawing.Point(171, 247);
+            this.txtDireccionActualizar.Name = "txtDireccionActualizar";
+            this.txtDireccionActualizar.Size = new System.Drawing.Size(261, 29);
+            this.txtDireccionActualizar.TabIndex = 7;
+            // 
+            // lblDireccionActualizar
+            // 
+            this.lblDireccionActualizar.AutoSize = true;
+            this.lblDireccionActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccionActualizar.Location = new System.Drawing.Point(167, 224);
+            this.lblDireccionActualizar.Name = "lblDireccionActualizar";
+            this.lblDireccionActualizar.Size = new System.Drawing.Size(123, 21);
+            this.lblDireccionActualizar.TabIndex = 20;
+            this.lblDireccionActualizar.Text = "Dirección:";
+            // 
+            // txtEmailActualizar
+            // 
+            this.txtEmailActualizar.Enabled = false;
+            this.txtEmailActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailActualizar.Location = new System.Drawing.Point(663, 247);
+            this.txtEmailActualizar.Name = "txtEmailActualizar";
+            this.txtEmailActualizar.Size = new System.Drawing.Size(275, 29);
+            this.txtEmailActualizar.TabIndex = 9;
+            // 
+            // lblEmailActualizar
+            // 
+            this.lblEmailActualizar.AutoSize = true;
+            this.lblEmailActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailActualizar.Location = new System.Drawing.Point(659, 224);
+            this.lblEmailActualizar.Name = "lblEmailActualizar";
+            this.lblEmailActualizar.Size = new System.Drawing.Size(76, 21);
+            this.lblEmailActualizar.TabIndex = 18;
+            this.lblEmailActualizar.Text = "Email:";
+            // 
+            // txtTelefonoActualizar
+            // 
+            this.txtTelefonoActualizar.Enabled = false;
+            this.txtTelefonoActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefonoActualizar.Location = new System.Drawing.Point(453, 247);
+            this.txtTelefonoActualizar.Name = "txtTelefonoActualizar";
+            this.txtTelefonoActualizar.Size = new System.Drawing.Size(190, 29);
+            this.txtTelefonoActualizar.TabIndex = 8;
+            this.txtTelefonoActualizar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNIActualizar_KeyPress);
+            // 
+            // lblTelefonoActualizar
+            // 
+            this.lblTelefonoActualizar.AutoSize = true;
+            this.lblTelefonoActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefonoActualizar.Location = new System.Drawing.Point(449, 224);
+            this.lblTelefonoActualizar.Name = "lblTelefonoActualizar";
+            this.lblTelefonoActualizar.Size = new System.Drawing.Size(118, 21);
+            this.lblTelefonoActualizar.TabIndex = 16;
+            this.lblTelefonoActualizar.Text = "Teléfono:";
+            // 
+            // txtDNIActualizar
+            // 
+            this.txtDNIActualizar.Enabled = false;
+            this.txtDNIActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNIActualizar.Location = new System.Drawing.Point(14, 247);
+            this.txtDNIActualizar.Name = "txtDNIActualizar";
+            this.txtDNIActualizar.Size = new System.Drawing.Size(142, 29);
+            this.txtDNIActualizar.TabIndex = 6;
+            this.txtDNIActualizar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNIActualizar_KeyPress);
+            // 
+            // lblDNIActualizar
+            // 
+            this.lblDNIActualizar.AutoSize = true;
+            this.lblDNIActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDNIActualizar.Location = new System.Drawing.Point(10, 224);
+            this.lblDNIActualizar.Name = "lblDNIActualizar";
+            this.lblDNIActualizar.Size = new System.Drawing.Size(55, 21);
+            this.lblDNIActualizar.TabIndex = 14;
+            this.lblDNIActualizar.Text = "DNI:";
+            // 
+            // dtpFechaNActualizar
+            // 
+            this.dtpFechaNActualizar.Enabled = false;
+            this.dtpFechaNActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNActualizar.Location = new System.Drawing.Point(15, 304);
+            this.dtpFechaNActualizar.Name = "dtpFechaNActualizar";
+            this.dtpFechaNActualizar.Size = new System.Drawing.Size(417, 29);
+            this.dtpFechaNActualizar.TabIndex = 10;
+            // 
+            // imgActualizarUsuario
+            // 
+            this.imgActualizarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("imgActualizarUsuario.Image")));
+            this.imgActualizarUsuario.Location = new System.Drawing.Point(14, 16);
+            this.imgActualizarUsuario.Name = "imgActualizarUsuario";
+            this.imgActualizarUsuario.Size = new System.Drawing.Size(143, 136);
+            this.imgActualizarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgActualizarUsuario.TabIndex = 11;
+            this.imgActualizarUsuario.TabStop = false;
+            // 
+            // lblIdActualizar
+            // 
+            this.lblIdActualizar.AutoSize = true;
+            this.lblIdActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdActualizar.Location = new System.Drawing.Point(11, 163);
+            this.lblIdActualizar.Name = "lblIdActualizar";
+            this.lblIdActualizar.Size = new System.Drawing.Size(193, 21);
+            this.lblIdActualizar.TabIndex = 9;
+            this.lblIdActualizar.Text = "N° Identificador:";
+            // 
+            // txtContraseñaActualizar
+            // 
+            this.txtContraseñaActualizar.Enabled = false;
+            this.txtContraseñaActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaActualizar.Location = new System.Drawing.Point(341, 186);
+            this.txtContraseñaActualizar.Name = "txtContraseñaActualizar";
+            this.txtContraseñaActualizar.Size = new System.Drawing.Size(155, 29);
+            this.txtContraseñaActualizar.TabIndex = 2;
+            // 
+            // txtUsuarioActualizar
+            // 
+            this.txtUsuarioActualizar.Enabled = false;
+            this.txtUsuarioActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioActualizar.Location = new System.Drawing.Point(171, 186);
+            this.txtUsuarioActualizar.Name = "txtUsuarioActualizar";
+            this.txtUsuarioActualizar.Size = new System.Drawing.Size(151, 29);
+            this.txtUsuarioActualizar.TabIndex = 1;
+            // 
+            // txtIDActualizar
+            // 
+            this.txtIDActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDActualizar.Location = new System.Drawing.Point(15, 186);
+            this.txtIDActualizar.Name = "txtIDActualizar";
+            this.txtIDActualizar.Size = new System.Drawing.Size(137, 29);
+            this.txtIDActualizar.TabIndex = 0;
+            this.txtIDActualizar.TextChanged += new System.EventHandler(this.txtIDActualizar_TextChanged);
+            // 
+            // btnCargarUsuarioActualizar
+            // 
+            this.btnCargarUsuarioActualizar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnCargarUsuarioActualizar.Enabled = false;
+            this.btnCargarUsuarioActualizar.FlatAppearance.BorderSize = 3;
+            this.btnCargarUsuarioActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargarUsuarioActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarUsuarioActualizar.Location = new System.Drawing.Point(142, 357);
+            this.btnCargarUsuarioActualizar.Name = "btnCargarUsuarioActualizar";
+            this.btnCargarUsuarioActualizar.Size = new System.Drawing.Size(257, 38);
+            this.btnCargarUsuarioActualizar.TabIndex = 12;
+            this.btnCargarUsuarioActualizar.Text = "Cargar usuario";
+            this.btnCargarUsuarioActualizar.UseVisualStyleBackColor = false;
+            this.btnCargarUsuarioActualizar.Click += new System.EventHandler(this.btnCargarUsuario_Click);
+            // 
+            // lblUsuarioActualizar
+            // 
+            this.lblUsuarioActualizar.AutoSize = true;
+            this.lblUsuarioActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioActualizar.Location = new System.Drawing.Point(167, 163);
+            this.lblUsuarioActualizar.Name = "lblUsuarioActualizar";
+            this.lblUsuarioActualizar.Size = new System.Drawing.Size(103, 21);
+            this.lblUsuarioActualizar.TabIndex = 4;
+            this.lblUsuarioActualizar.Text = "Usuario:";
+            // 
+            // cmbPermisosActualizar
+            // 
+            this.cmbPermisosActualizar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPermisosActualizar.Enabled = false;
+            this.cmbPermisosActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPermisosActualizar.FormattingEnabled = true;
+            this.cmbPermisosActualizar.Items.AddRange(new object[] {
+            "Administrador",
+            "Operador"});
+            this.cmbPermisosActualizar.Location = new System.Drawing.Point(453, 302);
+            this.cmbPermisosActualizar.Name = "cmbPermisosActualizar";
+            this.cmbPermisosActualizar.Size = new System.Drawing.Size(197, 29);
+            this.cmbPermisosActualizar.TabIndex = 11;
+            // 
+            // lblContraseñaActualizar
+            // 
+            this.lblContraseñaActualizar.AutoSize = true;
+            this.lblContraseñaActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseñaActualizar.Location = new System.Drawing.Point(337, 163);
+            this.lblContraseñaActualizar.Name = "lblContraseñaActualizar";
+            this.lblContraseñaActualizar.Size = new System.Drawing.Size(148, 21);
+            this.lblContraseñaActualizar.TabIndex = 5;
+            this.lblContraseñaActualizar.Text = "Contraseña:";
+            // 
+            // lblPermisosActualizar
+            // 
+            this.lblPermisosActualizar.AutoSize = true;
+            this.lblPermisosActualizar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPermisosActualizar.Location = new System.Drawing.Point(449, 280);
+            this.lblPermisosActualizar.Name = "lblPermisosActualizar";
+            this.lblPermisosActualizar.Size = new System.Drawing.Size(116, 21);
+            this.lblPermisosActualizar.TabIndex = 6;
+            this.lblPermisosActualizar.Text = "Permisos:";
+            // 
             // panelTitulo
             // 
             this.panelTitulo.BackColor = System.Drawing.Color.DimGray;
@@ -1556,7 +1556,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1286, 833);
+            this.ClientSize = new System.Drawing.Size(1284, 833);
             this.Controls.Add(this.panelAcciones);
             this.Controls.Add(this.dgvUsuarios);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1574,14 +1574,14 @@
             this.panelBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuscarUsuario)).EndInit();
             this.panelAcciones.ResumeLayout(false);
-            this.panelActualizar.ResumeLayout(false);
-            this.panelActualizar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).EndInit();
             this.panelEliminar.ResumeLayout(false);
             this.panelEliminar.PerformLayout();
             this.mrcEliminarUsuario.ResumeLayout(false);
             this.mrcEliminarUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgEliminarUsuario)).EndInit();
+            this.panelActualizar.ResumeLayout(false);
+            this.panelActualizar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgActualizarUsuario)).EndInit();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             this.ResumeLayout(false);
