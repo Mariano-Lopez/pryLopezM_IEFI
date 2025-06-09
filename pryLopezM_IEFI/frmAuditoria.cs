@@ -127,5 +127,15 @@ namespace pryLopezM_IEFI
             optSesionUsuario.Checked = true;
             BBDD.datosAuditoriaSesiones(dgvAuditoria);
         }
+
+        private void dgvAuditoria_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Ejemplo suponiendo que la columna se llama "horaInicio"
+            if (dgvAuditoria.Columns[e.ColumnIndex].Name == "tiempoTotal" && e.Value is TimeSpan tiempo)
+            {
+                e.Value = tiempo.ToString(@"hh\:mm\:ss");
+                e.FormattingApplied = true;
+            }
+        }
     }
 }

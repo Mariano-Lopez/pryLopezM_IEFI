@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsConexionBBDD.cs" />
-    <Compile Include="clsSesion.cs" />
+    <Compile Include="clsVariablesGlobales.cs" />
     <Compile Include="clsSesionUs.cs" />
     <Compile Include="clsUsuario.cs" />
     <Compile Include="clsUsuarios.cs" />

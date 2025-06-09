@@ -48,7 +48,7 @@ namespace pryLopezM_IEFI
                 detalle = "Sin detalle";
             }
 
-            BBDD.registrarTarea(fechaElegida, tarea, lugar, hora, clsSesion.idUsuario, comentario, detalle, fechaHoy);
+            BBDD.registrarTarea(fechaElegida, tarea, lugar, hora, clsVariablesGlobales.idUsuario, comentario, detalle, fechaHoy);
 
             dtpFechaTarea.Value = fechaHoy;
             cmbTarea.SelectedIndex = -1;

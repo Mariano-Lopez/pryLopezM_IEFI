@@ -36,7 +36,7 @@ namespace pryLopezM_IEFI
         bool fechaSeleccionada = false;
         public void habilitarBotonCrear(Button btn)
         {
-            if (!string.IsNullOrEmpty(txtIdCrear.Text) && !string.IsNullOrEmpty(txtUsuarioCrear.Text) && !string.IsNullOrEmpty(txtContraseñaCrear.Text)
+            if (!string.IsNullOrEmpty(txtUsuarioCrear.Text) && !string.IsNullOrEmpty(txtContraseñaCrear.Text)
                 && !string.IsNullOrEmpty(txtNombreCrear.Text) && !string.IsNullOrEmpty(txtApellidoCrear.Text) && !string.IsNullOrEmpty(txtEdadCrear.Text)
                 && !string.IsNullOrEmpty(txtDNICrear.Text) && !string.IsNullOrEmpty(txtDireccionCrear.Text) && !string.IsNullOrEmpty(txtTelefonoCrear.Text)
                 && !string.IsNullOrEmpty(txtEmailCrear.Text) && fechaSeleccionada && cmbPermisosCrear.SelectedIndex != -1)
@@ -137,42 +137,27 @@ namespace pryLopezM_IEFI
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
            
-            int id = Convert.ToInt32(txtIdCrear.Text);
-            clsUsuario nuevo;
+            int edad = Convert.ToInt32(txtEdadCrear.Text);
+            DateTime fechaActual = System.DateTime.Now;
+            DateTime fechaNacimiento = dtpNacimientoCrear.Value.Date;
+            TimeSpan hora = DateTime.Now.TimeOfDay;
 
-            nuevo = lstUsuarios.buscarUsuario(id);
+            clsUsuario aux = new clsUsuario(0, txtUsuarioCrear.Text, txtContraseñaCrear.Text, txtNombreCrear.Text, txtApellidoCrear.Text, edad, txtDNICrear.Text,
+                    txtDireccionCrear.Text, txtTelefonoCrear.Text, txtEmailCrear.Text, fechaNacimiento, fechaActual, hora, cmbPermisosCrear.Text);
 
-            if (nuevo == null)
-            {
-                int edad = Convert.ToInt32(txtEdadCrear.Text);
-                DateTime fechaActual = System.DateTime.Now;
-                DateTime fechaNacimiento = dtpNacimientoCrear.Value.Date;
+            BBDD.crearUsuario(txtUsuarioCrear, txtContraseñaCrear, txtNombreCrear, txtApellidoCrear, edad, txtDNICrear,
+                    txtDireccionCrear, txtTelefonoCrear, txtEmailCrear, fechaNacimiento, fechaActual, cmbPermisosCrear);
 
-                clsUsuario aux = new clsUsuario(id, txtUsuarioCrear.Text, txtContraseñaCrear.Text, txtNombreCrear.Text, txtApellidoCrear.Text, edad, txtDNICrear.Text,
-                     txtDireccionCrear.Text, txtTelefonoCrear.Text, txtEmailCrear.Text, fechaNacimiento, fechaActual, cmbPermisosCrear.Text);
+            lstUsuarios.agregarUsuario(aux);
+            BBDD.mostrarDatos(dgvUsuarios);
 
-                BBDD.crearUsuario(id, txtUsuarioCrear, txtContraseñaCrear, txtNombreCrear, txtApellidoCrear, edad, txtDNICrear,
-                     txtDireccionCrear, txtTelefonoCrear, txtEmailCrear, fechaNacimiento, fechaActual, cmbPermisosCrear);
-
-                lstUsuarios.agregarUsuario(aux);
-                BBDD.mostrarDatos(dgvUsuarios);
-
-                BBDD.registrarAcciones("Creación de usuario", $"Se creó el usuario {txtUsuarioCrear.Text}", clsSesion.idUsuario, clsSesion.fechaAccion);
-                vaciarComponentesCrear();
-            }
-            else
-            {
-                MessageBox.Show("El id que intenta cargar ya existe.","Error");
-                txtIdCrear.Text = "";
-            }
-
-
+            BBDD.registrarAcciones("Creación de usuario", $"Se creó el usuario {txtUsuarioCrear.Text}", clsVariablesGlobales.idUsuario, clsVariablesGlobales.fechaAccion);
+            vaciarComponentesCrear();
             
         }
 
         public void vaciarComponentesCrear()
         {
-            txtIdCrear.Text = "";
             txtUsuarioCrear.Text = "";
             txtContraseñaCrear.Text = "";
             txtNombreCrear.Text = "";
@@ -340,7 +325,7 @@ namespace pryLopezM_IEFI
                     break;
                 case 6:
                     dato = "";
-                    campo = "DNI";
+                    campo = "dni";
 
                     if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
                     {
@@ -419,40 +404,21 @@ namespace pryLopezM_IEFI
 
                     if (cmbBuscarPermisos.SelectedIndex == 0)
                     {
-                        dato = "";
+                        dato = "Administrador";
                         campo = "permisos";
-
-                        if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
-                        {
-                            dato = txtDatoDeBusqueda.Text;
-                            btnBuscarUsuario.Enabled = true;
-                        }
-                        else
-                        {
-                            btnBuscarUsuario.Enabled = false;
-                        }
-
                         resul = lstUsuarios.buscarUsuario(dato, campo);
+
                         break;
                     }
-                    else
+                    else if(cmbBuscarPermisos.SelectedIndex == 1)
                     {
-                        dato = "";
+                        dato = "Operador";
                         campo = "permisos";
-
-                        if (!string.IsNullOrEmpty(txtDatoDeBusqueda.Text))
-                        {
-                            dato = txtDatoDeBusqueda.Text;
-                            btnBuscarUsuario.Enabled = true;
-                        }
-                        else
-                        {
-                            btnBuscarUsuario.Enabled = false;
-                        }
-
                         resul = lstUsuarios.buscarUsuario(dato, campo);
+
                         break;
                     }
+                    break;
 
 
             }
@@ -468,11 +434,11 @@ namespace pryLopezM_IEFI
 
                 if (cmbBuscarTipoDeDato.SelectedIndex == 11 || cmbBuscarTipoDeDato.SelectedIndex == 10)
                 {
-                    BBDD.registrarAcciones($"Búsqueda de {cmbBuscarTipoDeDato.Text}", $"Dato: {fechaBusqueda}", clsSesion.idUsuario, clsSesion.fechaAccion);
+                    BBDD.registrarAcciones($"Búsqueda de {cmbBuscarTipoDeDato.Text}", $"Dato: {fechaBusqueda}", clsVariablesGlobales.idUsuario, clsVariablesGlobales.fechaAccion);
                 }
                 else
                 {
-                    BBDD.registrarAcciones($"Búsqueda de {cmbBuscarTipoDeDato.Text}", $"Dato: {txtDatoDeBusqueda.Text}", clsSesion.idUsuario, clsSesion.fechaAccion);
+                    BBDD.registrarAcciones($"Búsqueda de {cmbBuscarTipoDeDato.Text}", $"Dato: {txtDatoDeBusqueda.Text}", clsVariablesGlobales.idUsuario, clsVariablesGlobales.fechaAccion);
                 }
 
                 dgvUsuarios.DataSource = null;
@@ -488,6 +454,14 @@ namespace pryLopezM_IEFI
             txtDatoDeBusqueda.Text = "";
             dtpBuscarFecha.Value = System.DateTime.Now;
             cmbBuscarPermisos.SelectedIndex = -1;
+        }
+
+        private void cmbBuscarPermisos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbBuscarPermisos.SelectedIndex != -1)
+            {
+                btnBuscarUsuario.Enabled = true;
+            }
         }
 
         private void cmbBuscarTipoDeDato_SelectedIndexChanged(object sender, EventArgs e)
@@ -595,10 +569,6 @@ namespace pryLopezM_IEFI
                 case 12:
                     esconderComponentes();
                     lblBusquedaSeleccionada.Text = "Seleccione rol a filtrar:";
-                    if (cmbBuscarPermisos.SelectedIndex != -1)
-                    {
-                        btnBuscarUsuario.Enabled = true;
-                    }
                     tipoDeCarga = true;
                     lblBusquedaSeleccionada.Visible = true;
                     cmbBuscarPermisos.Visible = true;
@@ -804,7 +774,7 @@ namespace pryLopezM_IEFI
 
                 BBDD.mostrarDatos(dgvUsuarios);
 
-                BBDD.registrarAcciones("Actualización de usuario", $"Cambio de datos del usuario {aux.usuario}", clsSesion.idUsuario, clsSesion.fechaAccion);
+                BBDD.registrarAcciones("Actualización de usuario", $"Cambio de datos del usuario {aux.usuario}", clsVariablesGlobales.idUsuario, clsVariablesGlobales.fechaAccion);
 
                 vaciarComponentesDeActualizar();
                 habilitarComponentesDeActualizar(false, true);
@@ -824,7 +794,7 @@ namespace pryLopezM_IEFI
             int idParaEliminar = Convert.ToInt32(txtIdParaEliminarUsuario.Text);
             aux = lstUsuarios.buscarUsuario(idParaEliminar);
 
-            BBDD.registrarAcciones("Usuarios", $"Eliminación de usuario '{aux.usuario}' ", clsSesion.idUsuario, clsSesion.fechaAccion);
+            BBDD.registrarAcciones("Usuarios", $"Eliminación de usuario '{aux.usuario}' ", clsVariablesGlobales.idUsuario, clsVariablesGlobales.fechaAccion);
 
             if (chkMensaje.Checked)
             {
@@ -864,6 +834,22 @@ namespace pryLopezM_IEFI
             if (aux != null)
             {
                 mrcEliminarUsuario.Visible = true;
+
+                lblEliminarIdUsuario.Text = aux.id.ToString();
+                lblEliminarUsuarioDato.Text = aux.usuario;
+                lblEliminarContraseñaUsuario.Text = aux.contra;
+                lblEliminarNombreUsuario.Text = aux.nombre;
+
+                lblEliminarApellidoUsuario.Text = aux.apellido;
+                lblEliminarEdadUsuario.Text = aux.edad.ToString();
+                lblEliminarDNIUsuario.Text = aux.dni;
+                lblEliminarDireccionUsuario.Text = aux.direccion;
+                lblEliminarTelefonoUsuario.Text = aux.telefono;
+                lblEliminarEmailUsuario.Text = aux.email;
+                lblEliminarFechaNacimientoUsuario.Text = Convert.ToDateTime(aux.fechaNacimiento).ToString("dd/MM/yyyy");
+                lblEliminarFechaAltaUsuario.Text = Convert.ToDateTime(aux.fechaDeAlta).ToString("dd/MM/yyyy");
+                lblEliminarPermisosUsuario.Text = aux.permisos;
+                
             }
             else
             {
@@ -909,37 +895,40 @@ namespace pryLopezM_IEFI
         // --PANELES--
         private void btnCrear_Click_1(object sender, EventArgs e)
         {
-            paneles(panelCrear);
+            paneles(panelCrear, "Crear usuario");
             
         }
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-            paneles(panelBuscar);
+            paneles(panelBuscar, "Buscar usuario");
             vaciarComponentesBuscar();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            paneles(panelActualizar);
+            paneles(panelActualizar, "Actualizar usuario");
             vaciarComponentesDeActualizar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            paneles(panelEliminar);
+            paneles(panelEliminar, "Eliminar usuario");
             vaciarComponentesEliminar();
         }
 
-        public void paneles(Panel pnl)
+        public void paneles(Panel pnl, string titulo)
         {
             // Ocultamos todos
             panelCrear.Visible = false;
             panelBuscar.Visible = false;
             panelActualizar.Visible = false;
 
+            lblTituloPanel.Text = titulo;
+
             // Mostramos el deseado
             pnl.Visible = true;
+            panelTitulo.Visible = true;
             pnl.BringToFront();
         }
 
@@ -952,6 +941,10 @@ namespace pryLopezM_IEFI
             }
         }
 
-        
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

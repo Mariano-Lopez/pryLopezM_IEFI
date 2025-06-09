@@ -121,7 +121,7 @@
   <data name="imgLogoEmpresa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFFdSURBVHhe7Z0J
+        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFFdSURBVHhe7Z0J
         2G5T+f+/mck8D5mnyJhEqChJISJKMiTJ1E/6VVSKkhLKmFJS6FeSIbOQKSqZyzwPIXPmsf7/63vOeus9
         t/t9zzPsvdf0/VzX57pczjnPc6+117P23mu4FyCEyJ35AawB4OMAdgfwTQA/APBrABcBuAHAXcHHATwJ
         4GkA/y/4Yvh/9L7w924BcDmA0wEcC+AgAF8EsD2A9QAsBWBaG4gQQgghmmVWAO8EsAuAowCcG27SvHmP
@@ -470,6 +470,11 @@
         3BDeyPnAwGE2OnoLEp/GR/4/t9TcHvbTnh/WKXCenpnNdgOwMYC3h2xnPCddCJEuvNFytwHzEPC3y501
         /C3zN83fNn/j/K1zgR0PxxnpB9gnjPQP3KEw8v+Z9Ix9CfuUy8KDBlNwHw5gLwBbA3hv6JOYH0VkxP8H
         t7d2qXRXhqYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Bienvenido, por favor inicie sesión llenando los campos que están a continuación. Recuerde que los administradores tiene mas funciones adentro del programa.
+Si usted es operador y necesita realizar alguna de las funciones de administador, le recomendamos comunicarse con su jefe de área.
 </value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

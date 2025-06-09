@@ -67,9 +67,10 @@ namespace pryLopezM_IEFI
                     string email = fila[9].ToString();
                     DateTime fechaNacimiento = Convert.ToDateTime(fila[10].ToString());
                     DateTime fechaDeAlta = Convert.ToDateTime(fila[11].ToString());
-                    string permisos = fila[12].ToString();
+                    TimeSpan horaDeAlta = TimeSpan.Parse(fila[12].ToString());
+                    string permisos = fila[13].ToString();
 
-                    clsUsuario aux = new clsUsuario(id, usuario, contra, nombre, apellido, edad, dni, direccion, telefono, email, fechaNacimiento, fechaDeAlta, permisos);
+                    clsUsuario aux = new clsUsuario(id, usuario, contra, nombre, apellido, edad, dni, direccion, telefono, email, fechaNacimiento, fechaDeAlta, horaDeAlta, permisos);
 
                     lst.lstUsuarios.Add(aux);
                 }
@@ -91,8 +92,8 @@ namespace pryLopezM_IEFI
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@TiempoSesion", (long)tiempoSesion.TotalSeconds);
-                    cmd.Parameters.AddWithValue("@TiempoTotal", (long)tiempoTotal.TotalSeconds);
+                    cmd.Parameters.AddWithValue("@TiempoSesion", tiempoSesion.ToString(@"hh\:mm\:ss"));
+                    cmd.Parameters.AddWithValue("@TiempoTotal", tiempoTotal.ToString(@"hh\:mm\:ss"));
                     cmd.Parameters.AddWithValue("@FechaActual", fechaActual);
                     cmd.Parameters.AddWithValue("@IdSesion", idSesion);
 
@@ -108,7 +109,9 @@ namespace pryLopezM_IEFI
         {
             long total = 0;
 
-            string query = "SELECT SUM(tiempoSesion) FROM sesionUsuario WHERE idUsuarioSesion = @idUsuarioSesion";
+            string query = @"SELECT SUM(DATEDIFF(SECOND, 0, tiempoSesion)) 
+                     FROM sesionUsuario 
+                     WHERE idUsuarioSesion = @idUsuarioSesion";
 
             using (SqlConnection conn = new SqlConnection(cadenaConexion))
             using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -119,36 +122,37 @@ namespace pryLopezM_IEFI
                 object result = cmd.ExecuteScalar();
                 if (result != DBNull.Value && result != null)
                 {
-                    total = Convert.ToInt64(result);
+                    total = Convert.ToInt64(result); // Total en segundos
                 }
             }
 
             return total;
         }
-        
+
         public int insertarNuevaSesionYObtenerID(int idUs)
         {
             int idSesion = 0;
 
             string query = @"INSERT INTO sesionUsuario (fechaUltConeccion, fechaActual, tiempoSesion, tiempoTotal, idUsuarioSesion)
-                            OUTPUT INSERTED.idSesion 
-                            VALUES (@fechaUltConeccion, @fechaActual, @tiempoSesion, @tiempoTotal, @idUsuarioSesion)";
+                     OUTPUT INSERTED.idSesion 
+                     VALUES (@fechaUltConeccion, @fechaActual, @tiempoSesion, @tiempoTotal, @idUsuarioSesion)";
 
             using (SqlConnection conn = new SqlConnection(cadenaConexion))
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
                 cmd.Parameters.AddWithValue("@fechaUltConeccion", DateTime.Now);
                 cmd.Parameters.AddWithValue("@fechaActual", DateTime.Now);
-                cmd.Parameters.AddWithValue("@tiempoSesion", 0); // todavía no hay tiempo
-                cmd.Parameters.AddWithValue("@tiempoTotal", 0);
+                cmd.Parameters.AddWithValue("@tiempoSesion", TimeSpan.Zero);
+                cmd.Parameters.AddWithValue("@tiempoTotal", TimeSpan.Zero);
                 cmd.Parameters.AddWithValue("@idUsuarioSesion", idUs);
 
                 conn.Open();
-                idSesion = (int)cmd.ExecuteScalar(); // acá se recupera el ID generado
+                idSesion = (int)cmd.ExecuteScalar(); // Devuelve el ID generado automáticamente
             }
 
             return idSesion;
         }
+
 
         public void mostrarDatos(DataGridView dgv)
         {
@@ -186,7 +190,7 @@ namespace pryLopezM_IEFI
             }
         }
 
-        public void crearUsuario(int id, TextBox txt, TextBox txt1, TextBox txt2, TextBox txt3, int edad,
+        public void crearUsuario(TextBox txt, TextBox txt1, TextBox txt2, TextBox txt3, int edad,
             TextBox txt5, TextBox txt6, TextBox txt7, TextBox txt8, DateTime dtN, DateTime dtA, ComboBox cmb)
         {
             try
@@ -198,12 +202,12 @@ namespace pryLopezM_IEFI
 
 
                 string query = @"INSERT INTO Usuarios 
-                         (idUsuario, usuario, contraseña, nombre, apellido, edad, DNI, direccion, telefono, email, fechaDeNacimiento, fechaDeAlta, permisos ) 
-                         VALUES (@idUsuario, @usuario, @contraseña, @nombre, @apellido, @edad, @DNI, @direccion, @telefono, @email, @fechaDeNacimiento, @fechaDeAlta, @permisos)";
+                         (usuario, contraseña, nombre, apellido, edad, DNI, direccion, telefono, email, fechaDeNacimiento, fechaDeAlta, permisos ) 
+                         VALUES (@usuario, @contraseña, @nombre, @apellido, @edad, @DNI, @direccion, @telefono, @email, @fechaDeNacimiento, @fechaDeAlta, @permisos)";
 
                 SqlCommand command = new SqlCommand(query, conexionBaseDatos);
 
-                command.Parameters.AddWithValue("@idUsuario", id);
+                
                 command.Parameters.AddWithValue("@usuario", txt.Text);
                 command.Parameters.AddWithValue("@contraseña", txt1.Text);
                 command.Parameters.AddWithValue("@nombre", txt2.Text);

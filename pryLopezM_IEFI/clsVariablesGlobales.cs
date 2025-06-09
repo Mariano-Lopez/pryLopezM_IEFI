@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pryLopezM_IEFI
 {
-    public static class clsSesion
+    public static class clsVariablesGlobales
     {
         public static string nomUs { get; set; }
         public static int idUsuario { get; set; }

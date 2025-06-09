@@ -34,17 +34,17 @@ namespace pryLopezM_IEFI
 
                 if (usuario != null && usuario.contra == txtContraseña.Text)
                 {
-                    clsSesion.nomUs = usuario.usuario;
-                    clsSesion.idUsuario = usuario.id;
-                    clsSesion.idPermisos = usuario.permisos;
+                    clsVariablesGlobales.nomUs = usuario.usuario;
+                    clsVariablesGlobales.idUsuario = usuario.id;
+                    clsVariablesGlobales.idPermisos = usuario.permisos;
 
                     DateTime fecha = DateTime.Now;
 
 
-                    BBDD.registrarAcciones("Login", "Inicio de sesión", clsSesion.idUsuario, fecha);
+                    BBDD.registrarAcciones("Login", "Inicio de sesión", clsVariablesGlobales.idUsuario, fecha);
 
                     // Insertar nueva sesión y obtener el ID recién creado
-                    clsSesion.idSesion = BBDD.insertarNuevaSesionYObtenerID(usuario.id);
+                    clsVariablesGlobales.idSesion = BBDD.insertarNuevaSesionYObtenerID(usuario.id);
 
                     txtContraseña.Text = "";
                     txtUsuario.Text = "";
@@ -53,7 +53,7 @@ namespace pryLopezM_IEFI
 
                     MessageBox.Show($"Bienvenido {usuario.usuario}.", "Login exitoso");
 
-                    frmInicio v = new frmInicio(clsSesion.idSesion, clsSesion.idUsuario);
+                    frmInicio v = new frmInicio(clsVariablesGlobales.idSesion, clsVariablesGlobales.idUsuario);
                     v.ShowDialog();
                 }
                 else
@@ -73,6 +73,11 @@ namespace pryLopezM_IEFI
             {
                 btnIngresar.PerformClick();
             }
+        }
+
+        private void chkContraseña_CheckedChanged(object sender, EventArgs e)
+        {
+            txtContraseña.UseSystemPasswordChar = !chkContraseña.Checked;
         }
     }
 }

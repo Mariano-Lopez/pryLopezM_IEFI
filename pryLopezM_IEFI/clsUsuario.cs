@@ -32,12 +32,14 @@ namespace pryLopezM_IEFI
 
         public DateTime fechaDeAlta { get; set; }
 
+        public TimeSpan horaDeAlta { get; set; }
+
         public string permisos { get; set; }
 
         
 
         public clsUsuario(int id, string usuario, string contra, string nombre, string apellido, int edad, string dni, string direccion, string telefono,
-            string email, DateTime fechaNacimiento, DateTime fechaDeAlta, string permisos)
+            string email, DateTime fechaNacimiento, DateTime fechaDeAlta, TimeSpan horaDeAlta, string permisos)
         {
             this.id = id;
 
@@ -62,6 +64,8 @@ namespace pryLopezM_IEFI
             this.fechaNacimiento = fechaNacimiento;
 
             this.fechaDeAlta = fechaDeAlta;
+
+            this.horaDeAlta = horaDeAlta;
 
             this.permisos = permisos;
 

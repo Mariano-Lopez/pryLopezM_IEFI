@@ -30,13 +30,19 @@ namespace pryLopezM_IEFI
 
         private void frmInicio_Load(object sender, EventArgs e)
         {
-            tsUsuario.Text = clsSesion.nomUs;
+            tsUsuario.Text = clsVariablesGlobales.nomUs;
             tsFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
             inicioSesion = DateTime.Now;
             tiempoSesionActual = TimeSpan.Zero;
 
             timerSesion.Start();
+
+            if (clsVariablesGlobales.idPermisos == "Operador")
+            {
+                administrarToolStripMenuItem.Visible = false;
+            }
+
         }
 
         private void timerSesion_Tick(object sender, EventArgs e)
@@ -45,19 +51,25 @@ namespace pryLopezM_IEFI
             tsTiempoS.Text = tiempoSesionActual.ToString(@"hh\:mm\:ss");
         }
 
-        private void frmInicio_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            timerSesion.Stop();
-
-            // Supongamos que tienes el tiempo total acumulado de alguna forma
-            TimeSpan tiempoTotal = tiempoSesionActual; // Podés sumar lo anterior si querés
-
-            BBDD.actualizarSesion(idSesionActual, tiempoSesionActual, tiempoTotal, DateTime.Now);
-        }
-
         private void frmInicio_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            GuardarSesion();
+
+            DialogResult confir = MessageBox.Show("¿Está seguro de cerrar sesión?",
+                    "Confirmación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+            if (confir == DialogResult.Yes)
+            {
+                timerSesion.Stop();
+
+                // Supongamos que tienes el tiempo total acumulado de alguna forma
+                TimeSpan tiempoTotal = tiempoSesionActual; // Podés sumar lo anterior si querés
+
+                BBDD.actualizarSesion(idSesionActual, tiempoSesionActual, tiempoTotal, DateTime.Now);
+                GuardarSesion();
+            }
+
         }
 
         private void GuardarSesion()
@@ -74,11 +86,7 @@ namespace pryLopezM_IEFI
             // Guardás la sesión existente (NO crear una nueva)
             BBDD.actualizarSesion(idSesionActual, tiempoSesion, tiempoTotal, finSesion);
 
-            BBDD.registrarAcciones("Logout", "Cierre de sesión", clsSesion.idUsuario, finSesion);
-
-            
-
-
+            BBDD.registrarAcciones("Logout", "Cierre de sesión", clsVariablesGlobales.idUsuario, finSesion);
 
         }
 
@@ -96,7 +104,16 @@ namespace pryLopezM_IEFI
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult confir = MessageBox.Show("¿Está seguro de cerrar sesión?",
+                    "Confirmación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+            if (confir == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            
         }
 
         private void registrarTareaToolStripMenuItem_Click(object sender, EventArgs e)

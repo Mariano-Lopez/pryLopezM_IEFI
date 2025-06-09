@@ -206,6 +206,8 @@ namespace pryLopezM_IEFI
             dtpFechaBusquedaTarea.Value = DateTime.Now;
             dtpFechaBusquedaTarea.Visible = false;
 
+            lblTipoDeDato.Visible = false;
+
             btnFiltrarTarea.Enabled = false;
 
 
@@ -253,6 +255,11 @@ namespace pryLopezM_IEFI
                     e.Handled = true; // Cancela el carácter si no es válido
                 }
             }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiarComponentesHistorialTarea();
         }
     }
 }
