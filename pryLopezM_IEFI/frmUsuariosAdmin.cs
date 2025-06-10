@@ -445,7 +445,9 @@ namespace pryLopezM_IEFI
 
                 dgvUsuarios.DataSource = null;
                 dgvUsuarios.DataSource = resul;
+
                 
+
             }
 
             vaciarComponentesBuscar();
@@ -720,6 +722,8 @@ namespace pryLopezM_IEFI
         {
             vaciarComponentesDeActualizar();
             habilitarComponentesDeActualizar(false, true);
+
+            BBDD.mostrarDatos(dgvUsuarios);
         }
 
         public void vaciarComponentesDeActualizar()
@@ -928,6 +932,7 @@ namespace pryLopezM_IEFI
             panelActualizar.Visible = false;
 
             lblTituloPanel.Text = titulo;
+            BBDD.mostrarDatos(dgvUsuarios);
 
             // Mostramos el deseado
             pnl.Visible = true;
