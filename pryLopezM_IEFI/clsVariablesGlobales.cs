@@ -16,11 +16,28 @@ namespace pryLopezM_IEFI
         public static DateTime fechaAccion = DateTime.Now;
 
         public static TimeSpan sesionActual { get; set; }
-        
-        
+
+        public static List<string> lstTarea { get; set; } = new List<string>();
+
+        public static List<string> lstLugar { get; set; } = new List<string>();
+
+        public static void AgregarALista(List<string> lst,string opcion)
+        {
+            if (!string.IsNullOrEmpty(opcion) && !lst.Contains(opcion))
+            {
+                lst.Add(opcion);
+            }
+        }
+
+        public static void EliminarDeLista(List<string> lst, string opcion)
+        {
+            lst.Remove(opcion);
+        }
 
 
     }
 
-    
+
+
+
 }

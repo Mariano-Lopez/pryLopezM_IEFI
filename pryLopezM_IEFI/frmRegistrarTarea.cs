@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace pryLopezM_IEFI
 {
@@ -28,7 +30,8 @@ namespace pryLopezM_IEFI
         {
             BBDD.mostrarDatosTarea(dgvTareas);
 
-            dtpFechaTarea.MaxDate = DateTime.Today;
+            BBDD.cargarCombo(cmbTarea, "Tarea");
+            BBDD.cargarCombo(cmbLugarTarea, "Lugar");
         }
 
         private void btnGrabarTarea_Click(object sender, EventArgs e)
@@ -137,6 +140,209 @@ namespace pryLopezM_IEFI
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCerrarPanel_Click(object sender, EventArgs e)
+        {
+            panelAgregarEliminar.Visible = false;
+        }
+
+        private void btnAgregarEliminarTareaLugar_Click(object sender, EventArgs e)
+        {
+            panelAgregarEliminar.Visible=true;
+        }
+
+        private void cmbTareaLugar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
+            if (cmbTareaLugar.SelectedIndex == 0 || cmbTareaLugar.SelectedIndex == 1)
+            {
+                mostrarComponentes(false, true, true, true, false);
+                btnAñadirtxt.Text = "Añadir";
+                btnAñadirtxt.BackColor = Color.ForestGreen;
+                lblAgregarEliminar.Text = cmbTareaLugar.Text;
+                
+                
+
+
+            }
+            else if (cmbTareaLugar.SelectedIndex == 2 || cmbTareaLugar.SelectedIndex == 3)
+            {
+
+
+                mostrarComponentes(true, false, false, true, true);
+                btnEliminarcmb.Text = "Eliminar";
+                btnEliminarcmb.BackColor = Color.Red;
+                lblAgregarEliminar.Text = cmbTareaLugar.Text;
+                
+
+
+                if (cmbAñadirEliminar.SelectedIndex == -1)
+                {
+                btnAñadirtxt.Enabled = false;
+                }
+            }
+
+            if (cmbTareaLugar.SelectedIndex == 0 || cmbTareaLugar.SelectedIndex == 2)
+            {
+                BBDD.cargarCombo(cmbAñadirEliminar, "Tarea");
+            }
+            else if (cmbTareaLugar.SelectedIndex == 1 || cmbTareaLugar.SelectedIndex == 3)
+            {
+                BBDD.cargarCombo(cmbAñadirEliminar, "Lugar");
+            }
+
+
+        }
+        public void mostrarComponentes(bool t, bool v, bool u, bool w, bool x)
+        {
+            cmbAñadirEliminar.Visible = t;
+            txtNuevaTareaLugar.Visible = v;
+            btnAñadirtxt.Visible = u;
+            lblAgregarEliminar.Visible = w;
+            btnEliminarcmb.Visible = x;
+
+        }
+
+        public void limpiarComponentes()
+        {
+            btnAñadirtxt.Visible = false;
+            cmbTareaLugar.SelectedIndex = -1;
+
+            txtNuevaTareaLugar.Text = "";
+            txtNuevaTareaLugar.Visible = false;
+
+            cmbAñadirEliminar.SelectedIndex = -1;
+            cmbAñadirEliminar.Visible = false;
+
+            mostrarComponentes(false, false, false, false, false);
+        }
+
+
+        private void btnAñadirEliminar_Click(object sender, EventArgs e)
+        {
+            if (cmbTareaLugar.SelectedIndex == 0)
+            {
+                    string nuevaOpcion = txtNuevaTareaLugar.Text.Trim();
+
+                    if (!string.IsNullOrEmpty(nuevaOpcion))
+                    {
+                        if (!string.IsNullOrEmpty(nuevaOpcion) && !clsVariablesGlobales.lstTarea.Contains(nuevaOpcion))
+                        {
+                            clsVariablesGlobales.lstTarea.Add(nuevaOpcion);
+                            BBDD.agregarDatoCombo("Tarea", nuevaOpcion);
+                            BBDD.cargarCombo(cmbAñadirEliminar, "Tarea");
+                            BBDD.cargarCombo(cmbTarea, "Tarea");
+                        
+                    }
+                        else
+                        {
+                            MessageBox.Show("Ya existe opción", "Error");
+                        }
+                        limpiarComponentes();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pueden dejar campos vacíos.", "Error");
+                    }
+            }
+            else if (cmbTareaLugar.SelectedIndex == 1)
+            {
+                string nuevaOpcion = txtNuevaTareaLugar.Text.Trim();
+
+                if (!string.IsNullOrEmpty(nuevaOpcion))
+                {
+                    if (!string.IsNullOrEmpty(nuevaOpcion) && !clsVariablesGlobales.lstLugar.Contains(nuevaOpcion))
+                    {
+                        clsVariablesGlobales.lstLugar.Add(nuevaOpcion);
+                        BBDD.agregarDatoCombo("Lugar", nuevaOpcion);
+                        BBDD.cargarCombo(cmbAñadirEliminar, "Lugar");
+                        BBDD.cargarCombo(cmbLugarTarea, "Lugar");
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya existe opción", "Error");
+                    }
+                    limpiarComponentes();
+
+                }
+                else
+                {
+                    MessageBox.Show("No se pueden dejar campos vacíos.", "Error");
+                }
+                
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiarComponentes();
+        }
+
+        private void cmbAñadirEliminar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTareaLugar.SelectedIndex == 2 || cmbTareaLugar.SelectedIndex == 3)
+            {
+                if (cmbAñadirEliminar.SelectedIndex != -1)
+                {
+                    btnAñadirtxt.Enabled = true;
+                }
+            }
+        }
+
+        private void btnEliminarcmb_Click(object sender, EventArgs e)
+        {
+            if (cmbAñadirEliminar.SelectedIndex != -1)
+            {
+                if (cmbTareaLugar.SelectedIndex == 2)
+                {
+                    string seleccion = cmbAñadirEliminar.SelectedItem?.ToString();
+
+                    clsVariablesGlobales.lstTarea.Remove(seleccion);
+                    BBDD.eliminarDatoCombo("Tarea", seleccion);
+                    BBDD.cargarCombo(cmbTarea, "Tarea");
+                    BBDD.cargarCombo(cmbAñadirEliminar, "Tarea");
+
+
+
+
+                    limpiarComponentes();
+                }
+                else if (cmbTareaLugar.SelectedIndex == 3)
+                {
+                    string seleccion = cmbAñadirEliminar.SelectedItem?.ToString();
+
+                    clsVariablesGlobales.lstLugar.Remove(seleccion);
+                    BBDD.eliminarDatoCombo("Lugar", seleccion);
+                    BBDD.cargarCombo(cmbLugarTarea, "Lugar");
+                    BBDD.cargarCombo(cmbAñadirEliminar, "Lugar");
+
+
+                    limpiarComponentes();
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Selecicone una opción", "Error");
+            }
+
+            
+        }
+
+        private void txtNuevaTareaLugar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtNuevaTareaLugar.Text))
+            {
+                btnAñadirtxt.Enabled = true;
+            }
+            else
+            {
+                btnAñadirtxt.Enabled = false;
+            }
         }
     }
 }

@@ -84,6 +84,96 @@ namespace pryLopezM_IEFI
             }
         }
 
+        public void cargarCombo(ComboBox cmb, string tabla)
+        {
+            try
+            {
+                conexionBaseDatos = new SqlConnection(cadenaConexion);
+
+                nombreBaseDeDatos = conexionBaseDatos.Database;
+
+                conexionBaseDatos.Open();
+
+                string query = $"SELECT * FROM {tabla}";
+                comandoBaseDatos = new SqlCommand(query, conexionBaseDatos);
+
+                //Crear un DataTable.
+                DataTable tablaProductos = new DataTable();
+
+                //Llenar el DataTable.
+                using (SqlDataReader reader = comandoBaseDatos.ExecuteReader())
+                {
+                    tablaProductos.Load(reader);
+                }
+
+                cmb.Items.Clear();
+
+                foreach (DataRow fila in tablaProductos.Rows)
+                {
+                    cmb.Items.Add(fila[1].ToString());
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Cargar combo");
+
+            }
+        }
+
+        public void agregarDatoCombo(string tabla, string dato)
+        {
+            try
+            {
+                conexionBaseDatos = new SqlConnection(cadenaConexion);
+                nombreBaseDeDatos = conexionBaseDatos.Database;
+                conexionBaseDatos.Open();
+
+                string query = $"INSERT INTO {tabla} (opcion) VALUES (@opcion)";
+
+                SqlCommand command = new SqlCommand(query, conexionBaseDatos);
+
+                // Asignar los parámetros
+                command.Parameters.AddWithValue("@opcion", dato);
+
+
+                command.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
+
+        public void eliminarDatoCombo(string tabla, string dato)
+        {
+            try
+            {
+                conexionBaseDatos = new SqlConnection(cadenaConexion);
+                nombreBaseDeDatos = conexionBaseDatos.Database;
+                conexionBaseDatos.Open();
+
+                string query = $"DELETE FROM {tabla} WHERE opcion = @opcion";
+
+                SqlCommand command = new SqlCommand(query, conexionBaseDatos);
+
+                // Asignar los parámetros
+                command.Parameters.AddWithValue("@opcion", dato);
+
+
+                command.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
+
         public void actualizarSesion(int idSesion, TimeSpan tiempoSesion, TimeSpan tiempoTotal, DateTime fechaActual)
         {
             string query = "UPDATE sesionUsuario SET tiempoSesion = @tiempoSesion, tiempoTotal = @tiempoTotal, fechaActual = @fechaActual WHERE idSesion = @idSesion";

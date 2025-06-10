@@ -57,6 +57,31 @@ CREATE TABLE registrarTarea (
     FOREIGN KEY (idUsuarioTarea) REFERENCES Usuarios(IdUsuario) ON DELETE CASCADE
 );
 
+CREATE TABLE Tarea(
+	idTareacmb INT NOT NULL IDENTITY PRIMARY KEY,
+	opcion VARCHAR(50)
+);
+GO
+INSERT INTO Tarea (opcion) VALUES
+('Auditoría'),
+('Consultas'),
+('Inspección'),
+('Reclamos'),
+('Visita');
+
+CREATE TABLE Lugar(
+	idLugarcmb INT NOT NULL IDENTITY PRIMARY KEY,
+	opcion VARCHAR(50)
+);
+GO
+INSERT INTO Lugar (opcion) VALUES
+('Empresa'),
+('Oficina'),
+('Servicio');
+
+SELECT * FROM Tarea;
+
+
 
 INSERT INTO registrarTarea 
 (fechaTarea, tareaPrincipal, lugarTarea, detalle, comentario, fechaRegistro, horaTareaRegistrada, idUsuarioTarea)
@@ -118,6 +143,9 @@ VALUES
 ('2025-06-05', '2025-06-05', '00:10:00', '00:10:00', 8),
 ('2025-06-06', '2025-06-06', '01:00:00', '01:00:00', 9),
 ('2025-06-06', '2025-06-06', '00:15:00', '00:15:00', 10);
+
+
+
 
 
 Select * from sesionUsuario;

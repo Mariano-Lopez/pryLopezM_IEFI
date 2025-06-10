@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarTarea));
             this.lblFechaTarea = new System.Windows.Forms.Label();
             this.lblTarea = new System.Windows.Forms.Label();
@@ -52,18 +52,31 @@
             this.txtComentarioTarea = new System.Windows.Forms.TextBox();
             this.lblComentarioTarea = new System.Windows.Forms.Label();
             this.panelRegistro = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelInstruccionesRegistrar = new System.Windows.Forms.Panel();
             this.lblAuditoriaInstrucciones = new System.Windows.Forms.Label();
             this.imgRegistrarTarea = new System.Windows.Forms.PictureBox();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblTituloRegistrarTarea = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
+            this.panelAgregarEliminar = new System.Windows.Forms.Panel();
+            this.btnEliminarcmb = new System.Windows.Forms.Button();
+            this.btnCerrarPanel = new System.Windows.Forms.Button();
+            this.lblAgregarEliminarInstrucciones = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.txtNuevaTareaLugar = new System.Windows.Forms.TextBox();
+            this.lblOpcion = new System.Windows.Forms.Label();
+            this.lblAgregarEliminar = new System.Windows.Forms.Label();
+            this.btnAñadirtxt = new System.Windows.Forms.Button();
+            this.cmbTareaLugar = new System.Windows.Forms.ComboBox();
+            this.cmbAñadirEliminar = new System.Windows.Forms.ComboBox();
+            this.btnAgregarEliminarTareaLugar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareas)).BeginInit();
             this.mrcDetalleTarea.SuspendLayout();
             this.panelRegistro.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelInstruccionesRegistrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgRegistrarTarea)).BeginInit();
             this.panelTitulo.SuspendLayout();
+            this.panelAgregarEliminar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFechaTarea
@@ -90,7 +103,7 @@
             // 
             this.lblLugarTarea.AutoSize = true;
             this.lblLugarTarea.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLugarTarea.Location = new System.Drawing.Point(478, 9);
+            this.lblLugarTarea.Location = new System.Drawing.Point(500, 9);
             this.lblLugarTarea.Name = "lblLugarTarea";
             this.lblLugarTarea.Size = new System.Drawing.Size(82, 21);
             this.lblLugarTarea.TabIndex = 2;
@@ -110,15 +123,9 @@
             this.cmbTarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTarea.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTarea.FormattingEnabled = true;
-            this.cmbTarea.Items.AddRange(new object[] {
-            "Auditoría",
-            "Consultas",
-            "Inspección",
-            "Reclamos",
-            "Visita"});
             this.cmbTarea.Location = new System.Drawing.Point(339, 33);
             this.cmbTarea.Name = "cmbTarea";
-            this.cmbTarea.Size = new System.Drawing.Size(121, 29);
+            this.cmbTarea.Size = new System.Drawing.Size(159, 29);
             this.cmbTarea.TabIndex = 4;
             this.cmbTarea.SelectedIndexChanged += new System.EventHandler(this.cmbTarea_SelectedIndexChanged);
             // 
@@ -127,11 +134,7 @@
             this.cmbLugarTarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLugarTarea.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLugarTarea.FormattingEnabled = true;
-            this.cmbLugarTarea.Items.AddRange(new object[] {
-            "Empresa",
-            "Servicio",
-            "Oficina"});
-            this.cmbLugarTarea.Location = new System.Drawing.Point(482, 33);
+            this.cmbLugarTarea.Location = new System.Drawing.Point(504, 33);
             this.cmbLugarTarea.Name = "cmbLugarTarea";
             this.cmbLugarTarea.Size = new System.Drawing.Size(121, 29);
             this.cmbLugarTarea.TabIndex = 5;
@@ -145,36 +148,36 @@
             this.dgvTareas.AllowUserToResizeRows = false;
             this.dgvTareas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvTareas.BackgroundColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTareas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTareas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvTareas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTareas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTareas.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvTareas.GridColor = System.Drawing.Color.White;
             this.dgvTareas.Location = new System.Drawing.Point(12, 494);
             this.dgvTareas.MultiSelect = false;
             this.dgvTareas.Name = "dgvTareas";
             this.dgvTareas.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTareas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTareas.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvTareas.RowHeadersVisible = false;
             this.dgvTareas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTareas.Size = new System.Drawing.Size(1179, 216);
@@ -295,7 +298,7 @@
             this.btnGrabarTarea.FlatAppearance.BorderSize = 3;
             this.btnGrabarTarea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabarTarea.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabarTarea.Location = new System.Drawing.Point(267, 171);
+            this.btnGrabarTarea.Location = new System.Drawing.Point(203, 168);
             this.btnGrabarTarea.Name = "btnGrabarTarea";
             this.btnGrabarTarea.Size = new System.Drawing.Size(134, 36);
             this.btnGrabarTarea.TabIndex = 16;
@@ -341,27 +344,25 @@
             this.panelRegistro.Size = new System.Drawing.Size(656, 218);
             this.panelRegistro.TabIndex = 18;
             // 
-            // panel1
+            // panelInstruccionesRegistrar
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel1.Controls.Add(this.lblAuditoriaInstrucciones);
-            this.panel1.Controls.Add(this.imgRegistrarTarea);
-            this.panel1.Location = new System.Drawing.Point(164, 78);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(953, 174);
-            this.panel1.TabIndex = 18;
+            this.panelInstruccionesRegistrar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panelInstruccionesRegistrar.Controls.Add(this.lblAuditoriaInstrucciones);
+            this.panelInstruccionesRegistrar.Controls.Add(this.imgRegistrarTarea);
+            this.panelInstruccionesRegistrar.Location = new System.Drawing.Point(164, 78);
+            this.panelInstruccionesRegistrar.Name = "panelInstruccionesRegistrar";
+            this.panelInstruccionesRegistrar.Size = new System.Drawing.Size(953, 174);
+            this.panelInstruccionesRegistrar.TabIndex = 18;
             // 
             // lblAuditoriaInstrucciones
             // 
             this.lblAuditoriaInstrucciones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblAuditoriaInstrucciones.Font = new System.Drawing.Font("Copperplate Gothic Bold", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAuditoriaInstrucciones.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAuditoriaInstrucciones.Location = new System.Drawing.Point(139, 13);
             this.lblAuditoriaInstrucciones.Name = "lblAuditoriaInstrucciones";
             this.lblAuditoriaInstrucciones.Size = new System.Drawing.Size(795, 139);
             this.lblAuditoriaInstrucciones.TabIndex = 4;
-            this.lblAuditoriaInstrucciones.Text = "Para registrar una tarea, complete y seleccione todos los datos, sino el botón no" +
-    " se habilitará.\r\nEn caso de querer filtrar o buscar una tarea en específico vaya" +
-    " a la opción de \"Historial tarea\".";
+            this.lblAuditoriaInstrucciones.Text = resources.GetString("lblAuditoriaInstrucciones.Text");
             // 
             // imgRegistrarTarea
             // 
@@ -381,7 +382,7 @@
             this.panelTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelTitulo.Location = new System.Drawing.Point(164, 12);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(477, 60);
+            this.panelTitulo.Size = new System.Drawing.Size(660, 60);
             this.panelTitulo.TabIndex = 37;
             // 
             // lblTituloRegistrarTarea
@@ -410,6 +411,175 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panelAgregarEliminar
+            // 
+            this.panelAgregarEliminar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panelAgregarEliminar.Controls.Add(this.btnEliminarcmb);
+            this.panelAgregarEliminar.Controls.Add(this.btnCerrarPanel);
+            this.panelAgregarEliminar.Controls.Add(this.lblAgregarEliminarInstrucciones);
+            this.panelAgregarEliminar.Controls.Add(this.btnLimpiar);
+            this.panelAgregarEliminar.Controls.Add(this.txtNuevaTareaLugar);
+            this.panelAgregarEliminar.Controls.Add(this.lblOpcion);
+            this.panelAgregarEliminar.Controls.Add(this.lblAgregarEliminar);
+            this.panelAgregarEliminar.Controls.Add(this.btnAñadirtxt);
+            this.panelAgregarEliminar.Controls.Add(this.cmbTareaLugar);
+            this.panelAgregarEliminar.Controls.Add(this.cmbAñadirEliminar);
+            this.panelAgregarEliminar.Location = new System.Drawing.Point(326, 259);
+            this.panelAgregarEliminar.Name = "panelAgregarEliminar";
+            this.panelAgregarEliminar.Size = new System.Drawing.Size(656, 214);
+            this.panelAgregarEliminar.TabIndex = 40;
+            this.panelAgregarEliminar.Visible = false;
+            // 
+            // btnEliminarcmb
+            // 
+            this.btnEliminarcmb.BackColor = System.Drawing.Color.Red;
+            this.btnEliminarcmb.FlatAppearance.BorderSize = 3;
+            this.btnEliminarcmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarcmb.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarcmb.Location = new System.Drawing.Point(222, 158);
+            this.btnEliminarcmb.Name = "btnEliminarcmb";
+            this.btnEliminarcmb.Size = new System.Drawing.Size(134, 36);
+            this.btnEliminarcmb.TabIndex = 21;
+            this.btnEliminarcmb.Text = "Grabar";
+            this.btnEliminarcmb.UseVisualStyleBackColor = false;
+            this.btnEliminarcmb.Visible = false;
+            this.btnEliminarcmb.Click += new System.EventHandler(this.btnEliminarcmb_Click);
+            // 
+            // btnCerrarPanel
+            // 
+            this.btnCerrarPanel.BackColor = System.Drawing.Color.Red;
+            this.btnCerrarPanel.FlatAppearance.BorderSize = 3;
+            this.btnCerrarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarPanel.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarPanel.Location = new System.Drawing.Point(472, 158);
+            this.btnCerrarPanel.Name = "btnCerrarPanel";
+            this.btnCerrarPanel.Size = new System.Drawing.Size(172, 36);
+            this.btnCerrarPanel.TabIndex = 20;
+            this.btnCerrarPanel.Text = "Cerrar panel";
+            this.btnCerrarPanel.UseVisualStyleBackColor = false;
+            this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
+            // 
+            // lblAgregarEliminarInstrucciones
+            // 
+            this.lblAgregarEliminarInstrucciones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAgregarEliminarInstrucciones.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregarEliminarInstrucciones.Location = new System.Drawing.Point(17, 17);
+            this.lblAgregarEliminarInstrucciones.Name = "lblAgregarEliminarInstrucciones";
+            this.lblAgregarEliminarInstrucciones.Size = new System.Drawing.Size(627, 57);
+            this.lblAgregarEliminarInstrucciones.TabIndex = 19;
+            this.lblAgregarEliminarInstrucciones.Text = "Para agregar una nueva Tarea/Lugar, deberá elegir desde el combobox, la opción qu" +
+    "e necesite, recuerde que si no completa todos los campos, el botón no se habilit" +
+    "ará.";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLimpiar.FlatAppearance.BorderSize = 3;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
+            this.btnLimpiar.Location = new System.Drawing.Point(106, 158);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(46, 40);
+            this.btnLimpiar.TabIndex = 18;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // txtNuevaTareaLugar
+            // 
+            this.txtNuevaTareaLugar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNuevaTareaLugar.Location = new System.Drawing.Point(339, 108);
+            this.txtNuevaTareaLugar.Name = "txtNuevaTareaLugar";
+            this.txtNuevaTareaLugar.Size = new System.Drawing.Size(186, 29);
+            this.txtNuevaTareaLugar.TabIndex = 17;
+            this.txtNuevaTareaLugar.Visible = false;
+            this.txtNuevaTareaLugar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNuevaTareaLugar_KeyPress);
+            // 
+            // lblOpcion
+            // 
+            this.lblOpcion.AutoSize = true;
+            this.lblOpcion.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOpcion.Location = new System.Drawing.Point(102, 86);
+            this.lblOpcion.Name = "lblOpcion";
+            this.lblOpcion.Size = new System.Drawing.Size(137, 21);
+            this.lblOpcion.TabIndex = 1;
+            this.lblOpcion.Text = "Seleccione:";
+            // 
+            // lblAgregarEliminar
+            // 
+            this.lblAgregarEliminar.AutoSize = true;
+            this.lblAgregarEliminar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregarEliminar.Location = new System.Drawing.Point(335, 84);
+            this.lblAgregarEliminar.Name = "lblAgregarEliminar";
+            this.lblAgregarEliminar.Size = new System.Drawing.Size(85, 21);
+            this.lblAgregarEliminar.TabIndex = 2;
+            this.lblAgregarEliminar.Text = "Opción";
+            this.lblAgregarEliminar.Visible = false;
+            // 
+            // btnAñadirtxt
+            // 
+            this.btnAñadirtxt.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAñadirtxt.Enabled = false;
+            this.btnAñadirtxt.FlatAppearance.BorderSize = 3;
+            this.btnAñadirtxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadirtxt.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirtxt.Location = new System.Drawing.Point(222, 158);
+            this.btnAñadirtxt.Name = "btnAñadirtxt";
+            this.btnAñadirtxt.Size = new System.Drawing.Size(134, 36);
+            this.btnAñadirtxt.TabIndex = 16;
+            this.btnAñadirtxt.Text = "Grabar";
+            this.btnAñadirtxt.UseVisualStyleBackColor = false;
+            this.btnAñadirtxt.Visible = false;
+            this.btnAñadirtxt.Click += new System.EventHandler(this.btnAñadirEliminar_Click);
+            // 
+            // cmbTareaLugar
+            // 
+            this.cmbTareaLugar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTareaLugar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTareaLugar.FormattingEnabled = true;
+            this.cmbTareaLugar.Items.AddRange(new object[] {
+            "Añadir Tarea",
+            "Añadir Lugar",
+            "Eliminar Tarea",
+            "Eliminar Lugar"});
+            this.cmbTareaLugar.Location = new System.Drawing.Point(106, 110);
+            this.cmbTareaLugar.Name = "cmbTareaLugar";
+            this.cmbTareaLugar.Size = new System.Drawing.Size(211, 29);
+            this.cmbTareaLugar.TabIndex = 4;
+            this.cmbTareaLugar.SelectedIndexChanged += new System.EventHandler(this.cmbTareaLugar_SelectedIndexChanged);
+            // 
+            // cmbAñadirEliminar
+            // 
+            this.cmbAñadirEliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAñadirEliminar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAñadirEliminar.FormattingEnabled = true;
+            this.cmbAñadirEliminar.Items.AddRange(new object[] {
+            "Empresa",
+            "Servicio",
+            "Oficina"});
+            this.cmbAñadirEliminar.Location = new System.Drawing.Point(339, 108);
+            this.cmbAñadirEliminar.Name = "cmbAñadirEliminar";
+            this.cmbAñadirEliminar.Size = new System.Drawing.Size(144, 29);
+            this.cmbAñadirEliminar.TabIndex = 5;
+            this.cmbAñadirEliminar.Visible = false;
+            this.cmbAñadirEliminar.SelectedIndexChanged += new System.EventHandler(this.cmbAñadirEliminar_SelectedIndexChanged);
+            // 
+            // btnAgregarEliminarTareaLugar
+            // 
+            this.btnAgregarEliminarTareaLugar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAgregarEliminarTareaLugar.FlatAppearance.BorderSize = 3;
+            this.btnAgregarEliminarTareaLugar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarEliminarTareaLugar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEliminarTareaLugar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarEliminarTareaLugar.Image")));
+            this.btnAgregarEliminarTareaLugar.Location = new System.Drawing.Point(840, 23);
+            this.btnAgregarEliminarTareaLugar.Name = "btnAgregarEliminarTareaLugar";
+            this.btnAgregarEliminarTareaLugar.Size = new System.Drawing.Size(277, 49);
+            this.btnAgregarEliminarTareaLugar.TabIndex = 19;
+            this.btnAgregarEliminarTareaLugar.Text = "Nueva Tarea/Lugar";
+            this.btnAgregarEliminarTareaLugar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregarEliminarTareaLugar.UseVisualStyleBackColor = false;
+            this.btnAgregarEliminarTareaLugar.Click += new System.EventHandler(this.btnAgregarEliminarTareaLugar_Click);
+            // 
             // frmRegistrarTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -418,8 +588,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1203, 718);
+            this.Controls.Add(this.panelAgregarEliminar);
+            this.Controls.Add(this.btnAgregarEliminarTareaLugar);
             this.Controls.Add(this.panelTitulo);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelInstruccionesRegistrar);
             this.Controls.Add(this.panelRegistro);
             this.Controls.Add(this.dgvTareas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -433,10 +605,12 @@
             this.mrcDetalleTarea.PerformLayout();
             this.panelRegistro.ResumeLayout(false);
             this.panelRegistro.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.panelInstruccionesRegistrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgRegistrarTarea)).EndInit();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
+            this.panelAgregarEliminar.ResumeLayout(false);
+            this.panelAgregarEliminar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -463,11 +637,23 @@
         private System.Windows.Forms.TextBox txtComentarioTarea;
         private System.Windows.Forms.Label lblComentarioTarea;
         private System.Windows.Forms.Panel panelRegistro;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelInstruccionesRegistrar;
         private System.Windows.Forms.PictureBox imgRegistrarTarea;
         private System.Windows.Forms.Panel panelTitulo;
         private System.Windows.Forms.Label lblTituloRegistrarTarea;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label lblAuditoriaInstrucciones;
+        private System.Windows.Forms.Panel panelAgregarEliminar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.TextBox txtNuevaTareaLugar;
+        private System.Windows.Forms.Label lblOpcion;
+        private System.Windows.Forms.Label lblAgregarEliminar;
+        private System.Windows.Forms.Button btnAñadirtxt;
+        private System.Windows.Forms.ComboBox cmbTareaLugar;
+        private System.Windows.Forms.ComboBox cmbAñadirEliminar;
+        private System.Windows.Forms.Button btnAgregarEliminarTareaLugar;
+        private System.Windows.Forms.Button btnCerrarPanel;
+        private System.Windows.Forms.Label lblAgregarEliminarInstrucciones;
+        private System.Windows.Forms.Button btnEliminarcmb;
     }
 }

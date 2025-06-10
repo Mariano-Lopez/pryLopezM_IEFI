@@ -115,5 +115,11 @@ namespace pryLopezM_IEFI
             frmHistorialTareas v = new frmHistorialTareas();
             v.ShowDialog();
         }
+
+        private void registrarNuevaTareaLugarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarNuevaTarea_Lugar v = new frmAgregarNuevaTarea_Lugar();
+            v.ShowDialog();
+        }
     }
 }
