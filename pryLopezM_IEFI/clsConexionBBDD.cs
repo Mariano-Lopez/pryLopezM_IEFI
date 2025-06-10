@@ -364,7 +364,7 @@ namespace pryLopezM_IEFI
 
                 tablaUsuario.Columns["idAccionRealizada"].ColumnName = "N°ID";
                 tablaUsuario.Columns["evento"].ColumnName = "Evento";
-                tablaUsuario.Columns["evento"].ColumnName = "Evento";
+                tablaUsuario.Columns["descripcion"].ColumnName = "Descripción";
                 tablaUsuario.Columns["fechaDeAccion"].ColumnName = "Fecha";
                 tablaUsuario.Columns["horaDeAccion"].ColumnName = "Hora";
                 tablaUsuario.Columns["idUsuarioAccion"].ColumnName = "ID usuario";

@@ -28,7 +28,7 @@ CREATE TABLE sesionUsuario	(
     tiempoSesion TIME(0) NOT NULL,
     tiempoTotal TIME(0) NOT NULL,
 	idUsuarioSesion INT,
-	FOREIGN KEY (idUsuarioSesion) REFERENCES Usuarios(idUsuario)
+	FOREIGN KEY (idUsuarioSesion) REFERENCES Usuarios(idUsuario) ON DELETE CASCADE
 );
 
 CREATE TABLE accionRealizada(
@@ -38,7 +38,7 @@ descripcion VARCHAR (100) NOT NULL,
 fechaDeAccion DATE NOT NULL DEFAULT GETDATE(),
 horaDeAccion TIME(0) NOT NULL DEFAULT CAST(GETDATE() AS TIME),
 idUsuarioAccion INT NOT NULL,
-FOREIGN KEY (idUsuarioAccion) REFERENCES Usuarios(idUsuario)
+FOREIGN KEY (idUsuarioAccion) REFERENCES Usuarios(idUsuario) ON DELETE CASCADE
 );
 
 
@@ -54,7 +54,7 @@ CREATE TABLE registrarTarea (
     idUsuarioTarea INT NOT NULL
     --estado VARCHAR(50), -- Ej: "Pendiente", "En Proceso", "Completada"
     --prioridad VARCHAR(20), -- Ej: "Alta", "Media", "Baja"
-    FOREIGN KEY (idUsuarioTarea) REFERENCES Usuarios(IdUsuario)
+    FOREIGN KEY (idUsuarioTarea) REFERENCES Usuarios(IdUsuario) ON DELETE CASCADE
 );
 
 

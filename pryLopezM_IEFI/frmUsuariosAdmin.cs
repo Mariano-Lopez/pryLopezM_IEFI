@@ -447,6 +447,11 @@ namespace pryLopezM_IEFI
                 dgvUsuarios.DataSource = resul;
 
                 
+                dgvUsuarios.Columns["id"].HeaderText = "N°ID";
+                dgvUsuarios.Columns["contra"].HeaderText = "Contraseña";
+                dgvUsuarios.Columns["horaDeAlta"].HeaderText = "Hora de alta";
+                dgvUsuarios.Columns["fechaNacimiento"].HeaderText = "Fecha de nacimiento";
+                dgvUsuarios.Columns["fechaDeAlta"].HeaderText = "Fecha de alta";
 
             }
 
@@ -609,61 +614,67 @@ namespace pryLopezM_IEFI
 
         private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Si no selecciona la columna.
-            if (e.RowIndex >= 0)
+            if(panelBuscar.Visible == false)
             {
-                //Toma los datos de la fila y llena los componentes.
-                DataGridViewRow fila = dgvUsuarios.Rows[e.RowIndex];
+                //Si no selecciona la columna.
+                if (e.RowIndex >= 0)
+                {
+                    //Toma los datos de la fila y llena los componentes.
+                    DataGridViewRow fila = dgvUsuarios.Rows[e.RowIndex];
 
-                txtIDActualizar.Text = fila.Cells["N°ID"].Value.ToString();
-                txtIdParaEliminarUsuario.Text = fila.Cells["N°ID"].Value.ToString();
-
-                txtUsuarioActualizar.Text = fila.Cells["usuario"].Value.ToString();
-                lblEliminarUsuarioDato.Text = fila.Cells["usuario"].Value.ToString();
-
-                txtContraseñaActualizar.Text = fila.Cells["contraseña"].Value.ToString();
-                lblEliminarContraseñaUsuario.Text = fila.Cells["contraseña"].Value.ToString();
-
-                txtNombreActualizar.Text = fila.Cells["nombre"].Value.ToString();
-                lblEliminarNombreUsuario.Text = fila.Cells["nombre"].Value.ToString();
+                    txtIDActualizar.Text = fila.Cells["N°ID"].Value.ToString();
+                    txtIdParaEliminarUsuario.Text = fila.Cells["N°ID"].Value.ToString();
 
 
-                txtApellidoActualizar.Text = fila.Cells["apellido"].Value.ToString();
-                lblEliminarApellidoUsuario.Text = fila.Cells["apellido"].Value.ToString();
+                    txtUsuarioActualizar.Text = fila.Cells["usuario"].Value.ToString();
+                    lblEliminarUsuarioDato.Text = fila.Cells["usuario"].Value.ToString();
+
+                    txtContraseñaActualizar.Text = fila.Cells["contraseña"].Value.ToString();
+                    lblEliminarContraseñaUsuario.Text = fila.Cells["contraseña"].Value.ToString();
+
+                    txtNombreActualizar.Text = fila.Cells["nombre"].Value.ToString();
+                    lblEliminarNombreUsuario.Text = fila.Cells["nombre"].Value.ToString();
 
 
-                txtEdadActualizar.Text = fila.Cells["edad"].Value.ToString();
-                lblEliminarEdadUsuario.Text = fila.Cells["edad"].Value.ToString();
+                    txtApellidoActualizar.Text = fila.Cells["apellido"].Value.ToString();
+                    lblEliminarApellidoUsuario.Text = fila.Cells["apellido"].Value.ToString();
 
 
-                txtDNIActualizar.Text = fila.Cells["DNI"].Value.ToString();
-                lblEliminarEmailUsuario.Text = fila.Cells["DNI"].Value.ToString();
+                    txtEdadActualizar.Text = fila.Cells["edad"].Value.ToString();
+                    lblEliminarEdadUsuario.Text = fila.Cells["edad"].Value.ToString();
 
 
-                txtDireccionActualizar.Text = fila.Cells["direccion"].Value.ToString();
-                lblEliminarDireccionUsuario.Text = fila.Cells["direccion"].Value.ToString();
+                    txtDNIActualizar.Text = fila.Cells["DNI"].Value.ToString();
+                    lblEliminarEmailUsuario.Text = fila.Cells["DNI"].Value.ToString();
 
 
-                txtTelefonoActualizar.Text = fila.Cells["telefono"].Value.ToString();
-                lblEliminarTelefonoUsuario.Text = fila.Cells["telefono"].Value.ToString();
+                    txtDireccionActualizar.Text = fila.Cells["direccion"].Value.ToString();
+                    lblEliminarDireccionUsuario.Text = fila.Cells["direccion"].Value.ToString();
 
 
-                txtEmailActualizar.Text = fila.Cells["email"].Value.ToString();
-                lblEliminarEmailUsuario.Text = fila.Cells["email"].Value.ToString();
+                    txtTelefonoActualizar.Text = fila.Cells["telefono"].Value.ToString();
+                    lblEliminarTelefonoUsuario.Text = fila.Cells["telefono"].Value.ToString();
 
 
-                dtpFechaNActualizar.Value = Convert.ToDateTime(fila.Cells["Fecha de nacimiento"].Value);
-                lblEliminarFechaNacimientoUsuario.Text = Convert.ToDateTime(fila.Cells["Fecha de nacimiento"].Value).ToString("dd/MM/yyyy");
+                    txtEmailActualizar.Text = fila.Cells["email"].Value.ToString();
+                    lblEliminarEmailUsuario.Text = fila.Cells["email"].Value.ToString();
 
 
-                lblEliminarFechaAltaUsuario.Text = Convert.ToDateTime(fila.Cells["Fecha de alta"].Value).ToString("dd/MM/yyyy");
+                    dtpFechaNActualizar.Value = Convert.ToDateTime(fila.Cells["Fecha de nacimiento"].Value);
+                    lblEliminarFechaNacimientoUsuario.Text = Convert.ToDateTime(fila.Cells["Fecha de nacimiento"].Value).ToString("dd/MM/yyyy");
 
 
-                cmbPermisosActualizar.Text = fila.Cells["permisos"].Value.ToString();
-                lblEliminarPermisosUsuario.Text = fila.Cells["permisos"].Value.ToString();
+                    lblEliminarFechaAltaUsuario.Text = Convert.ToDateTime(fila.Cells["Fecha de alta"].Value).ToString("dd/MM/yyyy");
 
 
-                habilitarComponentesDeActualizar(true, false);
+                    cmbPermisosActualizar.Text = fila.Cells["permisos"].Value.ToString();
+                    lblEliminarPermisosUsuario.Text = fila.Cells["permisos"].Value.ToString();
+
+
+                    habilitarComponentesDeActualizar(true, false);
+                }
+
+            
 
             }            
         }

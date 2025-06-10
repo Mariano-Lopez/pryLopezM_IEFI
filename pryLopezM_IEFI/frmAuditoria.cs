@@ -157,5 +157,14 @@ namespace pryLopezM_IEFI
                 btnBuscarUsuarioAuditoria.Enabled = false;
             }
         }
+
+        private void txtIdAuditoría_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Solo permitir dígitos y control (como backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
