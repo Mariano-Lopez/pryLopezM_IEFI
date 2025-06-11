@@ -54,12 +54,6 @@
     <Compile Include="clsSesionUs.cs" />
     <Compile Include="clsUsuario.cs" />
     <Compile Include="clsUsuarios.cs" />
-    <Compile Include="frmAgregarNuevaTarea-Lugar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAgregarNuevaTarea-Lugar.Designer.cs">
-      <DependentUpon>frmAgregarNuevaTarea-Lugar.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmHistorialTareas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,9 +92,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAgregarNuevaTarea-Lugar.resx">
-      <DependentUpon>frmAgregarNuevaTarea-Lugar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmHistorialTareas.resx">
       <DependentUpon>frmHistorialTareas.cs</DependentUpon>
     </EmbeddedResource>

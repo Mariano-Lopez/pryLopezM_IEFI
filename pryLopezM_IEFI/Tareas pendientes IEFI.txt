@@ -1,4 +1,2 @@
--Mejorar lo de la carga del mail
--Al crear usuario que ponga 2 veces la contraseña, para confirmarla.
--Opcion de buscar varios usuarios a la vez
+-Nada por aqui, seguir viendo el programa.
 
